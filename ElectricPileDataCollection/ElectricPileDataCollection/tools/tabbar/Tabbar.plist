@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>controller</key>
+		<string>CollectionViewController</string>
+		<key>imageName</key>
+		<string>collection</string>
+		<key>selectedImageName</key>
+		<string>collection1</string>
+		<key>title</key>
+		<string>数据采集</string>
+	</dict>
+	<dict>
+		<key>controller</key>
+		<string>SetViewController</string>
+		<key>imageName</key>
+		<string>set</string>
+		<key>selectedImageName</key>
+		<string>set1</string>
+		<key>title</key>
+		<string>设置</string>
+	</dict>
+	<dict>
+		<key>controller</key>
+		<string>CheckViewController</string>
+		<key>imageName</key>
+		<string>check</string>
+		<key>selectedImageName</key>
+		<string>check1</string>
+		<key>title</key>
+		<string>查看</string>
+	</dict>
+	<dict>
+		<key>controller</key>
+		<string>MineViewController</string>
+		<key>imageName</key>
+		<string>update</string>
+		<key>selectedImageName</key>
+		<string>update1</string>
+		<key>title</key>
+		<string>我的</string>
+	</dict>
+</array>
+</plist>
