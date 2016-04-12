@@ -172,6 +172,8 @@
 		FA1BC50E1CBBAD6200B9F1FD /* CustomCellTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1BC50A1CBBAD6200B9F1FD /* CustomCellTwo.m */; };
 		FA1BC50F1CBBAD6200B9F1FD /* CustomCellTwo.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA1BC50B1CBBAD6200B9F1FD /* CustomCellTwo.xib */; };
 		FA1BC5111CBBAD9F00B9F1FD /* AddPileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA1BC5101CBBAD9F00B9F1FD /* AddPileViewController.storyboard */; };
+		FA1BC51A1CBC771900B9F1FD /* PileInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1BC5181CBC771900B9F1FD /* PileInfoCell.m */; };
+		FA1BC51B1CBC771900B9F1FD /* PileInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA1BC5191CBC771900B9F1FD /* PileInfoCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -517,6 +519,9 @@
 		FA1BC50A1CBBAD6200B9F1FD /* CustomCellTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellTwo.m; sourceTree = "<group>"; };
 		FA1BC50B1CBBAD6200B9F1FD /* CustomCellTwo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCellTwo.xib; sourceTree = "<group>"; };
 		FA1BC5101CBBAD9F00B9F1FD /* AddPileViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddPileViewController.storyboard; sourceTree = "<group>"; };
+		FA1BC5171CBC771900B9F1FD /* PileInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PileInfoCell.h; sourceTree = "<group>"; };
+		FA1BC5181CBC771900B9F1FD /* PileInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PileInfoCell.m; sourceTree = "<group>"; };
+		FA1BC5191CBC771900B9F1FD /* PileInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PileInfoCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1368,6 +1373,9 @@
 				FA1BC5091CBBAD6200B9F1FD /* CustomCellTwo.h */,
 				FA1BC50A1CBBAD6200B9F1FD /* CustomCellTwo.m */,
 				FA1BC50B1CBBAD6200B9F1FD /* CustomCellTwo.xib */,
+				FA1BC5171CBC771900B9F1FD /* PileInfoCell.h */,
+				FA1BC5181CBC771900B9F1FD /* PileInfoCell.m */,
+				FA1BC5191CBC771900B9F1FD /* PileInfoCell.xib */,
 			);
 			path = "自定制Cell";
 			sourceTree = "<group>";
@@ -1491,6 +1499,7 @@
 				FA1BC50F1CBBAD6200B9F1FD /* CustomCellTwo.xib in Resources */,
 				77AC1A341CB7A5F900B376E6 /* CollPileViewController.storyboard in Resources */,
 				FA1BC5111CBBAD9F00B9F1FD /* AddPileViewController.storyboard in Resources */,
+				FA1BC51B1CBC771900B9F1FD /* PileInfoCell.xib in Resources */,
 				77E61A731CB75434002F38FC /* charging_mouth_type.plist in Resources */,
 				77510D981CBB5AD00052080F /* GjAssetsPicker_image_selected_blue@2x.png in Resources */,
 				7726EF291CB6657E00D433FB /* CollectionMainCell.xib in Resources */,
@@ -1591,6 +1600,7 @@
 				7726EEC51CB6303100D433FB /* CustomAlertView.m in Sources */,
 				7726EE981CB6303100D433FB /* MJIvar.m in Sources */,
 				7726EEB31CB6303100D433FB /* MKAnnotationView+WebCache.m in Sources */,
+				FA1BC51A1CBC771900B9F1FD /* PileInfoCell.m in Sources */,
 				7726EF1A1CB658C900D433FB /* PileGroupInfo.m in Sources */,
 				77510D911CBB5AD00052080F /* GJCFAssetsPickerPreviewItemViewController.m in Sources */,
 				77510D4A1CBB3D9B0052080F /* Area.m in Sources */,
