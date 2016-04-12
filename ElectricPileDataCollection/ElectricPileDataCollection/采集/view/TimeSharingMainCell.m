@@ -1,15 +1,14 @@
 //
-//  PileInfoCell.m
+//  TimeSharingMainCell.m
 //  ElectricPileDataCollection
 //
-//  Created by 温冬 on 16/4/12.
+//  Created by 陈行 on 16/4/12.
 //  Copyright © 2016年 陈行. All rights reserved.
 //
 
-#import "PileInfoCell.h"
+#import "TimeSharingMainCell.h"
 
-@implementation PileInfoCell
-
+@implementation TimeSharingMainCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

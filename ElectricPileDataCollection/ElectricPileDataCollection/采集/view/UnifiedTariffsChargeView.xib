@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="fGP-Ss-oda" customClass="UnifiedTariffsChargeView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB">
+                    <rect key="frame" x="64" y="217" width="247" height="233"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fe-PB-fV9">
+                            <rect key="frame" x="16" y="30" width="215" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="22" id="svw-ny-NDI"/>
+                            </constraints>
+                            <state key="normal" image="select_no.png">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="selected" image="select_yes.png"/>
+                            <state key="highlighted" image="select_yes.png"/>
+                            <connections>
+                                <action selector="chooseParkingCategory:" destination="fGP-Ss-oda" eventType="touchUpInside" id="OHo-Jk-ALJ"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="元/小时" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPg-tS-lej">
+                            <rect key="frame" x="181" y="32" width="50" height="17"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="mjq-hS-yaM"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FeH-y4-aC8">
+                            <rect key="frame" x="56" y="26" width="109" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYH-HO-C2Y">
+                            <rect key="frame" x="16" y="86" width="215" height="22"/>
+                            <state key="normal" image="select_no.png">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="selected" image="select_yes.png"/>
+                            <connections>
+                                <action selector="chooseParkingCategory:" destination="fGP-Ss-oda" eventType="touchUpInside" id="HSA-Ot-QXh"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="元/次" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecP-iU-jA4">
+                            <rect key="frame" x="181" y="89" width="50" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cf4-KV-3bU">
+                            <rect key="frame" x="16" y="142" width="215" height="22"/>
+                            <state key="normal" image="select_no.png">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="selected" image="select_yes.png"/>
+                            <state key="highlighted" image="select_yes.png"/>
+                            <connections>
+                                <action selector="chooseParkingCategory:" destination="fGP-Ss-oda" eventType="touchUpInside" id="b2k-Z0-DJj"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="元/天" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4Z-be-Rmj">
+                            <rect key="frame" x="181" y="144" width="50" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iqd-gm-fl6">
+                            <rect key="frame" x="56" y="138" width="109" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Hp-1X-RDt">
+                            <rect key="frame" x="45" y="186" width="56" height="30"/>
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="确定">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRi-2I-8Co">
+                            <rect key="frame" x="146" y="186" width="56" height="30"/>
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="取消">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="cancleBtnClick:" destination="fGP-Ss-oda" eventType="touchUpInside" id="Ymj-Hf-ifp"/>
+                            </connections>
+                        </button>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nKy-Ei-CnU">
+                            <rect key="frame" x="56" y="82" width="109" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" red="0.6958133012974359" green="0.6958133012974359" blue="0.6958133012974359" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="nKy-Ei-CnU" firstAttribute="top" secondItem="FeH-y4-aC8" secondAttribute="bottom" constant="26" id="3x8-Vb-5Nk"/>
+                        <constraint firstItem="Iqd-gm-fl6" firstAttribute="centerY" secondItem="Cf4-KV-3bU" secondAttribute="centerY" id="4xx-pp-Ms6"/>
+                        <constraint firstItem="nKy-Ei-CnU" firstAttribute="centerY" secondItem="yYH-HO-C2Y" secondAttribute="centerY" id="507-dj-7sH"/>
+                        <constraint firstItem="Cf4-KV-3bU" firstAttribute="leading" secondItem="1fe-PB-fV9" secondAttribute="leading" id="8Gg-B1-KaQ"/>
+                        <constraint firstItem="yYH-HO-C2Y" firstAttribute="trailing" secondItem="1fe-PB-fV9" secondAttribute="trailing" id="8nM-IZ-luG"/>
+                        <constraint firstItem="ecP-iU-jA4" firstAttribute="leading" secondItem="LPg-tS-lej" secondAttribute="leading" id="A6D-5j-gcl"/>
+                        <constraint firstItem="V4Z-be-Rmj" firstAttribute="centerY" secondItem="Cf4-KV-3bU" secondAttribute="centerY" id="B4N-8q-GXN"/>
+                        <constraint firstItem="ecP-iU-jA4" firstAttribute="centerY" secondItem="yYH-HO-C2Y" secondAttribute="centerY" id="Eov-SQ-pHE"/>
+                        <constraint firstAttribute="trailing" secondItem="FRi-2I-8Co" secondAttribute="trailing" constant="45" id="Ewb-lq-lYK"/>
+                        <constraint firstItem="ecP-iU-jA4" firstAttribute="trailing" secondItem="LPg-tS-lej" secondAttribute="trailing" id="FSG-6U-env"/>
+                        <constraint firstItem="nKy-Ei-CnU" firstAttribute="trailing" secondItem="FeH-y4-aC8" secondAttribute="trailing" id="GN4-pn-1Zu"/>
+                        <constraint firstItem="V4Z-be-Rmj" firstAttribute="trailing" secondItem="LPg-tS-lej" secondAttribute="trailing" id="GrB-3Z-OfO"/>
+                        <constraint firstAttribute="trailing" secondItem="LPg-tS-lej" secondAttribute="trailing" constant="16" id="HxE-8G-khO"/>
+                        <constraint firstItem="V4Z-be-Rmj" firstAttribute="leading" secondItem="LPg-tS-lej" secondAttribute="leading" id="Kzd-EL-8Nl"/>
+                        <constraint firstItem="1fe-PB-fV9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="LEB-I5-cZt"/>
+                        <constraint firstItem="FeH-y4-aC8" firstAttribute="centerY" secondItem="1fe-PB-fV9" secondAttribute="centerY" id="MlW-Ln-mb4"/>
+                        <constraint firstItem="LPg-tS-lej" firstAttribute="centerY" secondItem="1fe-PB-fV9" secondAttribute="centerY" id="Oye-0X-dSc"/>
+                        <constraint firstItem="Cf4-KV-3bU" firstAttribute="trailing" secondItem="1fe-PB-fV9" secondAttribute="trailing" id="Pc9-rC-nid"/>
+                        <constraint firstItem="nKy-Ei-CnU" firstAttribute="leading" secondItem="FeH-y4-aC8" secondAttribute="leading" id="QI1-fF-2P3"/>
+                        <constraint firstItem="FRi-2I-8Co" firstAttribute="width" secondItem="6Hp-1X-RDt" secondAttribute="width" id="Rcb-li-oz2"/>
+                        <constraint firstItem="FRi-2I-8Co" firstAttribute="leading" secondItem="6Hp-1X-RDt" secondAttribute="trailing" constant="45" id="TWy-D5-8QB"/>
+                        <constraint firstAttribute="trailing" secondItem="1fe-PB-fV9" secondAttribute="trailing" constant="16" id="ZFi-qE-3Y3"/>
+                        <constraint firstItem="Iqd-gm-fl6" firstAttribute="trailing" secondItem="FeH-y4-aC8" secondAttribute="trailing" id="aDA-4e-Vdx"/>
+                        <constraint firstAttribute="height" constant="233" id="bmL-kq-TIi"/>
+                        <constraint firstItem="FeH-y4-aC8" firstAttribute="leading" secondItem="1fe-PB-fV9" secondAttribute="leading" constant="40" id="j0Z-4S-cOx"/>
+                        <constraint firstItem="FeH-y4-aC8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="26" id="jH5-z8-iZc"/>
+                        <constraint firstItem="LPg-tS-lej" firstAttribute="leading" secondItem="FeH-y4-aC8" secondAttribute="trailing" constant="16" id="joO-96-Ev4"/>
+                        <constraint firstItem="yYH-HO-C2Y" firstAttribute="leading" secondItem="1fe-PB-fV9" secondAttribute="leading" id="keE-Gj-EAT"/>
+                        <constraint firstItem="6Hp-1X-RDt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="45" id="kz2-r9-flZ"/>
+                        <constraint firstItem="Iqd-gm-fl6" firstAttribute="leading" secondItem="FeH-y4-aC8" secondAttribute="leading" id="pSW-T1-fyH"/>
+                        <constraint firstItem="Iqd-gm-fl6" firstAttribute="top" secondItem="nKy-Ei-CnU" secondAttribute="bottom" constant="26" id="t7h-I7-Pfc"/>
+                        <constraint firstItem="FRi-2I-8Co" firstAttribute="height" secondItem="6Hp-1X-RDt" secondAttribute="height" id="vcC-T7-eb7"/>
+                        <constraint firstAttribute="width" constant="247" id="x8I-K9-DOK"/>
+                        <constraint firstItem="FRi-2I-8Co" firstAttribute="top" secondItem="6Hp-1X-RDt" secondAttribute="top" id="xed-MB-edP"/>
+                        <constraint firstItem="6Hp-1X-RDt" firstAttribute="top" secondItem="Iqd-gm-fl6" secondAttribute="bottom" constant="18" id="zEH-fb-ASY"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="iN0-l3-epB" firstAttribute="centerX" secondItem="fGP-Ss-oda" secondAttribute="centerX" id="AZ2-rq-GvX"/>
+                <constraint firstItem="iN0-l3-epB" firstAttribute="centerY" secondItem="fGP-Ss-oda" secondAttribute="centerY" id="zAp-0z-3fF"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <connections>
+                <outlet property="cancleBtn" destination="FRi-2I-8Co" id="d5x-yb-7nT"/>
+                <outlet property="makeSureBtn" destination="6Hp-1X-RDt" id="T9N-Zx-b2S"/>
+                <outlet property="yuanEveryDayBtn" destination="Cf4-KV-3bU" id="OkY-tf-LCx"/>
+                <outlet property="yuanEveryDayTF" destination="Iqd-gm-fl6" id="4Cz-bB-9d7"/>
+                <outlet property="yuanEveryHoursBtn" destination="1fe-PB-fV9" id="vwg-Nb-7c4"/>
+                <outlet property="yuanEveryHoursTF" destination="FeH-y4-aC8" id="kXS-Gz-uwo"/>
+                <outlet property="yuanEveryTimeBtn" destination="yYH-HO-C2Y" id="iaS-6s-8pd"/>
+                <outlet property="yuanEveryTimeTF" destination="nKy-Ei-CnU" id="lkw-22-aUe"/>
+            </connections>
+            <point key="canvasLocation" x="746.5" y="423.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="select_no.png" width="22" height="22"/>
+        <image name="select_yes.png" width="22" height="22"/>
+    </resources>
+</document>

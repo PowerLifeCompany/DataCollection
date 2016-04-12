@@ -37,7 +37,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="tableView" destination="jlg-5Y-nHw" id="QQm-bG-Q2M"/>
+                        <outlet property="tableView" destination="jlg-5Y-nHw" id="cYd-Er-Zrc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uc1-FW-8gU" userLabel="First Responder" sceneMemberID="firstResponder"/>

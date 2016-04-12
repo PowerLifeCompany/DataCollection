@@ -8,11 +8,12 @@
 
 #import "CollPileViewController.h"
 #import "CustomImagePickerViewController.h"
+#import "FeesDetailViewController.h"
+#import "PileInfoViewController.h"
 #import "AddPileViewController.h"
 #import "UIView+LayoutCornerRadius.h"
 #import "CollPileMainView.h"
 #import "Area.h"
-#import "PileInfoViewController.h"
 
 @interface CollPileViewController ()<CollPileMainViewDelegate,RequestUtilDelegate,CustomImagePickerDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
@@ -55,9 +56,7 @@
 }
 
 - (void)testBtn{
-    AddPileViewController * con=[[AddPileViewController alloc]init];
-    
-    
+    FeesDetailViewController * con=[[FeesDetailViewController alloc]init];
     [self.navigationController pushViewController: con animated:YES];
 }
 

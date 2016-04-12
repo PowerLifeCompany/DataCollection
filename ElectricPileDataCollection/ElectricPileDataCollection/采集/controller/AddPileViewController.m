@@ -19,10 +19,7 @@
 @end
 
 @implementation AddPileViewController
-
-
-- (instancetype)init
-{
+- (instancetype)init{
     NSString * sbName=NSStringFromClass([self class]);
     UIStoryboard * sb=[UIStoryboard storyboardWithName:sbName bundle:nil];
     return [sb instantiateViewControllerWithIdentifier:sbName];
@@ -32,13 +29,12 @@
     [super viewDidLoad];
     [self loadMainView];
     [self loadNavigationBar];
-    self.tableView.mainViewDelegate=self;
 }
 
 #pragma mark - 初始化组件
 - (void)loadMainView{
     self.tableView=self.containerView.subviews[0];
-
+    self.tableView.mainViewDelegate=self;
 }
 
 - (void)loadNavigationBar{

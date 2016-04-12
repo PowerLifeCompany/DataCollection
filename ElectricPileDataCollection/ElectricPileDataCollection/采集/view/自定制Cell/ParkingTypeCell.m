@@ -1,15 +1,14 @@
 //
-//  PileInfoCell.m
+//  ParkingTypeCell.m
 //  ElectricPileDataCollection
 //
 //  Created by 温冬 on 16/4/12.
 //  Copyright © 2016年 陈行. All rights reserved.
 //
 
-#import "PileInfoCell.h"
+#import "ParkingTypeCell.h"
 
-@implementation PileInfoCell
-
+@implementation ParkingTypeCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

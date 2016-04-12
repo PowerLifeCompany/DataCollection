@@ -10,4 +10,11 @@
 
 @interface PileInfoCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UITextField *locationTextField;
+
+@property (weak, nonatomic) IBOutlet UITextField *longitudeTextField;
+
+@property (weak, nonatomic) IBOutlet UITextField *latitudeTextField;
+
+
 @end

@@ -1,15 +1,14 @@
 //
-//  PileInfoCell.m
+//  SpecialInstructionsCell.m
 //  ElectricPileDataCollection
 //
 //  Created by 温冬 on 16/4/12.
 //  Copyright © 2016年 陈行. All rights reserved.
 //
 
-#import "PileInfoCell.h"
+#import "SpecialInstructionsCell.h"
 
-@implementation PileInfoCell
-
+@implementation SpecialInstructionsCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

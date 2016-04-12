@@ -15,6 +15,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextView *descTextView;
 
+@property (weak, nonatomic) IBOutlet UILabel *placeHolderLabel;
 
 + (instancetype)customCellWithTableView:(UITableView *)tableView;
 
