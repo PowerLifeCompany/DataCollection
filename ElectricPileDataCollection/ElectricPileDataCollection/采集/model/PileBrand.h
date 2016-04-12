@@ -16,4 +16,7 @@
 
 + (instancetype)pileBrandWithDict:(NSDictionary *)dict;
 
++ (NSArray *)sharePileBrandFromPileBrandPlist;
+
+
 @end

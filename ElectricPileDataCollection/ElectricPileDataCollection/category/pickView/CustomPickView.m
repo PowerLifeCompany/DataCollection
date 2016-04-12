@@ -191,7 +191,7 @@
 }
 
 - (void)dealloc{
-//    NSLog(@"销毁customPickView");
+    NSLog(@"销毁customPickView");
 }
 
 @end

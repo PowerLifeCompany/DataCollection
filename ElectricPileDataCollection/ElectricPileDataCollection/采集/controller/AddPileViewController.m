@@ -7,9 +7,10 @@
 //
 
 #import "AddPileViewController.h"
+#import "CustomImagePickerViewController.h"
 #import "AddPileMainView.h"
 
-@interface AddPileViewController ()
+@interface AddPileViewController ()<AddPileMainViewDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate,CustomImagePickerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 
@@ -29,8 +30,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
+    [self loadMainView];
+    [self loadNavigationBar];
+    self.tableView.mainViewDelegate=self;
 }
 
 #pragma mark - 初始化组件
@@ -40,11 +42,46 @@
 }
 
 - (void)loadNavigationBar{
-    self.navigationItem.title = @"增加接口";
+    self.navigationItem.title = @"增加电桩";
 }
 
 
 #pragma mark - 自定义代理
+- (void)chooseAlbubmOrPhotoGraphWithIndex:(NSInteger)index{
+    if(index==0){
+        UIImagePickerController * con=[[UIImagePickerController alloc]init];
+        con.sourceType=UIImagePickerControllerSourceTypeCamera;
+        con.allowsEditing=YES;
+        con.delegate=self;
+        [self presentViewController:con animated:YES completion:nil];
+    }else if (index==1){
+        CustomImagePickerViewController * con=[CustomImagePickerViewController new];
+        con.imagePickerDelegate=self;
+        [self presentViewController:con animated:YES completion:nil];
+    }
+}
+
+- (void)customImagePickerWithChooseImage:(NSArray *)resultArray{
+    if(resultArray.count){
+        GJCFAsset * asset=[resultArray firstObject];
+        NSData * data = UIImageJPEGRepresentation(asset.aspectRatioThumbnail, 1);
+        self.tableView.currentImageView.image=[UIImage imageWithData:data];
+    }
+}
+
+#pragma mark - UIImagePickViewController
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary<NSString *,id> *)editingInfo{
+    self.tableView.currentImageView.image=image;
+    //    NSData * data = UIImagePNGRepresentation(image);
+    //加测试
+    //写入到沙盒，按照一定的命名规则，暂时没做
+    if(self.tableView.currentImageView.tag==101){//第一张图片
+        
+    }else if (self.tableView.currentImageView.tag==102){//第二张图片
+        
+    }
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
 
 #pragma mark - 下载数据
 

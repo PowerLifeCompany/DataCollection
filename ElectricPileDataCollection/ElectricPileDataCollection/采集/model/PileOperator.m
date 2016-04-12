@@ -15,5 +15,20 @@
     return [self objectWithDict:dict];
 }
 
+static NSArray * sharePileOperatorArray;
 
++ (NSArray *)sharePileOperatorFromPileOperatorPlist{
+    if (sharePileOperatorArray==nil) {
+        static dispatch_once_t once;
+        dispatch_once(&once, ^{
+            NSArray * array = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"pile_operators.plist" ofType:nil]];
+            NSMutableArray * dataArray=[NSMutableArray new];
+            for (NSDictionary * dict in array) {
+                [dataArray addObject:[PileOperator pileOperatorWithDict:dict]];
+            }
+            sharePileOperatorArray = dataArray;
+        });
+    }
+    return sharePileOperatorArray;
+}
 @end

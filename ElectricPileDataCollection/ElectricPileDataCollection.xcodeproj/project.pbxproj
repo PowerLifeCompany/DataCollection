@@ -643,6 +643,7 @@
 		7726ED2E1CB6303100D433FB /* model */ = {
 			isa = PBXGroup;
 			children = (
+				77B674CA1CBC7AA30003AFAC /* 品牌运营商 */,
 				77510D471CBB3D8B0052080F /* 省市区片小区 */,
 				7726EF1E1CB65B3E00D433FB /* 停车收费标准 */,
 				7726EF1C1CB65B1600D433FB /* 电桩组的信息 */,
@@ -1237,10 +1238,6 @@
 				7726EF0A1CB6520000D433FB /* PileInfo.m */,
 				7726EF0C1CB6521B00D433FB /* PileInterface.h */,
 				7726EF0D1CB6521B00D433FB /* PileInterface.m */,
-				77E61A761CB75C99002F38FC /* PileBrand.h */,
-				77E61A771CB75C99002F38FC /* PileBrand.m */,
-				77E61A7F1CB77553002F38FC /* PileOperator.h */,
-				77E61A801CB77553002F38FC /* PileOperator.m */,
 			);
 			name = "电桩信息";
 			sourceTree = "<group>";
@@ -1361,6 +1358,17 @@
 				77AC1A361CB7A9CB00B376E6 /* addPic.png */,
 			);
 			path = image;
+			sourceTree = "<group>";
+		};
+		77B674CA1CBC7AA30003AFAC /* 品牌运营商 */ = {
+			isa = PBXGroup;
+			children = (
+				77E61A761CB75C99002F38FC /* PileBrand.h */,
+				77E61A771CB75C99002F38FC /* PileBrand.m */,
+				77E61A7F1CB77553002F38FC /* PileOperator.h */,
+				77E61A801CB77553002F38FC /* PileOperator.m */,
+			);
+			name = "品牌运营商";
 			sourceTree = "<group>";
 		};
 		FA1BC5051CBBAD6200B9F1FD /* 自定制Cell */ = {

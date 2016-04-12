@@ -48,6 +48,14 @@
     [UIView animateWithDuration:0.5 animations:^{
         self.transform=CGAffineTransformIdentity;
     }];
+    self.pickView.hidden = NO;
+}
+
+- (void)hiddenPickView{
+    [UIView animateWithDuration:0.5 animations:^{
+        self.transform=CGAffineTransformTranslate(self.transform, 0, SCREENHEIGHT);
+    }];
+    self.pickView.hidden = YES;
 }
 
 #pragma mark - CustomPickView协议代理

@@ -23,7 +23,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    
+    self.descImageView.userInteractionEnabled=YES;
 }
 
 

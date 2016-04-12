@@ -8,8 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol AddPileMainViewDelegate <NSObject>
+
+- (void)chooseAlbubmOrPhotoGraphWithIndex:(NSInteger)index;
+
+@end
+
 @interface AddPileMainView : UITableView<UITableViewDataSource,UITableViewDelegate>
 
 @property(nonatomic,strong)NSMutableArray * dataArray;
+
+@property(nonatomic,weak)UIImageView * currentImageView;
+
+@property(nonatomic,weak)id<AddPileMainViewDelegate> mainViewDelegate;
 
 @end

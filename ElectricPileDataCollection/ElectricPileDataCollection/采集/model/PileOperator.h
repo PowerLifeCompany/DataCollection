@@ -16,4 +16,6 @@
 
 + (instancetype)pileOperatorWithDict:(NSDictionary *)dict;
 
++ (NSArray *)sharePileOperatorFromPileOperatorPlist;
+
 @end

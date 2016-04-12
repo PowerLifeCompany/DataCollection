@@ -12,8 +12,25 @@
 
 @implementation PileBrand
 
+static NSArray * sharePileBrandArray;
+
 + (instancetype)pileBrandWithDict:(NSDictionary *)dict{
     return [self objectWithDict:dict];
+}
+
++ (NSArray *)sharePileBrandFromPileBrandPlist{
+    if (sharePileBrandArray==nil) {
+        static dispatch_once_t once;
+        dispatch_once(&once, ^{
+            NSArray * array = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"pile_brand.plist" ofType:nil]];
+            NSMutableArray * dataArray=[NSMutableArray new];
+            for (NSDictionary * dict in array) {
+                [dataArray addObject:[PileBrand pileBrandWithDict:dict]];
+            }
+            sharePileBrandArray = dataArray;
+        });
+    }
+    return sharePileBrandArray;
 }
 
 - (NSString *)description{

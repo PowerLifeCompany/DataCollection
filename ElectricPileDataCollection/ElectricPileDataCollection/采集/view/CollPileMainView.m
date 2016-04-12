@@ -167,6 +167,7 @@
         self.pickView.dataArray=villageDataArray;
         [self.pickView reloadSelectArray];
         self.pickView.hidden=NO;
+        [self.chooseCityView hiddenPickView];
     }else{
         [self.superview.superview addSubview:[CustomPopupView customPopupViewWithMsg:@"暂无信息！"]];
     }

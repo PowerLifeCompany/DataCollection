@@ -24,4 +24,6 @@
 
 - (void)showPickView;
 
+- (void)hiddenPickView;
+
 @end
