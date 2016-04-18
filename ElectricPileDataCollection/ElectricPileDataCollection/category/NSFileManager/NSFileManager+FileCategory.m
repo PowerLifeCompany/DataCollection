@@ -34,4 +34,14 @@
     return fileSize;
 }
 
++ (void)writeToFile:(NSString *)filePath withData:(NSData *)data{
+    NSFileManager * fm=[NSFileManager defaultManager];
+    NSArray * array = [filePath componentsSeparatedByString:@"/"];
+    NSString * directoryPath = [[filePath componentsSeparatedByString:[array lastObject]] firstObject];
+    if(![fm fileExistsAtPath:filePath]){
+        [fm createDirectoryAtPath:directoryPath withIntermediateDirectories:YES attributes:nil error:nil];
+    }
+    [data writeToFile:filePath atomically:YES];
+}
+
 @end

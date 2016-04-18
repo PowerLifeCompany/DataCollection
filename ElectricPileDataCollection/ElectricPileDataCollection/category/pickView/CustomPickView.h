@@ -23,8 +23,10 @@
 @property(nonatomic,weak)UIPickerView * pickView;
 
 @property(nonatomic,copy)NSString * titleKey;
-
-@property(nonatomic,copy)NSString * dataArrayKey;
+/**
+ *  isDependPre为true的时候 对象key
+ */
+@property(nonatomic,copy)NSArray * dataArrayKey;
 
 @property(nonatomic,strong)NSArray * dataArray;
 

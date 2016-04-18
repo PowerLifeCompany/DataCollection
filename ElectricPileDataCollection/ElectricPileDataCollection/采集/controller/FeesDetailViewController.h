@@ -7,7 +7,12 @@
 //
 
 #import "RootViewController.h"
+#import "ParkingChargeStandard.h"
 
 @interface FeesDetailViewController : RootViewController
+
+@property(nonatomic,strong)ParkingChargeStandard * pcs;
+
+@property(nonatomic,strong)NSMutableArray * dataArray;
 
 @end

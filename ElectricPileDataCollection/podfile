@@ -1,0 +1,5 @@
+platform :ios, '8.0'
+
+pod 'CLImageEditor','0.1.3'
+pod 'UzysAssetsPickerController'
+pod 'RKDropdownAlert'

@@ -12,6 +12,8 @@
 #import "SQLiteManager.h"
 #import "PileVillageInfo.h"
 #import "CustomPopupView.h"
+#import "UIImageView+WebCache.h"
+#import "CLImageEditor.h"
 
 @interface RootViewController : UIViewController
 

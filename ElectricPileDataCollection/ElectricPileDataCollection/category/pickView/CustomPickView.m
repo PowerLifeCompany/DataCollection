@@ -89,23 +89,28 @@
 
 #pragma mark - pickView代理协议
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
-    return self.component?:1;
+    return self.component?:1;//有几列
 }
 
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{//每一列有几行
     if(self.isDependPre){
+        NSInteger number = 0 ;
         if(component==0){
-            return self.dataArray.count;
+            number = self.dataArray.count;
         }
         NSArray * currentArray=self.dataArray;
         for (int i=1; i<self.selectedArray.count; i++) {
             NSInteger index=[self.selectedArray[i-1] integerValue];
-            NSObject * object=currentArray[index];
-            currentArray=[object valueForKey:self.dataArrayKey];
-            if(component==i){
-                return currentArray.count;
+            if([currentArray count]){
+                NSObject * object=currentArray[index];
+                currentArray=[object valueForKey:self.dataArrayKey[i-1]];
+                if(component==i){
+                    number = currentArray.count;
+                }
             }
         }
+//        NSLog(@"%ld-->%ld",component,number);
+        return number;
     }else{
         if([self.dataArray[component] isKindOfClass:[NSArray class]]){
             return [self.dataArray[component] count]?:1;;
@@ -113,33 +118,42 @@
             return self.dataArray.count;
         }
     }
-    return 0;
 }
 
--(NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+-(NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{//返回的名称
     NSObject * obj;
     if(self.isDependPre){
         if(component==0){
             obj = [self.dataArray[row] valueForKey:self.titleKey];
-        }
-        NSArray * currentArray=self.dataArray;
-        for (int i=1; i<self.selectedArray.count; i++) {
-            NSInteger index=[self.selectedArray[i-1] integerValue];
-            NSObject * object=currentArray[index];
-            currentArray=[object valueForKey:self.dataArrayKey];
-            if(component==i){
-                return [currentArray[row] valueForKey:self.titleKey];
+        }else{
+            NSArray * currentArray=self.dataArray;
+//            NSLog(@"%ld--->%ld-->%@",component,[currentArray count],obj);
+            for (int i=1; i<self.selectedArray.count; i++) {
+                NSInteger index=[self.selectedArray[i-1] integerValue];
+                if([currentArray count]){
+                    NSObject * object=currentArray[index];
+                    currentArray=[object valueForKey:self.dataArrayKey[i-1]];
+                    if(component==i){
+                        if(currentArray[row]){
+                            return [currentArray[row] valueForKey:self.titleKey];
+                        }else{
+                            return @"";
+                        }
+                    }
+                }else{
+                    return @"";
+                }
             }
         }
     }else{
         if([self.dataArray[component] isKindOfClass:[NSArray class]]){
             if(self.keyArray==nil || self.keyArray.count<component+1){
-                obj = [self.dataArray[component] objectAtIndex:row];
+                return [self.dataArray[component] objectAtIndex:row];
             }else{
-                obj = [[self.dataArray[component] objectAtIndex:row] valueForKey:self.keyArray[component]];
+                return  [[self.dataArray[component] objectAtIndex:row] valueForKey:self.keyArray[component]];
             }
         }else{
-            obj = [[self.dataArray objectAtIndex:row] valueForKey:self.titleKey];
+            return [[self.dataArray objectAtIndex:row] valueForKey:self.titleKey];
         }
     }
     return [NSString stringWithFormat:@"%@",obj];

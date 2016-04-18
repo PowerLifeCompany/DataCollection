@@ -13,14 +13,20 @@
 #import "UnifiedTariffsChargeView.h"
 #import "TimeSharingChargeView.h"
 #import "LadderChargeView.h"
+#import "NSSystemDate.h"
 
-@interface FeesDetailViewController ()<UINavigationControllerDelegate, UIImagePickerControllerDelegate,CustomImagePickerDelegate,FeesDetailMainViewDelegate>
+#import "NSFileManager+FileCategory.h"
+#import "UIImageView+WebCache.h"
+
+@interface FeesDetailViewController ()<UINavigationControllerDelegate, UIImagePickerControllerDelegate,CustomImagePickerDelegate,FeesDetailMainViewDelegate,CLImageEditorDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 
 @property (weak, nonatomic) FeesDetailMainView * tableView;
 
 @property (weak, nonatomic) UIView * currentParkingChargeView;
+
+@property(nonatomic,assign)BOOL isChooseImage;
 
 @end
 
@@ -32,7 +38,6 @@
     UIStoryboard * sb=[UIStoryboard storyboardWithName:sbName bundle:nil];
     return [sb instantiateViewControllerWithIdentifier:sbName];
 }
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -47,11 +52,95 @@
     [self.tableView.unifiedTariffsBtn addTarget:self action:@selector(chooseParkingChargesCategory:) forControlEvents:UIControlEventTouchUpInside];
     [self.tableView.timeSharingBtn addTarget:self action:@selector(chooseParkingChargesCategory:) forControlEvents:UIControlEventTouchUpInside];
     [self.tableView.ladderChargesBtn addTarget:self action:@selector(chooseParkingChargesCategory:) forControlEvents:UIControlEventTouchUpInside];
-    
+    if(self.pcs){
+        //名称
+        self.tableView.feesDetailNameTF.text=self.pcs.parkingName;
+        //照片收费标准
+        if(self.pcs.chargeImagePath){
+            if([self.pcs.chargeImagePath containsString:@"http"]){
+                [self.tableView.feesDetailImageView sd_setImageWithURL:[NSURL URLWithString:self.pcs.chargeImagePath]];
+            }else{
+                NSData * data = [NSData dataWithContentsOfFile:self.pcs.chargeImagePath];
+                self.tableView.feesDetailImageView.image=[UIImage imageWithData:data];
+            }
+        }
+        self.tableView.feesDetailTextView.text=self.pcs.comment10;
+        //开放时间
+        NSString * openWorkStr = self.pcs.openIntervalWork;
+        NSArray * openWorkArr = [openWorkStr componentsSeparatedByString:@"~"];
+        if(openWorkArr && [openWorkArr count]==2){
+            self.tableView.workDayBeginTF.text=openWorkArr[0];
+            self.tableView.workDayEndTF.text=openWorkArr[1];
+        }
+        NSString * openNoWorkStr = self.pcs.openIntervalNowork;
+        NSArray * openNoWorkArr = [openNoWorkStr componentsSeparatedByString:@"~"];
+        if(openNoWorkArr && [openNoWorkArr count]==2){
+            self.tableView.weekendBeginTF.text=openNoWorkArr[0];
+            self.tableView.weekendEndTF.text=openNoWorkArr[1];
+        }
+        self.tableView.openTimeCommentTF.text=self.pcs.openComment;
+        //停车费
+        if(self.pcs.tariffTypeUnify){
+            self.tableView.unifiedTariffsBtn.selected=YES;
+            self.tableView.parkingDescLabel.text=self.pcs.tariffTypeUnify;
+        }
+        if(self.pcs.tariffTypeSplit){
+            self.tableView.timeSharingBtn.selected=YES;
+            self.tableView.parkingDescLabel.text=self.pcs.tariffTypeSplit;
+        }
+        if(self.pcs.tariffTypeLadder){
+            self.tableView.ladderChargesBtn.selected=YES;
+            self.tableView.parkingDescLabel.text=self.pcs.tariffTypeLadder;
+        }
+        //总体说明
+        self.tableView.feesDetailCommentTV.text=self.pcs.comment;
+    }
 }
 
 - (void)loadNavigationBar{
     self.navigationItem.title = @"收费详情";
+    UIBarButtonItem * rightItem=[[UIBarButtonItem alloc]initWithTitle:@"取消" style:UIBarButtonItemStyleDone target:self action:@selector(cancleBtnClick:)];
+    self.navigationItem.rightBarButtonItem=rightItem;
+    UIBarButtonItem * leftItem=[[UIBarButtonItem alloc]initWithTitle:@"  保存" style:UIBarButtonItemStyleDone target:self action:@selector(saveBtnClick:)];
+    self.navigationItem.leftBarButtonItem=leftItem;
+}
+
+- (void)saveBtnClick:(UIBarButtonItem *)bbi{
+    if(!self.pcs){
+        self.pcs=[[ParkingChargeStandard alloc]init];
+        [self.dataArray addObject:self.pcs];
+    }
+    //名称
+    self.pcs.parkingName=self.tableView.feesDetailNameTF.text;
+    //照片收费标准
+    if(self.isChooseImage){
+        NSData * data = UIImagePNGRepresentation(self.tableView.feesDetailImageView.image);
+        NSString * imagePath = [[NSSystemDate new] descriptionWithTimeFormatter:@"HHmmssSSS"];
+        [NSFileManager writeToFile:[NSString stringWithFormat:@"%@/%@.png",IMAGE_PATH_PILE_PARKING_TARIFF_FOLDER,imagePath] withData:data];
+        self.pcs.chargeImagePath=[NSString stringWithFormat:@"%@/%@.png",IMAGE_PATH_PILE_PARKING_TARIFF_FOLDER,imagePath];
+    }
+    self.pcs.comment10=self.tableView.feesDetailTextView.text;
+    //开放时间
+    self.pcs.openIntervalWork=[NSString stringWithFormat:@"%@~%@",self.tableView.workDayBeginTF.text,self.tableView.workDayEndTF.text];
+    self.pcs.openIntervalNowork=[NSString stringWithFormat:@"%@~%@",self.tableView.weekendBeginTF.text,self.tableView.weekendEndTF.text];
+    self.pcs.openComment=self.tableView.openTimeCommentTF.text;
+    //停车费
+    if(self.tableView.unifiedTariffsBtn.selected){
+        self.pcs.tariffTypeUnify=self.tableView.parkingDescLabel.text;
+    }
+    if(self.tableView.timeSharingBtn.selected){
+        self.pcs.tariffTypeSplit=self.tableView.parkingDescLabel.text;
+    }
+    if(self.tableView.ladderChargesBtn.selected){
+        self.pcs.tariffTypeLadder=self.tableView.parkingDescLabel.text;
+    }
+    //总体说明
+    self.pcs.comment=self.tableView.feesDetailCommentTV.text;
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)cancleBtnClick:(UIBarButtonItem *)bbi{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 #pragma mark - 自定义代理
 - (void)chooseAlbubmOrPhotoGraphWithIndex:(NSInteger)index{
@@ -71,20 +160,36 @@
 - (void)customImagePickerWithChooseImage:(NSArray *)resultArray{
     if(resultArray.count){
         GJCFAsset * asset=[resultArray firstObject];
-        NSData * data = UIImageJPEGRepresentation(asset.aspectRatioThumbnail, 1);
-        self.tableView.feesDetailImageView.image=[UIImage imageWithData:data];
+        self.tableView.feesDetailImageView.image=asset.fullResolutionImage;
+        self.isChooseImage=YES;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self editorImageWithImage:asset.fullResolutionImage];
+        });
     }
 }
 
 #pragma mark - UIImagePickViewController
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary<NSString *,id> *)editingInfo{
     self.tableView.feesDetailImageView.image=image;
-    //    NSData * data = UIImagePNGRepresentation(image);
+//    NSData * data = UIImagePNGRepresentation(image);
     //加测试
     //写入到沙盒，按照一定的命名规则，暂时没做
+    self.isChooseImage=YES;
     
-    
-    [picker dismissViewControllerAnimated:YES completion:nil];
+    [picker dismissViewControllerAnimated:YES completion:^{
+        [self editorImageWithImage:image];
+    }];
+}
+
+- (void)editorImageWithImage:(UIImage *)image{
+    CLImageEditor *editor = [[CLImageEditor alloc] initWithImage:image delegate:self];
+    editor.title=@"图片编辑";
+    [self presentViewController:editor animated:YES completion:nil];
+}
+
+- (void)imageEditor:(CLImageEditor*)editor didFinishEdittingWithImage:(UIImage*)image{
+    self.tableView.feesDetailImageView.image=image;
+    [editor dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - 私有方法

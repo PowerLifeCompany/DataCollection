@@ -8,6 +8,7 @@
 
 #import "Area.h"
 #import "NSObject+KVC.h"
+#import "NSObject+Description.h"
 
 @implementation Area
 
@@ -15,4 +16,10 @@
     return [self objectWithDict:dict];
 }
 
+- (NSString *)description{
+    return [self otherDescription];
+}
+
 @end
+
+

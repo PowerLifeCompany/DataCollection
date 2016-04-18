@@ -22,6 +22,10 @@
  *  省市区片中片的ID
  */
 @property (nonatomic, assign) NSInteger villageId;
+/**
+ *  小区名称
+ */
+@property (nonatomic, copy) NSString *villageName;
 
 /**
  *  小区路口怎么走图片路径

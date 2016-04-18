@@ -34,7 +34,7 @@
     if (self) {
         CustomPickView * pv = [CustomPickView customPickViewWithDataArray:self.cityDataArray andComponent:3 andIsDependPre:YES andFrame:self.bounds];
             pv.titleKey=TITLE_KEY;
-            pv.dataArrayKey=DATAARRAY_KEY;
+            pv.dataArrayKey=@[DATAARRAY_KEY,DATAARRAY_KEY];
         
         pv.delegate=self;
         [self addSubview:pv];

@@ -25,13 +25,13 @@ NSString *const VERSION_SQL_1_0_3 = @"CREATE TABLE `pile_brand` (`id`	INTEGER,`n
 
 NSString *const VERSION_SQL_1_0_4=@"CREATE TABLE `pile_operator` (`id`	INTEGER,`name`	TEXT,PRIMARY KEY(id));";
 
-NSString *const VERSION_SQL_1_0_5=@"";
+NSString *const VERSION_SQL_1_0_5=@"CREATE TABLE `province` (`Id`	INTEGER,`name`	INTEGER,`createdBy`	INTEGER,`createdDate`	INTEGER,`lastUpdatedBy`	INTEGER,`lastUpdatedDate`	INTEGER,`letter`	INTEGER,`sequence`	INTEGER,`ver`	INTEGER,PRIMARY KEY(Id));";
 
-NSString *const VERSION_SQL_1_0_6=@"";
+NSString *const VERSION_SQL_1_0_6=@"CREATE TABLE `city` (`Id`	INTEGER,`name`	INTEGER,`createdBy`	INTEGER,`createdDate`	INTEGER,`lastUpdatedBy`	INTEGER,`lastUpdatedDate`	INTEGER,`letter`	INTEGER,`sequence`	INTEGER,`ver`	INTEGER,`provinceId`	INTEGER,PRIMARY KEY(Id));";
 
-NSString *const VERSION_SQL_1_0_7=@"";
+NSString *const VERSION_SQL_1_0_7=@"CREATE TABLE `district` (`Id`	INTEGER,`name`	INTEGER,`createdBy`	INTEGER,`createdDate`	INTEGER,`lastUpdatedBy`	INTEGER,`lastUpdatedDate`	INTEGER,`letter`	INTEGER,`sequence`	INTEGER,`ver`	INTEGER,`cityId`	INTEGER,PRIMARY KEY(Id));";
 
-NSString *const VERSION_SQL_1_0_8 = @"";
+NSString *const VERSION_SQL_1_0_8 = @"CREATE TABLE `area` (`Id`	INTEGER,`name`	INTEGER,`createdBy`	INTEGER,`createdDate`	INTEGER,`lastUpdatedBy`	INTEGER,`lastUpdatedDate`	INTEGER,`letter`	INTEGER,`sequence`	INTEGER,`ver`	INTEGER,`districtId`	INTEGER,PRIMARY KEY(Id));";
 
 NSString *const VERSION_SQL_1_0_9 = @"";
 

@@ -140,6 +140,86 @@ static SQLiteManager * manager;
     return [[SQLiteManager shareSQLiteManager]insertWithSQL:sql andArgumentsInArray:valueArray];
 }
 
++ (BOOL)insertWithNoArrayToTableName:(NSString *)tableName andObject:(id)object{
+    NSMutableArray * valueArray=[[NSMutableArray alloc]init];
+    
+    NSArray * propertyArray=[self propertyArrayWithClass:[object class]];
+    NSMutableString * str=[[NSMutableString alloc]init];
+    NSMutableString * sql=[NSMutableString stringWithFormat:@"insert into %@(",tableName==nil? NSStringFromClass([object class]):tableName];
+    BOOL b = false;
+    for (int i=0;i<propertyArray.count;i++) {
+        id value = [object valueForKey:propertyArray[i]];
+        if([value isKindOfClass:[NSArray class]]){
+            if (i==0) {
+                b=true;
+            }
+            continue;
+        }
+        if(value){
+            [valueArray addObject:value];
+        }else{
+            [valueArray addObject:@"NULL"];
+        }
+        if(b){
+            b=false;
+            [sql appendFormat:@"%@",propertyArray[i]];
+            [str appendString:@"?"];
+            continue;
+        }
+        if(i==0){
+            [sql appendFormat:@"%@",propertyArray[i]];
+            [str appendString:@"?"];
+        }else{
+            [sql appendFormat:@",%@",propertyArray[i]];
+            [str appendString:@",?"];
+        }
+    }
+    
+    [sql appendFormat:@") values(%@);",str];
+    
+    return [[SQLiteManager shareSQLiteManager]insertWithSQL:sql andArgumentsInArray:valueArray];
+}
+
++ (BOOL)insertOrReplaceWithNoArrayToTableName:(NSString *)tableName andObject:(id)object{
+    NSMutableArray * valueArray=[[NSMutableArray alloc]init];
+    
+    NSArray * propertyArray=[self propertyArrayWithClass:[object class]];
+    NSMutableString * str=[[NSMutableString alloc]init];
+    NSMutableString * sql=[NSMutableString stringWithFormat:@"replace into %@(",tableName==nil? NSStringFromClass([object class]):tableName];
+    BOOL b = false;
+    for (int i=0;i<propertyArray.count;i++) {
+        id value = [object valueForKey:propertyArray[i]];
+        if([value isKindOfClass:[NSArray class]]){
+            if (i==0) {
+                b=true;
+            }
+            continue;
+        }
+        if(value){
+            [valueArray addObject:value];
+        }else{
+            [valueArray addObject:@"NULL"];
+        }
+        if(b){
+            b=false;
+            [sql appendFormat:@"%@",propertyArray[i]];
+            [str appendString:@"?"];
+            continue;
+        }
+        if(i==0){
+            [sql appendFormat:@"%@",propertyArray[i]];
+            [str appendString:@"?"];
+        }else{
+            [sql appendFormat:@",%@",propertyArray[i]];
+            [str appendString:@",?"];
+        }
+    }
+    
+    [sql appendFormat:@") values(%@);",str];
+    
+    return [[SQLiteManager shareSQLiteManager]insertWithSQL:sql andArgumentsInArray:valueArray];
+}
+
 + (BOOL)insertOrReplaceToTableName:(NSString *)tableName andObject:(id)object{
     NSMutableArray * valueArray=[[NSMutableArray alloc]init];
     
@@ -347,6 +427,8 @@ static SQLiteManager * manager;
 //    }
     
     if(![fileManager fileExistsAtPath:databasePath]){//不存在
+        NSString * filePath = [[NSBundle mainBundle]pathForResource:@"database.sqlite3" ofType:nil];
+        [fileManager copyItemAtPath:filePath toPath:databasePath error:nil];
         manager.databaseVersion=VERSION_0;
         [manager updateDatabase];
         return;
@@ -368,10 +450,15 @@ static SQLiteManager * manager;
 -(void)updateDatabase{
     if([self.databaseVersion isEqualToString:VERSION_0]){
         NSLog(@"进行首次安装");
-        [self createTableWithSQL:VERSION_SQL_1_0_1];
-        [self insertWithSQL:VERSION_SQL_1_0_2 andArgumentsInArray:nil];
-        [self createTableWithSQL:VERSION_SQL_1_0_3];
-        [self createTableWithSQL:VERSION_SQL_1_0_4];
+//        [self createTableWithSQL:VERSION_SQL_1_0_1];
+//        [self insertWithSQL:VERSION_SQL_1_0_2 andArgumentsInArray:nil];
+//        [self createTableWithSQL:VERSION_SQL_1_0_3];
+//        [self createTableWithSQL:VERSION_SQL_1_0_4];
+//        [self createTableWithSQL:VERSION_SQL_1_0_5];
+//        [self createTableWithSQL:VERSION_SQL_1_0_6];
+//        [self createTableWithSQL:VERSION_SQL_1_0_7];
+//        [self createTableWithSQL:VERSION_SQL_1_0_8];
+        
         self.databaseVersion=VERSION_1_0;
     }
 //    if ([self.databaseVersion isEqualToString:VERSION_1_0]){

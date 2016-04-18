@@ -76,10 +76,16 @@
  *  @return 数组
  */
 - (FMResultSet *)queryWithSQL:(NSString *)sql andArgumentsInArray:(NSArray *)array;
-
+/**
+ *  检查数据库版本，不相符则更新
+ */
 + (void)checkAndUpdateDatabaseVersion;
 
 + (BOOL)insertToTableName:(NSString *)tableName andObject:(id)object;
+
++ (BOOL)insertWithNoArrayToTableName:(NSString *)tableName andObject:(id)object;
+
++ (BOOL)insertOrReplaceWithNoArrayToTableName:(NSString *)tableName andObject:(id)object;
 
 + (BOOL)insertOrReplaceToTableName:(NSString *)tableName andObject:(id)object;
 

@@ -14,4 +14,6 @@
 
 + (NSInteger)cacheSize;
 
++ (void)writeToFile:(NSString *)filePath withData:(NSData *)data;
+
 @end

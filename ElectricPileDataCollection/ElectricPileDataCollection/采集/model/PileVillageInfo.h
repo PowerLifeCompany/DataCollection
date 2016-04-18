@@ -8,7 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "PileVillageBasicInfo.h"
+#import "ParkingChargeStandard.h"
 #import "PileGroupInfo.h"
+#import "Province.h"
+#import "City.h"
+#import "District.h"
 #import "Area.h"
 
 /**
@@ -44,10 +48,21 @@
 /**
  *  电桩组信息
  */
-@property(nonatomic,strong)NSArray<PileGroupInfo *> *sites;
-
+@property(nonatomic,strong)NSMutableArray<PileGroupInfo *> *sites;
+/**
+ *  收费标准信息
+ */
+@property(nonatomic,strong)NSMutableArray<ParkingChargeStandard *> * parkings;
+/**
+ *  省市区片
+ */
+@property(nonatomic,strong)Province * province;
+@property(nonatomic,strong)City * city;
+@property(nonatomic,strong)District * district;
 @property(nonatomic,strong)Area * area;
 
 + (instancetype)sharedPileVillageInfo;
+
++ (void)setSharedPileVillageInfo:(PileVillageInfo *)sharedPileVillageInfo;
 
 @end

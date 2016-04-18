@@ -15,11 +15,30 @@
 
 #define SERVER_URL @"http://192.168.1.38/pile-service"
 
+//获取所有数据（包含省市区片）
+#define GET_ALL_REGION_URL (SERVER_URL@"/region/all")
+
+//获得所有省数据
+#define GET_ALL_PROVINCE_URL @"/region/province/all"
+
+//根据省获得市数据
+#define GET_ALL_CITY_URL @"/region/city/%ld/all"
+
+//根据市获得区数据
+#define GET_ALL_DISTRICT_URL @"/region/district/%ld/all"
+
+//根据区获得片数据
+#define GET_ALL_AREA_URL @"/region/area/%ld/all"
+
 //获得片的数据
 #define GET_ALL_VILLAGE_URL (SERVER_URL@"/region/area/%ld/all")
 
+#define ADD_VILLAGE_URL (SERVER_URL@"/region/village/add")
+
 //SQL语句
 #define INSERT_PILE_BRAND @"REPLACE INTO `pile_brand`(`id`,`name`) VALUES (?,?);"
+
+//#define INSERT_ @"INSERT INTO `province`(`Id`,`name`,`createdBy`,`createdDate`,`lastUpdatedBy`,`lastUpdatedDate`,`letter`,`sequence`,`ver`) VALUES (?,?,?,?,?,?,?,?,?);"
 
 //颜色
 #define LIGHT_BG_COLOR [UIColor colorWithRed:0.92f green:0.91f blue:0.92f alpha:1.00f]
@@ -27,7 +46,28 @@
 #define BOY_BG_COLOR [UIColor colorWithRed:0.31f green:0.78f blue:0.97f alpha:1.00f]
 
 //存放路径
-#define PICKER_CURRENT_IMAGE_PATH [NSString stringWithFormat:@"%@/Library/Caches/currentImage.png",NSHomeDirectory()]
+//数据采集总的文件夹
+#define IMAGE_PATH_DATA_COLLECTION [NSString stringWithFormat:@"%@/Library/Caches/dataCollImage",NSHomeDirectory()]
+//小区入口，照片，路口如何走
+#define IMAGE_PATH_PILE_VILLAGE_ENTRY [NSString stringWithFormat:@"%@/Library/Caches/dataCollImage/pile_village_entry.png",NSHomeDirectory()]
+//小区大门，照片，左转？右转？
+#define IMAGE_PATH_PILE_VILLAGE_GATE [NSString stringWithFormat:@"%@/Library/Caches/dataCollImage/pile_village_gate.png",NSHomeDirectory()]
+//小区位置，照片，位于小区那里？
+#define IMAGE_PATH_PILE_SPACE_SITE_FOLDER [NSString stringWithFormat:@"%@/Library/Caches/dataCollImage/pile_space_site",NSHomeDirectory()]
+//电桩全景图，照片
+#define IMAGE_PATH_PILE_SPACE_PILES_FOLDER [NSString stringWithFormat:@"%@/Library/Caches/dataCollImage/pile_space_piles",NSHomeDirectory()]
+//空车位，照片
+#define IMAGE_PATH_PILE_SPACE_EMPTY_FOLDER [NSString stringWithFormat:@"%@/Library/Caches/dataCollImage/pile_space_empty",NSHomeDirectory()]
+//充电中，照片
+#define IMAGE_PATH_PILE_SPACE_CHARGING_FOLDER [NSString stringWithFormat:@"%@/Library/Caches/dataCollImage/pile_space_charging",NSHomeDirectory()]
+//电桩细节/用法，logo品牌
+#define IMAGE_PATH_PILE_DETAIL_FOLDER [NSString stringWithFormat:@"%@/Library/Caches/dataCollImage/pile_detail",NSHomeDirectory()]
+//充电口正面照
+#define IMAGE_PATH_PILE_INTERFACE_FRONT_FOLDER [NSString stringWithFormat:@"%@/Library/Caches/dataCollImage/pile_interface_front",NSHomeDirectory()]
+//充电把手细节照，重量等
+#define IMAGE_PATH_PILE_INTERFACE_HANDLER_FOLDER [NSString stringWithFormat:@"%@/Library/Caches/dataCollImage/pile_interface_handler",NSHomeDirectory()]
+//停车场收费牌
+#define IMAGE_PATH_PILE_PARKING_TARIFF_FOLDER [NSString stringWithFormat:@"%@/Library/Caches/dataCollImage/pile_parking_tariff",NSHomeDirectory()]
 
 //常用变量
 #define FINAL_DATA_REQUEST_FAIL @"数据请求失败！"
