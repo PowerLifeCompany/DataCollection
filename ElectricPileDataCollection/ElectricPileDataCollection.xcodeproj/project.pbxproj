@@ -50,7 +50,6 @@
 		7706F99F1CC06DA500EA1ED6 /* AddInterfaceCellThree.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7706F9821CC06DA500EA1ED6 /* AddInterfaceCellThree.xib */; };
 		7706F9A01CC06DA500EA1ED6 /* AddInterfaceCellTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7706F9841CC06DA500EA1ED6 /* AddInterfaceCellTwo.m */; };
 		7706F9A11CC06DA500EA1ED6 /* AddInterfaceCellTwo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7706F9851CC06DA500EA1ED6 /* AddInterfaceCellTwo.xib */; };
-		7706F9A21CC06DA500EA1ED6 /* AddPileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7706F9861CC06DA500EA1ED6 /* AddPileViewController.storyboard */; };
 		7706F9A31CC06DA500EA1ED6 /* CustomCellOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 7706F9881CC06DA500EA1ED6 /* CustomCellOne.m */; };
 		7706F9A41CC06DA500EA1ED6 /* CustomCellOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7706F9891CC06DA500EA1ED6 /* CustomCellOne.xib */; };
 		7706F9A51CC06DA500EA1ED6 /* CustomCellTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7706F98B1CC06DA500EA1ED6 /* CustomCellTwo.m */; };
@@ -209,6 +208,7 @@
 		77AB26D11CBE525C0067EEF8 /* RegionAll.m in Sources */ = {isa = PBXBuildFile; fileRef = 77AB26D01CBE525C0067EEF8 /* RegionAll.m */; };
 		77AC1A371CB7A9CB00B376E6 /* addPic.png in Resources */ = {isa = PBXBuildFile; fileRef = 77AC1A361CB7A9CB00B376E6 /* addPic.png */; };
 		77AC1A401CB7B0B600B376E6 /* UIView+LayoutCornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 77AC1A3F1CB7B0B600B376E6 /* UIView+LayoutCornerRadius.m */; };
+		77E257031CC464D10016DDC5 /* AddPileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E257021CC464D10016DDC5 /* AddPileViewController.storyboard */; };
 		77E61A731CB75434002F38FC /* charging_mouth_type.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77E61A701CB75434002F38FC /* charging_mouth_type.plist */; };
 		77E61A741CB75434002F38FC /* pile_brand.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77E61A711CB75434002F38FC /* pile_brand.plist */; };
 		77E61A751CB75434002F38FC /* pile_operators.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77E61A721CB75434002F38FC /* pile_operators.plist */; };
@@ -309,7 +309,6 @@
 		7706F9831CC06DA500EA1ED6 /* AddInterfaceCellTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddInterfaceCellTwo.h; sourceTree = "<group>"; };
 		7706F9841CC06DA500EA1ED6 /* AddInterfaceCellTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddInterfaceCellTwo.m; sourceTree = "<group>"; };
 		7706F9851CC06DA500EA1ED6 /* AddInterfaceCellTwo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddInterfaceCellTwo.xib; sourceTree = "<group>"; };
-		7706F9861CC06DA500EA1ED6 /* AddPileViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddPileViewController.storyboard; sourceTree = "<group>"; };
 		7706F9871CC06DA500EA1ED6 /* CustomCellOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellOne.h; sourceTree = "<group>"; };
 		7706F9881CC06DA500EA1ED6 /* CustomCellOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellOne.m; sourceTree = "<group>"; };
 		7706F9891CC06DA500EA1ED6 /* CustomCellOne.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCellOne.xib; sourceTree = "<group>"; };
@@ -624,6 +623,7 @@
 		77AC1A361CB7A9CB00B376E6 /* addPic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addPic.png; sourceTree = "<group>"; };
 		77AC1A3E1CB7B0B600B376E6 /* UIView+LayoutCornerRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LayoutCornerRadius.h"; sourceTree = "<group>"; };
 		77AC1A3F1CB7B0B600B376E6 /* UIView+LayoutCornerRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LayoutCornerRadius.m"; sourceTree = "<group>"; };
+		77E257021CC464D10016DDC5 /* AddPileViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddPileViewController.storyboard; sourceTree = "<group>"; };
 		77E61A701CB75434002F38FC /* charging_mouth_type.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = charging_mouth_type.plist; sourceTree = "<group>"; };
 		77E61A711CB75434002F38FC /* pile_brand.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = pile_brand.plist; sourceTree = "<group>"; };
 		77E61A721CB75434002F38FC /* pile_operators.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = pile_operators.plist; sourceTree = "<group>"; };
@@ -1582,7 +1582,7 @@
 				7706F9831CC06DA500EA1ED6 /* AddInterfaceCellTwo.h */,
 				7706F9841CC06DA500EA1ED6 /* AddInterfaceCellTwo.m */,
 				7706F9851CC06DA500EA1ED6 /* AddInterfaceCellTwo.xib */,
-				7706F9861CC06DA500EA1ED6 /* AddPileViewController.storyboard */,
+				77E257021CC464D10016DDC5 /* AddPileViewController.storyboard */,
 				7706F9871CC06DA500EA1ED6 /* CustomCellOne.h */,
 				7706F9881CC06DA500EA1ED6 /* CustomCellOne.m */,
 				7706F9891CC06DA500EA1ED6 /* CustomCellOne.xib */,
@@ -1735,9 +1735,9 @@
 				77E61A751CB75434002F38FC /* pile_operators.plist in Resources */,
 				7726EEC81CB6303100D433FB /* Tabbar.plist in Resources */,
 				7706F9B01CC074D600EA1ED6 /* checkBox_yes.png in Resources */,
-				7706F9A21CC06DA500EA1ED6 /* AddPileViewController.storyboard in Resources */,
 				7706F9AF1CC074D600EA1ED6 /* checkBox_no.png in Resources */,
 				77AC1A371CB7A9CB00B376E6 /* addPic.png in Resources */,
+				77E257031CC464D10016DDC5 /* AddPileViewController.storyboard in Resources */,
 				7726EEAE1CB6303100D433FB /* MJRefresh.bundle in Resources */,
 				77E61A731CB75434002F38FC /* charging_mouth_type.plist in Resources */,
 				77510D981CBB5AD00052080F /* GjAssetsPicker_image_selected_blue@2x.png in Resources */,
