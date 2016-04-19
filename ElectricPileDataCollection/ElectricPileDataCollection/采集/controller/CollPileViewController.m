@@ -9,9 +9,9 @@
 #import "CollPileViewController.h"
 #import "CustomImagePickerViewController.h"
 #import "ChargeStandardViewController.h"
+#import "PileInfoViewController.h"
 #import "AddPileInterfaceViewController.h"
 #import "FeesDetailViewController.h"
-#import "PileInfoViewController.h"
 #import "AddPileViewController.h"
 #import "UIView+LayoutCornerRadius.h"
 #import "CollPileMainView.h"
@@ -62,6 +62,14 @@
 
 - (void)loadNavigationBar{
     self.navigationItem.title = @"小区信息(1/3)";
+    
+    UIBarButtonItem *backBtnItem = [[UIBarButtonItem alloc] initWithTitle:@"数据列表" style:UIBarButtonItemStyleDone target:self action:@selector(backClick:)];
+    self.navigationItem.leftBarButtonItem = backBtnItem;
+}
+
+- (void)backClick:(UIButton *)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)nextStep:(UIButton *)sender {
@@ -83,9 +91,8 @@
         info.pile_village.villageEntranceImagePath=imagePath;
     }
     
-    UIStoryboard *addPileInterfaceSb = [UIStoryboard storyboardWithName:@"PileInfoDataViewController" bundle:nil];
-    AddPileInterfaceViewController *addPileInterfaceVC = [addPileInterfaceSb instantiateViewControllerWithIdentifier:@"PileInfoDataViewController"];
-    [self.navigationController pushViewController:addPileInterfaceVC animated:YES];
+    PileInfoViewController *pileInfoVC = [[PileInfoViewController alloc] init];
+    [self.navigationController pushViewController:pileInfoVC animated:YES];
 }
 
 #pragma mark - 自定义代理

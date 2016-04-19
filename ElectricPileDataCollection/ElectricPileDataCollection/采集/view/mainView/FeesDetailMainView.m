@@ -55,8 +55,8 @@
 #pragma mark - 选择相册或者相机
 - (void)customPickView:(CustomPickView *)customPickView andSelectedArray:(NSArray *)selectedArray andDataArray:(NSArray *)dataArray{
     customPickView.hidden=YES;
-    NSInteger num = [selectedArray[0] integerValue];
-    NSLog(@"%@",dataArray[num]);
+    //NSInteger num = [selectedArray[0] integerValue];
+    //NSLog(@"%@",dataArray[num]);
 }
 
 - (void)customPickViewCancleTouch:(CustomPickView *)customPickView{

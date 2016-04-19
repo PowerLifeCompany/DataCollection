@@ -39,7 +39,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z4D-Oo-1gW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="187.5" y="-238.5"/>
+            <point key="canvasLocation" x="123.5" y="-636.5"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="MDI-Oq-hXK">
@@ -75,7 +75,10 @@
                                                         <constraint firstAttribute="height" constant="30" id="dAI-cN-BQg"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="dPr-sN-dq4" id="K9o-7H-yHK"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="经度:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l1F-GM-Nba">
                                                     <rect key="frame" x="20" y="50" width="40" height="30"/>
@@ -93,7 +96,7 @@
                                                         <constraint firstAttribute="height" constant="30" id="uBL-lB-aHe"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="纬度:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZJ-VF-59i">
                                                     <rect key="frame" x="20" y="90" width="40" height="30"/>
@@ -111,7 +114,7 @@
                                                         <constraint firstAttribute="height" constant="30" id="Ksn-jU-Pkt"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -155,10 +158,10 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WZG-Dn-3UJ">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="请输入描述性文字..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WZG-Dn-3UJ">
                                                     <rect key="frame" x="130" y="40" width="225" height="99.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                             <real key="value" value="0.5"/>
@@ -212,11 +215,12 @@
                                                         <constraint firstAttribute="width" constant="100" id="C8z-Fx-aJZ"/>
                                                     </constraints>
                                                 </imageView>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Jq5-Ha-fWJ">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="请输入描述性文字..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Jq5-Ha-fWJ">
                                                     <rect key="frame" x="130" y="40" width="225" height="99.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                             <real key="value" value="0.5"/>
@@ -264,11 +268,11 @@
                                                         <constraint firstAttribute="width" constant="100" id="P1t-Ur-gBz"/>
                                                     </constraints>
                                                 </imageView>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HJS-oX-SgJ">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="请输入描述性文字..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HJS-oX-SgJ">
                                                     <rect key="frame" x="130" y="40" width="225" height="99.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                             <real key="value" value="0.5"/>
@@ -316,11 +320,11 @@
                                                         <constraint firstAttribute="width" constant="100" id="M1x-r2-wOV"/>
                                                     </constraints>
                                                 </imageView>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Xu4-YK-3DB">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="请输入描述性文字..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Xu4-YK-3DB">
                                                     <rect key="frame" x="130" y="40" width="225" height="99.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                             <real key="value" value="0.5"/>
@@ -379,7 +383,7 @@
                                                         <constraint firstAttribute="height" constant="30" id="zBk-37-9SU"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小(个):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzi-Qj-QBQ">
                                                     <rect key="frame" x="20" y="80" width="50" height="30"/>
@@ -398,7 +402,7 @@
                                                         <constraint firstAttribute="width" constant="40" id="KqO-bg-EAw"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="中(个):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6vU-sl-j9n">
                                                     <rect key="frame" x="145" y="40" width="50" height="30"/>
@@ -417,7 +421,7 @@
                                                         <constraint firstAttribute="width" constant="40" id="7Tx-LC-I2x"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="微(个):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KkR-n7-VWQ">
                                                     <rect key="frame" x="145" y="80" width="50" height="30"/>
@@ -436,7 +440,7 @@
                                                         <constraint firstAttribute="height" constant="30" id="mb4-GA-Yg2"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -483,7 +487,7 @@
                                                     <rect key="frame" x="20" y="40" width="335" height="99.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                             <real key="value" value="0.5"/>
@@ -512,8 +516,24 @@
                             </tableViewSection>
                         </sections>
                         <connections>
+                            <outlet property="bnumTextField" destination="SCC-6L-LLb" id="Quc-k7-Xva"/>
+                            <outlet property="carChargingImageView" destination="DFS-mb-9fW" id="8i1-MW-Gtp"/>
+                            <outlet property="carChargingTextView" destination="Xu4-YK-3DB" id="0K8-Vq-PAE"/>
                             <outlet property="dataSource" destination="dPr-sN-dq4" id="L94-3m-0Gj"/>
                             <outlet property="delegate" destination="dPr-sN-dq4" id="hEo-NN-anK"/>
+                            <outlet property="instructionsTextView" destination="fsM-31-8UA" id="Y1S-rS-RF0"/>
+                            <outlet property="latitudeTextField" destination="Zak-oU-hiv" id="7ha-8g-CcP"/>
+                            <outlet property="locationTextField" destination="lBY-eV-mrY" id="UfJ-io-dLe"/>
+                            <outlet property="longitudeTextField" destination="a0C-5Q-Fc5" id="hV4-58-KGz"/>
+                            <outlet property="mnumTextField" destination="gdM-48-Bwl" id="AOG-BK-xVm"/>
+                            <outlet property="parkingImageView" destination="PMY-v4-EWU" id="YKo-6e-Rwg"/>
+                            <outlet property="parkingTextView" destination="WZG-Dn-3UJ" id="Rxn-27-NH1"/>
+                            <outlet property="parkingVacancyImageView" destination="WgV-00-Sia" id="kF2-Eq-cny"/>
+                            <outlet property="parkingVacancyTextView" destination="HJS-oX-SgJ" id="zKN-cA-0Za"/>
+                            <outlet property="pilePanoramicImageView" destination="gCv-ty-vKh" id="wBL-jX-GLn"/>
+                            <outlet property="pilePanoramicTextView" destination="Jq5-Ha-fWJ" id="col-5z-N4t"/>
+                            <outlet property="snumTextField" destination="L4W-wo-EdN" id="USC-Gq-weS"/>
+                            <outlet property="tnumTextField" destination="WLm-VQ-Cjp" id="JXK-Ku-sOj"/>
                         </connections>
                     </tableView>
                     <toolbarItems/>
@@ -522,7 +542,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kGe-t2-Pen" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="654.5" y="-238.5"/>
+            <point key="canvasLocation" x="570.5" y="-636.5"/>
         </scene>
     </scenes>
     <resources>
