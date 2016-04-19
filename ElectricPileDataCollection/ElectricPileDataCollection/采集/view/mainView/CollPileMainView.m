@@ -9,6 +9,7 @@
 #import "CollPileMainView.h"
 #import "PileVillageInfo.h"
 #import "CustomPickView.h"
+#import "CustomChooseCityView.h"
 #import "CustomPopupView.h"
 #import "CustomAlertView.h"
 #import "UIView+LayoutCornerRadius.h"

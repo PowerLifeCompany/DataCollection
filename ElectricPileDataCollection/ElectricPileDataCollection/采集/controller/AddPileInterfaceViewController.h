@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddPileViewController.h"
 
 @interface AddPileInterfaceViewController : UIViewController
+
+@property (strong, nonatomic) NSMutableArray *dataArray;
+
+@property (strong, nonatomic) AddPileViewController *pile;
+
+@property (nonatomic, strong) NSArray<PileInterface *> *interfaces;
 
 @end

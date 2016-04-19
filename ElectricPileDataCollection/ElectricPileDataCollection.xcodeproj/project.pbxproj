@@ -216,6 +216,11 @@
 		77E61A7E1CB773BD002F38FC /* IpaInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77E61A7D1CB773BD002F38FC /* IpaInfo.plist */; };
 		77E61A811CB77553002F38FC /* PileOperator.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E61A801CB77553002F38FC /* PileOperator.m */; };
 		EE1CDD14DC98A4BC5A6B2258 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BAE79107C8FA376AEA02B30D /* libPods.a */; };
+		FA0E47DD1CC46B4C00687952 /* PileInfoDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0E47DB1CC46B4C00687952 /* PileInfoDataCell.m */; };
+		FA0E47DE1CC46B4C00687952 /* PileInfoDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA0E47DC1CC46B4C00687952 /* PileInfoDataCell.xib */; };
+		FA0E47E01CC4D4EF00687952 /* PileDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0E47DF1CC4D4EF00687952 /* PileDetailViewController.storyboard */; };
+		FA0E47E31CC4D7C900687952 /* PileDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0E47E21CC4D7C900687952 /* PileDetailViewController.m */; };
+		FA0E47E61CC4D95D00687952 /* PileDetailMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0E47E51CC4D95D00687952 /* PileDetailMainView.m */; };
 		FA1BC5E41CBD033400B9F1FD /* select_no.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1BC5E21CBD033400B9F1FD /* select_no.png */; };
 		FA1BC5E51CBD033400B9F1FD /* select_yes.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1BC5E31CBD033400B9F1FD /* select_yes.png */; };
 /* End PBXBuildFile section */
@@ -633,6 +638,14 @@
 		77E61A7F1CB77553002F38FC /* PileOperator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PileOperator.h; sourceTree = "<group>"; };
 		77E61A801CB77553002F38FC /* PileOperator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PileOperator.m; sourceTree = "<group>"; };
 		BAE79107C8FA376AEA02B30D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA0E47DA1CC46B4C00687952 /* PileInfoDataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PileInfoDataCell.h; sourceTree = "<group>"; };
+		FA0E47DB1CC46B4C00687952 /* PileInfoDataCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PileInfoDataCell.m; sourceTree = "<group>"; };
+		FA0E47DC1CC46B4C00687952 /* PileInfoDataCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PileInfoDataCell.xib; sourceTree = "<group>"; };
+		FA0E47DF1CC4D4EF00687952 /* PileDetailViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PileDetailViewController.storyboard; sourceTree = "<group>"; };
+		FA0E47E11CC4D7C900687952 /* PileDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PileDetailViewController.h; sourceTree = "<group>"; };
+		FA0E47E21CC4D7C900687952 /* PileDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PileDetailViewController.m; sourceTree = "<group>"; };
+		FA0E47E41CC4D95D00687952 /* PileDetailMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PileDetailMainView.h; sourceTree = "<group>"; };
+		FA0E47E51CC4D95D00687952 /* PileDetailMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PileDetailMainView.m; sourceTree = "<group>"; };
 		FA1BC5E21CBD033400B9F1FD /* select_no.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select_no.png; sourceTree = "<group>"; };
 		FA1BC5E31CBD033400B9F1FD /* select_yes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select_yes.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -712,6 +725,9 @@
 				7706F9451CC06B8700EA1ED6 /* CollPileViewController.storyboard */,
 				7706F9461CC06B8700EA1ED6 /* FeesDetailMainView.h */,
 				7706F9471CC06B8700EA1ED6 /* FeesDetailMainView.m */,
+				FA0E47E41CC4D95D00687952 /* PileDetailMainView.h */,
+				FA0E47E51CC4D95D00687952 /* PileDetailMainView.m */,
+				FA0E47DF1CC4D4EF00687952 /* PileDetailViewController.storyboard */,
 				7706F9481CC06B8700EA1ED6 /* FeesDetailViewController.storyboard */,
 				7706F9491CC06B8700EA1ED6 /* PileInfoDataViewController.storyboard */,
 				7706F94A1CC06B8700EA1ED6 /* PileInfoViewController.storyboard */,
@@ -813,8 +829,10 @@
 				7706F9661CC06D1A00EA1ED6 /* PileInfoDataViewController.m */,
 				7706F9671CC06D1A00EA1ED6 /* PileInfoViewController.h */,
 				7706F9681CC06D1A00EA1ED6 /* PileInfoViewController.m */,
-				7706F9691CC06D1A00EA1ED6 /* TestDataViewController.h */,
 				7706F96A1CC06D1A00EA1ED6 /* TestDataViewController.m */,
+				7706F9691CC06D1A00EA1ED6 /* TestDataViewController.h */,
+				FA0E47E11CC4D7C900687952 /* PileDetailViewController.h */,
+				FA0E47E21CC4D7C900687952 /* PileDetailViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -1595,6 +1613,9 @@
 				7706F9901CC06DA500EA1ED6 /* PileInfoCell.h */,
 				7706F9911CC06DA500EA1ED6 /* PileInfoCell.m */,
 				7706F9921CC06DA500EA1ED6 /* PileInfoCell.xib */,
+				FA0E47DA1CC46B4C00687952 /* PileInfoDataCell.h */,
+				FA0E47DB1CC46B4C00687952 /* PileInfoDataCell.m */,
+				FA0E47DC1CC46B4C00687952 /* PileInfoDataCell.xib */,
 				7706F9931CC06DA500EA1ED6 /* SpecialInstructionsCell.h */,
 				7706F9941CC06DA500EA1ED6 /* SpecialInstructionsCell.m */,
 				7706F9951CC06DA500EA1ED6 /* SpecialInstructionsCell.xib */,
@@ -1735,7 +1756,9 @@
 				77E61A751CB75434002F38FC /* pile_operators.plist in Resources */,
 				7726EEC81CB6303100D433FB /* Tabbar.plist in Resources */,
 				7706F9B01CC074D600EA1ED6 /* checkBox_yes.png in Resources */,
+				FA0E47E01CC4D4EF00687952 /* PileDetailViewController.storyboard in Resources */,
 				7706F9AF1CC074D600EA1ED6 /* checkBox_no.png in Resources */,
+				FA0E47DE1CC46B4C00687952 /* PileInfoDataCell.xib in Resources */,
 				77AC1A371CB7A9CB00B376E6 /* addPic.png in Resources */,
 				77E257031CC464D10016DDC5 /* AddPileViewController.storyboard in Resources */,
 				7726EEAE1CB6303100D433FB /* MJRefresh.bundle in Resources */,
@@ -1900,6 +1923,7 @@
 				7706F9721CC06D1A00EA1ED6 /* PileInfoViewController.m in Sources */,
 				7726EEBD1CB6303100D433FB /* UIImage+GIF.m in Sources */,
 				7726EE671CB6303100D433FB /* AFHTTPRequestOperationManager.m in Sources */,
+				FA0E47E31CC4D7C900687952 /* PileDetailViewController.m in Sources */,
 				7726EEFF1CB6463C00D433FB /* Pile.m in Sources */,
 				7726EEC51CB6303100D433FB /* CustomAlertView.m in Sources */,
 				7726EE981CB6303100D433FB /* MJIvar.m in Sources */,
@@ -1916,6 +1940,7 @@
 				7726EEBA1CB6303100D433FB /* SDWebImageManager.m in Sources */,
 				7726EE661CB6303100D433FB /* AFHTTPRequestOperation.m in Sources */,
 				7726EE531CB6303100D433FB /* NSFileManager+FileCategory.m in Sources */,
+				FA0E47DD1CC46B4C00687952 /* PileInfoDataCell.m in Sources */,
 				77510D8A1CBB5AD00052080F /* GJCFAsset.m in Sources */,
 				77E61A781CB75C99002F38FC /* PileBrand.m in Sources */,
 				7706F99C1CC06DA500EA1ED6 /* AddInterfaceCellSix.m in Sources */,
@@ -1925,6 +1950,7 @@
 				7726EE991CB6303100D433FB /* MJMember.m in Sources */,
 				77AC1A401CB7B0B600B376E6 /* UIView+LayoutCornerRadius.m in Sources */,
 				77510D891CBB5AD00052080F /* GJCFAlbums.m in Sources */,
+				FA0E47E61CC4D95D00687952 /* PileDetailMainView.m in Sources */,
 				7706F9961CC06DA500EA1ED6 /* AddInterfaceCellFive.m in Sources */,
 				7706F9A91CC06DA500EA1ED6 /* PileInfoCell.m in Sources */,
 				7726EEA51CB6303100D433FB /* MJRefreshAutoGifFooter.m in Sources */,

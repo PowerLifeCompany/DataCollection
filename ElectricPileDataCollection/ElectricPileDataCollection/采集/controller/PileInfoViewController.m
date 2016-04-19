@@ -7,6 +7,7 @@
 //
 
 #import "PileInfoViewController.h"
+#import "AddPileViewController.h"
 #import "PileInfoCell.h"
 #import "ParkingTypeCell.h"
 #import "CustomCellTwo.h"
@@ -20,6 +21,8 @@
 @property (strong, nonatomic) UITextView *desTextView;
 
 @property (strong, nonatomic) UILabel *placeHolderLabel;
+
+@property(nonatomic,strong)NSMutableArray * dataArray;
 
 @end
 
@@ -37,11 +40,44 @@
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self loadNavigationBar];
+    
+    if (self.pileGroupSpace) {
+        
+    }
+    
+    
 }
 
 - (void)loadNavigationBar
 {
     self.navigationItem.title = @"电桩详情";
+    
+    UIBarButtonItem *saveBtnItem = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStyleDone target:self action:@selector(saveClick:)];
+    self.navigationItem.leftBarButtonItem = saveBtnItem;
+    
+    UIBarButtonItem *cancelBtnItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStyleDone target:self action:@selector(cancelClick:)];
+    self.navigationItem.rightBarButtonItem = cancelBtnItem;
+    
+}
+
+- (void)saveClick:(UIButton *)sender
+{
+    // 保存数据
+    
+    // 桩信息多一条
+    
+    // 返回上一页
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)cancelClick:(UIButton *)sender
+{
+    // 数据清空
+    
+    // 桩信息条数不变
+    
+    // 返回上一页
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - tableView协议代理
@@ -57,7 +93,7 @@
     }else if (section == 1){
         return 6;
     }else{
-        return 1;
+        return self.dataArray.count;
     }
 }
 
@@ -107,17 +143,12 @@
                     cell.titleLabel.text = @"充电中:";
                 }
             }
-            //cell.placeHolderLabel.text = @"请输入...";
-            //cell.placeHolderLabel.textColor = [UIColor lightGrayColor];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
-            //self.desTextView = cell.descTextView;
-            //self.placeHolderLabel = cell.placeHolderLabel;
             return cell;
         }
         
     }else{
         UITableViewCell * cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-        cell.textLabel.text=@"测试---";
         return cell;
     }
         
@@ -130,7 +161,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 30;
+    return 40;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
@@ -141,23 +172,67 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if(indexPath.section == 0){
-        return 160;
+        return 130;
     }else if (indexPath.section == 1){
-        return 160;
+        
+        if (indexPath.row == 4) {
+            return 140;
+        }else{
+            return 160;
+        }
+        
     }else{
         return 60;
     }
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+- (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     if (section == 0) {
-        return @"位置";
+        UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 30, 0, 30, 30)];
+        UILabel *titleSectionL = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, 150, 40)];
+        titleSectionL.text = @"位置:";
+        titleSectionL.font = [UIFont systemFontOfSize:13.0];
+        titleSectionL.textColor = [UIColor grayColor];
+        [headerView addSubview:titleSectionL];
+        return headerView;
+
     }else if (section == 1){
-        return @"车位";
+        UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 30, 0, 30, 30)];
+        UILabel *titleSectionL = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, 150, 40)];
+        titleSectionL.text = @"车位:";
+        titleSectionL.font = [UIFont systemFontOfSize:13.0];
+        titleSectionL.textColor = [UIColor grayColor];
+        [headerView addSubview:titleSectionL];
+        return headerView;
+
     }else{
-        return @"电桩";
+        UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 30, 0, 30, 30)];
+        
+        UILabel *titleSectionL = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, 150, 40)];
+        titleSectionL.text = @"电桩:";
+        titleSectionL.font = [UIFont systemFontOfSize:13.0];
+        titleSectionL.textColor = [UIColor grayColor];
+        [headerView addSubview:titleSectionL];
+        
+        UIButton *addBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [addBtn setTitle:@"+" forState:UIControlStateNormal];
+        [addBtn setTitleColor:BOY_BG_COLOR forState:UIControlStateNormal];
+        addBtn.frame = headerView.frame;
+        [addBtn addTarget:self action:@selector(addClick:) forControlEvents:UIControlEventTouchUpInside];
+        [headerView addSubview:addBtn];
+        return headerView;
     }
+}
+
+- (void)addClick:(UIButton *)sender
+{
+   
+    UIStoryboard *addNewPileSb = [UIStoryboard storyboardWithName:@"AddPileViewController" bundle:nil];
+    AddPileViewController *addNewPileVC = [addNewPileSb instantiateViewControllerWithIdentifier:@"AddPileViewController"];
+    [self.navigationController pushViewController:addNewPileVC animated:YES];
+
+    [self addTableViewCell];
 }
 
 #pragma mark - textView delegate
@@ -175,6 +250,14 @@
     frame.origin = CGPointMake(frame.origin.x, frame.origin.y + 216);
     self.tableView.frame = frame;
     return YES;
+}
+
+- (void)addTableViewCell{//跳转到下一个界面，
+    if(self.dataArray==nil){
+        self.dataArray=[[NSMutableArray alloc]init];
+    }
+    [self.dataArray addObject:[NSObject new]];
+    [self.tableView reloadData];
 }
 
 //- (void)textViewDidBeginEditing:(UITextView *)textView

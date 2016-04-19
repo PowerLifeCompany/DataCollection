@@ -43,10 +43,7 @@ typedef enum{
 
 @property (assign, nonatomic) BOOL noState;
 
-//@property (assign, nonatomic) BOOL takeLineYes, takeLineNo;
-
 @property (assign, nonatomic) BOOL operatorPay, wechatPay, aliPay, creditPay;
-
 
 @end
 
@@ -247,11 +244,21 @@ typedef enum{
 - (void)leftBtnClick
 {
     [self.navigationController popViewControllerAnimated:YES];
+    
     // 保存数据
+    if(!self.pile){
+        self.pile = [[AddPileViewController alloc]init];
+        [self.dataArray addObject:self.pile];
+    }
+
+    // 生个一个新的接口,上个页面的self.dataArray.count加1
+    
+    
 }
 
 - (void)rightBtnClick:(id)sender
 {
+    [self.navigationController popViewControllerAnimated:YES];
     // 清空数据
 }
 

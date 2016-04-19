@@ -44,15 +44,15 @@
     /**
      加载主mainView，MVC分开来
      */
-//    CollectionMainView * mainView=[[CollectionMainView alloc]initWithFrame:CGRectMake(0, 64, WIDTH, HEIGHT-64) style:UITableViewStyleGrouped];
-//    mainView.mainViewDelegate=self;
-//    [self.view addSubview:mainView];
-//    self.mainView=mainView;
-//    self.mainView.dataArray=@[@"",@"",@"",@"",@""];
+    CollectionMainView * mainView=[[CollectionMainView alloc]initWithFrame:CGRectMake(0, 64, WIDTH, HEIGHT-64) style:UITableViewStyleGrouped];
+    mainView.mainViewDelegate=self;
+    [self.view addSubview:mainView];
+    self.mainView=mainView;
+    self.mainView.dataArray=@[@"",@"",@"",@"",@""];
     /**
      *  使用懒加载的方式，选择城市
      */
-//    [self.view addSubview:self.chooseCityView];
+    //[self.view addSubview:self.chooseCityView];
     /**
      *  懒加载，选择品牌运营商
      */
@@ -62,6 +62,15 @@
 
 - (void)loadNavigationBar{
     self.navigationItem.title=@"数据列表";
+    
+    UIBarButtonItem *addBtnItem = [[UIBarButtonItem alloc] initWithTitle:@"新增" style:UIBarButtonItemStyleDone target:self action:@selector(addClick:)];
+    self.navigationItem.rightBarButtonItem = addBtnItem;
+
+}
+
+- (void)addClick:(id)sender
+{
+    [self.navigationController pushViewController:[[CollPileViewController alloc]init] animated:YES];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{

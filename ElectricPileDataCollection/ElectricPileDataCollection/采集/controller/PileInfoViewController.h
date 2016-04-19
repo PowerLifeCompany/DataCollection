@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+#import "PileGroupSite.h"
+#import "PileGroupSpace.h"
+#import "Pile.h"
+
+
 @interface PileInfoViewController : UIViewController
+
+@property (nonatomic, strong) PileGroupSite *pileGroupSite;
+
+@property (nonatomic, strong) PileGroupSpace *pileGroupSpace;
+
+@property (nonatomic, strong) NSArray<Pile *> *piles;
+
 
 @end

@@ -43,38 +43,73 @@
  */
 @property (nonatomic, copy) NSString *comment;
 
-/**
- *  停车场位置图片路径
- */
-@property (nonatomic, copy) NSString *spaceLocationImagePath;
+
+
 /**
  *  停车场位于小区哪里
  */
 @property (nonatomic, copy) NSString *comment3;
+
 /**
- *  所有电桩全景图路径
+ *  停车场位于小区哪里(url)
  */
-@property (nonatomic, copy) NSString *allPileImagePath;
+@property (nonatomic, copy) NSString *imageUrl3;
+
+/**
+ *  停车场位于小区哪里(存在沙盒的路径)
+ */
+@property (nonatomic, copy) NSString *image3Path;
+
+
+
 /**
  *  电桩组的全景图
  */
 @property (nonatomic, copy) NSString *comment4;
+
 /**
- *  空位图片路径
+ *  电桩组的全景图(url)
  */
-@property (nonatomic, copy) NSString *idlePositionImagePath;
+@property (nonatomic, copy) NSString *imageUrl4;
+
+/**
+ *  电桩组的全景图(存在沙盒的路径)
+ */
+@property (nonatomic, copy) NSString *image4Path;
+
+
+
 /**
  *  空位
  */
 @property (nonatomic, copy) NSString *comment5;
 
 /**
- *  充电中图片路径
+ *  空位(url)
  */
-@property (nonatomic, copy) NSString *chargingImagePath;
+@property (nonatomic, copy) NSString *imageUrl5;
+
+/**
+ *  空位(存在沙盒的路径)
+ */
+@property (nonatomic, copy) NSString *image5Path;
+
+
+
 /**
  *  充电中
  */
 @property (nonatomic, copy) NSString *comment6;
+
+/**
+ *  充电中图片路径(url)
+ */
+@property (nonatomic, copy) NSString *imageUrl6;
+
+/**
+ *  充电中图片路径(存在沙盒的路径)
+ */
+@property (nonatomic, copy) NSString *image6Path;
+
 
 @end

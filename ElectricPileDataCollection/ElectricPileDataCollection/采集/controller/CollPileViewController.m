@@ -36,6 +36,7 @@
 
 @property(nonatomic,strong)PileVillageInfo * info;
 
+
 @end
 
 @implementation CollPileViewController
@@ -54,26 +55,13 @@
 }
 #pragma mark - 初始化组件
 - (void)loadMainView{
-    self.tableView=self.containerView.subviews[0];
+    self.tableView = self.containerView.subviews[0];
     [self.nextStepBtn layoutCornerRadiusWithCornerRadius:5];
-    self.tableView.mainViewDelegate=self;
-    
-    //测试按钮
-    UIButton * btn =[UIButton buttonWithType:UIButtonTypeCustom];
-    btn.frame=CGRectMake(100, HEIGHT-220, 100, 40);
-    [self.view addSubview:btn];
-    [btn addTarget:self action:@selector(testBtn) forControlEvents:UIControlEventTouchUpInside];
-    btn.backgroundColor=BOY_BG_COLOR;
-    [btn setTitle:@"跳转按钮" forState:UIControlStateNormal];
-}
-
-- (void)testBtn{
-    ChargeStandardViewController * con=[[ChargeStandardViewController alloc]init];
-    [self.navigationController pushViewController: con animated:YES];
+    self.tableView.mainViewDelegate = self;
 }
 
 - (void)loadNavigationBar{
-    self.navigationItem.title = @"小区信息";
+    self.navigationItem.title = @"小区信息(1/3)";
 }
 
 - (IBAction)nextStep:(UIButton *)sender {
@@ -95,8 +83,8 @@
         info.pile_village.villageEntranceImagePath=imagePath;
     }
     
-    UIStoryboard *addPileInterfaceSb = [UIStoryboard storyboardWithName:@"AddPileInterfaceViewController" bundle:nil];
-    AddPileInterfaceViewController *addPileInterfaceVC = [addPileInterfaceSb instantiateViewControllerWithIdentifier:@"AddPileInterface"];
+    UIStoryboard *addPileInterfaceSb = [UIStoryboard storyboardWithName:@"PileInfoDataViewController" bundle:nil];
+    AddPileInterfaceViewController *addPileInterfaceVC = [addPileInterfaceSb instantiateViewControllerWithIdentifier:@"PileInfoDataViewController"];
     [self.navigationController pushViewController:addPileInterfaceVC animated:YES];
 }
 

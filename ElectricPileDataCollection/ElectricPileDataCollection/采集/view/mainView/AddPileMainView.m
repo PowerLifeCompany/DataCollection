@@ -106,7 +106,7 @@
         btn.frame=CGRectMake(WIDTH-66, 0, 50, 40);
         [btn setTitle:@"+" forState:UIControlStateNormal];
         [btn setTitleColor:BOY_BG_COLOR forState:UIControlStateNormal];
-        [btn addTarget:self action:@selector(addTableViewCell) forControlEvents:UIControlEventTouchUpInside];
+        [btn addTarget:self action:@selector(addClick:) forControlEvents:UIControlEventTouchUpInside];
         
         [headerView addSubview:btn];
     }else{
@@ -114,6 +114,12 @@
     }
     
     return headerView;
+}
+
+- (void)addClick:(UIButton *)sender
+{
+    [self.mainViewDelegate addPileInterface:self];
+    [self addTableViewCell];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -200,7 +206,6 @@
     [self.dataArray addObject:[NSObject new]];
     [self reloadData];
 }
-
 
 
 @end

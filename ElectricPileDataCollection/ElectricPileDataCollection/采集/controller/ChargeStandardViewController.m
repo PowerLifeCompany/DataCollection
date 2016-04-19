@@ -61,7 +61,7 @@
 }
 
 - (void)loadNavigationBar{
-    self.navigationItem.title=@"收费标准";
+    self.navigationItem.title=@"收费标准(3/3)";
     UIBarButtonItem * rightItem=[[UIBarButtonItem alloc]initWithTitle:@"新增" style:UIBarButtonItemStyleDone target:self action:@selector(navAddBtnClick:)];
     self.navigationItem.rightBarButtonItem=rightItem;
     

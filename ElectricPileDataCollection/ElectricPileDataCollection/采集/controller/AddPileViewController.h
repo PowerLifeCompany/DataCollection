@@ -10,6 +10,6 @@
 
 @interface AddPileViewController : RootViewController
 
-
+@property (nonatomic, strong) NSArray<Pile *> *piles;
 
 @end

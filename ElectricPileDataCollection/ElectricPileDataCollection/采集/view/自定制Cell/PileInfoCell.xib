@@ -14,56 +14,56 @@
                 <rect key="frame" x="0.0" y="0.0" width="425" height="149.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="位置:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zeI-aT-zLX">
-                        <rect key="frame" x="30" y="10" width="50" height="40"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="位置:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zeI-aT-zLX">
+                        <rect key="frame" x="30" y="10" width="40" height="30"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="40" id="1xb-cW-n7H"/>
-                            <constraint firstAttribute="width" constant="50" id="HWl-TS-Upe"/>
+                            <constraint firstAttribute="height" constant="30" id="1xb-cW-n7H"/>
+                            <constraint firstAttribute="width" constant="40" id="HWl-TS-Upe"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="经度:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPy-aA-G4p">
-                        <rect key="frame" x="30" y="60" width="50" height="40"/>
+                        <rect key="frame" x="30" y="50" width="40" height="30"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="50" id="24m-Hv-iHb"/>
-                            <constraint firstAttribute="height" constant="40" id="8r5-71-Ade"/>
+                            <constraint firstAttribute="width" constant="40" id="24m-Hv-iHb"/>
+                            <constraint firstAttribute="height" constant="30" id="8r5-71-Ade"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="pileInfoCell" text="纬度:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9QQ-ld-8wM" customClass="pileInfoCell">
-                        <rect key="frame" x="30" y="110" width="50" height="40"/>
+                        <rect key="frame" x="30" y="90" width="40" height="30"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="50" id="AfM-Cr-dsP"/>
-                            <constraint firstAttribute="height" constant="40" id="qWt-XV-ZhT"/>
+                            <constraint firstAttribute="width" constant="40" id="AfM-Cr-dsP"/>
+                            <constraint firstAttribute="height" constant="30" id="qWt-XV-ZhT"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GRU-dk-kf9">
-                        <rect key="frame" x="100" y="10" width="235" height="40"/>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GRU-dk-kf9">
+                        <rect key="frame" x="90" y="10" width="245" height="30"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="40" id="zsj-py-mtC"/>
+                            <constraint firstAttribute="height" constant="30" id="zsj-py-mtC"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wnc-GS-PPC">
-                        <rect key="frame" x="100" y="60" width="235" height="40"/>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wnc-GS-PPC">
+                        <rect key="frame" x="90" y="50" width="245" height="30"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="40" id="RJZ-HS-d7T"/>
+                            <constraint firstAttribute="height" constant="30" id="RJZ-HS-d7T"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                     </textField>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ma5-ZQ-qey">
-                        <rect key="frame" x="100" y="110" width="235" height="40"/>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ma5-ZQ-qey">
+                        <rect key="frame" x="90" y="90" width="245" height="30"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="40" id="EmE-m8-WR3"/>
+                            <constraint firstAttribute="height" constant="30" id="EmE-m8-WR3"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
@@ -92,7 +92,7 @@
                 <outlet property="locationTextField" destination="GRU-dk-kf9" id="atS-M8-Fc2"/>
                 <outlet property="longitudeTextField" destination="Wnc-GS-PPC" id="zst-L4-6zn"/>
             </connections>
-            <point key="canvasLocation" x="119.5" y="285"/>
+            <point key="canvasLocation" x="161.5" y="289"/>
         </tableViewCell>
     </objects>
 </document>

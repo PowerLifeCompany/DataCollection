@@ -66,24 +66,22 @@
  *  支付类型
  */
 @property (nonatomic, copy) NSString *paymentType;
-
-/**
- *  充电口图片路径
- */
-@property (nonatomic, copy) NSString *chargingMouthImagePath;
 /**
  *  充电口正面照描述
  */
 @property (nonatomic, copy) NSString *comment8;
-
 /**
- *  细节特写，充电把，重量图片路径
+ *  充电口正面照描述(图片)
  */
-@property (nonatomic, copy) NSString *detailImagePath;
+@property (nonatomic, copy) NSString *imageUrl8;
 /**
  *  细节特写，充电把，重量描述
  */
 @property (nonatomic, copy) NSString *comment9;
+/**
+ *  细节特写，充电把，重量描述(图片)
+ */
+@property (nonatomic, copy) NSString *imageUrl9;
 /**
  *  接口特殊说明
  */

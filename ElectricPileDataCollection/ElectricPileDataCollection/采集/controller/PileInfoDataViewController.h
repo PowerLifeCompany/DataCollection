@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PileGroupInfo.h"
 
 @interface PileInfoDataViewController : UIViewController
+
+@property (strong, nonatomic) NSMutableArray *dataArray;
+
+@property (strong, nonatomic) PileGroupInfo *PileGroupInfo;
 
 @end

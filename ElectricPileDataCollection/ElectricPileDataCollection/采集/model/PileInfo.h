@@ -27,14 +27,15 @@
  *  电桩运营商ID
  */
 @property (nonatomic, assign) NSInteger pileResourceOperatorId;
-
-/**
- *  细节特写图片路径
- */
-@property (nonatomic, copy) NSString *detailImagePath;
 /**
  *  细节特写电桩用法
  */
 @property (nonatomic, copy) NSString *comment7;
+
+/**
+ *  细节特写电桩用法(图片)
+ */
+@property (nonatomic, copy) NSString *imageUrl7;
+
 
 @end

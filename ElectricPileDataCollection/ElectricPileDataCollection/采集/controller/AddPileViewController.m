@@ -7,6 +7,7 @@
 //
 
 #import "AddPileViewController.h"
+#import "AddPileInterfaceViewController.h"
 #import "CustomImagePickerViewController.h"
 #import "AddPileMainView.h"
 
@@ -15,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 
 @property (weak, nonatomic) AddPileMainView* tableView;
+
+@property (strong, nonatomic)NSMutableArray *dataArray;
 
 @end
 
@@ -38,7 +41,7 @@
 }
 
 - (void)loadNavigationBar{
-    self.navigationItem.title = @"增加电桩";
+    self.navigationItem.title = @"新增电桩";
 }
 
 
@@ -63,6 +66,14 @@
         NSData * data = UIImageJPEGRepresentation(asset.aspectRatioThumbnail, 1);
         self.tableView.currentImageView.image=[UIImage imageWithData:data];
     }
+}
+
+- (void)addPileInterface:(AddPileMainView *)mainView
+{
+    UIStoryboard *addPileInterfaceSb = [UIStoryboard storyboardWithName:@"AddPileInterfaceViewController" bundle:nil];
+    AddPileInterfaceViewController *addPileInterfaceVC = [addPileInterfaceSb instantiateViewControllerWithIdentifier:@"AddPileInterfaceViewController"];
+    addPileInterfaceVC.dataArray = self.dataArray;
+    [self.navigationController pushViewController:addPileInterfaceVC animated:YES];
 }
 
 #pragma mark - UIImagePickViewController
