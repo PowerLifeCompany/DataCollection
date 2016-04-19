@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PileInfoMainView : UITableView<UITableViewDelegate>
 
-@property(nonatomic,strong)NSMutableArray * dataArray;
+@interface PileInfoMainView : UITableView<UITableViewDataSource, UITableViewDelegate>
+
+@property (strong, nonatomic) NSMutableArray * dataArray;
 
 @end

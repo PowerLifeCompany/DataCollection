@@ -7,7 +7,7 @@
 //
 
 #import "AddPileViewController.h"
-#import "AddPileInterfaceViewController.h"
+#import "AddInterfaceViewController.h"
 #import "CustomImagePickerViewController.h"
 #import "AddPileMainView.h"
 
@@ -22,6 +22,7 @@
 @end
 
 @implementation AddPileViewController
+
 - (instancetype)init{
     NSString * sbName=NSStringFromClass([self class]);
     UIStoryboard * sb=[UIStoryboard storyboardWithName:sbName bundle:nil];
@@ -69,11 +70,10 @@
 }
 
 - (void)addPileInterface:(AddPileMainView *)mainView
-{
-    UIStoryboard *addPileInterfaceSb = [UIStoryboard storyboardWithName:@"AddPileInterfaceViewController" bundle:nil];
-    AddPileInterfaceViewController *addPileInterfaceVC = [addPileInterfaceSb instantiateViewControllerWithIdentifier:@"AddPileInterfaceViewController"];
-    addPileInterfaceVC.dataArray = self.dataArray;
-    [self.navigationController pushViewController:addPileInterfaceVC animated:YES];
+{    
+    AddInterfaceViewController *addInterfaceVC = [[AddInterfaceViewController alloc] init];
+    [self.navigationController  pushViewController:addInterfaceVC animated:YES];
+
 }
 
 #pragma mark - UIImagePickViewController

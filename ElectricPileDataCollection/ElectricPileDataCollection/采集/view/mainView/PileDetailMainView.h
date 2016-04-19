@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class PileDetailMainView;
+
 @protocol PileDetailMainViewDelegate <NSObject>
 
 - (void)chooseAlbubmOrPhotoGraphWithIndex:(NSInteger)index;
+
+- (void)addPile:(PileDetailMainView *)mainView;
 
 @end
 

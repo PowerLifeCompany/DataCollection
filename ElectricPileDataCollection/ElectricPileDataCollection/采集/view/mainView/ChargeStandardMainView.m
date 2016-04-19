@@ -10,8 +10,6 @@
 
 @interface ChargeStandardMainView()<UITableViewDelegate,UITableViewDataSource>
 
-
-
 @end
 
 @implementation ChargeStandardMainView
@@ -72,8 +70,6 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [self.mainViewDelegate itemSelectedWithMainView:self andIndexPath:indexPath];
 }
-
-
 
 - (void)setDataArray:(NSMutableArray *)dataArray{
     if(dataArray){

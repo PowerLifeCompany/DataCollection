@@ -9,6 +9,7 @@
 #import "PileDetailMainView.h"
 #import "CustomAlertView.h"
 #import "CustomPickView.h"
+#import "AddPileViewController.h";
 
 @interface PileDetailMainView()<CustomAlertViewDelegate>
 
@@ -168,7 +169,7 @@
 
 - (void)addClick:(UIButton *)sender
 {
-    NSLog(@"添加电桩");
+    [self.mainViewDelegate addPile:self];
 }
 
 

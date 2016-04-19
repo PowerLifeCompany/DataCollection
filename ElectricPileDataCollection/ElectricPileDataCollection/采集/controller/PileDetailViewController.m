@@ -9,8 +9,9 @@
 #import "PileDetailViewController.h"
 #import "PileDetailMainView.h"
 #import "CustomImagePickerViewController.h"
+#import "AddPileViewController.h"
 
-@interface PileDetailViewController ()<UINavigationControllerDelegate, UIImagePickerControllerDelegate,PileDetailMainViewDelegate, CustomImagePickerDelegate, CLImageEditorDelegate>
+@interface PileDetailViewController ()<UINavigationControllerDelegate, UIImagePickerControllerDelegate,PileDetailMainViewDelegate, CustomImagePickerDelegate, CLImageEditorDelegate, PileDetailMainViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 
@@ -144,6 +145,12 @@
 - (void)imageEditor:(CLImageEditor*)editor didFinishEdittingWithImage:(UIImage*)image{
     self.tableView.currentImageView.image=image;
     [editor dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)addPile:(PileDetailMainView *)mainView
+{
+    AddPileViewController *addPileVC = [[AddPileViewController alloc] init];
+    [self.navigationController pushViewController:addPileVC animated:YES];
 }
 
 #pragma mark - UIImagePickViewController
