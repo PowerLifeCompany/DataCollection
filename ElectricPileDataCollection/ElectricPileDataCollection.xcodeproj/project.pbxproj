@@ -16,7 +16,6 @@
 		7706F9331CC06B5000EA1ED6 /* UnifiedTariffsChargeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7706F92B1CC06B5000EA1ED6 /* UnifiedTariffsChargeView.m */; };
 		7706F9341CC06B5000EA1ED6 /* UnifiedTariffsChargeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7706F92C1CC06B5000EA1ED6 /* UnifiedTariffsChargeView.xib */; };
 		7706F94B1CC06B8700EA1ED6 /* AddInterfaceMainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7706F9371CC06B8700EA1ED6 /* AddInterfaceMainCell.m */; };
-		7706F94C1CC06B8700EA1ED6 /* AddPileInterfaceViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7706F9381CC06B8700EA1ED6 /* AddPileInterfaceViewController.storyboard */; };
 		7706F94D1CC06B8700EA1ED6 /* AddPileMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7706F93A1CC06B8700EA1ED6 /* AddPileMainView.m */; };
 		7706F94E1CC06B8700EA1ED6 /* AddPileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7706F93B1CC06B8700EA1ED6 /* AddPileViewController.storyboard */; };
 		7706F94F1CC06B8700EA1ED6 /* ChargeStandardMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7706F93D1CC06B8700EA1ED6 /* ChargeStandardMainView.m */; };
@@ -27,25 +26,12 @@
 		7706F9541CC06B8700EA1ED6 /* CollPileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7706F9451CC06B8700EA1ED6 /* CollPileViewController.storyboard */; };
 		7706F9551CC06B8700EA1ED6 /* FeesDetailMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7706F9471CC06B8700EA1ED6 /* FeesDetailMainView.m */; };
 		7706F9561CC06B8700EA1ED6 /* FeesDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7706F9481CC06B8700EA1ED6 /* FeesDetailViewController.storyboard */; };
-		7706F96B1CC06D1A00EA1ED6 /* AddPileInterfaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7706F95A1CC06D1A00EA1ED6 /* AddPileInterfaceViewController.m */; };
 		7706F96C1CC06D1A00EA1ED6 /* AddPileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7706F95C1CC06D1A00EA1ED6 /* AddPileViewController.m */; };
 		7706F96D1CC06D1A00EA1ED6 /* ChargeStandardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7706F95E1CC06D1A00EA1ED6 /* ChargeStandardViewController.m */; };
 		7706F96E1CC06D1A00EA1ED6 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7706F9601CC06D1A00EA1ED6 /* CollectionViewController.m */; };
 		7706F96F1CC06D1A00EA1ED6 /* CollPileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7706F9621CC06D1A00EA1ED6 /* CollPileViewController.m */; };
 		7706F9701CC06D1A00EA1ED6 /* FeesDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7706F9641CC06D1A00EA1ED6 /* FeesDetailViewController.m */; };
 		7706F9731CC06D1A00EA1ED6 /* TestDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7706F96A1CC06D1A00EA1ED6 /* TestDataViewController.m */; };
-		7706F9961CC06DA500EA1ED6 /* AddInterfaceCellFive.m in Sources */ = {isa = PBXBuildFile; fileRef = 7706F9751CC06DA500EA1ED6 /* AddInterfaceCellFive.m */; };
-		7706F9971CC06DA500EA1ED6 /* AddInterfaceCellFive.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7706F9761CC06DA500EA1ED6 /* AddInterfaceCellFive.xib */; };
-		7706F9981CC06DA500EA1ED6 /* AddInterfaceCellFour.m in Sources */ = {isa = PBXBuildFile; fileRef = 7706F9781CC06DA500EA1ED6 /* AddInterfaceCellFour.m */; };
-		7706F9991CC06DA500EA1ED6 /* AddInterfaceCellFour.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7706F9791CC06DA500EA1ED6 /* AddInterfaceCellFour.xib */; };
-		7706F99A1CC06DA500EA1ED6 /* AddInterfaceCellOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 7706F97B1CC06DA500EA1ED6 /* AddInterfaceCellOne.m */; };
-		7706F99B1CC06DA500EA1ED6 /* AddInterfaceCellOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7706F97C1CC06DA500EA1ED6 /* AddInterfaceCellOne.xib */; };
-		7706F99C1CC06DA500EA1ED6 /* AddInterfaceCellSix.m in Sources */ = {isa = PBXBuildFile; fileRef = 7706F97E1CC06DA500EA1ED6 /* AddInterfaceCellSix.m */; };
-		7706F99D1CC06DA500EA1ED6 /* AddInterfaceCellSix.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7706F97F1CC06DA500EA1ED6 /* AddInterfaceCellSix.xib */; };
-		7706F99E1CC06DA500EA1ED6 /* AddInterfaceCellThree.m in Sources */ = {isa = PBXBuildFile; fileRef = 7706F9811CC06DA500EA1ED6 /* AddInterfaceCellThree.m */; };
-		7706F99F1CC06DA500EA1ED6 /* AddInterfaceCellThree.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7706F9821CC06DA500EA1ED6 /* AddInterfaceCellThree.xib */; };
-		7706F9A01CC06DA500EA1ED6 /* AddInterfaceCellTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7706F9841CC06DA500EA1ED6 /* AddInterfaceCellTwo.m */; };
-		7706F9A11CC06DA500EA1ED6 /* AddInterfaceCellTwo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7706F9851CC06DA500EA1ED6 /* AddInterfaceCellTwo.xib */; };
 		7706F9A31CC06DA500EA1ED6 /* CustomCellOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 7706F9881CC06DA500EA1ED6 /* CustomCellOne.m */; };
 		7706F9A41CC06DA500EA1ED6 /* CustomCellOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7706F9891CC06DA500EA1ED6 /* CustomCellOne.xib */; };
 		7706F9A51CC06DA500EA1ED6 /* CustomCellTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7706F98B1CC06DA500EA1ED6 /* CustomCellTwo.m */; };
@@ -200,7 +186,6 @@
 		77AB26D11CBE525C0067EEF8 /* RegionAll.m in Sources */ = {isa = PBXBuildFile; fileRef = 77AB26D01CBE525C0067EEF8 /* RegionAll.m */; };
 		77AC1A371CB7A9CB00B376E6 /* addPic.png in Resources */ = {isa = PBXBuildFile; fileRef = 77AC1A361CB7A9CB00B376E6 /* addPic.png */; };
 		77AC1A401CB7B0B600B376E6 /* UIView+LayoutCornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 77AC1A3F1CB7B0B600B376E6 /* UIView+LayoutCornerRadius.m */; };
-		77E257031CC464D10016DDC5 /* AddPileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E257021CC464D10016DDC5 /* AddPileViewController.storyboard */; };
 		77E61A731CB75434002F38FC /* charging_mouth_type.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77E61A701CB75434002F38FC /* charging_mouth_type.plist */; };
 		77E61A741CB75434002F38FC /* pile_brand.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77E61A711CB75434002F38FC /* pile_brand.plist */; };
 		77E61A751CB75434002F38FC /* pile_operators.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77E61A721CB75434002F38FC /* pile_operators.plist */; };
@@ -208,8 +193,6 @@
 		77E61A7E1CB773BD002F38FC /* IpaInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77E61A7D1CB773BD002F38FC /* IpaInfo.plist */; };
 		77E61A811CB77553002F38FC /* PileOperator.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E61A801CB77553002F38FC /* PileOperator.m */; };
 		EE1CDD14DC98A4BC5A6B2258 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BAE79107C8FA376AEA02B30D /* libPods.a */; };
-		FA0E47DD1CC46B4C00687952 /* PileInfoDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0E47DB1CC46B4C00687952 /* PileInfoDataCell.m */; };
-		FA0E47DE1CC46B4C00687952 /* PileInfoDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA0E47DC1CC46B4C00687952 /* PileInfoDataCell.xib */; };
 		FA0E47E01CC4D4EF00687952 /* PileDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0E47DF1CC4D4EF00687952 /* PileDetailViewController.storyboard */; };
 		FA0E47E31CC4D7C900687952 /* PileDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0E47E21CC4D7C900687952 /* PileDetailViewController.m */; };
 		FA0E47E61CC4D95D00687952 /* PileDetailMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0E47E51CC4D95D00687952 /* PileDetailMainView.m */; };
@@ -218,6 +201,7 @@
 		FA2C8DF31CC63036006B3D48 /* AddInterfaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C8DF21CC63036006B3D48 /* AddInterfaceViewController.m */; };
 		FA2C8DF51CC630CA006B3D48 /* AddInterfaceViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA2C8DF41CC630CA006B3D48 /* AddInterfaceViewController.storyboard */; };
 		FA2C8DF81CC6336B006B3D48 /* AddInterfaceMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C8DF71CC6336B006B3D48 /* AddInterfaceMainView.m */; };
+		FA2C8E001CC71B59006B3D48 /* InterfaceType.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C8DFF1CC71B59006B3D48 /* InterfaceType.m */; };
 		FAC65DED1CC5FEDA0042C5E3 /* PileInfoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC65DEC1CC5FEDA0042C5E3 /* PileInfoViewController.storyboard */; };
 		FAC65DF01CC6003C0042C5E3 /* PileInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC65DEF1CC6003C0042C5E3 /* PileInfoViewController.m */; };
 		FAC65DF31CC600A80042C5E3 /* PileInfoMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC65DF21CC600A80042C5E3 /* PileInfoMainView.m */; };
@@ -257,7 +241,6 @@
 		7706F92C1CC06B5000EA1ED6 /* UnifiedTariffsChargeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UnifiedTariffsChargeView.xib; sourceTree = "<group>"; };
 		7706F9361CC06B8700EA1ED6 /* AddInterfaceMainCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddInterfaceMainCell.h; sourceTree = "<group>"; };
 		7706F9371CC06B8700EA1ED6 /* AddInterfaceMainCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddInterfaceMainCell.m; sourceTree = "<group>"; };
-		7706F9381CC06B8700EA1ED6 /* AddPileInterfaceViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddPileInterfaceViewController.storyboard; sourceTree = "<group>"; };
 		7706F9391CC06B8700EA1ED6 /* AddPileMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPileMainView.h; sourceTree = "<group>"; };
 		7706F93A1CC06B8700EA1ED6 /* AddPileMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPileMainView.m; sourceTree = "<group>"; };
 		7706F93B1CC06B8700EA1ED6 /* AddPileViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddPileViewController.storyboard; sourceTree = "<group>"; };
@@ -274,8 +257,6 @@
 		7706F9461CC06B8700EA1ED6 /* FeesDetailMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeesDetailMainView.h; sourceTree = "<group>"; };
 		7706F9471CC06B8700EA1ED6 /* FeesDetailMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeesDetailMainView.m; sourceTree = "<group>"; };
 		7706F9481CC06B8700EA1ED6 /* FeesDetailViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FeesDetailViewController.storyboard; sourceTree = "<group>"; };
-		7706F9591CC06D1A00EA1ED6 /* AddPileInterfaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPileInterfaceViewController.h; sourceTree = "<group>"; };
-		7706F95A1CC06D1A00EA1ED6 /* AddPileInterfaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPileInterfaceViewController.m; sourceTree = "<group>"; };
 		7706F95B1CC06D1A00EA1ED6 /* AddPileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPileViewController.h; sourceTree = "<group>"; };
 		7706F95C1CC06D1A00EA1ED6 /* AddPileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPileViewController.m; sourceTree = "<group>"; };
 		7706F95D1CC06D1A00EA1ED6 /* ChargeStandardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChargeStandardViewController.h; sourceTree = "<group>"; };
@@ -288,24 +269,6 @@
 		7706F9641CC06D1A00EA1ED6 /* FeesDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeesDetailViewController.m; sourceTree = "<group>"; };
 		7706F9691CC06D1A00EA1ED6 /* TestDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDataViewController.h; sourceTree = "<group>"; };
 		7706F96A1CC06D1A00EA1ED6 /* TestDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDataViewController.m; sourceTree = "<group>"; };
-		7706F9741CC06DA500EA1ED6 /* AddInterfaceCellFive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddInterfaceCellFive.h; sourceTree = "<group>"; };
-		7706F9751CC06DA500EA1ED6 /* AddInterfaceCellFive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddInterfaceCellFive.m; sourceTree = "<group>"; };
-		7706F9761CC06DA500EA1ED6 /* AddInterfaceCellFive.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddInterfaceCellFive.xib; sourceTree = "<group>"; };
-		7706F9771CC06DA500EA1ED6 /* AddInterfaceCellFour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddInterfaceCellFour.h; sourceTree = "<group>"; };
-		7706F9781CC06DA500EA1ED6 /* AddInterfaceCellFour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddInterfaceCellFour.m; sourceTree = "<group>"; };
-		7706F9791CC06DA500EA1ED6 /* AddInterfaceCellFour.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddInterfaceCellFour.xib; sourceTree = "<group>"; };
-		7706F97A1CC06DA500EA1ED6 /* AddInterfaceCellOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddInterfaceCellOne.h; sourceTree = "<group>"; };
-		7706F97B1CC06DA500EA1ED6 /* AddInterfaceCellOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddInterfaceCellOne.m; sourceTree = "<group>"; };
-		7706F97C1CC06DA500EA1ED6 /* AddInterfaceCellOne.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddInterfaceCellOne.xib; sourceTree = "<group>"; };
-		7706F97D1CC06DA500EA1ED6 /* AddInterfaceCellSix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddInterfaceCellSix.h; sourceTree = "<group>"; };
-		7706F97E1CC06DA500EA1ED6 /* AddInterfaceCellSix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddInterfaceCellSix.m; sourceTree = "<group>"; };
-		7706F97F1CC06DA500EA1ED6 /* AddInterfaceCellSix.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddInterfaceCellSix.xib; sourceTree = "<group>"; };
-		7706F9801CC06DA500EA1ED6 /* AddInterfaceCellThree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddInterfaceCellThree.h; sourceTree = "<group>"; };
-		7706F9811CC06DA500EA1ED6 /* AddInterfaceCellThree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddInterfaceCellThree.m; sourceTree = "<group>"; };
-		7706F9821CC06DA500EA1ED6 /* AddInterfaceCellThree.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddInterfaceCellThree.xib; sourceTree = "<group>"; };
-		7706F9831CC06DA500EA1ED6 /* AddInterfaceCellTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddInterfaceCellTwo.h; sourceTree = "<group>"; };
-		7706F9841CC06DA500EA1ED6 /* AddInterfaceCellTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddInterfaceCellTwo.m; sourceTree = "<group>"; };
-		7706F9851CC06DA500EA1ED6 /* AddInterfaceCellTwo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddInterfaceCellTwo.xib; sourceTree = "<group>"; };
 		7706F9871CC06DA500EA1ED6 /* CustomCellOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellOne.h; sourceTree = "<group>"; };
 		7706F9881CC06DA500EA1ED6 /* CustomCellOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellOne.m; sourceTree = "<group>"; };
 		7706F9891CC06DA500EA1ED6 /* CustomCellOne.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCellOne.xib; sourceTree = "<group>"; };
@@ -614,7 +577,6 @@
 		77AC1A361CB7A9CB00B376E6 /* addPic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addPic.png; sourceTree = "<group>"; };
 		77AC1A3E1CB7B0B600B376E6 /* UIView+LayoutCornerRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LayoutCornerRadius.h"; sourceTree = "<group>"; };
 		77AC1A3F1CB7B0B600B376E6 /* UIView+LayoutCornerRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LayoutCornerRadius.m"; sourceTree = "<group>"; };
-		77E257021CC464D10016DDC5 /* AddPileViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddPileViewController.storyboard; sourceTree = "<group>"; };
 		77E61A701CB75434002F38FC /* charging_mouth_type.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = charging_mouth_type.plist; sourceTree = "<group>"; };
 		77E61A711CB75434002F38FC /* pile_brand.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = pile_brand.plist; sourceTree = "<group>"; };
 		77E61A721CB75434002F38FC /* pile_operators.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = pile_operators.plist; sourceTree = "<group>"; };
@@ -624,9 +586,6 @@
 		77E61A7F1CB77553002F38FC /* PileOperator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PileOperator.h; sourceTree = "<group>"; };
 		77E61A801CB77553002F38FC /* PileOperator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PileOperator.m; sourceTree = "<group>"; };
 		BAE79107C8FA376AEA02B30D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA0E47DA1CC46B4C00687952 /* PileInfoDataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PileInfoDataCell.h; sourceTree = "<group>"; };
-		FA0E47DB1CC46B4C00687952 /* PileInfoDataCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PileInfoDataCell.m; sourceTree = "<group>"; };
-		FA0E47DC1CC46B4C00687952 /* PileInfoDataCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PileInfoDataCell.xib; sourceTree = "<group>"; };
 		FA0E47DF1CC4D4EF00687952 /* PileDetailViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PileDetailViewController.storyboard; sourceTree = "<group>"; };
 		FA0E47E11CC4D7C900687952 /* PileDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PileDetailViewController.h; sourceTree = "<group>"; };
 		FA0E47E21CC4D7C900687952 /* PileDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PileDetailViewController.m; sourceTree = "<group>"; };
@@ -639,6 +598,8 @@
 		FA2C8DF41CC630CA006B3D48 /* AddInterfaceViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddInterfaceViewController.storyboard; sourceTree = "<group>"; };
 		FA2C8DF61CC6336B006B3D48 /* AddInterfaceMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddInterfaceMainView.h; sourceTree = "<group>"; };
 		FA2C8DF71CC6336B006B3D48 /* AddInterfaceMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddInterfaceMainView.m; sourceTree = "<group>"; };
+		FA2C8DFE1CC71B59006B3D48 /* InterfaceType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterfaceType.h; sourceTree = "<group>"; };
+		FA2C8DFF1CC71B59006B3D48 /* InterfaceType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterfaceType.m; sourceTree = "<group>"; };
 		FAC65DEC1CC5FEDA0042C5E3 /* PileInfoViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PileInfoViewController.storyboard; sourceTree = "<group>"; };
 		FAC65DEE1CC6003C0042C5E3 /* PileInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PileInfoViewController.h; sourceTree = "<group>"; };
 		FAC65DEF1CC6003C0042C5E3 /* PileInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PileInfoViewController.m; sourceTree = "<group>"; };
@@ -724,7 +685,6 @@
 				7706F93A1CC06B8700EA1ED6 /* AddPileMainView.m */,
 				FA2C8DF61CC6336B006B3D48 /* AddInterfaceMainView.h */,
 				FA2C8DF71CC6336B006B3D48 /* AddInterfaceMainView.m */,
-				7706F9381CC06B8700EA1ED6 /* AddPileInterfaceViewController.storyboard */,
 				7706F9451CC06B8700EA1ED6 /* CollPileViewController.storyboard */,
 				7706F9481CC06B8700EA1ED6 /* FeesDetailViewController.storyboard */,
 				FAC65DEC1CC5FEDA0042C5E3 /* PileInfoViewController.storyboard */,
@@ -813,8 +773,6 @@
 		7726ED2D1CB6303100D433FB /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				7706F9591CC06D1A00EA1ED6 /* AddPileInterfaceViewController.h */,
-				7706F95A1CC06D1A00EA1ED6 /* AddPileInterfaceViewController.m */,
 				7706F95D1CC06D1A00EA1ED6 /* ChargeStandardViewController.h */,
 				7706F95E1CC06D1A00EA1ED6 /* ChargeStandardViewController.m */,
 				7706F95F1CC06D1A00EA1ED6 /* CollectionViewController.h */,
@@ -840,6 +798,7 @@
 		7726ED2E1CB6303100D433FB /* model */ = {
 			isa = PBXGroup;
 			children = (
+				FA2C8DFA1CC71A0A006B3D48 /* 接口类型 */,
 				77B674CA1CBC7AA30003AFAC /* 品牌运营商 */,
 				77510D471CBB3D8B0052080F /* 省市区片小区 */,
 				7726EF1E1CB65B3E00D433FB /* 停车收费标准 */,
@@ -1582,39 +1541,26 @@
 		FA1BC5901CBD01FC00B9F1FD /* 自定制Cell */ = {
 			isa = PBXGroup;
 			children = (
-				7706F9741CC06DA500EA1ED6 /* AddInterfaceCellFive.h */,
-				7706F9751CC06DA500EA1ED6 /* AddInterfaceCellFive.m */,
-				7706F9761CC06DA500EA1ED6 /* AddInterfaceCellFive.xib */,
-				7706F9771CC06DA500EA1ED6 /* AddInterfaceCellFour.h */,
-				7706F9781CC06DA500EA1ED6 /* AddInterfaceCellFour.m */,
-				7706F9791CC06DA500EA1ED6 /* AddInterfaceCellFour.xib */,
-				7706F97A1CC06DA500EA1ED6 /* AddInterfaceCellOne.h */,
-				7706F97B1CC06DA500EA1ED6 /* AddInterfaceCellOne.m */,
-				7706F97C1CC06DA500EA1ED6 /* AddInterfaceCellOne.xib */,
-				7706F97D1CC06DA500EA1ED6 /* AddInterfaceCellSix.h */,
-				7706F97E1CC06DA500EA1ED6 /* AddInterfaceCellSix.m */,
-				7706F97F1CC06DA500EA1ED6 /* AddInterfaceCellSix.xib */,
-				7706F9801CC06DA500EA1ED6 /* AddInterfaceCellThree.h */,
-				7706F9811CC06DA500EA1ED6 /* AddInterfaceCellThree.m */,
-				7706F9821CC06DA500EA1ED6 /* AddInterfaceCellThree.xib */,
-				7706F9831CC06DA500EA1ED6 /* AddInterfaceCellTwo.h */,
-				7706F9841CC06DA500EA1ED6 /* AddInterfaceCellTwo.m */,
-				7706F9851CC06DA500EA1ED6 /* AddInterfaceCellTwo.xib */,
-				77E257021CC464D10016DDC5 /* AddPileViewController.storyboard */,
 				7706F9871CC06DA500EA1ED6 /* CustomCellOne.h */,
 				7706F9881CC06DA500EA1ED6 /* CustomCellOne.m */,
 				7706F9891CC06DA500EA1ED6 /* CustomCellOne.xib */,
 				7706F98A1CC06DA500EA1ED6 /* CustomCellTwo.h */,
 				7706F98B1CC06DA500EA1ED6 /* CustomCellTwo.m */,
 				7706F98C1CC06DA500EA1ED6 /* CustomCellTwo.xib */,
-				FA0E47DA1CC46B4C00687952 /* PileInfoDataCell.h */,
-				FA0E47DB1CC46B4C00687952 /* PileInfoDataCell.m */,
-				FA0E47DC1CC46B4C00687952 /* PileInfoDataCell.xib */,
 				7706F9931CC06DA500EA1ED6 /* SpecialInstructionsCell.h */,
 				7706F9941CC06DA500EA1ED6 /* SpecialInstructionsCell.m */,
 				7706F9951CC06DA500EA1ED6 /* SpecialInstructionsCell.xib */,
 			);
 			path = "自定制Cell";
+			sourceTree = "<group>";
+		};
+		FA2C8DFA1CC71A0A006B3D48 /* 接口类型 */ = {
+			isa = PBXGroup;
+			children = (
+				FA2C8DFE1CC71B59006B3D48 /* InterfaceType.h */,
+				FA2C8DFF1CC71B59006B3D48 /* InterfaceType.m */,
+			);
+			name = "接口类型";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1727,22 +1673,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				7706F9B41CC09BFF00EA1ED6 /* database.sqlite3 in Resources */,
-				7706F99F1CC06DA500EA1ED6 /* AddInterfaceCellThree.xib in Resources */,
 				7706F9AC1CC06DA500EA1ED6 /* SpecialInstructionsCell.xib in Resources */,
 				7706F94E1CC06B8700EA1ED6 /* AddPileViewController.storyboard in Resources */,
-				7706F9971CC06DA500EA1ED6 /* AddInterfaceCellFive.xib in Resources */,
 				7726ED091CB62F8000D433FB /* LaunchScreen.storyboard in Resources */,
 				7706F92E1CC06B5000EA1ED6 /* LadderChargeView.xib in Resources */,
 				FAC65DED1CC5FEDA0042C5E3 /* PileInfoViewController.storyboard in Resources */,
-				7706F94C1CC06B8700EA1ED6 /* AddPileInterfaceViewController.storyboard in Resources */,
 				7706F9541CC06B8700EA1ED6 /* CollPileViewController.storyboard in Resources */,
-				7706F9991CC06DA500EA1ED6 /* AddInterfaceCellFour.xib in Resources */,
 				7706F9A41CC06DA500EA1ED6 /* CustomCellOne.xib in Resources */,
 				7706F9321CC06B5000EA1ED6 /* TimeSharingMainCell.xib in Resources */,
 				77E61A7E1CB773BD002F38FC /* IpaInfo.plist in Resources */,
 				7726EE591CB6303100D433FB /* area.plist in Resources */,
 				7706F9341CC06B5000EA1ED6 /* UnifiedTariffsChargeView.xib in Resources */,
-				7706F99D1CC06DA500EA1ED6 /* AddInterfaceCellSix.xib in Resources */,
 				77510D831CBB5AD00052080F /* GJCFAssetsPickerResourceBundle.bundle in Resources */,
 				77E61A741CB75434002F38FC /* pile_brand.plist in Resources */,
 				77E61A751CB75434002F38FC /* pile_operators.plist in Resources */,
@@ -1750,14 +1691,10 @@
 				7706F9B01CC074D600EA1ED6 /* checkBox_yes.png in Resources */,
 				FA0E47E01CC4D4EF00687952 /* PileDetailViewController.storyboard in Resources */,
 				7706F9AF1CC074D600EA1ED6 /* checkBox_no.png in Resources */,
-				FA0E47DE1CC46B4C00687952 /* PileInfoDataCell.xib in Resources */,
 				77AC1A371CB7A9CB00B376E6 /* addPic.png in Resources */,
-				77E257031CC464D10016DDC5 /* AddPileViewController.storyboard in Resources */,
 				7726EEAE1CB6303100D433FB /* MJRefresh.bundle in Resources */,
 				77E61A731CB75434002F38FC /* charging_mouth_type.plist in Resources */,
 				77510D981CBB5AD00052080F /* GjAssetsPicker_image_selected_blue@2x.png in Resources */,
-				7706F99B1CC06DA500EA1ED6 /* AddInterfaceCellOne.xib in Resources */,
-				7706F9A11CC06DA500EA1ED6 /* AddInterfaceCellTwo.xib in Resources */,
 				7706F9301CC06B5000EA1ED6 /* TimeSharingChargeView.xib in Resources */,
 				7706F9A61CC06DA500EA1ED6 /* CustomCellTwo.xib in Resources */,
 				7706F9511CC06B8700EA1ED6 /* CollectionMainCell.xib in Resources */,
@@ -1858,7 +1795,6 @@
 				7726EEA11CB6303100D433FB /* MJRefreshBackFooter.m in Sources */,
 				7726EEA21CB6303100D433FB /* MJRefreshComponent.m in Sources */,
 				7726EE9C1CB6303100D433FB /* MJTypeEncoding.m in Sources */,
-				7706F9981CC06DA500EA1ED6 /* AddInterfaceCellFour.m in Sources */,
 				7706F92D1CC06B5000EA1ED6 /* LadderChargeView.m in Sources */,
 				77510D901CBB5AD00052080F /* GJCFAlbumsViewController.m in Sources */,
 				7726EE561CB6303100D433FB /* NSString+NilToNULL.m in Sources */,
@@ -1875,7 +1811,6 @@
 				7726EE9B1CB6303100D433FB /* MJType.m in Sources */,
 				7726EEA91CB6303100D433FB /* MJRefreshBackNormalFooter.m in Sources */,
 				7726EE6E1CB6303100D433FB /* AFURLSessionManager.m in Sources */,
-				7706F9A01CC06DA500EA1ED6 /* AddInterfaceCellTwo.m in Sources */,
 				7726EE9A1CB6303100D433FB /* MJMethod.m in Sources */,
 				7706F9551CC06B8700EA1ED6 /* FeesDetailMainView.m in Sources */,
 				7726EE4F1CB6303100D433FB /* AppVersionInfo.m in Sources */,
@@ -1894,7 +1829,6 @@
 				7726EEC31CB6303100D433FB /* AppDelegate.m in Sources */,
 				7726EE611CB6303100D433FB /* LCLoadingHUD.m in Sources */,
 				7726EEDB1CB6325400D433FB /* CheckViewController.m in Sources */,
-				7706F99A1CC06DA500EA1ED6 /* AddInterfaceCellOne.m in Sources */,
 				7726EEA41CB6303100D433FB /* MJRefreshHeader.m in Sources */,
 				7726EE9E1CB6303100D433FB /* NSObject+MJKeyValue.m in Sources */,
 				77510D931CBB5AD00052080F /* GJCFAssetsPreviewController.m in Sources */,
@@ -1933,10 +1867,8 @@
 				7726EEBA1CB6303100D433FB /* SDWebImageManager.m in Sources */,
 				7726EE661CB6303100D433FB /* AFHTTPRequestOperation.m in Sources */,
 				7726EE531CB6303100D433FB /* NSFileManager+FileCategory.m in Sources */,
-				FA0E47DD1CC46B4C00687952 /* PileInfoDataCell.m in Sources */,
 				77510D8A1CBB5AD00052080F /* GJCFAsset.m in Sources */,
 				77E61A781CB75C99002F38FC /* PileBrand.m in Sources */,
-				7706F99C1CC06DA500EA1ED6 /* AddInterfaceCellSix.m in Sources */,
 				77510D881CBB5AD00052080F /* UILabel+GJCFAssetsPickerStyle.m in Sources */,
 				7726EEB71CB6303100D433FB /* SDWebImageDecoder.m in Sources */,
 				7726EEAF1CB6303100D433FB /* MJRefreshConst.m in Sources */,
@@ -1944,9 +1876,7 @@
 				77AC1A401CB7B0B600B376E6 /* UIView+LayoutCornerRadius.m in Sources */,
 				77510D891CBB5AD00052080F /* GJCFAlbums.m in Sources */,
 				FA0E47E61CC4D95D00687952 /* PileDetailMainView.m in Sources */,
-				7706F9961CC06DA500EA1ED6 /* AddInterfaceCellFive.m in Sources */,
 				7726EEA51CB6303100D433FB /* MJRefreshAutoGifFooter.m in Sources */,
-				7706F96B1CC06D1A00EA1ED6 /* AddPileInterfaceViewController.m in Sources */,
 				7726EE701CB6303100D433FB /* FMDatabaseAdditions.m in Sources */,
 				7726EEAD1CB6303100D433FB /* MJRefreshStateHeader.m in Sources */,
 				7726EE961CB6303100D433FB /* MJConst.m in Sources */,
@@ -1988,8 +1918,8 @@
 				7726EF0E1CB6521B00D433FB /* PileInterface.m in Sources */,
 				7706F96D1CC06D1A00EA1ED6 /* ChargeStandardViewController.m in Sources */,
 				77AB26CB1CBE48D40067EEF8 /* City.m in Sources */,
-				7706F99E1CC06DA500EA1ED6 /* AddInterfaceCellThree.m in Sources */,
 				7706F96E1CC06D1A00EA1ED6 /* CollectionViewController.m in Sources */,
+				FA2C8E001CC71B59006B3D48 /* InterfaceType.m in Sources */,
 				7726EEBC1CB6303100D433FB /* UIButton+WebCache.m in Sources */,
 				7726EE8E1CB6303100D433FB /* MASLayoutConstraint.m in Sources */,
 				7726EE581CB6303100D433FB /* NSSystemDate.m in Sources */,

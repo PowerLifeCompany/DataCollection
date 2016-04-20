@@ -39,7 +39,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lO0-s1-TlR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="424.5" y="-51.5"/>
+            <point key="canvasLocation" x="483.5" y="-624.5"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="Cre-B0-R8t">
@@ -59,29 +59,30 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="接口类型:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNi-KO-K5h">
-                                                    <rect key="frame" x="20" y="5" width="70" height="39.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="接口类型:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Tt-tN-hrr">
+                                                    <rect key="frame" x="20" y="10" width="70" height="30"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="70" id="dW2-Fn-VFz"/>
+                                                        <constraint firstAttribute="height" constant="30" id="KYO-wo-5hy"/>
+                                                        <constraint firstAttribute="width" constant="70" id="Nl6-bj-Y4Z"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U1V-GK-cvz">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYg-eg-a0o">
                                                     <rect key="frame" x="100" y="10" width="175" height="29.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="U1V-GK-cvz" secondAttribute="bottom" constant="10" id="2Jc-dZ-rNf"/>
-                                                <constraint firstItem="qNi-KO-K5h" firstAttribute="top" secondItem="nte-bg-6Sx" secondAttribute="top" constant="5" id="PsT-oV-PXC"/>
-                                                <constraint firstAttribute="bottom" secondItem="qNi-KO-K5h" secondAttribute="bottom" constant="5" id="QPU-XJ-hbm"/>
-                                                <constraint firstAttribute="trailing" secondItem="U1V-GK-cvz" secondAttribute="trailing" constant="100" id="b6W-8u-EGD"/>
-                                                <constraint firstItem="U1V-GK-cvz" firstAttribute="top" secondItem="nte-bg-6Sx" secondAttribute="top" constant="10" id="uJl-0T-umM"/>
-                                                <constraint firstItem="qNi-KO-K5h" firstAttribute="leading" secondItem="nte-bg-6Sx" secondAttribute="leading" constant="20" id="wn1-Yy-s4P"/>
-                                                <constraint firstItem="U1V-GK-cvz" firstAttribute="leading" secondItem="qNi-KO-K5h" secondAttribute="trailing" constant="10" id="zV1-qh-K7P"/>
+                                                <constraint firstAttribute="bottom" secondItem="wYg-eg-a0o" secondAttribute="bottom" constant="10" id="0Sh-CP-6nj"/>
+                                                <constraint firstItem="2Tt-tN-hrr" firstAttribute="leading" secondItem="nte-bg-6Sx" secondAttribute="leading" constant="20" id="3MI-X3-eyN"/>
+                                                <constraint firstItem="wYg-eg-a0o" firstAttribute="leading" secondItem="nte-bg-6Sx" secondAttribute="leading" constant="100" id="KcG-jc-rX8"/>
+                                                <constraint firstItem="2Tt-tN-hrr" firstAttribute="top" secondItem="nte-bg-6Sx" secondAttribute="top" constant="10" id="dT0-T6-fqr"/>
+                                                <constraint firstAttribute="trailing" secondItem="wYg-eg-a0o" secondAttribute="trailing" constant="100" id="kMc-hN-bhj"/>
+                                                <constraint firstItem="wYg-eg-a0o" firstAttribute="top" secondItem="nte-bg-6Sx" secondAttribute="top" constant="10" id="swv-hW-YWL"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
@@ -106,7 +107,7 @@
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ozG-U6-5dw">
                                                     <rect key="frame" x="100" y="10" width="175" height="29.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="元/度" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7U-Jj-Ozw">
                                                     <rect key="frame" x="285" y="10" width="40" height="30"/>
@@ -219,7 +220,7 @@
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dVE-wz-U5d">
                                                     <rect key="frame" x="100" y="10" width="175" height="29.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -253,7 +254,7 @@
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VI6-cd-e8A">
                                                     <rect key="frame" x="100" y="10" width="175" height="29.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -285,16 +286,16 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VAy-eI-8K5">
-                                                    <rect key="frame" x="100" y="10" width="40" height="30"/>
+                                                    <rect key="frame" x="100" y="10" width="60" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="Qt9-gX-KqK"/>
-                                                        <constraint firstAttribute="width" constant="40" id="uMC-Xs-HJG"/>
+                                                        <constraint firstAttribute="width" constant="60" id="uMC-Xs-HJG"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0J-Fb-jdR">
-                                                    <rect key="frame" x="145" y="10" width="30" height="30"/>
+                                                    <rect key="frame" x="165" y="10" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="Q9k-w7-KX2"/>
                                                         <constraint firstAttribute="height" constant="30" id="enz-6G-k4u"/>
@@ -304,16 +305,16 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RKL-Hg-naA">
-                                                    <rect key="frame" x="195" y="10" width="40" height="30"/>
+                                                    <rect key="frame" x="215" y="10" width="60" height="30"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="40" id="tIz-c3-CoK"/>
+                                                        <constraint firstAttribute="width" constant="60" id="tIz-c3-CoK"/>
                                                         <constraint firstAttribute="height" constant="30" id="uVe-gD-8ZI"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="V" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xW3-Av-2xf">
-                                                    <rect key="frame" x="240" y="10" width="40" height="30"/>
+                                                    <rect key="frame" x="280" y="10" width="40" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="Aiq-sB-xko"/>
                                                         <constraint firstAttribute="width" constant="40" id="oZB-e3-UAY"/>
@@ -366,16 +367,16 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZPq-qh-4W3">
-                                                    <rect key="frame" x="100" y="40" width="40" height="30"/>
+                                                    <rect key="frame" x="100" y="40" width="60" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="gMA-jc-5l5"/>
-                                                        <constraint firstAttribute="width" constant="40" id="gng-zE-IwZ"/>
+                                                        <constraint firstAttribute="width" constant="60" id="gng-zE-IwZ"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="到" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8d-We-3L7">
-                                                    <rect key="frame" x="145" y="40" width="30" height="30"/>
+                                                    <rect key="frame" x="165" y="40" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="a7r-i9-GS7"/>
                                                         <constraint firstAttribute="width" constant="30" id="gw6-xS-dl9"/>
@@ -385,25 +386,25 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yqM-mR-oTp">
-                                                    <rect key="frame" x="180" y="40" width="40" height="30"/>
+                                                    <rect key="frame" x="200" y="40" width="60" height="30"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="40" id="I93-hx-LhC"/>
+                                                        <constraint firstAttribute="width" constant="60" id="I93-hx-LhC"/>
                                                         <constraint firstAttribute="height" constant="30" id="lOw-xy-eyJ"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
                                                 </textField>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R3G-aU-JBt">
-                                                    <rect key="frame" x="240" y="40" width="40" height="30"/>
+                                                    <rect key="frame" x="280" y="40" width="40" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="0gO-Ao-VHz"/>
                                                         <constraint firstAttribute="width" constant="40" id="aZ6-8j-U1R"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="元" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0E-oI-1L7">
-                                                    <rect key="frame" x="285" y="40" width="30" height="30"/>
+                                                    <rect key="frame" x="325" y="40" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="VC1-JJ-Mtn"/>
                                                         <constraint firstAttribute="width" constant="30" id="WPE-9a-D49"/>
@@ -423,16 +424,16 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CrX-YH-adf">
-                                                    <rect key="frame" x="100" y="80" width="40" height="30"/>
+                                                    <rect key="frame" x="100" y="80" width="60" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="PNa-kg-cck"/>
-                                                        <constraint firstAttribute="width" constant="40" id="ZUH-Wo-QLn"/>
+                                                        <constraint firstAttribute="width" constant="60" id="ZUH-Wo-QLn"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="到" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="duH-pC-OMb">
-                                                    <rect key="frame" x="145" y="80" width="30" height="30"/>
+                                                    <rect key="frame" x="165" y="80" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="JhK-sD-tpQ"/>
                                                         <constraint firstAttribute="height" constant="30" id="SFt-tO-mWz"/>
@@ -442,25 +443,25 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AbA-hV-Z7w">
-                                                    <rect key="frame" x="180" y="80" width="40" height="30"/>
+                                                    <rect key="frame" x="200" y="80" width="60" height="30"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="40" id="709-eS-Yaw"/>
+                                                        <constraint firstAttribute="width" constant="60" id="709-eS-Yaw"/>
                                                         <constraint firstAttribute="height" constant="30" id="oOP-WF-R1n"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
                                                 </textField>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eqK-s0-F11">
-                                                    <rect key="frame" x="240" y="80" width="40" height="30"/>
+                                                    <rect key="frame" x="280" y="80" width="40" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="i6P-LK-wxe"/>
                                                         <constraint firstAttribute="height" constant="30" id="pc5-fg-g3r"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="元" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pjg-BO-3DN">
-                                                    <rect key="frame" x="285" y="80" width="30" height="30"/>
+                                                    <rect key="frame" x="325" y="80" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="CRl-Vo-Wdh"/>
                                                         <constraint firstAttribute="width" constant="30" id="GHR-kf-1MZ"/>
@@ -633,11 +634,11 @@
                                                         <constraint firstAttribute="width" constant="100" id="FpE-qs-l6C"/>
                                                     </constraints>
                                                 </imageView>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d9B-Qv-biR">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="请输入描述性文字..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d9B-Qv-biR">
                                                     <rect key="frame" x="140" y="40" width="215" height="99.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                             <real key="value" value="0.5"/>
@@ -646,6 +647,9 @@
                                                             <integer key="value" value="10"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="yOZ-vm-KBI" id="PvW-Au-9iv"/>
+                                                    </connections>
                                                 </textView>
                                             </subviews>
                                             <constraints>
@@ -685,11 +689,11 @@
                                                         <constraint firstAttribute="width" constant="100" id="Zja-40-6dv"/>
                                                     </constraints>
                                                 </imageView>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pSe-vD-u0s">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="请输入描述性文字..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pSe-vD-u0s">
                                                     <rect key="frame" x="140" y="40" width="215" height="99.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                             <real key="value" value="0.5"/>
@@ -698,6 +702,9 @@
                                                             <integer key="value" value="10"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="yOZ-vm-KBI" id="aZ3-lj-v3H"/>
+                                                    </connections>
                                                 </textView>
                                             </subviews>
                                             <constraints>
@@ -735,7 +742,7 @@
                                                     <rect key="frame" x="20" y="40" width="335" height="99.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                             <real key="value" value="0.5"/>
@@ -761,15 +768,38 @@
                             </tableViewSection>
                         </sections>
                         <connections>
+                            <outlet property="busyEndTextField" destination="yqM-mR-oTp" id="e1v-Nl-hQ4"/>
+                            <outlet property="busyPriceTextField" destination="R3G-aU-JBt" id="iBd-X1-ZNA"/>
+                            <outlet property="busyStartTextField" destination="ZPq-qh-4W3" id="kIm-Fe-5It"/>
+                            <outlet property="currentTextField" destination="VAy-eI-8K5" id="3Zg-Do-4jD"/>
                             <outlet property="dataSource" destination="yOZ-vm-KBI" id="BPl-RU-IC3"/>
                             <outlet property="delegate" destination="yOZ-vm-KBI" id="PBA-zF-MyA"/>
+                            <outlet property="idleEndTextField" destination="AbA-hV-Z7w" id="LSU-r6-PtZ"/>
+                            <outlet property="idlePriceTextField" destination="eqK-s0-F11" id="D4f-Di-BdM"/>
+                            <outlet property="idleStartTextField" destination="CrX-YH-adf" id="fp1-nl-pBQ"/>
+                            <outlet property="instructionsTextView" destination="xA0-UH-x6F" id="aay-T6-JKi"/>
+                            <outlet property="interfaceDetailTextView" destination="pSe-vD-u0s" id="hcO-NQ-TSM"/>
+                            <outlet property="interfaceDetailsImageView" destination="GAz-At-pAJ" id="cGj-tG-c2m"/>
+                            <outlet property="interfaceImageView" destination="2yR-CT-vWJ" id="K9i-Ow-NdK"/>
+                            <outlet property="interfaceNumTextField" destination="dVE-wz-U5d" id="R2u-uD-MlT"/>
+                            <outlet property="interfaceTextView" destination="d9B-Qv-biR" id="69Z-Yd-tBW"/>
+                            <outlet property="interfaceTypeLabel" destination="wYg-eg-a0o" id="LUk-qq-DCN"/>
+                            <outlet property="payAli" destination="059-gE-K8J" id="i9z-KM-ahL"/>
+                            <outlet property="payCreditCard" destination="eCG-7V-rd7" id="Fjb-Xu-nGr"/>
+                            <outlet property="payOpetator" destination="99M-HH-gVB" id="wtr-QA-8FL"/>
+                            <outlet property="payWechat" destination="otM-Qx-C8w" id="0tE-Gx-pQE"/>
+                            <outlet property="serviceFeeTextField" destination="ozG-U6-5dw" id="Pv3-fi-QnL"/>
+                            <outlet property="takeCharingTypeNoImageView" destination="oX2-o0-nX7" id="eZb-ec-dHJ"/>
+                            <outlet property="takeCharingTypeYesImageView" destination="eFG-Cw-oD4" id="ctd-16-FXc"/>
+                            <outlet property="voltageTextField" destination="RKL-Hg-naA" id="OOv-1Q-MyF"/>
+                            <outlet property="weightTextField" destination="VI6-cd-e8A" id="MTE-uU-hnX"/>
                         </connections>
                     </tableView>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fz3-s0-TUV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="874.5" y="-51.5"/>
+            <point key="canvasLocation" x="931.5" y="-624.5"/>
         </scene>
     </scenes>
     <resources>

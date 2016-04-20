@@ -139,8 +139,8 @@
     tv.layer.borderColor = [[UIColor blackColor]CGColor];
     tv.layer.borderWidth = 1.0;
     [tv layoutCornerRadiusWithCornerRadius:5];
-    tv.returnKeyType=UIReturnKeyDone;
-    tv.delegate=self;
+    tv.returnKeyType = UIReturnKeyDone;
+    tv.delegate = self;
 }
 
 #pragma mark - 系统协议代理

@@ -9,7 +9,7 @@
 #import "PileDetailMainView.h"
 #import "CustomAlertView.h"
 #import "CustomPickView.h"
-#import "AddPileViewController.h";
+#import "AddPileViewController.h"
 
 @interface PileDetailMainView()<CustomAlertViewDelegate>
 
