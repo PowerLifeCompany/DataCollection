@@ -22,8 +22,10 @@
 {
     if (indexPath.row == 0 || indexPath.row == 1 || indexPath.row == 2 || indexPath.row == 3 || indexPath.row == 4 || indexPath.row == 5) {
         return 50;
+    }else if (indexPath.row == 6 || indexPath.row == 7){
+        return 120;
     }else{
-        return 160;
+        return 150;
     }
 }
 
