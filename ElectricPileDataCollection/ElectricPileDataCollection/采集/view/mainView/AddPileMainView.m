@@ -42,8 +42,10 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if(section==0){
         return 3;
+    }else{
+        //NSLog(@"---8---%ld",self.dataArray.count);
+        return self.dataArray.count;
     }
-    return self.dataArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -119,7 +121,6 @@
 - (void)addClick:(UIButton *)sender
 {
     [self.mainViewDelegate addPileInterface:self];
-    [self addTableViewCell];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -140,7 +141,7 @@
             self.currentLabel = cell.contentLabel;
         }
     }else{//第二组数据，代理通知controller进行界面跳转
-        
+        [self.mainViewDelegate itemSelectedWithMainView:self andIndexPath:indexPath];
     }
 }
 
@@ -207,5 +208,11 @@
     [self reloadData];
 }
 
+- (void)setDataArray:(NSMutableArray *)dataArray{
+    if(dataArray){
+        _dataArray=dataArray;
+        [self reloadData];
+    }
+}
 
 @end

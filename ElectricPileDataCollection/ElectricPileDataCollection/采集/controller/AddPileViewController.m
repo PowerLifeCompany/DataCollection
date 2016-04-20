@@ -37,14 +37,14 @@
 
 #pragma mark - 初始化组件
 - (void)loadMainView{
-    self.tableView=self.containerView.subviews[0];
-    self.tableView.mainViewDelegate=self;
+    self.tableView = self.containerView.subviews[0];
+    self.tableView.mainViewDelegate = self;
+    self.tableView.dataArray = self.dataArray;
 }
 
 - (void)loadNavigationBar{
     self.navigationItem.title = @"新增电桩";
 }
-
 
 #pragma mark - 自定义代理
 - (void)chooseAlbubmOrPhotoGraphWithIndex:(NSInteger)index{
@@ -59,6 +59,22 @@
         con.imagePickerDelegate=self;
         [self presentViewController:con animated:YES completion:nil];
     }
+}
+
+- (void)itemSelectedWithMainView:(AddPileMainView *)mainView andIndexPath:(NSIndexPath *)indexPath
+{
+    AddInterfaceViewController *addInterfaceVC  =[[AddInterfaceViewController alloc]init];
+    addInterfaceVC.dataArray = self.dataArray;
+    addInterfaceVC.interface = self.dataArray[indexPath.row];
+    [self.navigationController pushViewController:addInterfaceVC animated:YES];
+}
+
+- (NSMutableArray *)dataArray{
+    if(_dataArray==nil){
+        NSMutableArray * array = [PileVillageInfo sharedPileVillageInfo].parkings;
+        _dataArray=array?:[[NSMutableArray alloc]init];
+    }
+    return _dataArray;
 }
 
 - (void)customImagePickerWithChooseImage:(NSArray *)resultArray{
@@ -89,13 +105,5 @@
     }
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
-
-#pragma mark - 下载数据
-
-#pragma mark - 懒加载
-
-#pragma mark - 系统协议方法
-
-
 
 @end

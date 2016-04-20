@@ -19,7 +19,6 @@
 
 @property(nonatomic,assign)NSInteger currentPickViewIndex;
 
-@property (weak, nonatomic) UILabel * currentLabel;
 
 @end
 

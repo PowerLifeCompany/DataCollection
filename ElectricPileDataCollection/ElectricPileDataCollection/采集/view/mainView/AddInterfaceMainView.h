@@ -145,4 +145,6 @@
 
 @property (nonatomic, weak)UIImageView * currentImageView;
 
+@property (weak, nonatomic) UILabel * currentLabel;
+
 @end

@@ -14,6 +14,8 @@
 
 - (void)chooseAlbubmOrPhotoGraphWithIndex:(NSInteger)index;
 
+- (void)itemSelectedWithMainView:(AddPileMainView *)mainView andIndexPath:(NSIndexPath *)indexPath;
+
 - (void)addPileInterface:(AddPileMainView *)mainView;
 
 @end

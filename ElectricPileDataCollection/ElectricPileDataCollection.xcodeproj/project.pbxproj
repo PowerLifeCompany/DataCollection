@@ -246,9 +246,9 @@
 		7706F93B1CC06B8700EA1ED6 /* AddPileViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddPileViewController.storyboard; sourceTree = "<group>"; };
 		7706F93C1CC06B8700EA1ED6 /* ChargeStandardMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChargeStandardMainView.h; sourceTree = "<group>"; };
 		7706F93D1CC06B8700EA1ED6 /* ChargeStandardMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChargeStandardMainView.m; sourceTree = "<group>"; };
-		7706F93E1CC06B8700EA1ED6 /* CollectionMainCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionMainCell.h; sourceTree = "<group>"; };
-		7706F93F1CC06B8700EA1ED6 /* CollectionMainCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionMainCell.m; sourceTree = "<group>"; };
-		7706F9401CC06B8700EA1ED6 /* CollectionMainCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionMainCell.xib; sourceTree = "<group>"; };
+		7706F93E1CC06B8700EA1ED6 /* CollectionMainCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollectionMainCell.h; path = ../mainView/CollectionMainCell.h; sourceTree = "<group>"; };
+		7706F93F1CC06B8700EA1ED6 /* CollectionMainCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollectionMainCell.m; path = ../mainView/CollectionMainCell.m; sourceTree = "<group>"; };
+		7706F9401CC06B8700EA1ED6 /* CollectionMainCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CollectionMainCell.xib; path = ../mainView/CollectionMainCell.xib; sourceTree = "<group>"; };
 		7706F9411CC06B8700EA1ED6 /* CollectionMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionMainView.h; sourceTree = "<group>"; };
 		7706F9421CC06B8700EA1ED6 /* CollectionMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionMainView.m; sourceTree = "<group>"; };
 		7706F9431CC06B8700EA1ED6 /* CollPileMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollPileMainView.h; sourceTree = "<group>"; };
@@ -668,9 +668,6 @@
 				7706F9371CC06B8700EA1ED6 /* AddInterfaceMainCell.m */,
 				7706F93C1CC06B8700EA1ED6 /* ChargeStandardMainView.h */,
 				7706F93D1CC06B8700EA1ED6 /* ChargeStandardMainView.m */,
-				7706F93E1CC06B8700EA1ED6 /* CollectionMainCell.h */,
-				7706F93F1CC06B8700EA1ED6 /* CollectionMainCell.m */,
-				7706F9401CC06B8700EA1ED6 /* CollectionMainCell.xib */,
 				7706F9411CC06B8700EA1ED6 /* CollectionMainView.h */,
 				7706F9421CC06B8700EA1ED6 /* CollectionMainView.m */,
 				7706F9431CC06B8700EA1ED6 /* CollPileMainView.h */,
@@ -1541,6 +1538,9 @@
 		FA1BC5901CBD01FC00B9F1FD /* 自定制Cell */ = {
 			isa = PBXGroup;
 			children = (
+				7706F93E1CC06B8700EA1ED6 /* CollectionMainCell.h */,
+				7706F93F1CC06B8700EA1ED6 /* CollectionMainCell.m */,
+				7706F9401CC06B8700EA1ED6 /* CollectionMainCell.xib */,
 				7706F9871CC06DA500EA1ED6 /* CustomCellOne.h */,
 				7706F9881CC06DA500EA1ED6 /* CustomCellOne.m */,
 				7706F9891CC06DA500EA1ED6 /* CustomCellOne.xib */,
