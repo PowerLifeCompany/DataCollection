@@ -17,8 +17,9 @@
 
 @property (weak, nonatomic) CustomPickView * interfaceTypePickView;
 
-@property(nonatomic,assign)NSInteger currentPickViewIndex;
+//@property(nonatomic,assign)NSInteger currentPickViewIndex;
 
+//@property (weak, nonatomic) UILabel * currentLabel;
 
 @end
 
@@ -103,41 +104,12 @@
 
 - (void)chooseTakeChargingTypeTap:(UITapGestureRecognizer *)tap
 {
-    UITapGestureRecognizer *singTap = (UITapGestureRecognizer *)tap;
-    
-    if ([singTap view].tag == 7000) {
-        // 是
-        self.isTakeChargingLine = YES;
-        [self.mainViewDelegate chooseTakeChargingType:self];
-        
-    }else{
-        // 否
-        self.isTakeChargingLine = NO;
-        [self.mainViewDelegate chooseTakeChargingType:self];
-    }
+    [self.mainViewDelegate chooseTakeChargingType:self andTap:tap];
 }
 
 - (void)choosePayTypeTap:(UITapGestureRecognizer *)tap
 {
-    UITapGestureRecognizer *singTap = (UITapGestureRecognizer *)tap;
-    
-    if ([singTap view].tag == 8000) {
-        // 选择 运营商 专用卡
-        [self.mainViewDelegate choosePayType:self payTypeTap:singTap];
-        
-    }else if ([singTap view].tag == 8001){
-        // 选择 微信
-        [self.mainViewDelegate choosePayType:self payTypeTap:singTap];
-        
-    }else if ([singTap view].tag == 8002){
-        // 选择 支付宝
-        [self.mainViewDelegate choosePayType:self payTypeTap:singTap];
-        
-    }else{
-        // 选择信用卡
-        [self.mainViewDelegate choosePayType:self payTypeTap:singTap];
-    }
-    
+    [self.mainViewDelegate choosePayType:self payTypeTap:tap];
 }
 
 #pragma mark - choose album or camera

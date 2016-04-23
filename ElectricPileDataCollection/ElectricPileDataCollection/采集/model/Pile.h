@@ -19,10 +19,15 @@
 /**
  *  电桩接口
  */
-@property (nonatomic, strong) NSArray<PileInterface *> *interfaces;
+@property (nonatomic, strong) NSMutableArray<PileInterface *> *interfaces;
 /**
  *  电桩基本信息
  */
 @property (nonatomic, strong) PileInfo *pile_pile;
+
++ (instancetype)sharedPileInfo;
+
++ (void)setSharedPileInfo:(Pile *)sharedPileInfo;
+
 
 @end

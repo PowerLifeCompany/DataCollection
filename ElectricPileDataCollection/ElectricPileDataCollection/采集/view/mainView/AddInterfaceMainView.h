@@ -14,7 +14,7 @@
 
 - (void)chooseAlbubmOrPhotoGraphWithIndex:(NSInteger)index;
 
-- (void)chooseTakeChargingType:(AddInterfaceMainView *)mainView;
+- (void)chooseTakeChargingType:(AddInterfaceMainView *)mainView andTap:(UITapGestureRecognizer *)tap;
 
 - (void)choosePayType:(AddInterfaceMainView *)mainView payTypeTap:(UITapGestureRecognizer *)tap;
 
@@ -143,8 +143,10 @@
 
 @property (weak, nonatomic) id<AddInterfaceMainViewDelegate>mainViewDelegate;
 
-@property (nonatomic, weak)UIImageView * currentImageView;
+@property (weak, nonatomic) UIImageView * currentImageView;
 
 @property (weak, nonatomic) UILabel * currentLabel;
+
+@property (assign, nonatomic) NSInteger currentPickViewIndex;
 
 @end

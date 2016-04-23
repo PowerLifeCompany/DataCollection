@@ -13,86 +13,91 @@
  */
 @interface PileInterface : NSObject
 
-@property (nonatomic, assign) NSInteger Id;
+
+@property (assign, nonatomic) NSInteger Id;
 /**
  *  电桩ID
  */
-@property (nonatomic, assign) NSInteger pileId;
+@property (assign, nonatomic) NSInteger pileId;
 /**
  *  充电接口类型ID
  */
-@property (nonatomic, assign) NSInteger pileResourceInterfaceId;
+@property (assign, nonatomic) NSInteger pileResourceInterfaceId;
 /**
  *  服务费
  */
-@property (nonatomic, assign) double tariffService;
+@property (copy, nonatomic) NSString *tariffService;
 /**
  *  充电接口的个数
  */
-@property (nonatomic, assign) NSInteger num;
+@property (copy, nonatomic) NSString *num;
 /**
  *  重量
  */
-@property (nonatomic, assign) NSInteger weight;
+@property (copy, nonatomic) NSString *weight;
 /**
  *  电桩是否自带充电线
  */
-@property (nonatomic, assign) NSInteger hasChargeCable;
+@property (assign, nonatomic) NSInteger hasChargeCable;
 /**
  *  电压
  */
-@property (nonatomic, assign) double voltage;
+@property (copy, nonatomic) NSString *voltage;
 /**
  *  电流
  */
-@property (nonatomic, assign) double current;
+@property (copy, nonatomic) NSString *current;
 /**
  *  忙时充电钱数单价
  */
-@property (nonatomic, assign) double tariffChargeBusy;
+@property (copy, nonatomic) NSString *tariffChargeBusy;
 /**
  *  忙时时间区间
  */
-@property (nonatomic, copy) NSString *tariffChargeBusyInterval;
+@property (copy, nonatomic) NSString *tariffChargeBusyInterval;
 /**
  *  闲时充电钱数单价
  */
-@property (nonatomic, assign) double tariffChargeIdle;
+@property (copy, nonatomic) NSString *tariffChargeIdle;
 /**
  *  闲时时间区间
  */
-@property (nonatomic, copy) NSString *tariffChargeIdleInterval;
+@property (copy, nonatomic) NSString *tariffChargeIdleInterval;
 /**
  *  支付类型
  */
-@property (nonatomic, copy) NSString *paymentType;
+@property (copy, nonatomic) NSString *paymentType;
+/**
+ *  支付类型数组
+ */
+@property (copy, nonatomic) NSMutableArray *paymentTypeArray;
 /**
  *  充电口图片描述
  */
-@property (nonatomic, copy) NSString *comment8;
+@property (copy, nonatomic) NSString *comment8;
 /**
  *  充电口图片
  */
-@property (nonatomic, copy) NSString *imageUrl8;
+@property (copy, nonatomic) NSString *imageUrl8;
 /**
  *  充电口图片路径
  */
-@property (nonatomic, copy) NSString *chargingMouthImagePath;
+@property (copy, nonatomic) NSString *chargingMouthImagePath;
 /**
  *  细节特写图片描述
  */
-@property (nonatomic, copy) NSString *comment9;
+@property (copy, nonatomic) NSString *comment9;
 /**
  *  细节特写图片
  */
-@property (nonatomic, copy) NSString *imageUrl9;
+@property (copy, nonatomic) NSString *imageUrl9;
 /**
  *  细节特写图片路径
  */
-@property (nonatomic, copy) NSString *detailImagePath;
+@property (copy, nonatomic) NSString *detailImagePath;
 /**
  *  接口特殊说明
  */
-@property (nonatomic, copy) NSString *comment;
+@property (copy, nonatomic) NSString *comment;
 
 @end

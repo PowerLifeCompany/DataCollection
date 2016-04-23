@@ -69,14 +69,6 @@
     [self.navigationController pushViewController:addInterfaceVC animated:YES];
 }
 
-- (NSMutableArray *)dataArray{
-    if(_dataArray==nil){
-        NSMutableArray * array = [PileVillageInfo sharedPileVillageInfo].parkings;
-        _dataArray=array?:[[NSMutableArray alloc]init];
-    }
-    return _dataArray;
-}
-
 - (void)customImagePickerWithChooseImage:(NSArray *)resultArray{
     if(resultArray.count){
         GJCFAsset * asset=[resultArray firstObject];
@@ -88,6 +80,7 @@
 - (void)addPileInterface:(AddPileMainView *)mainView
 {    
     AddInterfaceViewController *addInterfaceVC = [[AddInterfaceViewController alloc] init];
+    addInterfaceVC.dataArray = self.dataArray;
     [self.navigationController  pushViewController:addInterfaceVC animated:YES];
 
 }
@@ -104,6 +97,20 @@
         
     }
     [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+// 这里是关键
+- (NSMutableArray *)dataArray{
+    if(_dataArray==nil){
+        NSMutableArray * array = [Pile sharedPileInfo].interfaces;
+        _dataArray = array?:[[NSMutableArray alloc]init];
+    }
+    return _dataArray;
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
 }
 
 @end

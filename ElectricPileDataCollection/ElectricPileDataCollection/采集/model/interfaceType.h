@@ -14,7 +14,7 @@
 
 @property (nonatomic, copy) NSString *name;
 
-+ (instancetype)InterfaceTypeWithDict:(NSDictionary *)dict;
++ (instancetype)interfaceTypeWithDict:(NSDictionary *)dict;
 
 + (NSArray *)shareInterfaceTypeFromPileBrandPlist;
 

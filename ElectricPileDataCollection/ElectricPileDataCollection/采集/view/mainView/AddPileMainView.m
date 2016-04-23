@@ -43,7 +43,7 @@
     if(section==0){
         return 3;
     }else{
-        //NSLog(@"---8---%ld",self.dataArray.count);
+        NSLog(@"---8---%ld",self.dataArray.count);
         return self.dataArray.count;
     }
 }
@@ -148,8 +148,8 @@
 #pragma mark - 自定义协议代理
 - (void)chooseAlbubmOrPhotoGraphWithTgr:(UITapGestureRecognizer *)tgr{
     self.currentImageView = (UIImageView *)tgr.view;
-    CustomAlertView * alertView=[CustomAlertView customAlertViewWithArray:@[@"相机",@"相册",@"取消"]];
-    alertView.delegate=self;
+    CustomAlertView * alertView =[CustomAlertView customAlertViewWithArray:@[@"相机",@"相册",@"取消"]];
+    alertView.delegate = self;
     [self.superview.superview addSubview:alertView];
     [alertView showAlertView];
 }
@@ -210,9 +210,10 @@
 
 - (void)setDataArray:(NSMutableArray *)dataArray{
     if(dataArray){
-        _dataArray=dataArray;
+        _dataArray = dataArray;
         [self reloadData];
     }
 }
+
 
 @end
