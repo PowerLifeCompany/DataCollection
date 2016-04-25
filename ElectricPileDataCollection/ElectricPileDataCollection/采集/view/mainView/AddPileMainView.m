@@ -2,12 +2,11 @@
 //  AddPileMainView.m
 //  ElectricPileDataCollection
 //
-//  Created by 陈行 on 16/4/11.
+//  Created by 温冬 on 16/4/23.
 //  Copyright © 2016年 陈行. All rights reserved.
 //
 
 #import "AddPileMainView.h"
-#import "AddInterfaceMainCell.h"
 #import "CustomAlertView.h"
 #import "CustomPickView.h"
 #import "CustomCellOne.h"
@@ -15,26 +14,28 @@
 #import "PileOperator.h"
 #import "PileBrand.h"
 
-@interface AddPileMainView()<CustomAlertViewDelegate,CustomPickViewDelegate>
+@interface AddPileMainView()<CustomAlertViewDelegate,CustomPickViewDelegate, UITextViewDelegate, UITableViewDelegate,UITableViewDataSource>
 
 @property (weak, nonatomic) CustomPickView * brandPickView;
 
 @property (weak, nonatomic) CustomPickView * operatorPickView;
 
-@property(nonatomic,assign)NSInteger currentPickViewIndex;
-
-@property (weak, nonatomic) UILabel * currentLabel;
-
 @end
 
 @implementation AddPileMainView
 
-- (void)awakeFromNib{
-    self.dataSource=self;
-    self.delegate=self;
+- (void)awakeFromNib
+{
+    /**
+     *  设置代理
+     */
+    self.delegate = self;
+    self.dataSource = self;
+    
+    self.currentImageView.tag = 5000;
 }
 
-#pragma mark - tableView协议代理
+#pragma mark - tableView delegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 2;
 }
@@ -43,22 +44,24 @@
     if(section==0){
         return 3;
     }else{
-        NSLog(@"---8---%ld",self.dataArray.count);
         return self.dataArray.count;
     }
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     if(indexPath.section==0){
         if(indexPath.row==0){
             CustomCellOne * cell = [CustomCellOne customCellWithTableView:tableView];
             cell.categoryLabel.text=@"电桩品牌";
             cell.contentLabel.text=@"";
+            self.pileBrandLabel = cell.contentLabel;
             return cell;
         }else if(indexPath.row==1){
             CustomCellOne * cell = [CustomCellOne customCellWithTableView:tableView];
             cell.categoryLabel.text=@"电桩运营商";
             cell.contentLabel.text=@"";
+            self.pileOperatorLabel = cell.contentLabel;
             return cell;
         }else{
             CustomCellTwo * cell = [CustomCellTwo customCellWithTableView:tableView];
@@ -66,56 +69,71 @@
             cell.descImageView.image=[UIImage imageNamed:@"addPic.png"];
             cell.descTextView.text=FINAL_PLEASE_ENTER_DESCRIPTION_TEST;
             UITapGestureRecognizer * tgr=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(chooseAlbubmOrPhotoGraphWithTgr:)];
+            cell.descImageView.userInteractionEnabled = YES;
             [cell.descImageView addGestureRecognizer:tgr];
+            cell.descTextView.delegate = self;
             return cell;
         }
     }else{
+        CustomCellOne * cell = [CustomCellOne customCellWithTableView:tableView];
+        cell.categoryLabel.text=[NSString stringWithFormat:@"接口-%ld", indexPath.row + 1];
+        cell.contentLabel.text=@"点击编辑";
+        cell.contentLabel.textAlignment = NSTextAlignmentRight;
+        return cell;
         
     }
     return [[UITableViewCell alloc]init];
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if(indexPath.section==0){
-        if(indexPath.row==0|| indexPath.row==1){
-            return 60;
-        }else{
-            return 160;
-        }
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0 && indexPath.row == 2) {
+        return 150;
     }else{
-        return 60;
+        return 50;
     }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 40;
+    return 30;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return 0.1;
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    UIView * headerView =[[UIView alloc]initWithFrame:CGRectMake(0, 0, WIDTH, 40)];
-    UILabel * label =[[UILabel alloc]initWithFrame:CGRectMake(20, 0, WIDTH, 40)];
-    label.font=[UIFont systemFontOfSize:13];
-    label.textColor=[UIColor grayColor];
-    [headerView addSubview:label];
+
+- (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView * headerView =[[UIView alloc]initWithFrame:CGRectMake(0, 0, WIDTH, 30)];
+    UILabel * titleLabel =[[UILabel alloc]initWithFrame:CGRectMake(20, 0, WIDTH, 30)];
+    titleLabel.font=[UIFont systemFontOfSize:15];
+    titleLabel.textColor=[UIColor grayColor];
+    [headerView addSubview:titleLabel];
     
-    if(section==1){
-        label.text=@"增加接口：";
-        UIButton * btn =[UIButton buttonWithType:UIButtonTypeCustom];
-        btn.frame=CGRectMake(WIDTH-66, 0, 50, 40);
-        [btn setTitle:@"+" forState:UIControlStateNormal];
-        [btn setTitleColor:BOY_BG_COLOR forState:UIControlStateNormal];
-        [btn addTarget:self action:@selector(addClick:) forControlEvents:UIControlEventTouchUpInside];
-        
-        [headerView addSubview:btn];
+    if(section == 0){
+        titleLabel.text=@"电桩介绍:";
     }else{
-        label.text=@"电桩介绍：";
+        titleLabel.text=@"增加接口:";
+        UIButton * addbtn =[UIButton buttonWithType:UIButtonTypeCustom];
+        addbtn.frame = CGRectMake(WIDTH - 66, 0, 50, 30);
+        [addbtn setTitle:@"+" forState:UIControlStateNormal];
+        [addbtn setTitleColor:BOY_BG_COLOR forState:UIControlStateNormal];
+        [addbtn.titleLabel setFont:[UIFont systemFontOfSize:30.0]];
+        [addbtn addTarget:self action:@selector(addClick:) forControlEvents:UIControlEventTouchUpInside];
+        [headerView addSubview:addbtn];
     }
     
     return headerView;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self.dataArray removeObjectAtIndex:indexPath.row];
+    [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return @"删除";
 }
 
 - (void)addClick:(UIButton *)sender
@@ -126,33 +144,34 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     //选中某行，执行相应的代理方法
-    if(indexPath.section==0){
-        if(indexPath.row==0){
-            self.brandPickView.hidden=NO;
-            self.operatorPickView.hidden=YES;
-            self.currentPickViewIndex=0;
+    if(indexPath.section == 0){
+        if(indexPath.row == 0){
+            self.brandPickView.hidden = NO;
+            self.operatorPickView.hidden = YES;
+            self.currentPickViewIndex = 0;
             CustomCellOne * cell = [tableView cellForRowAtIndexPath:indexPath];
-            self.currentLabel = cell.contentLabel;
-        }else if(indexPath.row==1){
-            self.brandPickView.hidden=YES;
-            self.operatorPickView.hidden=NO;
-            self.currentPickViewIndex=1;
+            self.pileBrandLabel = cell.contentLabel;
+        }else if(indexPath.row == 1){
+            self.brandPickView.hidden = YES;
+            self.operatorPickView.hidden = NO;
+            self.currentPickViewIndex = 1;
             CustomCellOne * cell = [tableView cellForRowAtIndexPath:indexPath];
-            self.currentLabel = cell.contentLabel;
+            self.pileOperatorLabel = cell.contentLabel;
         }
     }else{//第二组数据，代理通知controller进行界面跳转
         [self.mainViewDelegate itemSelectedWithMainView:self andIndexPath:indexPath];
     }
 }
 
-#pragma mark - 自定义协议代理
 - (void)chooseAlbubmOrPhotoGraphWithTgr:(UITapGestureRecognizer *)tgr{
+    
     self.currentImageView = (UIImageView *)tgr.view;
     CustomAlertView * alertView =[CustomAlertView customAlertViewWithArray:@[@"相机",@"相册",@"取消"]];
     alertView.delegate = self;
     [self.superview.superview addSubview:alertView];
     [alertView showAlertView];
 }
+
 
 - (void)customAlertView:(CustomAlertView *)alertView andIndex:(NSInteger)index{
     [alertView hiddenAlertView];
@@ -166,9 +185,12 @@
 - (void)customPickView:(CustomPickView *)customPickView andSelectedArray:(NSArray *)selectedArray andDataArray:(NSArray *)dataArray{
     customPickView.hidden=YES;
     NSInteger num = [selectedArray[0] integerValue];
-    if(self.currentPickViewIndex==0 || self.currentPickViewIndex==1){
+    if(self.currentPickViewIndex == 0){
         NSObject * obj = dataArray[num];
-        self.currentLabel.text=[obj valueForKey:@"name"];
+        self.pileBrandLabel.text = [obj valueForKey:@"name"];
+    }else{
+        NSObject * obj = dataArray[num];
+        self.pileOperatorLabel.text = [obj valueForKey:@"name"];
     }
 }
 
@@ -199,14 +221,14 @@
     return _operatorPickView;
 }
 
-#pragma mark - 私有方法
-- (void)addTableViewCell{//跳转到下一个界面，
-    if(self.dataArray==nil){
-        self.dataArray=[[NSMutableArray alloc]init];
-    }
-    [self.dataArray addObject:[NSObject new]];
-    [self reloadData];
-}
+//#pragma mark - 私有方法
+//- (void)addTableViewCell{//跳转到下一个界面，
+//    if(self.dataArray==nil){
+//        self.dataArray=[[NSMutableArray alloc]init];
+//    }
+//    [self.dataArray addObject:[NSObject new]];
+//    [self reloadData];
+//}
 
 - (void)setDataArray:(NSMutableArray *)dataArray{
     if(dataArray){
@@ -215,5 +237,26 @@
     }
 }
 
+#pragma mark - textView delegate
+- (void)textViewDidBeginEditing:(UITextView *)textView{
+    if([textView.text isEqualToString:FINAL_PLEASE_ENTER_DESCRIPTION_TEST]){
+        textView.text = @"";
+    }
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView{
+    if([textView.text isEqualToString:@""]){
+        textView.text = FINAL_PLEASE_ENTER_DESCRIPTION_TEST;
+    }
+}
+
+-(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    if ([text isEqualToString:@"\n"]) {
+        [textView resignFirstResponder];
+        return NO;
+    }
+    return YES;
+}
 
 @end

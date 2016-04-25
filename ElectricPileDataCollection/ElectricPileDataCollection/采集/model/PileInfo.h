@@ -13,29 +13,37 @@
  */
 @interface PileInfo : NSObject
 
-@property (nonatomic, assign) NSInteger Id;
+@property (assign, nonatomic) NSInteger Id;
+
 /**
  *  电桩组的位置ID
  */
-@property (nonatomic, assign) NSInteger pileSiteId;
+@property (assign, nonatomic) NSInteger pileSiteId;
 
 /**
  *  电桩品牌ID
  */
-@property (nonatomic, assign) NSInteger pileResourceBrandId;
+@property (assign, nonatomic) NSInteger pileResourceBrandId;
+
 /**
  *  电桩运营商ID
  */
-@property (nonatomic, assign) NSInteger pileResourceOperatorId;
+@property (assign, nonatomic) NSInteger pileResourceOperatorId;
+
 /**
  *  细节特写电桩用法
  */
-@property (nonatomic, copy) NSString *comment7;
+@property (copy, nonatomic) NSString *comment7;
 
 /**
  *  细节特写电桩用法(图片)
  */
-@property (nonatomic, copy) NSString *imageUrl7;
+@property (copy, nonatomic) NSString *logoDetailImagePath;
+
+/**
+ *  细节特写电桩用法(图片)
+ */
+@property (copy, nonatomic) NSString *imageUrl7;
 
 
 @end

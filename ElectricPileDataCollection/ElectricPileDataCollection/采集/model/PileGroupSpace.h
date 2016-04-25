@@ -43,8 +43,6 @@
  */
 @property (nonatomic, copy) NSString *comment;
 
-
-
 /**
  *  停车场位于小区哪里
  */
@@ -59,8 +57,6 @@
  *  停车场位于小区哪里(存在沙盒的路径)
  */
 @property (nonatomic, copy) NSString *image3Path;
-
-
 
 /**
  *  电桩组的全景图
@@ -77,8 +73,6 @@
  */
 @property (nonatomic, copy) NSString *image4Path;
 
-
-
 /**
  *  空位
  */
@@ -93,8 +87,6 @@
  *  空位(存在沙盒的路径)
  */
 @property (nonatomic, copy) NSString *image5Path;
-
-
 
 /**
  *  充电中

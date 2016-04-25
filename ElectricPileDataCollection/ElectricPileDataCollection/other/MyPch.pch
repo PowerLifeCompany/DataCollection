@@ -72,3 +72,33 @@
 //常用变量
 #define FINAL_DATA_REQUEST_FAIL @"数据请求失败！"
 #define FINAL_PLEASE_ENTER_DESCRIPTION_TEST @"请输入描述性文字..."
+
+// 电桩品牌
+#define GD @"国电"
+#define PT @"普天"
+#define TLD @"特来电"
+#define HSSY @"华商三优"
+#define NFDW @"南方电网"
+#define ZSH @"中石化"
+#define FDKJ @"富电科技"
+#define ATX @"奥特迅"
+#define WBJT @"万邦集团"
+#define WMGF @"万马股份"
+#define XXCD @"星星充电"
+#define YWNY @"依威能源"
+#define TSL @"特斯拉"
+#define ACW @"爱充网"
+#define CDW @"充电网"
+#define DZ @"电桩"
+
+// 接口类型
+#define FAST_INTERNATION @"快--国标"
+#define FAST_DOMESTIC @"快--非国标"
+#define SLOW_INTERNATION @"慢--国标"
+#define SLOW_DOMESTIC @"慢--非国标"
+
+// 支付类型
+#define OPERATOR @"1"
+#define WECHAT   @"2"
+#define ALI      @"3"
+#define CREDITCARD @"4"

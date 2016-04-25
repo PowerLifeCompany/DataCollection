@@ -22,6 +22,7 @@
     /**
      *  设置代理
      */
+    //self.dataSource = self;
     self.delegate = self;
     self.locationTextField.delegate = self;
     self.parkingTextView.delegate = self;
@@ -87,6 +88,28 @@
 }
 
 #pragma mark - tableView delegate
+
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    
+//}
+
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+//{
+//    return 3;
+//}
+
+//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+//{
+//    if (section == 0) {
+//        return 1;
+//    }else if (section == 1){
+//        return 6;
+//    }else{
+//        return self.dataArray.count;
+//    }
+//}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 0) {
@@ -171,6 +194,5 @@
 {
     [self.mainViewDelegate addPile:self];
 }
-
 
 @end

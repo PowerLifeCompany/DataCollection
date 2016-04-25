@@ -13,16 +13,6 @@
 #import "NSSystemDate.h"
 #import "NSFileManager+FileCategory.h"
 
-#define FAST_INTERNATION @"快--国标"
-#define FAST_DOMESTIC @"快--非国标"
-#define SLOW_INTERNATION @"慢--国标"
-#define SLOW_DOMESTIC @"慢--非国标"
-
-#define OPERATOR @"1"
-#define WECHAT   @"2"
-#define ALI      @"3"
-#define CREDITCARD @"4"
-
 /**
  接口类型
  */
@@ -72,13 +62,13 @@ typedef enum {
 
 @property (assign, nonatomic) BOOL isTakeCharingTypeNoIV;
 
-@property (assign, nonatomic) BOOL isChooseOperatorPay;
+@property (assign, nonatomic) BOOL isChooseOperatorPayIV;
 
-@property (assign, nonatomic) BOOL isChooseWechatPay;
+@property (assign, nonatomic) BOOL isChooseWechatPayIV;
 
-@property (assign, nonatomic) BOOL isChooseAliPay;
+@property (assign, nonatomic) BOOL isChooseAliPayIV;
 
-@property (assign, nonatomic) BOOL isChooseCreditCardPay;
+@property (assign, nonatomic) BOOL isChooseCreditCardPayIV;
 
 @property (strong, nonatomic) NSMutableArray *payArray;
 
@@ -96,6 +86,7 @@ typedef enum {
     [super viewDidLoad];
     [self loadMainView];
     [self loadNavigationBar];
+    
 }
 
 #pragma mark - 初始化组件
@@ -105,6 +96,8 @@ typedef enum {
         self.tableView = self.containerView.subviews[0];
         self.tableView.mainViewDelegate = self;
     }
+    
+    self.payArray = [NSMutableArray array];
     
     /**
      *  数据回显
@@ -171,7 +164,7 @@ typedef enum {
         // 充电单价-闲时-价格
         self.tableView.idlePriceTextField.text = self.interface.tariffChargeIdle;
         
-        NSArray *payTypeArray = [self.interface.paymentType componentsSeparatedByString:@","];
+        NSArray *payTypeArray = [self.interface.paymentType componentsSeparatedByString:@","];        
         /**
          *  支付方式
          */
@@ -305,24 +298,7 @@ typedef enum {
     self.interface.tariffChargeIdle = self.tableView.idlePriceTextField.text;
     
     // 支付方式
-    if (self.isChooseOperatorPay == YES) {
-        [self.payArray addObject:@"1"];
-    }
-    
-    if (self.isChooseWechatPay == YES) {
-        [self.payArray addObject:@"2"];
-    }
-    
-    if (self.isChooseAliPay == YES) {
-        [self.payArray addObject:@"3"];
-    }
-    
-    if (self.isChooseCreditCardPay == YES) {
-        [self.payArray addObject:@"4"];
-    }
-    
     self.interface.paymentType = [self.payArray componentsJoinedByString:@","];
-    
     
     // 充电口 正面照
     if(self.isChooseInterfaceIV){
@@ -349,6 +325,12 @@ typedef enum {
     // 特殊说明
     self.interface.comment = self.tableView.instructionsTextView.text;
     
+    
+    /**
+     *  发送通知,刷新前一个页面
+     */
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadAddPileVC" object:nil];
+    
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -357,7 +339,7 @@ typedef enum {
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-#pragma custom delegete
+#pragma - custom delegete
 - (void)chooseAlbubmOrPhotoGraphWithIndex:(NSInteger)index{
     if(index == 0){
         UIImagePickerController * con =[[UIImagePickerController alloc]init];
@@ -424,38 +406,38 @@ typedef enum {
     if ([tap view].tag == 8000) {
         if (mainView.isChoosepayOpetator == NO) {
             mainView.payOpetator.image = [UIImage imageNamed:@"checkBox_yes"];
-            self.isChooseOperatorPay = YES;
+            [self.payArray addObject:OPERATOR];
         }else{
             mainView.payOpetator.image = [UIImage imageNamed:@"checkBox_no"];
-            self.isChooseOperatorPay = NO;
+            [self.payArray removeObject:OPERATOR];
         }
         mainView.isChoosepayOpetator = !mainView.isChoosepayOpetator;
         
     }else if ([tap view].tag == 8001){
         if (mainView.isChoosepayWechat == NO) {
             mainView.payWechat.image = [UIImage imageNamed:@"checkBox_yes"];
-            self.isChooseWechatPay = YES;
+            [self.payArray addObject:WECHAT];
         }else{
             mainView.payWechat.image = [UIImage imageNamed:@"checkBox_no"];
-            self.isChooseWechatPay = NO;
+            [self.payArray removeObject:WECHAT];
         }
         mainView.isChoosepayWechat = !mainView.isChoosepayWechat;
     }else if ([tap view].tag == 8002){
         if (mainView.isChoosepayAli == NO) {
             mainView.payAli.image = [UIImage imageNamed:@"checkBox_yes"];
-            self.isChooseAliPay = YES;
+            [self.payArray addObject:ALI];
         }else{
             mainView.payAli.image = [UIImage imageNamed:@"checkBox_no"];
-            self.isChooseAliPay = NO;
+            [self.payArray removeObject:ALI];
         }
         mainView.isChoosepayAli = !mainView.isChoosepayAli;
     }else{
         if (mainView.isChoosepayCreditCard == NO) {
             mainView.payCreditCard.image = [UIImage imageNamed:@"checkBox_yes"];
-            self.isChooseCreditCardPay = YES;
+            [self.payArray addObject:CREDITCARD];
         }else{
             mainView.payCreditCard.image = [UIImage imageNamed:@"checkBox_no"];
-            self.isChooseCreditCardPay = NO;
+            [self.payArray removeObject:CREDITCARD];
         }
         mainView.isChoosepayCreditCard = !mainView.isChoosepayCreditCard;
     }

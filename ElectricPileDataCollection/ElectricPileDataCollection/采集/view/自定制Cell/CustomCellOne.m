@@ -26,6 +26,7 @@
     [super awakeFromNib];
     self.categoryLabel.text=@"";
     self.contentLabel.text=@"";
+    self.contentLabel.font = [UIFont systemFontOfSize:14.0];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

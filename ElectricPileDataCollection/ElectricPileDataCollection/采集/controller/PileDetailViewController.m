@@ -46,11 +46,10 @@
 {
     self.navigationItem.title = @"电桩详情";
     
-    UIBarButtonItem *saveBtnItem = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStyleDone target:self action:@selector(saveClick:)];
-    self.navigationItem.leftBarButtonItem = saveBtnItem;
-    
     UIBarButtonItem *cancelBtnItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStyleDone target:self action:@selector(cancelClick:)];
-    self.navigationItem.rightBarButtonItem = cancelBtnItem;
+    self.navigationItem.leftBarButtonItem = cancelBtnItem;
+    UIBarButtonItem *saveBtnItem = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStyleDone target:self action:@selector(saveClick:)];
+    self.navigationItem.rightBarButtonItem = saveBtnItem;
 
 }
 
@@ -70,12 +69,13 @@
         self.tableView.longitudeTextField.text = self.pileLocation.x;
         // 纬度
         self.tableView.latitudeTextField.text = self.pileLocation.y;
-        
     }
 }
 
 - (void)saveClick:(UIButton *)sender
 {
+    [self.navigationController popViewControllerAnimated:YES];
+    
     if(!self.pileLocation){
         self.pileLocation=[[PileGroupSite alloc]init];
         [self.dataArray addObject:self.pileLocation];
@@ -87,8 +87,6 @@
     self.pileLocation.x = self.tableView.longitudeTextField.text;
     // 纬度
     self.pileLocation.y = self.tableView.latitudeTextField.text;
-    
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)cancelClick:(UIButton *)sender
@@ -96,7 +94,7 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-#pragma custom delegete
+#pragma - custom delegete
 - (void)chooseAlbubmOrPhotoGraphWithIndex:(NSInteger)index{
     if(index == 0){
         UIImagePickerController * con =[[UIImagePickerController alloc]init];
@@ -175,6 +173,12 @@
     [picker dismissViewControllerAnimated:YES completion:^{
         [self editorImageWithImage:image];
     }];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {

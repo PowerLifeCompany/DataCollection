@@ -26,5 +26,4 @@
     self.descImageView.userInteractionEnabled=YES;
 }
 
-
 @end

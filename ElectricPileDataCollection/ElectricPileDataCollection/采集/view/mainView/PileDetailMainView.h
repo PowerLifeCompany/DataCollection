@@ -104,4 +104,6 @@
 
 @property (nonatomic, weak)UIImageView * currentImageView;
 
+@property (strong, nonatomic) NSMutableArray *dataArray;
+
 @end
