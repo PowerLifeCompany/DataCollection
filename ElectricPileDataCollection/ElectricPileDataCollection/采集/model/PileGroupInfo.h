@@ -28,6 +28,10 @@
 /**
  *  电桩信息集合
  */
-@property (nonatomic, strong) NSArray<Pile *> *piles;
+@property (nonatomic, strong) NSMutableArray<Pile *> *piles;
+
++ (instancetype)sharedPileGroupInfo;
+
++ (void)setSharedPileGroupInfo:(PileGroupInfo *)sharedPileGroupInfo;
 
 @end

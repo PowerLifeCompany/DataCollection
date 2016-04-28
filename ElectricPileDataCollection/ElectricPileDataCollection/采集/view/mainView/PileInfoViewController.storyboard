@@ -23,10 +23,31 @@
                                     <segue destination="Z6j-xg-iUX" kind="embed" id="ULR-KF-gMv"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9YZ-6x-18p">
+                                <rect key="frame" x="70" y="557" width="235" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Xen-AS-JV7"/>
+                                </constraints>
+                                <state key="normal" title="下一步">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextStep:" destination="uSp-s5-2Bb" eventType="touchUpInside" id="dZM-C7-E6E"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="b4l-IC-1Hb" secondAttribute="trailing" id="ALN-Dv-o0E"/>
+                            <constraint firstAttribute="trailing" secondItem="9YZ-6x-18p" secondAttribute="trailing" constant="70" id="II1-P5-iE8"/>
+                            <constraint firstItem="9YZ-6x-18p" firstAttribute="leading" secondItem="Cta-qU-PJ4" secondAttribute="leading" constant="70" id="U1L-Hp-2Ke"/>
+                            <constraint firstItem="JSz-5z-zkD" firstAttribute="top" secondItem="9YZ-6x-18p" secondAttribute="bottom" constant="70" id="YM0-Pk-OZb"/>
                             <constraint firstItem="JSz-5z-zkD" firstAttribute="top" secondItem="b4l-IC-1Hb" secondAttribute="bottom" id="hl5-Yw-QrL"/>
                             <constraint firstItem="b4l-IC-1Hb" firstAttribute="top" secondItem="Cta-qU-PJ4" secondAttribute="top" constant="64" id="qqe-la-kBu"/>
                             <constraint firstItem="b4l-IC-1Hb" firstAttribute="leading" secondItem="Cta-qU-PJ4" secondAttribute="leading" id="r7p-oj-evx"/>
@@ -45,7 +66,7 @@
         <scene sceneID="KrW-3C-WaG">
             <objects>
                 <tableViewController id="Z6j-xg-iUX" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="wSM-qE-YNu" customClass="PileInfoMainView">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="50" sectionHeaderHeight="18" sectionFooterHeight="18" id="wSM-qE-YNu" customClass="PileInfoMainView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -53,10 +74,10 @@
                             <tableViewSection id="YyS-8q-iUe">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="sn2-E1-7xX">
-                                        <rect key="frame" x="0.0" y="35" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="35" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sn2-E1-7xX" id="0Du-wC-Vbd">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>

@@ -31,8 +31,6 @@
      */
     self.delegate = self;
     self.dataSource = self;
-    
-    self.currentImageView.tag = 5000;
 }
 
 #pragma mark - tableView delegate
@@ -44,7 +42,7 @@
     if(section==0){
         return 3;
     }else{
-        return self.dataArray.count;
+        return self.interfaceArray.count;
     }
 }
 
@@ -67,11 +65,15 @@
             CustomCellTwo * cell = [CustomCellTwo customCellWithTableView:tableView];
             cell.titleLabel.text=@"（照片）细节特写、电桩用法、logo：";
             cell.descImageView.image=[UIImage imageNamed:@"addPic.png"];
-            cell.descTextView.text=FINAL_PLEASE_ENTER_DESCRIPTION_TEST;
+            if ([cell.descTextView.text isEqualToString:@""]) {
+                cell.descTextView.text = FINAL_PLEASE_ENTER_DESCRIPTION_TEST;
+            }
+            cell.descTextView.delegate = self;
+            self.logoDetailImageView = cell.descImageView;
+            self.logoDetailTextView = cell.descTextView;
             UITapGestureRecognizer * tgr=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(chooseAlbubmOrPhotoGraphWithTgr:)];
             cell.descImageView.userInteractionEnabled = YES;
             [cell.descImageView addGestureRecognizer:tgr];
-            cell.descTextView.delegate = self;
             return cell;
         }
     }else{
@@ -80,7 +82,6 @@
         cell.contentLabel.text=@"点击编辑";
         cell.contentLabel.textAlignment = NSTextAlignmentRight;
         return cell;
-        
     }
     return [[UITableViewCell alloc]init];
 }
@@ -127,8 +128,18 @@
     return headerView;
 }
 
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 1) {
+        return UITableViewCellEditingStyleDelete;
+    }else{
+        return UITableViewCellEditingStyleNone;
+    }
+}
+
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
-    [self.dataArray removeObjectAtIndex:indexPath.row];
+    
+    [self.interfaceArray removeObjectAtIndex:indexPath.row];
     [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
 }
 
@@ -143,7 +154,6 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    //选中某行，执行相应的代理方法
     if(indexPath.section == 0){
         if(indexPath.row == 0){
             self.brandPickView.hidden = NO;
@@ -158,20 +168,17 @@
             CustomCellOne * cell = [tableView cellForRowAtIndexPath:indexPath];
             self.pileOperatorLabel = cell.contentLabel;
         }
-    }else{//第二组数据，代理通知controller进行界面跳转
+    }else{
         [self.mainViewDelegate itemSelectedWithMainView:self andIndexPath:indexPath];
     }
 }
 
 - (void)chooseAlbubmOrPhotoGraphWithTgr:(UITapGestureRecognizer *)tgr{
-    
-    self.currentImageView = (UIImageView *)tgr.view;
     CustomAlertView * alertView =[CustomAlertView customAlertViewWithArray:@[@"相机",@"相册",@"取消"]];
     alertView.delegate = self;
     [self.superview.superview addSubview:alertView];
     [alertView showAlertView];
 }
-
 
 - (void)customAlertView:(CustomAlertView *)alertView andIndex:(NSInteger)index{
     [alertView hiddenAlertView];
@@ -198,7 +205,7 @@
     customPickView.hidden=YES;
 }
 
-#pragma mark - 懒加载
+#pragma mark - lazy loading
 - (CustomPickView *)brandPickView{
     if(_brandPickView==nil){
         CustomPickView * pickView=[CustomPickView customPickViewWithDataArray:[PileBrand sharePileBrandFromPileBrandPlist] andComponent:1 andIsDependPre:NO andFrame:CGRectMake(0, HEIGHT-300, WIDTH, 300)];
@@ -221,18 +228,16 @@
     return _operatorPickView;
 }
 
-//#pragma mark - 私有方法
-//- (void)addTableViewCell{//跳转到下一个界面，
-//    if(self.dataArray==nil){
-//        self.dataArray=[[NSMutableArray alloc]init];
-//    }
-//    [self.dataArray addObject:[NSObject new]];
-//    [self reloadData];
-//}
-
 - (void)setDataArray:(NSMutableArray *)dataArray{
     if(dataArray){
         _dataArray = dataArray;
+        [self reloadData];
+    }
+}
+
+- (void)setInterfaceArray:(NSMutableArray *)interfaceArray{
+    if (interfaceArray) {
+        _interfaceArray = interfaceArray;
         [self reloadData];
     }
 }

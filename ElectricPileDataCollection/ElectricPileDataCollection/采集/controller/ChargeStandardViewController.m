@@ -38,7 +38,7 @@
     
     UIButton * preBtn=[UIButton buttonWithType:UIButtonTypeCustom];
     preBtn.frame=CGRectMake((WIDTH-200)/3.0, HEIGHT-110, 100, 40);
-    [self.view addSubview:preBtn];
+    //[self.view addSubview:preBtn];
     [preBtn addTarget:self action:@selector(backToPreviousViewCon) forControlEvents:UIControlEventTouchUpInside];
     preBtn.backgroundColor=[UIColor colorWithRed:0.02f green:0.48f blue:1.00f alpha:1.00f];
     [preBtn setTitle:@"上一步" forState:UIControlStateNormal];
@@ -50,7 +50,7 @@
     
     UIButton * saveExitBtn=[UIButton buttonWithType:UIButtonTypeCustom];
     saveExitBtn.frame=CGRectMake((WIDTH-200)/3.0*2+100, HEIGHT-110, 100, 40);
-    [self.view addSubview:saveExitBtn];
+    //[self.view addSubview:saveExitBtn];
     [saveExitBtn addTarget:self action:@selector(saveExitBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     saveExitBtn.backgroundColor=[UIColor colorWithRed:0.02f green:0.48f blue:1.00f alpha:1.00f];;
     [saveExitBtn setTitle:@"保存退出" forState:UIControlStateNormal];

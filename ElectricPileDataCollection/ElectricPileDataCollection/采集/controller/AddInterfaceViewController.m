@@ -325,11 +325,10 @@ typedef enum {
     // 特殊说明
     self.interface.comment = self.tableView.instructionsTextView.text;
     
-    
     /**
-     *  发送通知,刷新前一个页面
+     *  发送通知
      */
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadAddPileVC" object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadVC" object:nil];
     
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -460,5 +459,6 @@ typedef enum {
         [self editorImageWithImage:image];
     }];
 }
+
 
 @end

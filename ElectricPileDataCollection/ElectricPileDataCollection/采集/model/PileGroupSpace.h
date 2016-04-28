@@ -13,11 +13,11 @@
  */
 @interface PileGroupSpace : NSObject
 
-@property (nonatomic, assign) NSInteger Id;
+@property (assign, nonatomic) NSInteger Id;
 /**
  *  电桩组的位置ID
  */
-@property (nonatomic, assign) NSInteger pileSiteId;
+@property (assign, nonatomic) NSInteger pileSiteId;
 
 /**
  *  车位类型中四条数据
@@ -25,83 +25,83 @@
 /**
  *  中停车位
  */
-@property (nonatomic, assign) NSInteger mnum;
+@property (copy, nonatomic) NSString *mnum;
 /**
  *  小停车位
  */
-@property (nonatomic, assign) NSInteger snum;
+@property (copy, nonatomic) NSString *snum;
 /**
  *  大停车位
  */
-@property (nonatomic, assign) NSInteger bnum;
+@property (copy, nonatomic) NSString *bnum;
 /**
  *  微停车位
  */
-@property (nonatomic, assign) NSInteger tnum;
+@property (copy, nonatomic) NSString *tnum;
 /**
  *  特殊说明
  */
-@property (nonatomic, copy) NSString *comment;
+@property (copy, nonatomic) NSString *comment;
 
 /**
  *  停车场位于小区哪里
  */
-@property (nonatomic, copy) NSString *comment3;
+@property (copy, nonatomic) NSString *comment3;
 
 /**
  *  停车场位于小区哪里(url)
  */
-@property (nonatomic, copy) NSString *imageUrl3;
+@property (copy, nonatomic) NSString *imageUrl3;
 
 /**
  *  停车场位于小区哪里(存在沙盒的路径)
  */
-@property (nonatomic, copy) NSString *image3Path;
+@property (copy, nonatomic) NSString *image3Path;
 
 /**
  *  电桩组的全景图
  */
-@property (nonatomic, copy) NSString *comment4;
+@property (copy, nonatomic) NSString *comment4;
 
 /**
  *  电桩组的全景图(url)
  */
-@property (nonatomic, copy) NSString *imageUrl4;
+@property (copy, nonatomic) NSString *imageUrl4;
 
 /**
  *  电桩组的全景图(存在沙盒的路径)
  */
-@property (nonatomic, copy) NSString *image4Path;
+@property (copy, nonatomic) NSString *image4Path;
 
 /**
  *  空位
  */
-@property (nonatomic, copy) NSString *comment5;
+@property (copy, nonatomic) NSString *comment5;
 
 /**
  *  空位(url)
  */
-@property (nonatomic, copy) NSString *imageUrl5;
+@property (copy, nonatomic) NSString *imageUrl5;
 
 /**
  *  空位(存在沙盒的路径)
  */
-@property (nonatomic, copy) NSString *image5Path;
+@property (copy, nonatomic) NSString *image5Path;
 
 /**
  *  充电中
  */
-@property (nonatomic, copy) NSString *comment6;
+@property (copy, nonatomic) NSString *comment6;
 
 /**
  *  充电中图片路径(url)
  */
-@property (nonatomic, copy) NSString *imageUrl6;
+@property (copy, nonatomic) NSString *imageUrl6;
 
 /**
  *  充电中图片路径(存在沙盒的路径)
  */
-@property (nonatomic, copy) NSString *image6Path;
+@property (copy, nonatomic) NSString *image6Path;
 
 
 @end

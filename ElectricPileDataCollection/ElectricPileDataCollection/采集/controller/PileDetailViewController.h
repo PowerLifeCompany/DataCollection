@@ -9,22 +9,25 @@
 #import "RootViewController.h"
 #import "PileGroupSite.h"
 #import "PileGroupSpace.h"
+#import "PileGroupInfo.h"
+
+@class PileDetailViewController;
 
 @interface PileDetailViewController : RootViewController
 
 /**
- *  位置模型
+ *  电桩组信息
  */
-@property (strong, nonatomic) PileGroupSite *pileLocation;
+@property (strong, nonatomic) PileGroupInfo *pileGroupInfo;
 
 /**
- *  车位模型
+ *  电桩详情数组
  */
-@property (strong, nonatomic) PileGroupSpace *pileParking;
+@property (strong, nonatomic) NSMutableArray * dataArray;
 
 /**
- *  数据数组
+ *  接口数组
  */
-@property(nonatomic,strong)NSMutableArray * dataArray;
+@property (strong, nonatomic) NSMutableArray *addPileArray;
 
 @end

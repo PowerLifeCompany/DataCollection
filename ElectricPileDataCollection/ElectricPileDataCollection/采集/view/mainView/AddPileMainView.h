@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Pile.h"
 
 @class AddPileMainView;
 
@@ -20,7 +21,7 @@
 
 @end
 
-@interface AddPileMainView : UITableView<UITableViewDelegate, UITextViewDelegate>
+@interface AddPileMainView : UITableView<UITableViewDelegate,UITextViewDelegate>
 
 /**
  *  电桩品牌
@@ -35,18 +36,23 @@
 /**
  *  细节照片
  */
-@property(nonatomic,weak)UIImageView * currentImageView;
+@property (strong, nonatomic) UIImageView *logoDetailImageView;
 
 /**
  *  细节描述
  */
 @property (strong, nonatomic) UITextView *logoDetailTextView;
 
+@property (nonatomic,strong) NSMutableArray * dataArray;
 
-@property(nonatomic,strong)NSMutableArray * dataArray;
+@property (nonatomic, strong) NSMutableArray *interfaceArray;
+
+@property (nonatomic,weak)UIImageView * currentImageView;
 
 @property (assign, nonatomic) NSInteger currentPickViewIndex;
 
 @property(nonatomic,weak)id<AddPileMainViewDelegate> mainViewDelegate;
+
+@property (strong, nonatomic) Pile *addPile;
 
 @end

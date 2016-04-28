@@ -11,6 +11,7 @@
 @interface CustomCellTwo : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
 @property (weak, nonatomic) IBOutlet UIImageView *descImageView;
 
 @property (weak, nonatomic) IBOutlet UITextView *descTextView;

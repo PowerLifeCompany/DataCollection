@@ -11,8 +11,10 @@
 
 @interface AddPileViewController : RootViewController
 
-@property (strong, nonatomic) NSArray<Pile *> *piles;
+@property (strong, nonatomic) Pile *addPile;
 
-@property (strong, nonatomic) PileInfo *addPile;
+@property (strong, nonatomic) NSMutableArray *dataArray;
+
+@property (strong, nonatomic) NSMutableArray *interfaceArray;
 
 @end

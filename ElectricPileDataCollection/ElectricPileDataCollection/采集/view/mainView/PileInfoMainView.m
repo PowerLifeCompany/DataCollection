@@ -7,6 +7,7 @@
 //
 
 #import "PileInfoMainView.h"
+#import "CustomCellOne.h"
 
 @implementation PileInfoMainView
 
@@ -16,7 +17,6 @@
     self.delegate = self;
 }
 
-
 #pragma mark - tableView delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -25,13 +25,18 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString * identifier=@"pileInfo";
-    UITableViewCell * cell=[tableView dequeueReusableCellWithIdentifier:identifier];
-    if(cell==nil){
-        [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:identifier];
-        cell=[tableView dequeueReusableCellWithIdentifier:identifier];
-    }
+    CustomCellOne * cell = [CustomCellOne customCellWithTableView:tableView];
+    cell.categoryLabel.text=[NSString stringWithFormat:@"电桩信息-%ld", indexPath.row + 1];
+    cell.contentLabel.text=@"点击编辑";
+    cell.contentLabel.textAlignment = NSTextAlignmentRight;
     return cell;
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self deselectRowAtIndexPath:indexPath animated:YES];
+    [self.mainViewDelegate itemSelectedWithMainView:self andIndexPath:indexPath];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -39,6 +44,20 @@
     return 0.01;
 }
 
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewCellEditingStyleDelete;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [self.dataArray removeObjectAtIndex:indexPath.row];
+    [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return @"删除";
+}
 
 - (void)setDataArray:(NSMutableArray *)dataArray
 {

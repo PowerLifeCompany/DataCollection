@@ -8,8 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@class PileInfoMainView;
+
+@protocol PileInfoMainViewDelegate <NSObject>
+
+- (void)itemSelectedWithMainView:(PileInfoMainView *)mainView andIndexPath:(NSIndexPath *)indexPath;
+
+@end
 
 @interface PileInfoMainView : UITableView<UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) id<PileInfoMainViewDelegate>mainViewDelegate;
 
 @property (strong, nonatomic) NSMutableArray * dataArray;
 

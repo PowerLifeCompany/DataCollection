@@ -46,8 +46,8 @@ static PileVillageInfo * sharedInfo;
 }
 
 - (NSMutableArray<PileGroupInfo *> *)sites{
-    if(_sites==nil){
-        _sites=[[NSMutableArray alloc]init];
+    if(_sites == nil){
+        _sites = [[NSMutableArray alloc]init];
     }
     return _sites;
 }

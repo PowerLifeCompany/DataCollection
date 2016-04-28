@@ -16,14 +16,16 @@
 @interface Pile : NSObject
 
 @property(nonatomic,assign)NSInteger Id;
-/**
- *  电桩接口
- */
-@property (nonatomic, strong) NSMutableArray<PileInterface *> *interfaces;
+
 /**
  *  电桩基本信息
  */
 @property (nonatomic, strong) PileInfo *pile_pile;
+
+/**
+ *  电桩接口
+ */
+@property (nonatomic, strong) NSMutableArray<PileInterface *> *interfaces;
 
 + (instancetype)sharedPileInfo;
 

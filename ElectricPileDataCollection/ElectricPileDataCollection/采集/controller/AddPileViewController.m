@@ -14,6 +14,8 @@
 #import "NSSystemDate.h"
 #import "NSFileManager+FileCategory.h"
 
+#import "CustomCellTwo.h"
+
 
 /**
  接口类型
@@ -45,8 +47,6 @@ typedef enum {
 
 @property (weak, nonatomic) AddPileMainView* tableView;
 
-@property (strong, nonatomic) NSMutableArray *dataArray;
-
 @property (assign, nonatomic) BOOL isChooseLogoDetailIV;
 
 @end
@@ -71,135 +71,149 @@ typedef enum {
     self.tableView = self.containerView.subviews[0];
     self.tableView.mainViewDelegate = self;
     self.tableView.dataArray = self.dataArray;
+    self.tableView.interfaceArray = self.interfaceArray;
     
     /**
      *  数据回显
      */
     if (self.addPile) {
         
-        // 电桩品牌
-        switch (self.addPile.pileResourceBrandId) {
-            case gd:
-                self.tableView.pileBrandLabel.text = GD;
-                break;
-            case pt:
-                self.tableView.pileBrandLabel.text = PT;
-                break;
-            case tld:
-                self.tableView.pileBrandLabel.text = TLD;
-                break;
-            case hssy:
-                self.tableView.pileBrandLabel.text = HSSY;
-                break;
-            case nfdw:
-                self.tableView.pileBrandLabel.text = NFDW;
-                break;
-            case zsh:
-                self.tableView.pileBrandLabel.text = ZSH;
-                break;
-            case fdkj:
-                self.tableView.pileBrandLabel.text = FDKJ;
-                break;
-            case atx:
-                self.tableView.pileBrandLabel.text = ATX;
-                break;
-            case wbjt:
-                self.tableView.pileBrandLabel.text = WBJT;
-                break;
-            case wmgf:
-                self.tableView.pileBrandLabel.text = WMGF;
-                break;
-            case xxcd:
-                self.tableView.pileBrandLabel.text = XXCD;
-                break;
-            case ywny:
-                self.tableView.pileBrandLabel.text = YWNY;
-                break;
-            case tsl:
-                self.tableView.pileBrandLabel.text = TSL;
-                break;
-            case acw:
-                self.tableView.pileBrandLabel.text = ACW;
-                break;
-            case cdw:
-                self.tableView.pileBrandLabel.text = CDW;
-                break;
-            case dz:
-                self.tableView.pileBrandLabel.text = DZ;
-                break;
-            default:
-                break;
-        }
-        // 电桩运营商
-        switch (self.addPile.pileResourceOperatorId) {
-            case gd:
-                self.tableView.pileOperatorLabel.text = GD;
-                break;
-            case pt:
-                self.tableView.pileOperatorLabel.text = PT;
-                break;
-            case tld:
-                self.tableView.pileOperatorLabel.text = TLD;
-                break;
-            case hssy:
-                self.tableView.pileOperatorLabel.text = HSSY;
-                break;
-            case nfdw:
-                self.tableView.pileOperatorLabel.text = NFDW;
-                break;
-            case zsh:
-                self.tableView.pileOperatorLabel.text = ZSH;
-                break;
-            case fdkj:
-                self.tableView.pileOperatorLabel.text = FDKJ;
-                break;
-            case atx:
-                self.tableView.pileOperatorLabel.text = ATX;
-                break;
-            case wbjt:
-                self.tableView.pileOperatorLabel.text = WBJT;
-                break;
-            case wmgf:
-                self.tableView.pileOperatorLabel.text = WMGF;
-                break;
-            case xxcd:
-                self.tableView.pileOperatorLabel.text = XXCD;
-                break;
-            case ywny:
-                self.tableView.pileOperatorLabel.text = YWNY;
-                break;
-            case tsl:
-                self.tableView.pileOperatorLabel.text = TSL;
-                break;
-            case acw:
-                self.tableView.pileOperatorLabel.text = ACW;
-                break;
-            case cdw:
-                self.tableView.pileOperatorLabel.text = CDW;
-                break;
-            case dz:
-                self.tableView.pileOperatorLabel.text = DZ;
-                break;
-            default:
-                break;
-        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self assignment];
+        });
+       
+    }
         
-        // 照片logo
-        if (self.addPile.logoDetailImagePath) {
-            if([self.addPile.logoDetailImagePath containsString:@"http"]){
-                [self.tableView.currentImageView sd_setImageWithURL:[NSURL URLWithString:self.addPile.logoDetailImagePath]];
-            }else{
-                NSData * data = [NSData dataWithContentsOfFile:self.addPile.logoDetailImagePath];
-                self.tableView.currentImageView.image=[UIImage imageWithData:data];
-            }
-        }
-        
-        // logo照片描述
-        self.tableView.logoDetailTextView.text = self.addPile.comment7;
-        
+}
+
+- (void)assignment
+{
+    
+    //self.tableView.addPile = _addPile;
+    //return;
+    
+    // 电桩品牌
+    switch (self.addPile.pile_pile.pileResourceBrandId) {
+        case gd:
+            self.tableView.pileBrandLabel.text = GD;
+            break;
+        case pt:
+            self.tableView.pileBrandLabel.text = PT;
+            break;
+        case tld:
+            self.tableView.pileBrandLabel.text = TLD;
+            break;
+        case hssy:
+            self.tableView.pileBrandLabel.text = HSSY;
+            break;
+        case nfdw:
+            self.tableView.pileBrandLabel.text = NFDW;
+            break;
+        case zsh:
+            self.tableView.pileBrandLabel.text = ZSH;
+            break;
+        case fdkj:
+            self.tableView.pileBrandLabel.text = FDKJ;
+            break;
+        case atx:
+            self.tableView.pileBrandLabel.text = ATX;
+            break;
+        case wbjt:
+            self.tableView.pileBrandLabel.text = WBJT;
+            break;
+        case wmgf:
+            self.tableView.pileBrandLabel.text = WMGF;
+            break;
+        case xxcd:
+            self.tableView.pileBrandLabel.text = XXCD;
+            break;
+        case ywny:
+            self.tableView.pileBrandLabel.text = YWNY;
+            break;
+        case tsl:
+            self.tableView.pileBrandLabel.text = TSL;
+            break;
+        case acw:
+            self.tableView.pileBrandLabel.text = ACW;
+            break;
+        case cdw:
+            self.tableView.pileBrandLabel.text = CDW;
+            break;
+        case dz:
+            self.tableView.pileBrandLabel.text = DZ;
+            break;
+        default:
+            break;
+    }
+    // 电桩运营商
+    switch (self.addPile.pile_pile.pileResourceOperatorId) {
+        case gd:
+            self.tableView.pileOperatorLabel.text = GD;
+            break;
+        case pt:
+            self.tableView.pileOperatorLabel.text = PT;
+            break;
+        case tld:
+            self.tableView.pileOperatorLabel.text = TLD;
+            break;
+        case hssy:
+            self.tableView.pileOperatorLabel.text = HSSY;
+            break;
+        case nfdw:
+            self.tableView.pileOperatorLabel.text = NFDW;
+            break;
+        case zsh:
+            self.tableView.pileOperatorLabel.text = ZSH;
+            break;
+        case fdkj:
+            self.tableView.pileOperatorLabel.text = FDKJ;
+            break;
+        case atx:
+            self.tableView.pileOperatorLabel.text = ATX;
+            break;
+        case wbjt:
+            self.tableView.pileOperatorLabel.text = WBJT;
+            break;
+        case wmgf:
+            self.tableView.pileOperatorLabel.text = WMGF;
+            break;
+        case xxcd:
+            self.tableView.pileOperatorLabel.text = XXCD;
+            break;
+        case ywny:
+            self.tableView.pileOperatorLabel.text = YWNY;
+            break;
+        case tsl:
+            self.tableView.pileOperatorLabel.text = TSL;
+            break;
+        case acw:
+            self.tableView.pileOperatorLabel.text = ACW;
+            break;
+        case cdw:
+            self.tableView.pileOperatorLabel.text = CDW;
+            break;
+        case dz:
+            self.tableView.pileOperatorLabel.text = DZ;
+            break;
+        default:
+            break;
     }
     
+    // 照片logo
+    if (self.addPile.pile_pile.logoDetailImagePath) {
+        if([self.addPile.pile_pile.logoDetailImagePath containsString:@"http"]){
+            [self.tableView.logoDetailImageView sd_setImageWithURL:[NSURL URLWithString:self.addPile.pile_pile.logoDetailImagePath]];
+        }else{
+            NSData * data = [NSData dataWithContentsOfFile:self.addPile.pile_pile.logoDetailImagePath];
+            self.tableView.logoDetailImageView.image = [UIImage imageWithData:data];
+        }
+    }
+    
+    // logo照片描述
+    self.tableView.logoDetailTextView.text = self.addPile.pile_pile.comment7;
+    
 }
+
 
 - (void)loadNavigationBar{
     self.navigationItem.title = @"新增电桩";
@@ -219,112 +233,107 @@ typedef enum {
 
 - (void)saveClick:(UIButton *)sender
 {
-    
     /**
      *  数据存储
      */
     if(!self.addPile){
-        self.addPile = [[PileInfo alloc]init];
+        self.addPile = [Pile sharedPileInfo];
         [self.dataArray addObject:self.addPile];
     }
     
     // 电桩品牌
     if ([self.tableView.pileBrandLabel.text isEqualToString:GD]) {
-        self.addPile.pileResourceBrandId = 1;
+        self.addPile.pile_pile.pileResourceBrandId = 1;
     }else if([self.tableView.pileBrandLabel.text isEqualToString:PT]){
-        self.addPile.pileResourceBrandId = 2;
+        self.addPile.pile_pile.pileResourceBrandId = 2;
     }else if ([self.tableView.pileBrandLabel.text isEqualToString:TLD]){
-        self.addPile.pileResourceBrandId = 3;
+        self.addPile.pile_pile.pileResourceBrandId = 3;
     }else if ([self.tableView.pileBrandLabel.text isEqualToString:HSSY]){
-        self.addPile.pileResourceBrandId = 4;
+        self.addPile.pile_pile.pileResourceBrandId = 4;
     }else if ([self.tableView.pileBrandLabel.text isEqualToString:NFDW]){
-        self.addPile.pileResourceBrandId = 5;
+        self.addPile.pile_pile.pileResourceBrandId = 5;
     }else if ([self.tableView.pileBrandLabel.text isEqualToString:ZSH]){
-        self.addPile.pileResourceBrandId = 6;
+        self.addPile.pile_pile.pileResourceBrandId = 6;
     }else if ([self.tableView.pileBrandLabel.text isEqualToString:FDKJ]){
-        self.addPile.pileResourceBrandId = 7;
+        self.addPile.pile_pile.pileResourceBrandId = 7;
     }else if ([self.tableView.pileBrandLabel.text isEqualToString:ATX]){
-        self.addPile.pileResourceBrandId = 8;
+        self.addPile.pile_pile.pileResourceBrandId = 8;
     }else if ([self.tableView.pileBrandLabel.text isEqualToString:WBJT]){
-        self.addPile.pileResourceBrandId = 9;
+        self.addPile.pile_pile.pileResourceBrandId = 9;
     }else if ([self.tableView.pileBrandLabel.text isEqualToString:WMGF]){
-        self.addPile.pileResourceBrandId = 10;
+        self.addPile.pile_pile.pileResourceBrandId = 10;
     }else if ([self.tableView.pileBrandLabel.text isEqualToString:XXCD]){
-        self.addPile.pileResourceBrandId = 11;
+        self.addPile.pile_pile.pileResourceBrandId = 11;
     }else if ([self.tableView.pileBrandLabel.text isEqualToString:YWNY]){
-        self.addPile.pileResourceBrandId = 12;
+        self.addPile.pile_pile.pileResourceBrandId = 12;
     }else if ([self.tableView.pileBrandLabel.text isEqualToString:TSL]){
-        self.addPile.pileResourceBrandId = 13;
+        self.addPile.pile_pile.pileResourceBrandId = 13;
     }else if ([self.tableView.pileBrandLabel.text isEqualToString:ACW]){
-        self.addPile.pileResourceBrandId = 14;
+        self.addPile.pile_pile.pileResourceBrandId = 14;
     }else if ([self.tableView.pileBrandLabel.text isEqualToString:CDW]){
-        self.addPile.pileResourceBrandId = 15;
+        self.addPile.pile_pile.pileResourceBrandId = 15;
     }else{
-        self.addPile.pileResourceBrandId = 16;
+        self.addPile.pile_pile.pileResourceBrandId = 16;
     }
     
     // 电桩运营商
     if ([self.tableView.pileOperatorLabel.text isEqualToString:GD]) {
-        self.addPile.pileResourceOperatorId = 1;
+        self.addPile.pile_pile.pileResourceOperatorId = 1;
     }else if([self.tableView.pileOperatorLabel.text isEqualToString:PT]){
-        self.addPile.pileResourceOperatorId = 2;
+        self.addPile.pile_pile.pileResourceOperatorId = 2;
     }else if ([self.tableView.pileOperatorLabel.text isEqualToString:TLD]){
-        self.addPile.pileResourceOperatorId = 3;
+        self.addPile.pile_pile.pileResourceOperatorId = 3;
     }else if ([self.tableView.pileOperatorLabel.text isEqualToString:HSSY]){
-        self.addPile.pileResourceOperatorId = 4;
+        self.addPile.pile_pile.pileResourceOperatorId = 4;
     }else if ([self.tableView.pileOperatorLabel.text isEqualToString:NFDW]){
-        self.addPile.pileResourceOperatorId = 5;
+        self.addPile.pile_pile.pileResourceOperatorId = 5;
     }else if ([self.tableView.pileOperatorLabel.text isEqualToString:ZSH]){
-        self.addPile.pileResourceOperatorId = 6;
+        self.addPile.pile_pile.pileResourceOperatorId = 6;
     }else if ([self.tableView.pileOperatorLabel.text isEqualToString:FDKJ]){
-        self.addPile.pileResourceOperatorId = 7;
+        self.addPile.pile_pile.pileResourceOperatorId = 7;
     }else if ([self.tableView.pileOperatorLabel.text isEqualToString:ATX]){
-        self.addPile.pileResourceOperatorId = 8;
+        self.addPile.pile_pile.pileResourceOperatorId = 8;
     }else if ([self.tableView.pileOperatorLabel.text isEqualToString:WBJT]){
-        self.addPile.pileResourceOperatorId = 9;
+        self.addPile.pile_pile.pileResourceOperatorId = 9;
     }else if ([self.tableView.pileOperatorLabel.text isEqualToString:WMGF]){
-        self.addPile.pileResourceOperatorId = 10;
+        self.addPile.pile_pile.pileResourceOperatorId = 10;
     }else if ([self.tableView.pileOperatorLabel.text isEqualToString:XXCD]){
-        self.addPile.pileResourceOperatorId = 11;
+        self.addPile.pile_pile.pileResourceOperatorId = 11;
     }else if ([self.tableView.pileOperatorLabel.text isEqualToString:YWNY]){
-        self.addPile.pileResourceOperatorId = 12;
+        self.addPile.pile_pile.pileResourceOperatorId = 12;
     }else if ([self.tableView.pileOperatorLabel.text isEqualToString:TSL]){
-        self.addPile.pileResourceOperatorId = 13;
+        self.addPile.pile_pile.pileResourceOperatorId = 13;
     }else if ([self.tableView.pileOperatorLabel.text isEqualToString:ACW]){
-        self.addPile.pileResourceOperatorId = 14;
+        self.addPile.pile_pile.pileResourceOperatorId = 14;
     }else if ([self.tableView.pileOperatorLabel.text isEqualToString:CDW]){
-        self.addPile.pileResourceOperatorId = 15;
+        self.addPile.pile_pile.pileResourceOperatorId = 15;
     }else{
-        self.addPile.pileResourceOperatorId = 16;
+        self.addPile.pile_pile.pileResourceOperatorId = 16;
     }
     
     // 桩细节图片
-    if(self.isChooseLogoDetailIV){
-        NSData * data = UIImagePNGRepresentation(self.tableView.currentImageView.image);
+    if(self.isChooseLogoDetailIV){ 
+        NSData * data = UIImagePNGRepresentation(self.tableView.logoDetailImageView.image);
         NSString * imagePath = [[NSSystemDate new] descriptionWithTimeFormatter:@"HHmmssSSS"];
         [NSFileManager writeToFile:[NSString stringWithFormat:@"%@/%@.png", IMAGE_PATH_PILE_DETAIL_FOLDER,imagePath] withData:data];
-        self.addPile.logoDetailImagePath = [NSString stringWithFormat:@"%@/%@.png",IMAGE_PATH_PILE_DETAIL_FOLDER,imagePath];
+        self.addPile.pile_pile.logoDetailImagePath = [NSString stringWithFormat:@"%@/%@.png",IMAGE_PATH_PILE_DETAIL_FOLDER,imagePath];
     }
     
     // 桩细节描述
-    self.addPile.comment7 = self.tableView.logoDetailTextView.text;
-    
-    //[self.navigationController popViewControllerAnimated:YES];
+    self.addPile.pile_pile.comment7 = self.tableView.logoDetailTextView.text;
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (void)addNotification
-{
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadAddPileVC) name:@"reloadAddPileVC" object:nil];
+- (void)addNotification{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notice) name:@"reloadVC" object:nil];
 }
 
-- (void)reloadAddPileVC
-{
+- (void)notice{
     [self.tableView reloadData];
 }
 
-- (void)dealloc
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"reloadAddPileVC" object:nil];
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"reloadVC" object:nil];
 }
 
 #pragma mark - custom delegete
@@ -343,13 +352,10 @@ typedef enum {
 }
 
 - (void)customImagePickerWithChooseImage:(NSArray *)resultArray{
-    
     if(resultArray.count){
         GJCFAsset * asset = [resultArray firstObject];
-        self.tableView.currentImageView.image = asset.fullResolutionImage;
-        if(self.tableView.currentImageView.tag == 5000){
-            self.isChooseLogoDetailIV = YES;
-        }
+        self.tableView.logoDetailImageView.image = asset.fullResolutionImage;
+        self.isChooseLogoDetailIV = YES;
         dispatch_async(dispatch_get_main_queue(), ^{
             [self editorImageWithImage:asset.fullResolutionImage];
         });
@@ -363,19 +369,15 @@ typedef enum {
 }
 
 - (void)imageEditor:(CLImageEditor*)editor didFinishEdittingWithImage:(UIImage*)image{
-    self.tableView.currentImageView.image=image;
+    self.tableView.logoDetailImageView.image = image;
     [editor dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - UIImagePickViewController
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary<NSString *,id> *)editingInfo{
     
-    self.tableView.currentImageView.image = image;
-    
-    if(self.tableView.currentImageView.tag == 5000){
-        self.isChooseLogoDetailIV = YES;
-    }
-    
+    self.tableView.logoDetailImageView.image = image;
+    self.isChooseLogoDetailIV = YES;
     [picker dismissViewControllerAnimated:YES completion:^{
         [self editorImageWithImage:image];
     }];
@@ -385,8 +387,8 @@ typedef enum {
 - (void)itemSelectedWithMainView:(AddPileMainView *)mainView andIndexPath:(NSIndexPath *)indexPath
 {
     AddInterfaceViewController *addInterfaceVC  =[[AddInterfaceViewController alloc]init];
-    addInterfaceVC.dataArray = self.dataArray;
-    addInterfaceVC.interface = self.dataArray[indexPath.row];
+    addInterfaceVC.dataArray = self.interfaceArray;
+    addInterfaceVC.interface = self.interfaceArray[indexPath.row];
     [self.navigationController pushViewController:addInterfaceVC animated:YES];
     
 }
@@ -394,23 +396,25 @@ typedef enum {
 - (void)addPileInterface:(AddPileMainView *)mainView
 {
     AddInterfaceViewController *addInterfaceVC = [[AddInterfaceViewController alloc] init];
-    addInterfaceVC.dataArray = self.dataArray;
-    [self.navigationController  pushViewController:addInterfaceVC animated:YES];
+    addInterfaceVC.dataArray = self.interfaceArray;
+    [self.navigationController pushViewController:addInterfaceVC animated:YES];
 }
 
 - (NSMutableArray *)dataArray{
-    if(_dataArray==nil){
-        NSMutableArray * array = [Pile sharedPileInfo].interfaces;
-        _dataArray = array?:[[NSMutableArray alloc]init];
+    if(_dataArray == nil){
+        NSMutableArray *array = [PileGroupInfo sharedPileGroupInfo].piles;
+        _dataArray = array ?:[[NSMutableArray alloc] init];
     }
     return _dataArray;
 }
 
-//- (void)viewWillAppear:(BOOL)animated
-//{
-//    [super viewWillAppear:animated];
-//    [self.tableView reloadData];
-//}
+- (NSMutableArray *)interfaceArray{
+    if(_interfaceArray==nil){
+        NSMutableArray *array = self.addPile.interfaces;
+        _interfaceArray = array?:[[NSMutableArray alloc]init];
+    }
+    return _interfaceArray;
+}
 
 @end
 

@@ -7,9 +7,10 @@
 //
 
 #import "RootViewController.h"
-
+#import "Pile.h"
 
 @interface PileInfoViewController : RootViewController
 
+@property(nonatomic,strong)NSMutableArray * dataArray;
 
 @end

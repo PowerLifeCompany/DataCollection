@@ -8,16 +8,16 @@
 
 #import "PileInfoViewController.h"
 #import "PileDetailViewController.h"
+#import "ChargeStandardViewController.h"
 
 #import "PileInfoMainView.h"
 
-@interface PileInfoViewController ()
+@interface PileInfoViewController ()<PileInfoMainViewDelegate>
 
 @property (weak, nonatomic) PileInfoMainView *tableView;
 
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 
-@property(nonatomic,strong)NSMutableArray * dataArray;
 
 @end
 
@@ -38,7 +38,7 @@
 
 - (void)loadNavigationBar
 {
-    self.navigationItem.title = @"电桩信息";
+    self.navigationItem.title = @"电桩信息(2/3)";
     
     UIBarButtonItem *backBtnItem = [[UIBarButtonItem alloc] initWithTitle:@"小区信息" style:UIBarButtonItemStyleDone target:self action:@selector(backClick:)];
     self.navigationItem.leftBarButtonItem = backBtnItem;
@@ -51,6 +51,7 @@
 - (void)loadMainView
 {
     self.tableView = self.containerView.subviews[0];
+    self.tableView.mainViewDelegate = self;
     self.tableView.dataArray = self.dataArray;
 }
 
@@ -62,20 +63,37 @@
 - (void)addClick:(UIButton *)sender
 {
     PileDetailViewController *pileDetailVC = [[PileDetailViewController alloc] init];
-    pileDetailVC.dataArray = self.dataArray;
+    pileDetailVC.dataArray = self.dataArray; 
     [self.navigationController pushViewController:pileDetailVC animated:YES];
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
+- (void)itemSelectedWithMainView:(PileInfoMainView *)mainView andIndexPath:(NSIndexPath *)indexPath{
+    
+    PileDetailViewController *pileDetailVC  =[[PileDetailViewController alloc]init];
+    pileDetailVC.pileGroupInfo = self.dataArray[indexPath.row];
+    [self.navigationController pushViewController:pileDetailVC animated:YES];
+    
+}
+
+- (NSMutableArray *)dataArray{
+    if(_dataArray == nil){
+        NSMutableArray * array = [PileVillageInfo sharedPileVillageInfo].sites;
+        _dataArray = array?:[[NSMutableArray alloc]init];
+    }
+    return _dataArray;
+}
+
+- (IBAction)nextStep:(id)sender{
+    
+    ChargeStandardViewController *chargeStandardVC = [[ChargeStandardViewController alloc] init];
+    [self.navigationController pushViewController:chargeStandardVC animated:YES];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    
     [super viewWillAppear:animated];
     [self.tableView reloadData];
+    
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 @end

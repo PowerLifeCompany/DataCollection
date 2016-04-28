@@ -31,6 +31,13 @@ static Pile * sharedInfo;
     sharedInfo = sharedPileInfo;
 }
 
+- (PileInfo *)pile_pile{
+    if(_pile_pile == nil){
+        _pile_pile = [[PileInfo alloc]init];
+    }
+    return _pile_pile;
+}
+
 - (NSMutableArray<PileInterface *> *)interfaces{
     if(_interfaces == nil){
         _interfaces = [[NSMutableArray alloc]init];

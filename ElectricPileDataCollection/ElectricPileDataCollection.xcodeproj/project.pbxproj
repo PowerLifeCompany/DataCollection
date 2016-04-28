@@ -33,8 +33,6 @@
 		7706F9A41CC06DA500EA1ED6 /* CustomCellOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7706F9891CC06DA500EA1ED6 /* CustomCellOne.xib */; };
 		7706F9A51CC06DA500EA1ED6 /* CustomCellTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7706F98B1CC06DA500EA1ED6 /* CustomCellTwo.m */; };
 		7706F9A61CC06DA500EA1ED6 /* CustomCellTwo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7706F98C1CC06DA500EA1ED6 /* CustomCellTwo.xib */; };
-		7706F9AB1CC06DA500EA1ED6 /* SpecialInstructionsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7706F9941CC06DA500EA1ED6 /* SpecialInstructionsCell.m */; };
-		7706F9AC1CC06DA500EA1ED6 /* SpecialInstructionsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7706F9951CC06DA500EA1ED6 /* SpecialInstructionsCell.xib */; };
 		7706F9AF1CC074D600EA1ED6 /* checkBox_no.png in Resources */ = {isa = PBXBuildFile; fileRef = 7706F9AD1CC074D600EA1ED6 /* checkBox_no.png */; };
 		7706F9B01CC074D600EA1ED6 /* checkBox_yes.png in Resources */ = {isa = PBXBuildFile; fileRef = 7706F9AE1CC074D600EA1ED6 /* checkBox_yes.png */; };
 		7706F9B41CC09BFF00EA1ED6 /* database.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = 7706F9B31CC09BFF00EA1ED6 /* database.sqlite3 */; };
@@ -202,6 +200,12 @@
 		FA2C8E041CCB5BE8006B3D48 /* AddPileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA2C8E031CCB5BE8006B3D48 /* AddPileViewController.storyboard */; };
 		FA2C8E071CCB5C1E006B3D48 /* AddPileMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C8E061CCB5C1E006B3D48 /* AddPileMainView.m */; };
 		FA2C8E0A1CCB5C3B006B3D48 /* AddPileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C8E091CCB5C3B006B3D48 /* AddPileViewController.m */; };
+		FA808D521CCF483600FD9A74 /* CustomCellThree.m in Sources */ = {isa = PBXBuildFile; fileRef = FA808D501CCF483600FD9A74 /* CustomCellThree.m */; };
+		FA808D531CCF483600FD9A74 /* CustomCellThree.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA808D511CCF483600FD9A74 /* CustomCellThree.xib */; };
+		FA808D571CCF4D6700FD9A74 /* CustomCellFour.m in Sources */ = {isa = PBXBuildFile; fileRef = FA808D551CCF4D6700FD9A74 /* CustomCellFour.m */; };
+		FA808D581CCF4D6700FD9A74 /* CustomCellFour.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA808D561CCF4D6700FD9A74 /* CustomCellFour.xib */; };
+		FA808D5C1CCF518F00FD9A74 /* CustomCellFive.m in Sources */ = {isa = PBXBuildFile; fileRef = FA808D5A1CCF518F00FD9A74 /* CustomCellFive.m */; };
+		FA808D5D1CCF518F00FD9A74 /* CustomCellFive.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA808D5B1CCF518F00FD9A74 /* CustomCellFive.xib */; };
 		FAC65DED1CC5FEDA0042C5E3 /* PileInfoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC65DEC1CC5FEDA0042C5E3 /* PileInfoViewController.storyboard */; };
 		FAC65DF01CC6003C0042C5E3 /* PileInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC65DEF1CC6003C0042C5E3 /* PileInfoViewController.m */; };
 		FAC65DF31CC600A80042C5E3 /* PileInfoMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC65DF21CC600A80042C5E3 /* PileInfoMainView.m */; };
@@ -270,9 +274,6 @@
 		7706F98A1CC06DA500EA1ED6 /* CustomCellTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellTwo.h; sourceTree = "<group>"; };
 		7706F98B1CC06DA500EA1ED6 /* CustomCellTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellTwo.m; sourceTree = "<group>"; };
 		7706F98C1CC06DA500EA1ED6 /* CustomCellTwo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCellTwo.xib; sourceTree = "<group>"; };
-		7706F9931CC06DA500EA1ED6 /* SpecialInstructionsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecialInstructionsCell.h; sourceTree = "<group>"; };
-		7706F9941CC06DA500EA1ED6 /* SpecialInstructionsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecialInstructionsCell.m; sourceTree = "<group>"; };
-		7706F9951CC06DA500EA1ED6 /* SpecialInstructionsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpecialInstructionsCell.xib; sourceTree = "<group>"; };
 		7706F9AD1CC074D600EA1ED6 /* checkBox_no.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkBox_no.png; sourceTree = "<group>"; };
 		7706F9AE1CC074D600EA1ED6 /* checkBox_yes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkBox_yes.png; sourceTree = "<group>"; };
 		7706F9B31CC09BFF00EA1ED6 /* database.sqlite3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = database.sqlite3; sourceTree = "<group>"; };
@@ -600,6 +601,15 @@
 		FA2C8E061CCB5C1E006B3D48 /* AddPileMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPileMainView.m; sourceTree = "<group>"; };
 		FA2C8E081CCB5C3B006B3D48 /* AddPileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPileViewController.h; sourceTree = "<group>"; };
 		FA2C8E091CCB5C3B006B3D48 /* AddPileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPileViewController.m; sourceTree = "<group>"; };
+		FA808D4F1CCF483600FD9A74 /* CustomCellThree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellThree.h; sourceTree = "<group>"; };
+		FA808D501CCF483600FD9A74 /* CustomCellThree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellThree.m; sourceTree = "<group>"; };
+		FA808D511CCF483600FD9A74 /* CustomCellThree.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCellThree.xib; sourceTree = "<group>"; };
+		FA808D541CCF4D6700FD9A74 /* CustomCellFour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellFour.h; sourceTree = "<group>"; };
+		FA808D551CCF4D6700FD9A74 /* CustomCellFour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellFour.m; sourceTree = "<group>"; };
+		FA808D561CCF4D6700FD9A74 /* CustomCellFour.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCellFour.xib; sourceTree = "<group>"; };
+		FA808D591CCF518F00FD9A74 /* CustomCellFive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellFive.h; sourceTree = "<group>"; };
+		FA808D5A1CCF518F00FD9A74 /* CustomCellFive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellFive.m; sourceTree = "<group>"; };
+		FA808D5B1CCF518F00FD9A74 /* CustomCellFive.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCellFive.xib; sourceTree = "<group>"; };
 		FAC65DEC1CC5FEDA0042C5E3 /* PileInfoViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PileInfoViewController.storyboard; sourceTree = "<group>"; };
 		FAC65DEE1CC6003C0042C5E3 /* PileInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PileInfoViewController.h; sourceTree = "<group>"; };
 		FAC65DEF1CC6003C0042C5E3 /* PileInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PileInfoViewController.m; sourceTree = "<group>"; };
@@ -1547,9 +1557,15 @@
 				7706F98A1CC06DA500EA1ED6 /* CustomCellTwo.h */,
 				7706F98B1CC06DA500EA1ED6 /* CustomCellTwo.m */,
 				7706F98C1CC06DA500EA1ED6 /* CustomCellTwo.xib */,
-				7706F9931CC06DA500EA1ED6 /* SpecialInstructionsCell.h */,
-				7706F9941CC06DA500EA1ED6 /* SpecialInstructionsCell.m */,
-				7706F9951CC06DA500EA1ED6 /* SpecialInstructionsCell.xib */,
+				FA808D4F1CCF483600FD9A74 /* CustomCellThree.h */,
+				FA808D501CCF483600FD9A74 /* CustomCellThree.m */,
+				FA808D511CCF483600FD9A74 /* CustomCellThree.xib */,
+				FA808D541CCF4D6700FD9A74 /* CustomCellFour.h */,
+				FA808D551CCF4D6700FD9A74 /* CustomCellFour.m */,
+				FA808D561CCF4D6700FD9A74 /* CustomCellFour.xib */,
+				FA808D591CCF518F00FD9A74 /* CustomCellFive.h */,
+				FA808D5A1CCF518F00FD9A74 /* CustomCellFive.m */,
+				FA808D5B1CCF518F00FD9A74 /* CustomCellFive.xib */,
 			);
 			path = "自定制Cell";
 			sourceTree = "<group>";
@@ -1673,7 +1689,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7706F9B41CC09BFF00EA1ED6 /* database.sqlite3 in Resources */,
-				7706F9AC1CC06DA500EA1ED6 /* SpecialInstructionsCell.xib in Resources */,
 				7726ED091CB62F8000D433FB /* LaunchScreen.storyboard in Resources */,
 				7706F92E1CC06B5000EA1ED6 /* LadderChargeView.xib in Resources */,
 				FAC65DED1CC5FEDA0042C5E3 /* PileInfoViewController.storyboard in Resources */,
@@ -1688,13 +1703,16 @@
 				77E61A751CB75434002F38FC /* pile_operators.plist in Resources */,
 				7726EEC81CB6303100D433FB /* Tabbar.plist in Resources */,
 				7706F9B01CC074D600EA1ED6 /* checkBox_yes.png in Resources */,
+				FA808D581CCF4D6700FD9A74 /* CustomCellFour.xib in Resources */,
 				FA0E47E01CC4D4EF00687952 /* PileDetailViewController.storyboard in Resources */,
 				7706F9AF1CC074D600EA1ED6 /* checkBox_no.png in Resources */,
 				77AC1A371CB7A9CB00B376E6 /* addPic.png in Resources */,
 				7726EEAE1CB6303100D433FB /* MJRefresh.bundle in Resources */,
 				77E61A731CB75434002F38FC /* charging_mouth_type.plist in Resources */,
 				FA2C8E041CCB5BE8006B3D48 /* AddPileViewController.storyboard in Resources */,
+				FA808D5D1CCF518F00FD9A74 /* CustomCellFive.xib in Resources */,
 				77510D981CBB5AD00052080F /* GjAssetsPicker_image_selected_blue@2x.png in Resources */,
+				FA808D531CCF483600FD9A74 /* CustomCellThree.xib in Resources */,
 				7706F9301CC06B5000EA1ED6 /* TimeSharingChargeView.xib in Resources */,
 				7706F9A61CC06DA500EA1ED6 /* CustomCellTwo.xib in Resources */,
 				7706F9511CC06B8700EA1ED6 /* CollectionMainCell.xib in Resources */,
@@ -1809,7 +1827,9 @@
 				7726EE6F1CB6303100D433FB /* FMDatabase.m in Sources */,
 				7726EEC21CB6303100D433FB /* UIView+WebCacheOperation.m in Sources */,
 				7726EE9B1CB6303100D433FB /* MJType.m in Sources */,
+				FA808D571CCF4D6700FD9A74 /* CustomCellFour.m in Sources */,
 				7726EEA91CB6303100D433FB /* MJRefreshBackNormalFooter.m in Sources */,
+				FA808D521CCF483600FD9A74 /* CustomCellThree.m in Sources */,
 				7726EE6E1CB6303100D433FB /* AFURLSessionManager.m in Sources */,
 				7726EE9A1CB6303100D433FB /* MJMethod.m in Sources */,
 				7706F9551CC06B8700EA1ED6 /* FeesDetailMainView.m in Sources */,
@@ -1824,6 +1844,7 @@
 				7726EEB61CB6303100D433FB /* SDWebImageCompat.m in Sources */,
 				7726EE8B1CB6303100D433FB /* MASCompositeConstraint.m in Sources */,
 				7726EEAC1CB6303100D433FB /* MJRefreshNormalHeader.m in Sources */,
+				FA808D5C1CCF518F00FD9A74 /* CustomCellFive.m in Sources */,
 				7726EE9F1CB6303100D433FB /* NSObject+MJMember.m in Sources */,
 				7726EE8D1CB6303100D433FB /* MASConstraintMaker.m in Sources */,
 				7726EEC31CB6303100D433FB /* AppDelegate.m in Sources */,
@@ -1925,7 +1946,6 @@
 				7726EE8E1CB6303100D433FB /* MASLayoutConstraint.m in Sources */,
 				7726EE581CB6303100D433FB /* NSSystemDate.m in Sources */,
 				7726EE5B1CB6303100D433FB /* CustomChooseCityView.m in Sources */,
-				7706F9AB1CC06DA500EA1ED6 /* SpecialInstructionsCell.m in Sources */,
 				7726EEA31CB6303100D433FB /* MJRefreshFooter.m in Sources */,
 				7726EEB01CB6303100D433FB /* UIScrollView+MJExtension.m in Sources */,
 				7726EEA71CB6303100D433FB /* MJRefreshAutoStateFooter.m in Sources */,
