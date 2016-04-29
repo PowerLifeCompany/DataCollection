@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "LCLoadingHUD.h"
 
 #define RongYunAppKey @"8brlm7ufrhs23"
 
@@ -21,6 +20,7 @@ typedef enum RequestMethod{
 
 @protocol RequestUtilDelegate <NSObject>
 
+@optional
 - (void)response:(NSURLResponse *)response andError:(NSError *)error andData:(NSData *)data andStatusCode:(NSInteger)statusCode andURLString:(NSString *)urlString;
 
 @end
@@ -31,25 +31,12 @@ typedef enum RequestMethod{
 
 @property(nonatomic,copy)NSString * progressHudText;
 
-@property(nonatomic,weak)id<RequestUtilDelegate>delegate;
+/**
+ *  请求的header参数
+ */
+@property(nonatomic,strong)NSDictionary * headerDict;
 
-/**
- *
- *  @param urlString       url地址
- *  @param parameters      请求参数
- *  @param method          请求方式
- *  @param timeoutInterval 超时时间
- */
-//- (void)asyncWithUrl:(NSString *)urlString andParameters:(NSDictionary *)parameters andMethod:(RequestMethod)method andTimeoutInterval:(NSInteger)timeoutInterval;
-/**
- *  异步请求
- *
- *  @param urlString       url地址
- *  @param parameters      请求参数
- *  @param method          请求方式
- *  @param timeoutInterval 超时时间
- */
-//- (void)asyncSessionWithUrl:(NSString *)urlString andParameters:(NSDictionary *)parameters andMethod:(RequestMethod)method andTimeoutInterval:(NSInteger)timeoutInterval;
+@property(nonatomic,weak)id<RequestUtilDelegate>delegate;
 
 /**
  *  异步请求，第三方库普通请求
@@ -73,6 +60,17 @@ typedef enum RequestMethod{
 - (void)asyncThirdLibWithUrl:(NSString *)urlString andParameters:(NSDictionary *)parameters andImageName:(NSString *)imageName andData:(NSData *)data andTimeoutInterval:(NSInteger)timeoutInterval;
 
 /**
+ *  新版图片上传
+ *
+ *  @param urlString       url地址
+ *  @param parameters      另带参数
+ *  @param data            图片的data数据
+ *  @param timeoutInterval 超时时间
+ */
+- (void)uploadImageWithUrl:(NSString *)urlString andParameters:(NSDictionary *)parameters andData:(NSData *)data andTimeoutInterval:(NSInteger)timeoutInterval;
+
+
+/**
  *  第三方库融云
  *
  *  @param urlString  请求地址
@@ -85,13 +83,13 @@ typedef enum RequestMethod{
  *
  *  @return 
  */
-- (NSString *)getCurrentTimeStr;
++ (NSString *)getCurrentTimeStr;
 /**
  *  获取当前时间字符串
  *
  *  @return 
  */
-- (NSString *)getCurrentTimeDescription;
++ (NSString *)getCurrentTimeDescription;
 
 /**
  *  string转字典

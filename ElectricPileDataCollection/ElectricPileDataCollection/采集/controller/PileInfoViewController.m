@@ -40,12 +40,14 @@
 {
     self.navigationItem.title = @"电桩信息(2/3)";
     
-    UIBarButtonItem *backBtnItem = [[UIBarButtonItem alloc] initWithTitle:@"小区信息" style:UIBarButtonItemStyleDone target:self action:@selector(backClick:)];
+    UIBarButtonItem *backBtnItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back"] style:UIBarButtonItemStyleDone target:self action:@selector(backClick)];
     self.navigationItem.leftBarButtonItem = backBtnItem;
     
-    UIBarButtonItem *addBtnItem = [[UIBarButtonItem alloc] initWithTitle:@"新增" style:UIBarButtonItemStyleDone target:self action:@selector(addClick:)];
-    self.navigationItem.rightBarButtonItem = addBtnItem;
-    
+}
+
+- (void)backClick
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)loadMainView
@@ -60,10 +62,10 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (void)addClick:(UIButton *)sender
+- (void)pushNextVC
 {
     PileDetailViewController *pileDetailVC = [[PileDetailViewController alloc] init];
-    pileDetailVC.dataArray = self.dataArray; 
+    pileDetailVC.dataArray = self.dataArray;
     [self.navigationController pushViewController:pileDetailVC animated:YES];
 }
 

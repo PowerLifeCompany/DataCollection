@@ -99,10 +99,10 @@
 
 - (void)loadNavigationBar{
     self.navigationItem.title = @"收费详情";
-    UIBarButtonItem * rightItem=[[UIBarButtonItem alloc]initWithTitle:@"取消" style:UIBarButtonItemStyleDone target:self action:@selector(cancleBtnClick:)];
-    self.navigationItem.rightBarButtonItem=rightItem;
-    UIBarButtonItem * leftItem=[[UIBarButtonItem alloc]initWithTitle:@"  保存" style:UIBarButtonItemStyleDone target:self action:@selector(saveBtnClick:)];
-    self.navigationItem.leftBarButtonItem=leftItem;
+    UIBarButtonItem * leftItem =[[UIBarButtonItem alloc]initWithTitle:@"取消" style:UIBarButtonItemStyleDone target:self action:@selector(cancleBtnClick:)];
+    self.navigationItem.leftBarButtonItem =leftItem;
+    UIBarButtonItem * rightItem =[[UIBarButtonItem alloc]initWithTitle:@"保存" style:UIBarButtonItemStyleDone target:self action:@selector(saveBtnClick:)];
+    self.navigationItem.rightBarButtonItem = rightItem;
 }
 
 - (void)saveBtnClick:(UIBarButtonItem *)bbi{

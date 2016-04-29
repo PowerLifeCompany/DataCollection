@@ -60,39 +60,37 @@
 }
 
 - (void)loadNavigationBar{
+    
     self.navigationItem.title = @"小区信息(1/3)";
     
-    UIBarButtonItem *cancelBtnItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStyleDone target:self action:@selector(backClick:)];
+    UIBarButtonItem *cancelBtnItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStyleDone target:self action:@selector(cancelClick:)];
     self.navigationItem.leftBarButtonItem = cancelBtnItem;
-    
-    UIBarButtonItem *saveBtnItem = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStyleDone target:self action:@selector(saveClick:)];
-    self.navigationItem.rightBarButtonItem = saveBtnItem;
-    
 }
 
-- (void)backClick:(UIButton *)sender
+- (void)cancelClick:(UIButton *)sender
 {
-    [self.navigationController popViewControllerAnimated:YES];
+    /**
+     *  取消提示框
+     */
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"确定要放弃此次编辑" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
+    
+    [alertVC addAction:cancelAction];
+    [alertVC addAction:confirmAction];
+    
+    [self presentViewController:alertVC animated:YES completion:nil];
 }
 
-- (void)saveClick:(UIButton *)sender
-{
-    [self saveData];
-    
-    [self.navigationController popViewControllerAnimated:YES];
-}
+
 
 - (IBAction)nextStep:(UIButton *)sender {
     
-    [self saveData];
-    PileInfoViewController *pileInfoVC = [[PileInfoViewController alloc] init];
-    [self.navigationController pushViewController:pileInfoVC animated:YES];
-}
-
-- (void)saveData{
-    PileVillageInfo * info =self.info;
-    info.pile_village.comment1=self.tableView.toGoCommentTextView.text;
-    info.pile_village.comment2=self.tableView.villageEntranceTextView.text;
+    PileVillageInfo * info = self.info;
+    info.pile_village.comment1 = self.tableView.toGoCommentTextView.text;
+    info.pile_village.comment2 = self.tableView.villageEntranceTextView.text;
     
     if(self.isChooseToGoIV){
         NSData * data = UIImagePNGRepresentation(self.tableView.toGoImageView.image);
@@ -106,6 +104,9 @@
         [NSFileManager writeToFile:imagePath withData:data];
         info.pile_village.villageEntranceImagePath=imagePath;
     }
+
+    PileInfoViewController *pileInfoVC = [[PileInfoViewController alloc] init];
+    [self.navigationController pushViewController:pileInfoVC animated:YES];
 }
 
 #pragma mark - 自定义代理

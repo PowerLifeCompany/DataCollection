@@ -8,6 +8,8 @@
 
 #import "SetViewController.h"
 #import "RegionAll.h"
+#import "UIView+LayoutCornerRadius.h"
+#import "LCLoadingHUD.h"
 
 @interface SetViewController ()<RequestUtilDelegate>
 
@@ -27,10 +29,11 @@
 - (void)loadMainView{
     //测试按钮
     UIButton * btn =[UIButton buttonWithType:UIButtonTypeCustom];
-    btn.frame=CGRectMake(100, HEIGHT-220, 100, 40);
+    btn.frame=CGRectMake(120, HEIGHT-220, WIDTH - 240, 40);
     [self.view addSubview:btn];
     [btn addTarget:self action:@selector(testBtn) forControlEvents:UIControlEventTouchUpInside];
-    btn.backgroundColor=BOY_BG_COLOR;
+    btn.backgroundColor = TAB_COLOR;
+    [btn layoutCornerRadiusWithCornerRadius:5];
     [btn setTitle:@"数据同步" forState:UIControlStateNormal];
 }
 

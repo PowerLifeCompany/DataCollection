@@ -12,6 +12,8 @@
 
 @protocol PileInfoMainViewDelegate <NSObject>
 
+- (void)pushNextVC;
+
 - (void)itemSelectedWithMainView:(PileInfoMainView *)mainView andIndexPath:(NSIndexPath *)indexPath;
 
 @end
@@ -21,5 +23,7 @@
 @property (weak, nonatomic) id<PileInfoMainViewDelegate>mainViewDelegate;
 
 @property (strong, nonatomic) NSMutableArray * dataArray;
+
+@property (strong, nonatomic) UIView *footerView;
 
 @end

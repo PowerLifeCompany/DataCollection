@@ -63,9 +63,8 @@
 
 - (void)loadNavigationBar{
     self.navigationItem.title=@"数据列表";
-    UIBarButtonItem *addBtnItem = [[UIBarButtonItem alloc] initWithTitle:@"新增" style:UIBarButtonItemStyleDone target:self action:@selector(addClick:)];
+    UIBarButtonItem *addBtnItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"addItem"] style:UIBarButtonItemStyleDone target:self action:@selector(addClick:)];
     self.navigationItem.rightBarButtonItem = addBtnItem;
-
 }
 
 - (void)addClick:(id)sender
@@ -159,13 +158,6 @@
     }
     return _requestUtil;
 }
-
-//- (NSMutableArray *)dataArray{
-//    if(_dataArray == nil){
-//        _dataArray =[NSMutableArray new];
-//    }
-//    return _dataArray;
-//}
 
 - (NSMutableArray *)dataArray{
     if(_dataArray == nil){

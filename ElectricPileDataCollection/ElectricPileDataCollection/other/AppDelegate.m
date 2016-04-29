@@ -52,7 +52,7 @@
     tbc.viewControllers=viewCons;
     
     CustomTabbar * tabbar=[CustomTabbar tabbarWithTabbarItemArray:itemArray andTabbarController:tbc];
-    tabbar.selectedColor=[UIColor blueColor];
+    tabbar.selectedColor = TAB_COLOR;
     UIView * view=[[UIView alloc]initWithFrame:CGRectMake(0, 0, WIDTH, 1)];
     view.backgroundColor=[UIColor grayColor];
     [tabbar addSubview:view];

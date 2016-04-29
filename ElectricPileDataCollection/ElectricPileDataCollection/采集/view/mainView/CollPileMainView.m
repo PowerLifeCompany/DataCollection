@@ -197,13 +197,11 @@
 
 - (void)setTextViewWithTextView:(UITextView *)tv{
     tv.layer.borderColor = [[UIColor blackColor]CGColor];
-    tv.layer.borderWidth = 1.0;
+    tv.layer.borderWidth = 0.5;
     [tv layoutCornerRadiusWithCornerRadius:5];
     tv.returnKeyType=UIReturnKeyDone;
     tv.delegate=self;
 }
-
-
 
 #pragma mark - 懒加载
 - (CustomPickView *)chooseCityView{

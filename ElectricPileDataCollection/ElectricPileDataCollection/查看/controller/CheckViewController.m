@@ -16,7 +16,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor=[UIColor purpleColor];
+    self.view.backgroundColor=[UIColor whiteColor];
+    self.navigationItem.title = @"查看";
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 100, WIDTH, 100)];
+    label.text = @"敬请期待...";
+    label.textAlignment = NSTextAlignmentCenter;
+    label.textColor = [UIColor colorWithRed:0 / 255.0 green:118 / 255.0 blue:255 / 255.0 alpha:1.0];
+    label.font = [UIFont systemFontOfSize:30];
+    [self.view addSubview:label];
 }
 
 - (void)didReceiveMemoryWarning {
