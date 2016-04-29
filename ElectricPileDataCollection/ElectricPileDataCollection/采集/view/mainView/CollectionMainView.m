@@ -42,7 +42,9 @@
         [tableView registerNib:nib forCellReuseIdentifier:identifier];
         cell=[tableView dequeueReusableCellWithIdentifier:identifier];
     }
-    cell.siteLabel.text=@"测试数据一";
+    cell.uploadBtn.tag = 1000 + indexPath.row;
+    [cell.uploadBtn addTarget:self action:@selector(upLoad:) forControlEvents:UIControlEventTouchUpInside];
+    cell.siteLabel.text = [NSString stringWithFormat:@"数据%ld", indexPath.row];
     return cell;
 }
 
@@ -63,11 +65,32 @@
     return 46;
 }
 
-- (void)setDataArray:(NSArray *)dataArray{
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewCellEditingStyleDelete;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [self.dataArray removeObjectAtIndex:indexPath.row];
+    [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return @"删除";
+}
+
+- (void)setDataArray:(NSMutableArray *)dataArray{
     if(dataArray.count){
-        _dataArray=dataArray;
+        _dataArray = dataArray;
         [self reloadData];
     }
+}
+
+- (void)upLoad:(UIButton *)sender
+{
+    NSInteger num = sender.tag - 1000;
+    [self.mainViewDelegate upLoadWithMainView:self andButtonNumber:num];
 }
 
 @end

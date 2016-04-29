@@ -13,6 +13,7 @@
 #import "CustomChooseCityView.h"
 #import "CustomPopupView.h"
 #import "PileBrand.h"
+#import "CollPileViewController.h"
 
 @interface CollectionViewController ()<RequestUtilDelegate,CollectionMainViewDelegate,CustomChooseCityViewDelegate,CustomPickViewDelegate>
 
@@ -48,7 +49,7 @@
     mainView.mainViewDelegate=self;
     [self.view addSubview:mainView];
     self.mainView=mainView;
-    self.mainView.dataArray=@[@"",@"",@"",@"",@""];
+    //self.mainView.dataArray=@[@"",@"",@"",@"",@""];
     /**
      *  使用懒加载的方式，选择城市
      */
@@ -62,7 +63,6 @@
 
 - (void)loadNavigationBar{
     self.navigationItem.title=@"数据列表";
-    
     UIBarButtonItem *addBtnItem = [[UIBarButtonItem alloc] initWithTitle:@"新增" style:UIBarButtonItemStyleDone target:self action:@selector(addClick:)];
     self.navigationItem.rightBarButtonItem = addBtnItem;
 
@@ -70,7 +70,9 @@
 
 - (void)addClick:(id)sender
 {
-    [self.navigationController pushViewController:[[CollPileViewController alloc]init] animated:YES];
+    CollPileViewController *regionVC = [[CollPileViewController alloc] init];
+    regionVC.dataArray = self.dataArray;
+    [self.navigationController pushViewController:regionVC animated:YES];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -79,12 +81,29 @@
 
 #pragma mark - mainView代理
 -(void)itemSelectedWithMainView:(CollectionMainView *)mainView andIndexPath:(NSIndexPath *)indexPath{
+    CollPileViewController *regionVC = [[CollPileViewController alloc] init];
+    // 传值
     
+    [self.navigationController pushViewController:regionVC animated:YES];
 }
 
 - (void)refreshWithMainView:(CollectionMainView *)mainView andRefreshComponent:(MJRefreshComponent *)baseView{
     [mainView.mj_header endRefreshing];
 }
+
+- (void)upLoadWithMainView:(CollectionMainView *)mainView andButtonNumber:(NSInteger)num{
+    
+    // 0.上传文字
+    
+    // 1.上传图片
+    
+}
+
+// 将数据按字段汇总,转成data格式
+
+// 封装上传文字的方法
+
+// 封装上传图片的方法
 
 #pragma mark - custom方法
 - (void)showBrandPickView{
@@ -141,9 +160,16 @@
     return _requestUtil;
 }
 
+//- (NSMutableArray *)dataArray{
+//    if(_dataArray == nil){
+//        _dataArray =[NSMutableArray new];
+//    }
+//    return _dataArray;
+//}
+
 - (NSMutableArray *)dataArray{
-    if(_dataArray==nil){
-        _dataArray=[NSMutableArray new];
+    if(_dataArray == nil){
+        _dataArray = [[NSMutableArray alloc]init];
     }
     return _dataArray;
 }

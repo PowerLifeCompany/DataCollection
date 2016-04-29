@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -15,39 +14,35 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTX-az-5I6">
-                        <rect key="frame" x="244" y="7" width="60" height="30"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hpe-Qx-aqf">
+                        <rect key="frame" x="240" y="5" width="60" height="30"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="60" id="Ki0-iJ-AWk"/>
+                            <constraint firstAttribute="height" constant="30" id="Gf4-ah-lbh"/>
+                            <constraint firstAttribute="width" constant="60" id="kbD-ec-lEV"/>
                         </constraints>
-                        <state key="normal" title="删除"/>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hpe-Qx-aqf">
-                        <rect key="frame" x="176" y="7" width="60" height="30"/>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <state key="normal" title="上传"/>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QnO-pl-YZd">
-                        <rect key="frame" x="16" y="13" width="36" height="17"/>
+                        <rect key="frame" x="20" y="10.5" width="60" height="19.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="cSE-pd-3fc"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="VTX-az-5I6" firstAttribute="leading" secondItem="Hpe-Qx-aqf" secondAttribute="trailing" constant="8" id="0ER-3h-JBB"/>
-                    <constraint firstItem="QnO-pl-YZd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="HI2-Kw-qMZ"/>
-                    <constraint firstItem="Hpe-Qx-aqf" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Jij-MK-ZHN"/>
-                    <constraint firstItem="VTX-az-5I6" firstAttribute="width" secondItem="Hpe-Qx-aqf" secondAttribute="width" id="NHu-wt-wRC"/>
-                    <constraint firstItem="QnO-pl-YZd" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Qz8-dg-YYF"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="VTX-az-5I6" secondAttribute="trailing" constant="8" id="UOE-ho-VPO"/>
-                    <constraint firstItem="VTX-az-5I6" firstAttribute="height" secondItem="Hpe-Qx-aqf" secondAttribute="height" id="YMX-33-Whj"/>
-                    <constraint firstItem="VTX-az-5I6" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="tk8-eS-7Fq"/>
+                    <constraint firstItem="QnO-pl-YZd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="ECk-0f-Hxx"/>
+                    <constraint firstAttribute="bottom" secondItem="QnO-pl-YZd" secondAttribute="bottom" constant="10" id="FZR-Pk-SEV"/>
+                    <constraint firstAttribute="bottom" secondItem="Hpe-Qx-aqf" secondAttribute="bottom" constant="5" id="XKu-0g-QPk"/>
+                    <constraint firstItem="Hpe-Qx-aqf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="XnR-Lx-78h"/>
+                    <constraint firstItem="QnO-pl-YZd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="l3D-bb-PPe"/>
+                    <constraint firstAttribute="trailing" secondItem="Hpe-Qx-aqf" secondAttribute="trailing" constant="20" id="sPy-xM-HVf"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="deleteBtn" destination="VTX-az-5I6" id="wPW-HK-ejb"/>
                 <outlet property="siteLabel" destination="QnO-pl-YZd" id="W2R-Ez-dGJ"/>
                 <outlet property="uploadBtn" destination="Hpe-Qx-aqf" id="PA4-7Q-5dk"/>
             </connections>

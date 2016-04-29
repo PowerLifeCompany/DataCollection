@@ -387,7 +387,7 @@ typedef enum {
 - (void)itemSelectedWithMainView:(AddPileMainView *)mainView andIndexPath:(NSIndexPath *)indexPath
 {
     AddInterfaceViewController *addInterfaceVC  =[[AddInterfaceViewController alloc]init];
-    addInterfaceVC.dataArray = self.interfaceArray;
+    //addInterfaceVC.dataArray = self.interfaceArray;
     addInterfaceVC.interface = self.interfaceArray[indexPath.row];
     [self.navigationController pushViewController:addInterfaceVC animated:YES];
     

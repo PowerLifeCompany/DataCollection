@@ -16,11 +16,13 @@
 
 - (void)refreshWithMainView:(CollectionMainView *)mainView andRefreshComponent:(MJRefreshComponent *)baseView;
 
+- (void)upLoadWithMainView:(CollectionMainView *)mainView andButtonNumber:(NSInteger)num;
+
 @end
 
 @interface CollectionMainView : UITableView<UITableViewDataSource,UITableViewDelegate>
 
-@property(nonatomic,strong)NSArray * dataArray;
+@property(nonatomic,strong)NSMutableArray * dataArray;
 
 @property(nonatomic,weak)id<CollectionMainViewDelegate>
 mainViewDelegate;

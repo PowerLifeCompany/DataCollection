@@ -14,6 +14,4 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *uploadBtn;
 
-@property (weak, nonatomic) IBOutlet UIButton *deleteBtn;
-
 @end

@@ -62,8 +62,12 @@
 - (void)loadNavigationBar{
     self.navigationItem.title = @"小区信息(1/3)";
     
-    UIBarButtonItem *backBtnItem = [[UIBarButtonItem alloc] initWithTitle:@"数据列表" style:UIBarButtonItemStyleDone target:self action:@selector(backClick:)];
-    self.navigationItem.leftBarButtonItem = backBtnItem;
+    UIBarButtonItem *cancelBtnItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStyleDone target:self action:@selector(backClick:)];
+    self.navigationItem.leftBarButtonItem = cancelBtnItem;
+    
+    UIBarButtonItem *saveBtnItem = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStyleDone target:self action:@selector(saveClick:)];
+    self.navigationItem.rightBarButtonItem = saveBtnItem;
+    
 }
 
 - (void)backClick:(UIButton *)sender
@@ -71,8 +75,21 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (void)saveClick:(UIButton *)sender
+{
+    [self saveData];
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (IBAction)nextStep:(UIButton *)sender {
     
+    [self saveData];
+    PileInfoViewController *pileInfoVC = [[PileInfoViewController alloc] init];
+    [self.navigationController pushViewController:pileInfoVC animated:YES];
+}
+
+- (void)saveData{
     PileVillageInfo * info =self.info;
     info.pile_village.comment1=self.tableView.toGoCommentTextView.text;
     info.pile_village.comment2=self.tableView.villageEntranceTextView.text;
@@ -89,9 +106,6 @@
         [NSFileManager writeToFile:imagePath withData:data];
         info.pile_village.villageEntranceImagePath=imagePath;
     }
-    
-    PileInfoViewController *pileInfoVC = [[PileInfoViewController alloc] init];
-    [self.navigationController pushViewController:pileInfoVC animated:YES];
 }
 
 #pragma mark - 自定义代理

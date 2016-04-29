@@ -14,4 +14,6 @@
 
 @property(nonatomic,strong)PileVillageInfo * pileVillageInfo;
 
+@property (strong, nonatomic) NSMutableArray *dataArray;
+
 @end
