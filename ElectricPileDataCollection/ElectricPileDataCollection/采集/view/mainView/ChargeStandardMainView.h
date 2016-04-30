@@ -12,6 +12,8 @@
 
 @protocol ChargeStandardMainViewDelegate <NSObject>
 
+- (void)pushNextVC;
+
 - (void)itemSelectedWithMainView:(ChargeStandardMainView *)mainView andIndexPath:(NSIndexPath *)indexPath;
 
 @end
@@ -22,5 +24,6 @@
 
 @property(nonatomic,weak)id<ChargeStandardMainViewDelegate> mainViewDelegate;
 
+@property (strong, nonatomic) UIView *footerView;
 
 @end

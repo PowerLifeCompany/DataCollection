@@ -43,6 +43,8 @@
  */
 @property (strong, nonatomic) UITextView *logoDetailTextView;
 
+@property (strong, nonatomic) UIView *footerView;
+
 @property (nonatomic,strong) NSMutableArray * dataArray;
 
 @property (nonatomic, strong) NSMutableArray *interfaceArray;

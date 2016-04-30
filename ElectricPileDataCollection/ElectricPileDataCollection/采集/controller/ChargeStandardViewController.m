@@ -29,74 +29,95 @@
 
 #pragma mark - 初始化组件
 - (void)loadMainView{
-    ChargeStandardMainView * mainView=[[ChargeStandardMainView alloc]initWithFrame:CGRectMake(0, 64, WIDTH, HEIGHT-264) style:UITableViewStyleGrouped];
+    ChargeStandardMainView * mainView=[[ChargeStandardMainView alloc]initWithFrame:CGRectMake(0, 64, WIDTH, HEIGHT-214) style:UITableViewStyleGrouped];
     mainView.mainViewDelegate=self;
     [self.view addSubview:mainView];
     self.mainView=mainView;
     self.mainView.dataArray=self.dataArray;
     
-    
+#pragma mark - 勿删
+    /*
     UIButton * preBtn=[UIButton buttonWithType:UIButtonTypeCustom];
     preBtn.frame=CGRectMake((WIDTH-200)/3.0, HEIGHT-110, 100, 40);
-    //[self.view addSubview:preBtn];
+    [self.view addSubview:preBtn];
     [preBtn addTarget:self action:@selector(backToPreviousViewCon) forControlEvents:UIControlEventTouchUpInside];
     preBtn.backgroundColor=[UIColor colorWithRed:0.02f green:0.48f blue:1.00f alpha:1.00f];
     [preBtn setTitle:@"上一步" forState:UIControlStateNormal];
     preBtn.titleLabel.font=[UIFont systemFontOfSize:15];
     [preBtn layoutCornerRadiusWithCornerRadius:5];
-    
     self.view.backgroundColor=self.mainView.backgroundColor;
+    */
     
-    
-    UIButton * saveExitBtn=[UIButton buttonWithType:UIButtonTypeCustom];
-    saveExitBtn.frame=CGRectMake((WIDTH-200)/3.0*2+100, HEIGHT-110, 100, 40);
-    //[self.view addSubview:saveExitBtn];
+    UIButton * saveExitBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    saveExitBtn.frame = CGRectMake(70, HEIGHT-110, WIDTH-140, 40);
+    [self.view addSubview:saveExitBtn];
     [saveExitBtn addTarget:self action:@selector(saveExitBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-    saveExitBtn.backgroundColor=[UIColor colorWithRed:0.02f green:0.48f blue:1.00f alpha:1.00f];;
-    [saveExitBtn setTitle:@"保存退出" forState:UIControlStateNormal];
-    saveExitBtn.titleLabel.font=[UIFont systemFontOfSize:15];
+    saveExitBtn.backgroundColor = [UIColor colorWithRed:0.02f green:0.48f blue:1.00f alpha:1.00f];;
+    [saveExitBtn setTitle:@"保存数据" forState:UIControlStateNormal];
+    saveExitBtn.titleLabel.font = [UIFont systemFontOfSize:15];
     [saveExitBtn layoutCornerRadiusWithCornerRadius:5];
-    
-    self.view.backgroundColor=self.mainView.backgroundColor;
+    self.view.backgroundColor = self.mainView.backgroundColor;
 }
 
 - (void)loadNavigationBar{
     self.navigationItem.title=@"收费标准(3/3)";
-    UIBarButtonItem * rightItem=[[UIBarButtonItem alloc]initWithTitle:@"新增" style:UIBarButtonItemStyleDone target:self action:@selector(navAddBtnClick:)];
-    self.navigationItem.rightBarButtonItem=rightItem;
     
-    self.navigationItem.hidesBackButton=YES;
+    UIBarButtonItem *returnBtnItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleDone target:self action:@selector(returnBtnClick)];
+    self.navigationItem.leftBarButtonItem = returnBtnItem;
     
-    UIBarButtonItem * leftItem=[[UIBarButtonItem alloc]initWithTitle:@"  回到列表" style:UIBarButtonItemStyleDone target:self action:@selector(backToRootViewCon)];
-    self.navigationItem.leftBarButtonItem=leftItem;
 }
-#pragma mark - 新增一条数据
-- (void)navAddBtnClick:(UIBarButtonItem *)item{
-    FeesDetailViewController * con=[[FeesDetailViewController alloc]init];
-    con.dataArray=self.dataArray;
-    [self.navigationController pushViewController:con animated:YES];
+
+- (void)returnBtnClick{
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
+
+- (void)saveExitBtnClick:(UIButton *)sender{
+    /**
+     *  保存数据提示框
+     */
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"保存本次数据采集?" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [PileVillageInfo sharedPileVillageInfo].parkings=self.dataArray;
+        [self.navigationController popToRootViewControllerAnimated:YES];
+        [[NSFileManager defaultManager] removeItemAtPath:IMAGE_PATH_DATA_COLLECTION error:nil];
+    }];
+    
+    [alertVC addAction:cancelAction];
+    [alertVC addAction:confirmAction];
+    
+    [self presentViewController:alertVC animated:YES completion:nil];
+}
+
+#pragma mark - 勿删
+/*
 #pragma mark - 上一步
 - (void)backToPreviousViewCon{
     [PileVillageInfo sharedPileVillageInfo].parkings=self.dataArray;
     [self.navigationController popViewControllerAnimated:YES];
 }
-#pragma mark - 回到列表
-- (void)backToRootViewCon{
-    [self.navigationController popToRootViewControllerAnimated:YES];
-}
+
 #pragma mark - 保存退出
 - (void)saveExitBtnClick:(UIButton *)btn{
     [PileVillageInfo sharedPileVillageInfo].parkings=self.dataArray;
     [self.navigationController popToRootViewControllerAnimated:YES];
     [[NSFileManager defaultManager] removeItemAtPath:IMAGE_PATH_DATA_COLLECTION error:nil];
 }
+*/
 
 #pragma mark - 自定义协议代理
 - (void)itemSelectedWithMainView:(ChargeStandardMainView *)mainView andIndexPath:(NSIndexPath *)indexPath{
     FeesDetailViewController * con=[[FeesDetailViewController alloc]init];
     con.dataArray=self.dataArray;
     con.pcs=self.dataArray[indexPath.row];
+    [self.navigationController pushViewController:con animated:YES];
+}
+
+- (void)pushNextVC{
+    FeesDetailViewController * con=[[FeesDetailViewController alloc]init];
+    con.dataArray=self.dataArray;
     [self.navigationController pushViewController:con animated:YES];
 }
 

@@ -40,12 +40,11 @@
 {
     self.navigationItem.title = @"电桩信息(2/3)";
     
-    UIBarButtonItem *backBtnItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back"] style:UIBarButtonItemStyleDone target:self action:@selector(backClick)];
-    self.navigationItem.leftBarButtonItem = backBtnItem;
-    
+    UIBarButtonItem *returnBtnItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleDone target:self action:@selector(returnBtnClick)];
+    self.navigationItem.leftBarButtonItem = returnBtnItem;
 }
 
-- (void)backClick
+- (void)returnBtnClick
 {
     [self.navigationController popViewControllerAnimated:YES];
 }

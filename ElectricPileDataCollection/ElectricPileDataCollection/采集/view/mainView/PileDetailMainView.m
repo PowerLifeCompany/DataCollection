@@ -227,6 +227,14 @@
     return 30;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    if (section == 2) {
+        return 50;
+    }
+    return 0.1;
+}
+
 - (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     UIView * headerView =[[UIView alloc]initWithFrame:CGRectMake(0, 0, WIDTH, 30)];
@@ -241,16 +249,51 @@
         titleLabel.text = @"车位:";
     }else{
         titleLabel.text=@"电桩:";
-        UIButton * addbtn =[UIButton buttonWithType:UIButtonTypeCustom];
-        addbtn.frame = CGRectMake(WIDTH - 66, 0, 50, 30);
-        [addbtn setTitle:@"+" forState:UIControlStateNormal];
-        [addbtn.titleLabel setFont:[UIFont systemFontOfSize:30.0]];
-        [addbtn setTitleColor:BOY_BG_COLOR forState:UIControlStateNormal];
-        [addbtn addTarget:self action:@selector(addClick:) forControlEvents:UIControlEventTouchUpInside];
-        [headerView addSubview:addbtn];
     }
     
     return headerView;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    
+    /**
+     *  表尾视图
+     */
+    if (section == 2) {
+        self.footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, 50)];
+        _footerView.backgroundColor = [UIColor whiteColor];
+        
+        UIImageView *addImageView = [[UIImageView alloc] initWithFrame:CGRectMake(20, 15, 20, 20)];
+        addImageView.image = [UIImage imageNamed:@"add"];
+        
+        UILabel *addLabel = [[UILabel alloc] initWithFrame:CGRectMake(50, 10, 120, 30)];
+        addLabel.text = @"新增电桩";
+        addLabel.textAlignment = NSTextAlignmentLeft;
+        addLabel.font = [UIFont systemFontOfSize:14];
+        
+        UIImageView *pushImageView = [[UIImageView alloc] initWithFrame:CGRectMake(WIDTH - 40, 15, 20, 20)];
+        pushImageView.image = [UIImage imageNamed:@"push"];
+        
+        [_footerView addSubview:addImageView];
+        [_footerView addSubview:addLabel];
+        [_footerView addSubview:pushImageView];
+        
+        /**
+         *  手势
+         */
+        UITapGestureRecognizer *footerViewTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pushVC)];
+        _footerView.userInteractionEnabled = YES;
+        [_footerView addGestureRecognizer:footerViewTap];
+        
+        return _footerView;
+
+    }
+    return nil;
+}
+
+- (void)pushVC{
+    [self.mainViewDelegate addPile:self];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -331,12 +374,6 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     [self endEditing:YES];
     return YES;
-}
-
-
-- (void)addClick:(UIButton *)sender
-{
-    [self.mainViewDelegate addPile:self];
 }
 
 @end

@@ -100,6 +100,9 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    if (section == 1) {
+        return 50;
+    }
     return 0.1;
 }
 
@@ -116,16 +119,47 @@
         titleLabel.text=@"电桩介绍:";
     }else{
         titleLabel.text=@"增加接口:";
-        UIButton * addbtn =[UIButton buttonWithType:UIButtonTypeCustom];
-        addbtn.frame = CGRectMake(WIDTH - 66, 0, 50, 30);
-        [addbtn setTitle:@"+" forState:UIControlStateNormal];
-        [addbtn setTitleColor:BOY_BG_COLOR forState:UIControlStateNormal];
-        [addbtn.titleLabel setFont:[UIFont systemFontOfSize:30.0]];
-        [addbtn addTarget:self action:@selector(addClick:) forControlEvents:UIControlEventTouchUpInside];
-        [headerView addSubview:addbtn];
     }
     
     return headerView;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    
+    /**
+     *  表尾视图
+     */
+    if (section == 1) {
+        self.footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, 50)];
+        _footerView.backgroundColor = [UIColor whiteColor];
+        
+        UIImageView *addImageView = [[UIImageView alloc] initWithFrame:CGRectMake(20, 15, 20, 20)];
+        addImageView.image = [UIImage imageNamed:@"add"];
+        
+        UILabel *addLabel = [[UILabel alloc] initWithFrame:CGRectMake(50, 10, 120, 30)];
+        addLabel.text = @"新增电桩";
+        addLabel.textAlignment = NSTextAlignmentLeft;
+        addLabel.font = [UIFont systemFontOfSize:14];
+        
+        UIImageView *pushImageView = [[UIImageView alloc] initWithFrame:CGRectMake(WIDTH - 40, 15, 20, 20)];
+        pushImageView.image = [UIImage imageNamed:@"push"];
+        
+        [_footerView addSubview:addImageView];
+        [_footerView addSubview:addLabel];
+        [_footerView addSubview:pushImageView];
+        
+        /**
+         *  手势
+         */
+        UITapGestureRecognizer *footerViewTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pushVC)];
+        _footerView.userInteractionEnabled = YES;
+        [_footerView addGestureRecognizer:footerViewTap];
+        
+        return _footerView;
+        
+    }
+    return nil;
 }
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -147,8 +181,7 @@
     return @"删除";
 }
 
-- (void)addClick:(UIButton *)sender
-{
+- (void)pushVC{
     [self.mainViewDelegate addPileInterface:self];
 }
 

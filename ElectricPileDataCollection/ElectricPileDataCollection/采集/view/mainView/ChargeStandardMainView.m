@@ -45,16 +45,52 @@
     return cell;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 0.1;
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 20;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-    return 0.1;
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 50;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 50;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    
+    /**
+     *  表尾视图
+     */
+    self.footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, 50)];
+    _footerView.backgroundColor = [UIColor whiteColor];
+    
+    UIImageView *addImageView = [[UIImageView alloc] initWithFrame:CGRectMake(20, 15, 20, 20)];
+    addImageView.image = [UIImage imageNamed:@"add"];
+    
+    UILabel *addLabel = [[UILabel alloc] initWithFrame:CGRectMake(50, 10, 120, 30)];
+    addLabel.text = @"新增收费标准";
+    addLabel.textAlignment = NSTextAlignmentLeft;
+    addLabel.font = [UIFont systemFontOfSize:14];
+    
+    UIImageView *pushImageView = [[UIImageView alloc] initWithFrame:CGRectMake(WIDTH - 40, 15, 20, 20)];
+    pushImageView.image = [UIImage imageNamed:@"push"];
+    
+    [_footerView addSubview:addImageView];
+    [_footerView addSubview:addLabel];
+    [_footerView addSubview:pushImageView];
+    
+    /**
+     *  手势
+     */
+    UITapGestureRecognizer *footerViewTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pushVC)];
+    _footerView.userInteractionEnabled = YES;
+    [_footerView addGestureRecognizer:footerViewTap];
+    
+    return _footerView;
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -76,6 +112,10 @@
         _dataArray=dataArray;
         [self reloadData];
     }
+}
+
+- (void)pushVC{
+    [self.mainViewDelegate pushNextVC];
 }
 
 @end

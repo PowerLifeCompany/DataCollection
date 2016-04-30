@@ -42,8 +42,8 @@
 
 - (instancetype)init
 {
-    NSString * sbName=NSStringFromClass([self class]);
-    UIStoryboard * sb=[UIStoryboard storyboardWithName:sbName bundle:nil];
+    NSString * sbName = NSStringFromClass([self class]);
+    UIStoryboard * sb = [UIStoryboard storyboardWithName:sbName bundle:nil];
     return [sb instantiateViewControllerWithIdentifier:sbName];
 }
 
@@ -72,7 +72,7 @@
     /**
      *  取消提示框
      */
-    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"确定要放弃此次编辑" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"放弃本次数据采集?" message:nil preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
     UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [self.navigationController popViewControllerAnimated:YES];
@@ -111,22 +111,22 @@
 
 #pragma mark - 自定义代理
 - (void)itemSelectedWithMainView:(CollPileMainView *)mainView andIndexPath:(NSIndexPath *)indexPath{
-    if(indexPath.row==1){
-        NSString * url=[NSString stringWithFormat:GET_ALL_VILLAGE_URL,[PileVillageInfo sharedPileVillageInfo].districtid];
+    if(indexPath.row == 1){
+        NSString * url = [NSString stringWithFormat:GET_ALL_VILLAGE_URL,[PileVillageInfo sharedPileVillageInfo].districtid];
         [self.requestUtil asyncThirdLibWithUrl:url andParameters:nil andMethod:RequestMethodGet andTimeoutInterval:10];
     }
 }
 
 - (void)chooseAlbubmOrPhotoGraphWithIndex:(NSInteger)index{
-    if(index==0){
-        UIImagePickerController * con=[[UIImagePickerController alloc]init];
-        con.sourceType=UIImagePickerControllerSourceTypeCamera;
-        con.allowsEditing=YES;
+    if(index == 0){
+        UIImagePickerController * con = [[UIImagePickerController alloc]init];
+        con.sourceType = UIImagePickerControllerSourceTypeCamera;
+        con.allowsEditing = YES;
         con.delegate=self;
         [self presentViewController:con animated:YES completion:nil];
-    }else if (index==1){
-        CustomImagePickerViewController * con=[CustomImagePickerViewController new];
-        con.imagePickerDelegate=self;
+    }else if (index == 1){
+        CustomImagePickerViewController * con = [CustomImagePickerViewController new];
+        con.imagePickerDelegate = self;
         [self presentViewController:con animated:YES completion:nil];
     }
 }
@@ -139,12 +139,12 @@
 
 - (void)customImagePickerWithChooseImage:(NSArray *)resultArray{
     if(resultArray.count){
-        GJCFAsset * asset=[resultArray firstObject];
-        self.tableView.currentImageView.image=asset.fullResolutionImage;
-        if(self.tableView.currentImageView.tag==101){//第一张图片
-            self.isChooseToGoIV=YES;
-        }else if (self.tableView.currentImageView.tag==102){//第二张图片
-            self.isChooseEntranceIV=YES;
+        GJCFAsset * asset = [resultArray firstObject];
+        self.tableView.currentImageView.image = asset.fullResolutionImage;
+        if(self.tableView.currentImageView.tag == 101){//第一张图片
+            self.isChooseToGoIV = YES;
+        }else if (self.tableView.currentImageView.tag == 102){//第二张图片
+            self.isChooseEntranceIV = YES;
         }
         dispatch_async(dispatch_get_main_queue(), ^{
             [self editorImageWithImage:asset.fullResolutionImage];
@@ -154,11 +154,11 @@
 
 #pragma mark - UIImagePickViewController
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary<NSString *,id> *)editingInfo{
-    self.tableView.currentImageView.image=image;
-    if(self.tableView.currentImageView.tag==101){//第一张图片
-        self.isChooseToGoIV=YES;
-    }else if (self.tableView.currentImageView.tag==102){//第二张图片
-        self.isChooseEntranceIV=YES;
+    self.tableView.currentImageView.image = image;
+    if(self.tableView.currentImageView.tag == 101){//第一张图片
+        self.isChooseToGoIV = YES;
+    }else if (self.tableView.currentImageView.tag == 102){//第二张图片
+        self.isChooseEntranceIV = YES;
     }
     
     [picker dismissViewControllerAnimated:YES completion:^{
@@ -183,10 +183,10 @@
         if([urlString isEqualToString:ADD_VILLAGE_URL]){
             NSInteger villageId = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] integerValue];
             NSLog(@"小区ID：%ld",villageId);
-            if(villageId==-1){
+            if(villageId == -1){
                 [self.view addSubview:[CustomPopupView customPopupViewWithMsg:@"新增小区失败"]];
             }else{
-                self.info.pile_village.Id=villageId;
+                self.info.pile_village.Id = villageId;
             }
             return;
         }
@@ -203,9 +203,9 @@
 }
 #pragma mark - 懒加载
 - (RequestUtil *)requestUtil{
-    if(_requestUtil==nil){
-        _requestUtil=[[RequestUtil alloc]init];
-        _requestUtil.delegate=self;
+    if(_requestUtil == nil){
+        _requestUtil = [[RequestUtil alloc]init];
+        _requestUtil.delegate = self;
     }
     return _requestUtil;
 }
@@ -217,6 +217,7 @@
 #pragma mark - 系统协议方法
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [AppDelegate customTabbar].hidden=YES;
+    [AppDelegate customTabbar].hidden = YES;
 }
+
 @end

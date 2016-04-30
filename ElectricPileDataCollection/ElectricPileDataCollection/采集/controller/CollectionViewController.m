@@ -33,7 +33,7 @@
 
 @implementation CollectionViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad{
     [super viewDidLoad];
     [self loadMainView];
     [self loadNavigationBar];
@@ -42,33 +42,20 @@
 
 #pragma mark - 初始化组件
 - (void)loadMainView{
-    /**
-     加载主mainView，MVC分开来
-     */
-    CollectionMainView * mainView=[[CollectionMainView alloc]initWithFrame:CGRectMake(0, 64, WIDTH, HEIGHT-64) style:UITableViewStyleGrouped];
-    mainView.mainViewDelegate=self;
+    CollectionMainView *mainView =[[CollectionMainView alloc]initWithFrame:CGRectMake(0, 64, WIDTH, HEIGHT-64) style:UITableViewStyleGrouped];
+    mainView.mainViewDelegate = self;
     [self.view addSubview:mainView];
-    self.mainView=mainView;
-    //self.mainView.dataArray=@[@"",@"",@"",@"",@""];
-    /**
-     *  使用懒加载的方式，选择城市
-     */
-    //[self.view addSubview:self.chooseCityView];
-    /**
-     *  懒加载，选择品牌运营商
-     */
-//    [self.view addSubview:self.brandPickView];
-//    [self showBrandPickView];
+    self.mainView = mainView;
 }
 
 - (void)loadNavigationBar{
-    self.navigationItem.title=@"数据列表";
+    self.navigationItem.title = @"数据列表";
+    
     UIBarButtonItem *addBtnItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"addItem"] style:UIBarButtonItemStyleDone target:self action:@selector(addClick:)];
     self.navigationItem.rightBarButtonItem = addBtnItem;
 }
 
-- (void)addClick:(id)sender
-{
+- (void)addClick:(id)sender{
     CollPileViewController *regionVC = [[CollPileViewController alloc] init];
     regionVC.dataArray = self.dataArray;
     [self.navigationController pushViewController:regionVC animated:YES];
@@ -107,13 +94,13 @@
 #pragma mark - custom方法
 - (void)showBrandPickView{
     [UIView animateWithDuration:0.5 animations:^{
-        self.brandPickView.transform=CGAffineTransformIdentity;
+        self.brandPickView.transform = CGAffineTransformIdentity;
     }];
 }
 
 - (void)hideBrandPickView{
     [UIView animateWithDuration:0.5 animations:^{
-        self.brandPickView.transform=CGAffineTransformTranslate(self.brandPickView.transform, 0, HEIGHT);
+        self.brandPickView.transform = CGAffineTransformTranslate(self.brandPickView.transform, 0, HEIGHT);
     }];
 }
 
@@ -133,8 +120,6 @@
 
 #pragma mark - 下载数据
 - (void)downloadData{
-    
-    
     //数据请求
 //    [self.requestUtil asyncThirdLibWithUrl:PIC_SCORE_DETAIL_URL andParameters:[RequestUtil getParamsWithString:params] andMethod:RequestMethodPost andTimeoutInterval:10];
 }
@@ -150,11 +135,12 @@
         [self.mainView.mj_footer endRefreshing];
     }
 }
+
 #pragma mark - 懒加载
 - (RequestUtil *)requestUtil{
-    if(_requestUtil==nil){
-        _requestUtil=[[RequestUtil alloc]init];
-        _requestUtil.delegate=self;
+    if(_requestUtil == nil){
+        _requestUtil = [[RequestUtil alloc]init];
+        _requestUtil.delegate = self;
     }
     return _requestUtil;
 }
@@ -167,9 +153,9 @@
 }
 
 - (CustomChooseCityView *)chooseCityView{
-    if(_chooseCityView==nil){
-        CustomChooseCityView * chooseCityView=[[CustomChooseCityView alloc]initWithFrame:CGRectMake(0, HEIGHT-300, WIDTH, 300)];
-        chooseCityView.delegate=self;
+    if(_chooseCityView == nil){
+        CustomChooseCityView *chooseCityView = [[CustomChooseCityView alloc]initWithFrame:CGRectMake(0, HEIGHT-300, WIDTH, 300)];
+        chooseCityView.delegate = self;
         [self.view addSubview:chooseCityView];
         _chooseCityView=chooseCityView;
     }
@@ -177,21 +163,21 @@
 }
 
 - (CustomPickView *)brandPickView{
-    if(_brandPickView==nil){
-        CustomPickView * pickView=[CustomPickView customPickViewWithDataArray:self.pileBrandArray andComponent:1 andIsDependPre:NO andFrame:CGRectMake(0, HEIGHT-300, WIDTH, 300)];
-        pickView.titleKey=@"name";
-        pickView.delegate=self;
-        pickView.transform=CGAffineTransformTranslate(pickView.transform, 0, HEIGHT);
+    if(_brandPickView == nil){
+        CustomPickView *pickView = [CustomPickView customPickViewWithDataArray:self.pileBrandArray andComponent:1 andIsDependPre:NO andFrame:CGRectMake(0, HEIGHT-300, WIDTH, 300)];
+        pickView.titleKey = @"name";
+        pickView.delegate = self;
+        pickView.transform = CGAffineTransformTranslate(pickView.transform, 0, HEIGHT);
         [self.view addSubview:pickView];
-        _brandPickView=pickView;
+        _brandPickView = pickView;
     }
     return _brandPickView;
 }
 
 - (NSArray *)pileBrandArray{
-    NSMutableArray * array=[[NSMutableArray alloc]init];
-    NSArray * tmpArray=[NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"charging_mouth_tyoe.plist" ofType:nil]];
-    for (NSDictionary * dict in tmpArray) {
+    NSMutableArray * array = [[NSMutableArray alloc]init];
+    NSArray * tmpArray = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"charging_mouth_tyoe.plist" ofType:nil]];
+    for (NSDictionary *dict in tmpArray) {
         [array addObject:[PileBrand pileBrandWithDict:dict]];
     }
     return array;
@@ -202,7 +188,5 @@
     [super viewWillAppear:animated];
     [AppDelegate customTabbar].hidden=NO;
 }
-
-
 
 @end

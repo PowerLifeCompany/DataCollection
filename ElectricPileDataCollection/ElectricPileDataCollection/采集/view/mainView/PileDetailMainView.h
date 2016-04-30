@@ -105,6 +105,8 @@
 
 @property(nonatomic,weak)id<PileDetailMainViewDelegate> mainViewDelegate;
 
+@property (strong, nonatomic) UIView *footerView;
+
 @property (nonatomic, weak)UIImageView * currentImageView;
 
 @property (strong, nonatomic) NSMutableArray *dataArray;
