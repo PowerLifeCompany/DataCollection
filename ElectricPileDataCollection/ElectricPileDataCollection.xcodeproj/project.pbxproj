@@ -15,7 +15,6 @@
 		7706F9321CC06B5000EA1ED6 /* TimeSharingMainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7706F9291CC06B5000EA1ED6 /* TimeSharingMainCell.xib */; };
 		7706F9331CC06B5000EA1ED6 /* UnifiedTariffsChargeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7706F92B1CC06B5000EA1ED6 /* UnifiedTariffsChargeView.m */; };
 		7706F9341CC06B5000EA1ED6 /* UnifiedTariffsChargeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7706F92C1CC06B5000EA1ED6 /* UnifiedTariffsChargeView.xib */; };
-		7706F94B1CC06B8700EA1ED6 /* AddInterfaceMainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7706F9371CC06B8700EA1ED6 /* AddInterfaceMainCell.m */; };
 		7706F94F1CC06B8700EA1ED6 /* ChargeStandardMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7706F93D1CC06B8700EA1ED6 /* ChargeStandardMainView.m */; };
 		7706F9501CC06B8700EA1ED6 /* CollectionMainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7706F93F1CC06B8700EA1ED6 /* CollectionMainCell.m */; };
 		7706F9511CC06B8700EA1ED6 /* CollectionMainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7706F9401CC06B8700EA1ED6 /* CollectionMainCell.xib */; };
@@ -255,8 +254,6 @@
 		7706F92A1CC06B5000EA1ED6 /* UnifiedTariffsChargeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnifiedTariffsChargeView.h; sourceTree = "<group>"; };
 		7706F92B1CC06B5000EA1ED6 /* UnifiedTariffsChargeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnifiedTariffsChargeView.m; sourceTree = "<group>"; };
 		7706F92C1CC06B5000EA1ED6 /* UnifiedTariffsChargeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UnifiedTariffsChargeView.xib; sourceTree = "<group>"; };
-		7706F9361CC06B8700EA1ED6 /* AddInterfaceMainCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddInterfaceMainCell.h; sourceTree = "<group>"; };
-		7706F9371CC06B8700EA1ED6 /* AddInterfaceMainCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddInterfaceMainCell.m; sourceTree = "<group>"; };
 		7706F93C1CC06B8700EA1ED6 /* ChargeStandardMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChargeStandardMainView.h; sourceTree = "<group>"; };
 		7706F93D1CC06B8700EA1ED6 /* ChargeStandardMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChargeStandardMainView.m; sourceTree = "<group>"; };
 		7706F93E1CC06B8700EA1ED6 /* CollectionMainCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollectionMainCell.h; path = ../mainView/CollectionMainCell.h; sourceTree = "<group>"; };
@@ -706,8 +703,6 @@
 		7706F9351CC06B8700EA1ED6 /* mainView */ = {
 			isa = PBXGroup;
 			children = (
-				7706F9361CC06B8700EA1ED6 /* AddInterfaceMainCell.h */,
-				7706F9371CC06B8700EA1ED6 /* AddInterfaceMainCell.m */,
 				7706F9411CC06B8700EA1ED6 /* CollectionMainView.h */,
 				7706F9421CC06B8700EA1ED6 /* CollectionMainView.m */,
 				7706F9431CC06B8700EA1ED6 /* CollPileMainView.h */,
@@ -1993,7 +1988,6 @@
 				7726EEC11CB6303100D433FB /* UIImageView+WebCache.m in Sources */,
 				77510D8F1CBB5AD00052080F /* GJCFAssetsView.m in Sources */,
 				7706F9331CC06B5000EA1ED6 /* UnifiedTariffsChargeView.m in Sources */,
-				7706F94B1CC06B8700EA1ED6 /* AddInterfaceMainCell.m in Sources */,
 				7726ECFB1CB62F8000D433FB /* main.m in Sources */,
 				7726EEBE1CB6303100D433FB /* UIImage+MultiFormat.m in Sources */,
 				7726EE5C1CB6303100D433FB /* CustomPickView.m in Sources */,

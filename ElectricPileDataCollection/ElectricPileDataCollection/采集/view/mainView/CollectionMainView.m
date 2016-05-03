@@ -81,7 +81,7 @@
 }
 
 - (void)setDataArray:(NSMutableArray *)dataArray{
-    if(dataArray.count){
+    if(dataArray){
         _dataArray = dataArray;
         [self reloadData];
     }

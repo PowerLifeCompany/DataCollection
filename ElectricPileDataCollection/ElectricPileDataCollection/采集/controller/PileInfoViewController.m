@@ -53,7 +53,8 @@
 {
     self.tableView = self.containerView.subviews[0];
     self.tableView.mainViewDelegate = self;
-    self.tableView.dataArray = self.dataArray;
+    //self.tableView.dataArray = self.dataArray;
+    self.tableView.dataArray = self.pileGroupInfoArray;
 }
 
 - (void)backClick:(UIButton *)sender
@@ -64,29 +65,33 @@
 - (void)pushNextVC
 {
     PileDetailViewController *pileDetailVC = [[PileDetailViewController alloc] init];
-    pileDetailVC.dataArray = self.dataArray;
+    //pileDetailVC.dataArray = self.dataArray;
+    pileDetailVC.dataArray = self.pileGroupInfoArray;
     [self.navigationController pushViewController:pileDetailVC animated:YES];
 }
 
 - (void)itemSelectedWithMainView:(PileInfoMainView *)mainView andIndexPath:(NSIndexPath *)indexPath{
     
     PileDetailViewController *pileDetailVC  =[[PileDetailViewController alloc]init];
-    pileDetailVC.pileGroupInfo = self.dataArray[indexPath.row];
+    //pileDetailVC.pileGroupInfo = self.dataArray[indexPath.row];
+    pileDetailVC.pileGroupInfo = self.pileGroupInfoArray[indexPath.row];
     [self.navigationController pushViewController:pileDetailVC animated:YES];
     
 }
 
-- (NSMutableArray *)dataArray{
-    if(_dataArray == nil){
-        NSMutableArray * array = [PileVillageInfo sharedPileVillageInfo].sites;
-        _dataArray = array?:[[NSMutableArray alloc]init];
-    }
-    return _dataArray;
-}
+//- (NSMutableArray *)dataArray{
+//    if(_dataArray == nil){
+//        NSMutableArray * array = [PileVillageInfo sharedPileVillageInfo].sites;
+//        _dataArray = array?:[[NSMutableArray alloc]init];
+//    }
+//    return _dataArray;
+//}
 
 - (IBAction)nextStep:(id)sender{
     
     ChargeStandardViewController *chargeStandardVC = [[ChargeStandardViewController alloc] init];
+    //chargeStandardVC.pileVillageInfoArray = self.pileVillageInfoArray;
+    chargeStandardVC.dataArray = self.pileChargeStandardArray;
     [self.navigationController pushViewController:chargeStandardVC animated:YES];
 }
 

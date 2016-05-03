@@ -138,7 +138,7 @@
         addImageView.image = [UIImage imageNamed:@"add"];
         
         UILabel *addLabel = [[UILabel alloc] initWithFrame:CGRectMake(50, 10, 120, 30)];
-        addLabel.text = @"新增电桩";
+        addLabel.text = @"新增接口";
         addLabel.textAlignment = NSTextAlignmentLeft;
         addLabel.font = [UIFont systemFontOfSize:14];
         

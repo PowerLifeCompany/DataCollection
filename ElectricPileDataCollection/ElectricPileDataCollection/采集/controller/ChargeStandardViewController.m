@@ -15,8 +15,6 @@
 
 @property (nonatomic ,weak)ChargeStandardMainView * mainView;
 
-@property(nonatomic,strong)NSMutableArray * dataArray;
-
 @end
 
 @implementation ChargeStandardViewController
@@ -80,15 +78,20 @@
     
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
     UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [PileVillageInfo sharedPileVillageInfo].parkings=self.dataArray;
-        [self.navigationController popToRootViewControllerAnimated:YES];
-        [[NSFileManager defaultManager] removeItemAtPath:IMAGE_PATH_DATA_COLLECTION error:nil];
+        [self saveData];
+
     }];
     
     [alertVC addAction:cancelAction];
     [alertVC addAction:confirmAction];
     
     [self presentViewController:alertVC animated:YES completion:nil];
+}
+
+#pragma mark - 保存
+- (void)saveData{
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 #pragma mark - 勿删
@@ -117,7 +120,7 @@
 
 - (void)pushNextVC{
     FeesDetailViewController * con=[[FeesDetailViewController alloc]init];
-    con.dataArray=self.dataArray;
+    con.dataArray = self.dataArray;
     [self.navigationController pushViewController:con animated:YES];
 }
 
@@ -128,6 +131,14 @@
     }
     return _dataArray;
 }
+
+//- (NSMutableArray *)pileVillageInfoArray{
+//    
+//    if (_pileVillageInfoArray == nil) {
+//        _pileVillageInfoArray = [[NSMutableArray alloc] init];
+//    }
+//    return _pileVillageInfoArray;
+//}
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];

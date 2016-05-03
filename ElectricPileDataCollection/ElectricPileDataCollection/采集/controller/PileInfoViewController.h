@@ -8,9 +8,15 @@
 
 #import "RootViewController.h"
 #import "Pile.h"
+#import "PileGroupInfo.h"
+#import "ParkingChargeStandard.h"
 
 @interface PileInfoViewController : RootViewController
 
-@property(nonatomic,strong)NSMutableArray * dataArray;
+@property (nonatomic, strong) NSMutableArray *dataArray;
+
+@property (nonatomic, strong) NSMutableArray <PileGroupInfo *> *pileGroupInfoArray;
+
+@property (nonatomic, strong) NSMutableArray <ParkingChargeStandard *> *pileChargeStandardArray;
 
 @end

@@ -69,7 +69,7 @@
 {
     self.tableView = self.containerView.subviews[0];
     self.tableView.mainViewDelegate = self;
-    self.tableView.dataArray = self.dataArray;
+    //self.tableView.dataArray = self.dataArray;
     self.tableView.addPileArray = self.addPileArray;
     
     /**
@@ -317,14 +317,20 @@
     [self.navigationController pushViewController:addPileVC animated:YES];
 }
 
-
-- (NSMutableArray *)dataArray{
-    if(_dataArray == nil){
-        NSMutableArray * array = [PileVillageInfo sharedPileVillageInfo].sites;
-        _dataArray = array?:[[NSMutableArray alloc]init];
-    }
-    return _dataArray;
+- (void)pushNextVC
+{
+    PileDetailViewController *pileDetailVC = [[PileDetailViewController alloc] init];
+    pileDetailVC.dataArray = self.dataArray;
+    [self.navigationController pushViewController:pileDetailVC animated:YES];
 }
+
+//- (NSMutableArray *)dataArray{
+//    if(_dataArray == nil){
+//        NSMutableArray * array = [PileVillageInfo sharedPileVillageInfo].sites;
+//        _dataArray = array?:[[NSMutableArray alloc]init];
+//    }
+//    return _dataArray;
+//}
 
 - (NSMutableArray *)addPileArray{
     if(_addPileArray == nil){
@@ -333,7 +339,6 @@
     }
     return _addPileArray;
 }
-
 
 #pragma mark - UIImagePickViewController
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary<NSString *,id> *)editingInfo{

@@ -237,7 +237,7 @@ typedef enum {
      *  数据存储
      */
     if(!self.addPile){
-        self.addPile = [Pile sharedPileInfo];
+        self.addPile = [[Pile alloc] init];
         [self.dataArray addObject:self.addPile];
     }
     
@@ -387,7 +387,6 @@ typedef enum {
 - (void)itemSelectedWithMainView:(AddPileMainView *)mainView andIndexPath:(NSIndexPath *)indexPath
 {
     AddInterfaceViewController *addInterfaceVC  =[[AddInterfaceViewController alloc]init];
-    //addInterfaceVC.dataArray = self.interfaceArray;
     addInterfaceVC.interface = self.interfaceArray[indexPath.row];
     [self.navigationController pushViewController:addInterfaceVC animated:YES];
     
@@ -400,6 +399,26 @@ typedef enum {
     [self.navigationController pushViewController:addInterfaceVC animated:YES];
 }
 
+#pragma mark --------------------------------------------------
+//- (NSMutableArray *)dataArray{
+//    if(_dataArray == nil){
+//        NSMutableArray * array = [PileVillageInfo sharedPileVillageInfo].sites;
+//        _dataArray = array?:[[NSMutableArray alloc]init];
+//    }
+//    return _dataArray;
+//}
+//
+//- (NSMutableArray *)addPileArray{
+//    if(_addPileArray == nil){
+//        NSMutableArray *array = self.pileGroupInfo.piles;
+//        _addPileArray = array ?:[[NSMutableArray alloc] init];
+//    }
+//    return _addPileArray;
+//}
+
+#pragma mark --------------------------------------------------
+
+
 - (NSMutableArray *)dataArray{
     if(_dataArray == nil){
         NSMutableArray *array = [PileGroupInfo sharedPileGroupInfo].piles;
@@ -409,7 +428,7 @@ typedef enum {
 }
 
 - (NSMutableArray *)interfaceArray{
-    if(_interfaceArray==nil){
+    if(_interfaceArray == nil){
         NSMutableArray *array = self.addPile.interfaces;
         _interfaceArray = array?:[[NSMutableArray alloc]init];
     }

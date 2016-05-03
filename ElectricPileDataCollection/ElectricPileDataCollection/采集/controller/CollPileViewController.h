@@ -12,8 +12,8 @@
 
 @interface CollPileViewController : RootViewController
 
-@property(nonatomic,strong)PileVillageInfo * pileVillageInfo;
+@property(nonatomic,strong)PileVillageInfo * info;
 
-@property (strong, nonatomic) NSMutableArray *dataArray;
+@property (strong, nonatomic) NSMutableArray  <PileVillageInfo *> *dataArray;
 
 @end

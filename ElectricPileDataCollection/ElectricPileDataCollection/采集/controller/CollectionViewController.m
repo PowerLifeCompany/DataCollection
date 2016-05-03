@@ -19,7 +19,7 @@
 
 @property(nonatomic,strong)RequestUtil * requestUtil;
 
-@property(nonatomic,strong)NSMutableArray * dataArray;
+@property(nonatomic,strong)NSMutableArray <PileVillageInfo *> *dataArray;
 
 @property(nonatomic,weak) CollectionMainView * mainView;
 
@@ -46,6 +46,8 @@
     mainView.mainViewDelegate = self;
     [self.view addSubview:mainView];
     self.mainView = mainView;
+    self.mainView.dataArray = self.dataArray;
+    
 }
 
 - (void)loadNavigationBar{
@@ -61,15 +63,10 @@
     [self.navigationController pushViewController:regionVC animated:YES];
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [self.navigationController pushViewController:[[CollPileViewController alloc]init] animated:YES];
-}
-
 #pragma mark - mainView代理
 -(void)itemSelectedWithMainView:(CollectionMainView *)mainView andIndexPath:(NSIndexPath *)indexPath{
     CollPileViewController *regionVC = [[CollPileViewController alloc] init];
-    // 传值
-    
+    regionVC.info = self.dataArray[indexPath.row];
     [self.navigationController pushViewController:regionVC animated:YES];
 }
 
@@ -78,6 +75,13 @@
 }
 
 - (void)upLoadWithMainView:(CollectionMainView *)mainView andButtonNumber:(NSInteger)num{
+    
+    
+    if (self.dataArray.count) {
+        PileVillageInfo *pileInfo = self.dataArray[num];
+    }
+    
+    
     
     // 0.上传文字
     
@@ -145,7 +149,7 @@
     return _requestUtil;
 }
 
-- (NSMutableArray *)dataArray{
+- (NSMutableArray<PileVillageInfo *> *)dataArray{
     if(_dataArray == nil){
         _dataArray = [[NSMutableArray alloc]init];
     }
@@ -186,6 +190,7 @@
 #pragma mark - 系统代理
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    [self.mainView reloadData];
     [AppDelegate customTabbar].hidden=NO;
 }
 

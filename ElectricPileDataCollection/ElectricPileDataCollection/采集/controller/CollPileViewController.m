@@ -33,9 +33,6 @@
 
 @property(nonatomic,assign)BOOL isChooseEntranceIV;
 
-@property(nonatomic,strong)PileVillageInfo * info;
-
-
 @end
 
 @implementation CollPileViewController
@@ -57,6 +54,33 @@
     self.tableView = self.containerView.subviews[0];
     [self.nextStepBtn layoutCornerRadiusWithCornerRadius:5];
     self.tableView.mainViewDelegate = self;
+    
+    /**
+     *  数据回显
+     */
+    if (self.info) {
+        self.tableView.toGoCommentTextView.text = self.info.pile_village.comment1;
+        self.tableView.villageEntranceTextView.text = self.info.pile_village.comment2;
+        
+        if (self.info.pile_village.villagePathImagePath) {
+            if([self.info.pile_village.villagePathImagePath containsString:@"http"]){
+                [self.tableView.toGoImageView sd_setImageWithURL:[NSURL URLWithString:self.info.pile_village.villagePathImagePath]];
+            }else{
+                NSData * data = [NSData dataWithContentsOfFile:self.info.pile_village.villagePathImagePath];
+                self.tableView.toGoImageView.image = [UIImage imageWithData:data];
+            }
+        }
+        
+        if (self.info.pile_village.villageEntranceImagePath) {
+            if([self.info.pile_village.villageEntranceImagePath containsString:@"http"]){
+                [self.tableView.villageEntranceImageView sd_setImageWithURL:[NSURL URLWithString:self.info.pile_village.villageEntranceImagePath]];
+            }else{
+                NSData * data = [NSData dataWithContentsOfFile:self.info.pile_village.villageEntranceImagePath];
+                self.tableView.villageEntranceImageView.image = [UIImage imageWithData:data];
+            }
+        }
+    }
+    
 }
 
 - (void)loadNavigationBar{
@@ -72,41 +96,73 @@
     /**
      *  取消提示框
      */
-    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"放弃本次数据采集?" message:nil preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
-    UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [self.navigationController popViewControllerAnimated:YES];
-    }];
+//    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"放弃本次数据采集?" message:nil preferredStyle:UIAlertControllerStyleAlert];
+//    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+//    UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//        [self.navigationController popViewControllerAnimated:YES];
+//    }];
+//    
+//    [alertVC addAction:cancelAction];
+//    [alertVC addAction:confirmAction];
+//    
+//    [self presentViewController:alertVC animated:YES completion:nil];
     
-    [alertVC addAction:cancelAction];
-    [alertVC addAction:confirmAction];
-    
-    [self presentViewController:alertVC animated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
-
-
 
 - (IBAction)nextStep:(UIButton *)sender {
     
-    PileVillageInfo * info = self.info;
-    info.pile_village.comment1 = self.tableView.toGoCommentTextView.text;
-    info.pile_village.comment2 = self.tableView.villageEntranceTextView.text;
+    /**
+     *  数据存储
+     */
+    if (!self.info) {
+        self.info = [[PileVillageInfo alloc] init];
+        [self.dataArray addObject:self.info];
+    }
+    
+    self.info.pile_village.comment1 = self.tableView.toGoCommentTextView.text;
+    self.info.pile_village.comment2 = self.tableView.villageEntranceTextView.text;
     
     if(self.isChooseToGoIV){
         NSData * data = UIImagePNGRepresentation(self.tableView.toGoImageView.image);
         NSString * imagePath = IMAGE_PATH_PILE_VILLAGE_ENTRY;
         [NSFileManager writeToFile:imagePath withData:data];
-        info.pile_village.villagePathImagePath=imagePath;
+        self.info.pile_village.villagePathImagePath=imagePath;
     }
     if(self.isChooseEntranceIV){
         NSData * data = UIImagePNGRepresentation(self.tableView.villageEntranceImageView.image);
         NSString * imagePath = IMAGE_PATH_PILE_VILLAGE_GATE;
         [NSFileManager writeToFile:imagePath withData:data];
-        info.pile_village.villageEntranceImagePath=imagePath;
+        self.info.pile_village.villageEntranceImagePath=imagePath;
     }
-
+    
     PileInfoViewController *pileInfoVC = [[PileInfoViewController alloc] init];
+    pileInfoVC.pileGroupInfoArray = self.info.sites;
+    pileInfoVC.pileChargeStandardArray = self.info.parkings;
     [self.navigationController pushViewController:pileInfoVC animated:YES];
+
+    
+//    PileVillageInfo * info = self.info;
+//    info.pile_village.comment1 = self.tableView.toGoCommentTextView.text;
+//    info.pile_village.comment2 = self.tableView.villageEntranceTextView.text;
+//    
+//    if(self.isChooseToGoIV){
+//        NSData * data = UIImagePNGRepresentation(self.tableView.toGoImageView.image);
+//        NSString * imagePath = IMAGE_PATH_PILE_VILLAGE_ENTRY;
+//        [NSFileManager writeToFile:imagePath withData:data];
+//        info.pile_village.villagePathImagePath=imagePath;
+//    }
+//    if(self.isChooseEntranceIV){
+//        NSData * data = UIImagePNGRepresentation(self.tableView.villageEntranceImageView.image);
+//        NSString * imagePath = IMAGE_PATH_PILE_VILLAGE_GATE;
+//        [NSFileManager writeToFile:imagePath withData:data];
+//        info.pile_village.villageEntranceImagePath=imagePath;
+//    }
+//
+//    PileInfoViewController *pileInfoVC = [[PileInfoViewController alloc] init];
+//    pileInfoVC.pileVillageInfoArray = self.dataArray;
+//    [self.navigationController pushViewController:pileInfoVC animated:YES];
+    
 }
 
 #pragma mark - 自定义代理
@@ -210,9 +266,25 @@
     return _requestUtil;
 }
 
-- (PileVillageInfo *)info{
-    return [PileVillageInfo sharedPileVillageInfo];
+//- (PileVillageInfo *)info{
+//    return [PileVillageInfo sharedPileVillageInfo];
+//}
+
+- (NSMutableArray<PileVillageInfo *> *)dataArray{
+    if(_dataArray == nil){
+        _dataArray = [[NSMutableArray alloc]init];
+    }
+    return _dataArray;
 }
+
+//- (NSMutableArray *)dataArray{
+//    if(_dataArray == nil){
+//        //NSMutableArray *array = [PileGroupInfo sharedPileGroupInfo].piles;
+//        NSMutableArray *array = [PileVillageInfo sharedPileVillageInfo];
+//        _dataArray = array ?:[[NSMutableArray alloc] init];
+//    }
+//    return _dataArray;
+//}
 
 #pragma mark - 系统协议方法
 - (void)viewWillAppear:(BOOL)animated{
