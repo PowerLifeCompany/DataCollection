@@ -59,6 +59,7 @@
      *  数据回显
      */
     if (self.info) {
+        self.tableView.tf.text = self.info.pile_village.villageName;
         self.tableView.toGoCommentTextView.text = self.info.pile_village.comment1;
         self.tableView.villageEntranceTextView.text = self.info.pile_village.comment2;
         
@@ -120,6 +121,7 @@
         [self.dataArray addObject:self.info];
     }
     
+    self.info.pile_village.villageName = self.tableView.tf.text;
     self.info.pile_village.comment1 = self.tableView.toGoCommentTextView.text;
     self.info.pile_village.comment2 = self.tableView.villageEntranceTextView.text;
     
@@ -139,6 +141,7 @@
     PileInfoViewController *pileInfoVC = [[PileInfoViewController alloc] init];
     pileInfoVC.pileGroupInfoArray = self.info.sites;
     pileInfoVC.pileChargeStandardArray = self.info.parkings;
+    pileInfoVC.siteName = self.info.pile_village.villageName;
     [self.navigationController pushViewController:pileInfoVC animated:YES];
 
     

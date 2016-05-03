@@ -127,12 +127,15 @@
     //停车费
     if(self.tableView.unifiedTariffsBtn.selected){
         self.pcs.tariffTypeUnify=self.tableView.parkingDescLabel.text;
+        self.pcs.tariffType = @"1";
     }
     if(self.tableView.timeSharingBtn.selected){
         self.pcs.tariffTypeSplit=self.tableView.parkingDescLabel.text;
+        self.pcs.tariffType = @"2";
     }
     if(self.tableView.ladderChargesBtn.selected){
         self.pcs.tariffTypeLadder=self.tableView.parkingDescLabel.text;
+        self.pcs.tariffType = @"3";
     }
     //总体说明
     self.pcs.comment=self.tableView.feesDetailCommentTV.text;

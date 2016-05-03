@@ -39,6 +39,8 @@
 
 @property (weak, nonatomic) IBOutlet UITextView *villageEntranceTextView;
 
+@property (strong, nonatomic) UITextField * tf;
+
 //@property(nonatomic,strong)NSArray * villageDataArray;
 
 @property (nonatomic, weak)UIImageView * currentImageView;

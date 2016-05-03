@@ -153,11 +153,11 @@
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    UITextField * tf = [alertView textFieldAtIndex:0];
-    if(tf.text.length){
-        [self.mainViewDelegate addVillageInfoWithVillageName:tf.text];
-        [PileVillageInfo sharedPileVillageInfo].pile_village.villageName=tf.text;
-        self.communityLabel.text = [NSString stringWithFormat:@"%@",tf.text];
+    self.tf = [alertView textFieldAtIndex:0];
+    if(self.tf.text.length){
+        [self.mainViewDelegate addVillageInfoWithVillageName:self.tf.text];
+        [PileVillageInfo sharedPileVillageInfo].pile_village.villageName=self.tf.text;
+        self.communityLabel.text = [NSString stringWithFormat:@"%@",self.tf.text];
     }
 }
 

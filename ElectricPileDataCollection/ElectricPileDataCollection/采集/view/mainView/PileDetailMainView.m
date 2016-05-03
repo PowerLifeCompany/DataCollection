@@ -72,7 +72,7 @@
         self.longitudeTextField = cell.longitudeTextField;
         self.latitudeTextField = cell.latitudeTextField;
         
-        cell.locationLabel.text = @"北京市十里河";
+        //cell.locationLabel.text = @"北京市十里河";
         //cell.longitudeTextField.text = _pileGroupInfo.pile_site.x;
         //cell.latitudeTextField.text = _pileGroupInfo.pile_site.y;
         

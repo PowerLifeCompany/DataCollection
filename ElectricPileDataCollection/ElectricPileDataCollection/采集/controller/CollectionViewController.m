@@ -76,24 +76,40 @@
 
 - (void)upLoadWithMainView:(CollectionMainView *)mainView andButtonNumber:(NSInteger)num{
     
-    
     if (self.dataArray.count) {
+        
         PileVillageInfo *pileInfo = self.dataArray[num];
+        
+        PileVillageBasicInfo *pile_village = pileInfo.pile_village;
+        NSLog(@"id = %ld, villageId = %ld, comment1 = %@, comment2 = %@, villageName = %@", pile_village.Id, pile_village.villageId, pile_village.comment1, pile_village.comment2, pile_village.villageName);
+        
+        NSMutableArray<PileGroupInfo *> *sites = pileInfo.sites;
+        
+        for (int i = 0; i < sites.count; i++) {
+            PileGroupInfo *pileGroupInfo = sites[i];
+            NSLog(@"pileSiteId = %ld, villageId = %ld, siteName = %@, x = %@, y = %@",pileGroupInfo.pile_site.Id, pile_village.villageId, pile_village.villageName, pileGroupInfo.pile_site.x, pileGroupInfo.pile_site.y);
+            
+            NSLog(@"spaceId = %ld, pileSiteId = %ld, comment3 = %@, comment4 = %@, comment5 = %@, comment6 = %@, comment = %@, bnum = %@, mnum = %@, snum = %@, tnum = %@, imageUrl3 = %@, imageUrl4 = %@, imageUrl5 = %@, imageUrl6 = %@", pileGroupInfo.pile_space.Id, pileGroupInfo.pile_space.pileSiteId, pileGroupInfo.pile_space.comment3, pileGroupInfo.pile_space.comment4, pileGroupInfo.pile_space.comment5, pileGroupInfo.pile_space.comment6, pileGroupInfo.pile_space.comment, pileGroupInfo.pile_space.bnum, pileGroupInfo.pile_space.snum, pileGroupInfo.pile_space.mnum, pileGroupInfo.pile_space.tnum, pileGroupInfo.pile_space.imageUrl3, pileGroupInfo.pile_space.imageUrl4, pileGroupInfo.pile_space.imageUrl5, pileGroupInfo.pile_space.imageUrl6);
+            
+            NSMutableArray<Pile *> *piles = pileGroupInfo.piles;
+            for (int i = 0; i < piles.count; i++) {
+                Pile *pile = piles[i];
+                NSLog(@"pildId = %ld, pileSiteId = %ld, pileResourceBrandId = %ld, pileResourceOperatorId = %ld, imageUrl7 = %@ ,comment7 = %@", pile.pile_pile.Id, pile.pile_pile.pileSiteId, pile.pile_pile.pileResourceBrandId, pile.pile_pile.pileResourceOperatorId, pile.pile_pile.imageUrl7, pile.pile_pile.comment7);
+                
+                NSMutableArray<PileInterface *> *interfaces = pile.interfaces;
+                for (int i = 0; i < interfaces.count; i++) {
+                    PileInterface *interface = interfaces[i];
+                    NSLog(@"pileInterfaceIds = %ld, pileId = %ld, pileResourceInterfaceId = %ld, tariffService = %@, num = %@, weight = %@, hasChargeCable = %ld, voltage = %@, current = %@, tariffChargeBusy = %@, tariffChargeBusyInterval = %@， tariffChargeIdle = %@, tariffChargeIdleInterval = %@, paymentType = %@, imageUrl8 = %@, imageUrl9 = %@, comment8 = %@, comment9 = %@, comment = %@", interface.Id, interface.pileId, interface.pileResourceInterfaceId, interface.tariffService, interface.num, interface.weight, interface.hasChargeCable, interface.voltage, interface.current,interface.tariffChargeBusy, interface.tariffChargeBusyInterval, interface.tariffChargeIdle, interface.tariffChargeIdleInterval, interface.paymentType, interface.imageUrl8, interface.imageUrl9, interface.comment8, interface.comment9, interface.comment);
+                }
+            }
+        }
+        NSMutableArray<ParkingChargeStandard *> *parkings = pileInfo.parkings;
+        for (int i = 0; i < parkings.count; i++) {
+            ParkingChargeStandard *parkingChargeStandard = parkings[i];
+            NSLog(@"parkingsId = %ld, parkingName = %@, villageId = %ld, openIntervalWork = %@, openIntervalNowork = %@, openComment = %@, tariffType = %@, tariffTypeUnity = %@, tariffTypeSplit = %@, tariffTypeLadder = %@, comment = %@, comment10 = %@", parkingChargeStandard.Id, parkingChargeStandard.parkingName, parkingChargeStandard.villageId, parkingChargeStandard.openIntervalWork, parkingChargeStandard.openIntervalNowork, parkingChargeStandard.openComment, parkingChargeStandard.tariffType, parkingChargeStandard.tariffTypeUnify, parkingChargeStandard.tariffTypeSplit, parkingChargeStandard.tariffTypeLadder, parkingChargeStandard.comment, parkingChargeStandard.comment10);
+        }
     }
-    
-    
-    
-    // 0.上传文字
-    
-    // 1.上传图片
-    
 }
-
-// 将数据按字段汇总,转成data格式
-
-// 封装上传文字的方法
-
-// 封装上传图片的方法
 
 #pragma mark - custom方法
 - (void)showBrandPickView{

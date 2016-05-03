@@ -67,6 +67,7 @@
     PileDetailViewController *pileDetailVC = [[PileDetailViewController alloc] init];
     //pileDetailVC.dataArray = self.dataArray;
     pileDetailVC.dataArray = self.pileGroupInfoArray;
+    pileDetailVC.location = self.siteName;
     [self.navigationController pushViewController:pileDetailVC animated:YES];
 }
 

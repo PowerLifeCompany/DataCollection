@@ -19,4 +19,6 @@
 
 @property (nonatomic, strong) NSMutableArray <ParkingChargeStandard *> *pileChargeStandardArray;
 
+@property (copy ,nonatomic) NSString *siteName;
+
 @end

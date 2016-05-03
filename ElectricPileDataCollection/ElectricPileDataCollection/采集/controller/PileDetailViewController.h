@@ -30,4 +30,9 @@
  */
 @property (strong, nonatomic) NSMutableArray *addPileArray;
 
+/**
+ *  地理位置
+ */
+@property (copy, nonatomic) NSString *location;
+
 @end

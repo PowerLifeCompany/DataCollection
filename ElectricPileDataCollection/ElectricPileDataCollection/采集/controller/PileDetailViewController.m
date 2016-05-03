@@ -84,7 +84,12 @@
             [self assignment];
         });
         
+    }else{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.tableView.locationLabel.text = self.location;
+        });
     }
+    
 }
 
 - (void)assignment{
@@ -97,7 +102,8 @@
      */
     NSIndexPath *index_one =  [NSIndexPath indexPathForItem:0 inSection:0];
     CustomCellThree *cell_one =  (CustomCellThree *)[self.tableView cellForRowAtIndexPath:index_one];
-    // 位置(小区信息传过来的值)
+    // 位置
+    cell_one.locationLabel.text = self.pileGroupInfo.pile_site.siteName;
     // 经度
     cell_one.longitudeTextField.text = self.pileGroupInfo.pile_site.x;
     // 纬度
@@ -170,7 +176,8 @@
         [self.dataArray addObject:self.pileGroupInfo];
     }
     
-    // 位置(小区信息传过来的页面)
+    // 位置
+    self.pileGroupInfo.pile_site.siteName = self.location;
 
     // 经度
     self.pileGroupInfo.pile_site.x = self.tableView.longitudeTextField.text;

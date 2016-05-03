@@ -17,18 +17,24 @@
 // id1(返回数据中的 pileVillageId 字段)
 @property (copy, nonatomic) NSString *id1;
 
-// 小区id
+// 小区id(上传userId, areaId(片Id), name(小区名字), code(空字符)获取 )
 @property (copy, nonatomic) NSString *villageId;
 
-// 图片描述1
+// 路口图片的url
+@property (copy, nonatomic) NSString *imageUrl1;
+
+// 路口图片描述
 @property (copy, nonatomic) NSString *comment1;
 
-// 图片描述2
+// 小区入口图片的url
+@property (copy, nonatomic) NSString *imageUrl2;
+
+// 小区入口图片描述
 @property (copy, nonatomic) NSString *comment2;
 
 
 /**
- *  电桩数据属性
+ *  电桩组数据属性--位置
  */
 
 // id2(返回数据中的 pileSiteId)
@@ -44,35 +50,39 @@
 @property (copy, nonatomic) NSString *y;
 
 
+/**
+ *  电桩组数据属性--车位
+ */
+
 // id3(返回数据中的 spaceId)
 @property (copy, nonatomic) NSString *id3;
+
+// 停车场位置图片url
+@property (copy, nonatomic) NSString *imageUrl3;
 
 // 停车场位置图片描述
 @property (copy, nonatomic) NSString *comment3;
 
-// 服务器返回的url(comment3)
-@property (copy, nonatomic) NSString *imageUrl3;
+// 电桩全景图片url
+@property (copy, nonatomic) NSString *imageUrl4;
 
 // 电桩全景图片描述
 @property (copy, nonatomic) NSString *comment4;
 
-// 服务器返回的url(comment4)
-@property (copy, nonatomic) NSString *imageUrl4;
+// 空位图片描述url
+@property (copy, nonatomic) NSString *imageUrl5;
 
 // 空位图片描述
 @property (copy, nonatomic) NSString *comment5;
 
-// 服务器返回的url(comment5)
-@property (copy, nonatomic) NSString *imageUrl5;
+// 充电中图片描述url
+@property (copy, nonatomic) NSString *imageUrl6;
 
 // 充电中图片描述
 @property (copy, nonatomic) NSString *comment6;
 
-// 服务器返回的url(comment6)
-@property (copy, nonatomic) NSString *imageUrl6;
-
-// 特殊说明
-@property (copy, nonatomic) NSString *comment;
+// 车位特殊说明
+@property (copy, nonatomic) NSString *space_comment;
 
 // 大
 @property (copy, nonatomic) NSString *bnum;
@@ -86,6 +96,11 @@
 // 微
 @property (copy, nonatomic) NSString *tnum;
 
+
+/**
+ *  电桩组数据属性--车位
+ */
+
 // id4(返回数据中的pileId)
 @property (copy, nonatomic) NSString *id4;
 
@@ -95,8 +110,16 @@
 // 运营商id
 @property (copy, nonatomic) NSString *pileResourceOperatorId;
 
-// 电桩用法
+// 电桩用法图片url
+@property (copy, nonatomic) NSString *imageUrl7;
+
+// 电桩用法图片描述
 @property (copy, nonatomic) NSString *comment7;
+
+
+/**
+ *  电桩组数据属性--接口
+ */
 
 // id5 (返回数据中的pileInterfaceIds)
 @property (copy, nonatomic) NSString *id5;
@@ -137,14 +160,20 @@
 // 支付类型
 @property (copy, nonatomic) NSString *paymentType;
 
+// 充电口正面照图片url
+@property (copy, nonatomic) NSString *imageUrl8;
+
 // 充电口正面照图片描述
 @property (copy, nonatomic) NSString *comment8;
+
+// 细节图片url
+@property (copy, nonatomic) NSString *imageUrl9;
 
 // 细节图片描述
 @property (copy, nonatomic) NSString *comment9;
 
-// 特殊说明
-@property (copy, nonatomic) NSString *comment_2;
+// 接口特殊说明
+@property (copy, nonatomic) NSString *interface_comment;
 
 
 /**
@@ -178,10 +207,13 @@
 // 阶梯资费
 @property (copy, nonatomic) NSString *tariffTypeLadder;
 
-// 特殊说明
-@property (copy, nonatomic) NSString *comment_3;
+// 收费标准特殊说明
+@property (copy, nonatomic) NSString *ChargeaStandard_comment;
 
-// 照片描述
+// 收费标准图片url
+@property (copy, nonatomic) NSString *imageUrl10;
+
+// 收费标准图片描述
 @property (copy, nonatomic) NSString *comment10;
 
 @end

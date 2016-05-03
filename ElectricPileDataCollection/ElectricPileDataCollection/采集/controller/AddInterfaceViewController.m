@@ -143,10 +143,9 @@ typedef enum {
         // 重量
         self.tableView.weightTextField.text = self.interface.weight;
         // 电压-V
-        NSArray *voltageArray = [self.interface.voltage componentsSeparatedByString:@","];
-        self.tableView.voltageTextField.text = voltageArray[0];
+        self.tableView.voltageTextField.text = self.interface.voltage;
         // 电压-A
-        self.tableView.currentTextField.text = voltageArray[1];
+        self.tableView.currentTextField.text = self.interface.current;
         // 充电单价-忙时
         NSArray *busyIntervalArray = [self.interface.tariffChargeBusyInterval componentsSeparatedByString:@","];
         // 开始时间
@@ -283,7 +282,10 @@ typedef enum {
     self.interface.weight = self.tableView.weightTextField.text;
     
     // 电压
-    self.interface.voltage = [NSString stringWithFormat:@"%@,%@",self.tableView.currentTextField.text, self.tableView.voltageTextField.text];
+    self.interface.voltage = self.tableView.voltageTextField.text;
+    
+    // 电流
+    self.interface.current = self.tableView.currentTextField.text;
     
     // 忙时-时间间隔
     self.interface.tariffChargeBusyInterval = [NSString stringWithFormat:@"%@,%@", self.tableView.busyStartTextField.text, self.tableView.busyEndTextField.text];
