@@ -33,6 +33,12 @@
 @property (nonatomic, copy) NSString *chargeImagePath;
 
 /**
+ *  收费标准图片 url
+ */
+@property (nonatomic, copy) NSString *imageUrl0;
+
+
+/**
  *  收费标准图片 描述
  */
 @property (nonatomic, copy) NSString *comment10;
