@@ -15,6 +15,8 @@
 
 #define SERVER_URL @"http://192.168.1.38/pile-service"
 
+#define IMAGE_URL @"http://192.168.1.38/image-service"
+
 //获取所有数据（包含省市区片）
 #define GET_ALL_REGION_URL (SERVER_URL@"/region/all")
 
@@ -34,6 +36,14 @@
 #define GET_ALL_VILLAGE_URL (SERVER_URL@"/region/area/%ld/all")
 
 #define ADD_VILLAGE_URL (SERVER_URL@"/region/village/add")
+
+//上传桩数据
+#define UPLOAD_PILE_DATA (SERVER_URL@"/pile/village/upload")
+
+//上传图片
+//#define UPLOAD_IMAGE @"http://192.168.1.38/image-service/upload?location=%@"
+// http://192.168.1.38/image-service
+#define UPLOAD_IMAGE (IMAGE_URL@"/upload?location=%@")
 
 //SQL语句
 #define INSERT_PILE_BRAND @"REPLACE INTO `pile_brand`(`id`,`name`) VALUES (?,?);"

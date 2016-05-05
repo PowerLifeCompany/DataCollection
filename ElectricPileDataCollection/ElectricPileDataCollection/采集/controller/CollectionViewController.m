@@ -14,6 +14,7 @@
 #import "CustomPopupView.h"
 #import "PileBrand.h"
 #import "CollPileViewController.h"
+#import "PPNetworkingHelper.h"
 #import "AFNetworking.h"
 
 @interface CollectionViewController ()<RequestUtilDelegate,CollectionMainViewDelegate,CustomChooseCityViewDelegate,CustomPickViewDelegate>
@@ -31,19 +32,15 @@
 @property (nonatomic,strong) NSArray * pileBrandArray;
 
 /**
- *  小区数据json串
+ *  数据总字典
  */
-@property (copy, nonatomic) NSString *villageJson;
+@property (strong, nonatomic) NSMutableDictionary *dataDic;
 
-/**
- *  桩数据json串
- */
-@property (copy, nonatomic) NSString *pileJson;
+@property (copy, nonatomic) NSString *json1;
 
-/**
- *  接口数据json串
- */
-@property (copy, nonatomic) NSString *chargeStandardJson;
+@property (copy, nonatomic) NSString *json2;
+
+@property (copy, nonatomic) NSString *json3;
 
 @end
 
@@ -95,6 +92,14 @@
     [self dealUpLoadData:num];
     [self upLoadData];
     
+//    [PPNetworkingHelper uploadDataWithInfo:_dataDic andFinishBlock:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+//        if (error) {
+//            NSLog(@"上传失败:%@", error);
+//        }else{
+//            NSLog(@"上传成功:%@", responseObject);
+//        }
+//    }];
+    
 }
 
 #pragma mark - 处理上传数据
@@ -107,6 +112,9 @@
         
         PileVillageInfo *pileInfo = self.dataArray[num];
         
+        // 存储数据的大字典
+        //self.dataDic = [NSMutableDictionary dictionary];
+        
         PileVillageBasicInfo *pile_village = pileInfo.pile_village;
         /**
          *  小区存储数据
@@ -116,17 +124,17 @@
         [villageDic setObject:[NSString stringWithFormat:@"%ld", pile_village.villageId] forKey:@"villageId"];
         [villageDic setObject:pile_village.comment1 forKey:@"comment1"];
         [villageDic setObject:pile_village.comment2 forKey:@"comment2"];
-        /**
-         *  转成小区json串
-         */
+        //[_dataDic setObject:villageDic forKey:@"pile_village"];
+        
         NSData *villageData = [NSJSONSerialization dataWithJSONObject:villageDic options:NSJSONWritingPrettyPrinted error:nil];
-        self.villageJson = [[NSString alloc] initWithData:villageData encoding:NSUTF8StringEncoding];
+        self.json1 = [[NSString alloc] initWithData:villageData encoding:NSUTF8StringEncoding];
         
         /**
          *  电桩组存储数据
          */
         NSMutableArray<PileGroupInfo *> *sites = pileInfo.sites;
         NSMutableArray *siteDataArr = [NSMutableArray array];
+        //[_dataDic setObject:siteDataArr forKey:@"sites"];
         for (int i = 0; i < sites.count; i++) {
             PileGroupInfo *pileGroupInfo = sites[i];
             NSMutableDictionary *sitesDataDic = [NSMutableDictionary dictionary];
@@ -217,17 +225,16 @@
                 }
             }
         }
-        /**
-         *  转成电装组json串
-         */
-        NSData *pileGroupInfoData = [NSJSONSerialization dataWithJSONObject:siteDataArr  options:NSJSONWritingPrettyPrinted error:nil];
-        self.pileJson = [[NSString alloc] initWithData:pileGroupInfoData encoding:NSUTF8StringEncoding];
+        NSData *siteData = [NSJSONSerialization dataWithJSONObject:siteDataArr options:NSJSONWritingPrettyPrinted error:nil];
+        self.json2 = [[NSString alloc] initWithData:siteData encoding:NSUTF8StringEncoding];
+        
         
         /**
          *  收费标准数据存储
          */
         NSMutableArray<ParkingChargeStandard *> *parkings = pileInfo.parkings;
         NSMutableArray *parkingsDataArr = [NSMutableArray array];
+        //[_dataDic setObject:parkingsDataArr forKey:@"parkings"];
         for (int i = 0; i < parkings.count; i++) {
             ParkingChargeStandard *parkingChargeStandard = parkings[i];
             NSMutableDictionary *parkingsDic = [NSMutableDictionary dictionary];
@@ -246,19 +253,71 @@
             [parkingsDic setObject:parkingChargeStandard.imageUrl0 forKey:@"imageUrl0"];
             [parkingsDataArr addObject:parkingsDic];
         }
+        NSData *parkingsData = [NSJSONSerialization dataWithJSONObject:parkingsDataArr options:NSJSONWritingPrettyPrinted error:nil];
+        self.json3 = [[NSString alloc] initWithData:parkingsData encoding:NSUTF8StringEncoding];
         
-        /**
-         *  转成收费标准json串
-         */
-        NSData *parkingChargeStandardData = [NSJSONSerialization dataWithJSONObject:parkingsDataArr options:NSJSONWritingPrettyPrinted error:nil];
-        self.chargeStandardJson = [[NSString alloc] initWithData:parkingChargeStandardData encoding:NSUTF8StringEncoding];
     }
 }
 
-#pragma mark - 数据上传
+//#pragma mark - 数据上传
+//+ (void)uploadDataWithInfo:(NSDictionary *)dict andFinishBlock:(nullable void (^)(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error))finishBlock {
+//    
+//    // 1.格式转换
+//    NSMutableDictionary *formData = [[NSMutableDictionary alloc]init];
+//    NSArray *keyList = [dict allKeys];
+//    for (NSString *key in keyList) {
+//        
+//        id value = dict[key];
+//        
+//        if ([value isKindOfClass:[NSDictionary class]] || [value isKindOfClass:[NSArray class]]) {
+//            formData[key] = [NSJSONSerialization dataWithJSONObject:value options:NSJSONWritingPrettyPrinted error:nil];
+//        }
+//        else {
+//            formData[key] = value;
+//        }
+//    }
+//    
+//    NSLog(@"-------------%@", formData);
+//    
+//    // 2.创建请求
+//    NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] multipartFormRequestWithMethod:@"POST" URLString:UPLOAD_PILE_DATA parameters:formData constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+//    } error:nil];
+//    [request setHTTPMethod:@"POST"];
+//    
+//    // 3.创建数据数据上传任务
+//    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+//    
+//    NSURLSessionUploadTask *uploadTask = [manager uploadTaskWithStreamedRequest:request progress:nil completionHandler:finishBlock];
+//    
+//    // 4.开始上传数据
+//    [uploadTask resume];
+//}
+
 - (void)upLoadData{
-    
-    
+
+    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:@"0",@"userId",@"0",@"provinceid",@"0", @"cityid",@"0",@"districtid",@"0",@"areaid", self.json1, @"pile_village",self.json2,@"sites",self.json3,@"parkings",nil];
+
+    RequestUtil * requestUtil =[[RequestUtil alloc]init];
+    requestUtil.delegate=self;
+    [requestUtil uploadDataWithUrl:UPLOAD_PILE_DATA andParameters:dic andTimeoutInterval:20];
+
+//    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+//    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+//    [manager POST:UPLOAD_PILE_DATA parameters:dic constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+//        // 拼接data到请求体
+//        formData appendPartWithFormData:(nonnull NSData *) name:(nonnull NSString *)
+//        self.villageJson, @"pile_village",self.pileJson,@"sites",self.chargeStandardJson,@"parkings";
+//
+//    } progress:^(NSProgress * _Nonnull uploadProgress) {
+//        // 获取上传进度
+//        NSLog(@"%@", uploadProgress);
+//    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        // 数据上传成功
+//        NSLog(@"成功后返回:%@", responseObject);
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        //数据上传失败
+//        NSLog(@"失败后返回:%@", error);
+//    }];
 }
 
 #pragma mark - custom方法

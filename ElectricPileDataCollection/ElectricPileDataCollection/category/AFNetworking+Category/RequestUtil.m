@@ -9,6 +9,7 @@
 #import "RequestUtil.h"
 #import "AFNetworking.h"
 #import "NSString+encrypto.h"
+#import "MJExtension.h"
 //#import "Setting.h"
 
 #define HMEncode(str) [str dataUsingEncoding:NSUTF8StringEncoding]
@@ -23,7 +24,9 @@
     }
     return self;
 }
-
+/**
+ *  自定义请求
+ */
 - (void)asyncSessionWithUrl:(NSString *)urlString andParameters:(NSDictionary *)parameters andMethod:(RequestMethod)method andTimeoutInterval:(NSInteger)timeoutInterval{
     
     NSURL * url=[NSURL URLWithString:urlString];
@@ -49,7 +52,9 @@
     }];
     [task resume];
 }
-
+/**
+ *  第三方普通请求
+ */
 - (void)asyncThirdLibWithUrl:(NSString *)urlString andParameters:(NSDictionary *)parameters andMethod:(RequestMethod)method andTimeoutInterval:(NSInteger)timeoutInterval{
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
@@ -95,47 +100,26 @@
         }];
     }
 }
-
-
-- (void)asyncThirdLibWithUrl:(NSString *)urlString andParameters:(NSDictionary *)parameters andImageName:(NSString *)imageName andData:(NSData *)data andTimeoutInterval:(NSInteger)timeoutInterval{
-    urlString =[urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSURL *url=[NSURL URLWithString:urlString];
-    //2.创建请求
-    NSMutableURLRequest *request=[NSMutableURLRequest requestWithURL:url];
-    request.HTTPMethod=@"POST";
-    
-    //3.构建数据
-    NSData * formdata=[self getHttpBody:imageName andData:data andParams:parameters];
-    request.HTTPBody=data;
-    
-    [request setValue:[NSString stringWithFormat:@"%lu",(unsigned long)data.length] forHTTPHeaderField:@"Content-Length"];
-    [request setValue:[NSString stringWithFormat:@"multipart/form-data; boundary=%@",@"KenshinCui"] forHTTPHeaderField:@"Content-Type"];
-    
-    //4.创建会话
-    NSURLSession *session=[NSURLSession sharedSession];
-    NSURLSessionUploadTask *uploadTask=[session uploadTaskWithRequest:request fromData:formdata completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        NSHTTPURLResponse * res=(NSHTTPURLResponse *)response;
-        dispatch_async(dispatch_get_main_queue(), ^{
-            if ([self.delegate respondsToSelector:@selector(response:andError:andData:andStatusCode:andURLString:)]) {
-                [self.delegate response:res andError:error andData:nil andStatusCode:res.statusCode andURLString:urlString];
-            }
-        });
-    }];
-    
-    [uploadTask resume];
-}
-
+/**
+ *  上传图片
+ */
 - (void)uploadImageWithUrl:(NSString *)urlString andParameters:(NSDictionary *)parameters andData:(NSData *)data andTimeoutInterval:(NSInteger)timeoutInterval{
     AFHTTPSessionManager * manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    manager.requestSerializer.timeoutInterval=timeoutInterval?:10;
     
     NSURL * url = [NSURL URLWithString:urlString];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     [request setHTTPMethod:@"POST"];
     [request setValue:@"application/octet-stream" forHTTPHeaderField:@"Content-Type"];
     
+    for (NSString * key in [self.headerDict allKeys]) {
+        [request setValue:[NSString stringWithFormat:@"%@",self.headerDict[key]] forHTTPHeaderField:key];
+    }
     
     NSURLSessionUploadTask *uploadTask = [manager uploadTaskWithRequest:request fromData:data progress:^(NSProgress * _Nonnull uploadProgress) {
-        NSLog(@"---->%@,||||||||%.2f",uploadProgress,uploadProgress.fractionCompleted);
+        
     } completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         dispatch_async(dispatch_get_main_queue(), ^{
             NSHTTPURLResponse * res=(NSHTTPURLResponse *)response;
@@ -146,35 +130,33 @@
     }];
     [uploadTask resume];
 }
-
-
-#pragma mark 取得数据体
--(NSData *)getHttpBody:(NSString *)fileName andData:(NSData *)fileData andParams:(NSDictionary *)params{
-    NSString *boundary=@"KenshinCui";
-    NSMutableData *dataM=[NSMutableData data];
+/**
+ *  上传数据
+ */
+- (void)uploadDataWithUrl:(NSString *)urlString andParameters:(NSDictionary *)parameters andTimeoutInterval:(NSInteger)timeoutInterval{
+    AFHTTPSessionManager * manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+//    manager.requestSerializer.timeoutInterval=timeoutInterval?:10;
+//    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     
-    NSString *strTop=[NSString stringWithFormat:@"--%@\r\nContent-Disposition: form-data; name=\"%@\"; filename=\"%@\"\r\nContent-Type: %@\r\n",boundary,fileName,[NSString stringWithFormat:@"%@.jpg",[RequestUtil getCurrentTimeStr]],@"image/jpeg"];
+    NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] multipartFormRequestWithMethod:@"POST" URLString:urlString parameters:parameters constructingBodyWithBlock:nil error:nil];
+    request.timeoutInterval=timeoutInterval?:10;
     
-    [dataM appendData:[strTop dataUsingEncoding:NSUTF8StringEncoding]];
+    for (NSString * key in [self.headerDict allKeys]) {
+        [request setValue:[NSString stringWithFormat:@"%@",self.headerDict[key]] forHTTPHeaderField:key];
+    }
     
-    [dataM appendData:HMEncode(@"\r\n")];
-    [dataM appendData:fileData];
-    [dataM appendData:HMEncode(@"\r\n")];
-    
-    /***************普通参数***************/
-    [params enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-        // 参数开始的标志
-        [dataM appendData:HMEncode(@"--KenshinCui\r\n")];
-        NSString *disposition = [NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"\r\n", key];
-        [dataM appendData:HMEncode(disposition)];
+    NSURLSessionUploadTask *uploadTask = [manager uploadTaskWithStreamedRequest:request progress:^(NSProgress * _Nonnull uploadProgress) {
         
-        [dataM appendData:HMEncode(@"\r\n")];
-        [dataM appendData:HMEncode(obj)];
-        [dataM appendData:HMEncode(@"\r\n")];
+    } completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSHTTPURLResponse * res=(NSHTTPURLResponse *)response;
+            if ([self.delegate respondsToSelector:@selector(response:andError:andData:andStatusCode:andURLString:)]) {
+                [self.delegate response:res andError:error andData:responseObject andStatusCode:res.statusCode andURLString:urlString];
+            }
+        });
     }];
-    NSString *strBottom=[NSString stringWithFormat:@"--%@--\r\n",boundary];
-    [dataM appendData:[strBottom dataUsingEncoding:NSUTF8StringEncoding]];
-    return dataM;
+    [uploadTask resume];
 }
 
 /**
@@ -256,6 +238,19 @@
     NSDate * date=[NSDate dateWithTimeIntervalSince1970:time];
     NSString * res = [date description];
     return [res substringToIndex:res.length-6];
+}
+
+//字典转data
++(NSData *)dataWithDictionary:(NSDictionary *)dict{
+    
+    NSMutableData * data = [[NSMutableData alloc] init];
+    NSKeyedArchiver * archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
+    for (NSString * key in dict.allKeys) {
+        [archiver encodeObject:dict[key] forKey:key];
+    }
+    [archiver finishEncoding];
+
+    return data;
 }
 
 @end

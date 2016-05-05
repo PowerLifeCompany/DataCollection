@@ -18,27 +18,42 @@
  *  唯一ID
  */
 @property (nonatomic, assign) NSInteger Id;
+
 /**
  *  省市区片中片的ID
  */
 @property (nonatomic, assign) NSInteger villageId;
+
 /**
  *  小区名称
  */
 @property (nonatomic, copy) NSString *villageName;
 
 /**
- *  小区路口怎么走图片路径
+ *  小区路口怎么走本地图片路径
  */
 @property (nonatomic, copy) NSString *villagePathImagePath;
+
+/**
+ *  小区路口怎么走图片url
+ */
+@property (nonatomic, copy) NSString *villagePathImageUrl;
+
 /**
  *  路口如何走，标明来处，面描述
  */
 @property (nonatomic, copy) NSString *comment1;
+
 /**
- *  小区入口图片路径
+ *  小区入口本地图片路径
  */
 @property (nonatomic, copy) NSString *villageEntranceImagePath;
+
+/**
+ *  小区入口本地图片url
+ */
+@property (nonatomic, copy) NSString *villageEntranceImageUrl;
+
 /**
  *  小区入口（左转右转描述）
  */

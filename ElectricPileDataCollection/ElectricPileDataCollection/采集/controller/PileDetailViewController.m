@@ -19,7 +19,7 @@
 #import "CustomCellFour.h"
 #import "CustomCellFive.h"
 
-@interface PileDetailViewController ()<UINavigationControllerDelegate, UIImagePickerControllerDelegate,PileDetailMainViewDelegate, CustomImagePickerDelegate, CLImageEditorDelegate, PileDetailMainViewDelegate>
+@interface PileDetailViewController ()<UINavigationControllerDelegate, UIImagePickerControllerDelegate,PileDetailMainViewDelegate, CustomImagePickerDelegate, CLImageEditorDelegate, PileDetailMainViewDelegate,RequestUtilDelegate>
 
 {
     int _oldOffset;
@@ -28,6 +28,8 @@
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 
 @property (weak, nonatomic) PileDetailMainView *tableView;
+
+@property(nonatomic,strong)RequestUtil * requestUtil;
 
 @property (assign, nonatomic) BOOL isChooseparkingIV;
 
@@ -250,6 +252,33 @@
     // 特殊说明
     self.pileGroupInfo.pile_space.comment = self.tableView.instructionsTextView.text;
     
+    
+    /**
+     *  上传图片
+     */
+    NSDictionary * headerDict = @{@"__provinceid":@(0),@"__cityid":@(0),@"__districtid":@(0),@"__areaid":@(0),@"__villageid":@(0),@"__parkingid":@(0),@"__siteid":@(0)};
+    self.requestUtil.headerDict = headerDict;
+    
+    // 停车位
+    NSData *parkingImageData = [NSData dataWithContentsOfFile:self.pileGroupInfo.pile_space.image3Path];
+    NSString *parkingUrlStr = [NSString stringWithFormat:UPLOAD_IMAGE,@"pile_space_site"];
+    [self.requestUtil uploadImageWithUrl:parkingUrlStr andParameters:nil andData:parkingImageData andTimeoutInterval:20];
+    
+    // 电桩全景
+    NSData *pileAllImageData = [NSData dataWithContentsOfFile:self.pileGroupInfo.pile_space.image4Path];
+    NSString *pileAllUrlStr = [NSString stringWithFormat:UPLOAD_IMAGE,@"pile_space_piles"];
+    [self.requestUtil uploadImageWithUrl:pileAllUrlStr andParameters:nil andData:pileAllImageData andTimeoutInterval:20];
+    
+    // 空车位
+    NSData *emptyImageData = [NSData dataWithContentsOfFile:self.pileGroupInfo.pile_space.image5Path];
+    NSString *emptyUrlStr = [NSString stringWithFormat:UPLOAD_IMAGE,@"pile_space_empty"];
+    [self.requestUtil uploadImageWithUrl:emptyUrlStr andParameters:nil andData:emptyImageData andTimeoutInterval:20];
+    
+    // 充电
+    NSData *chargingImageData = [NSData dataWithContentsOfFile:self.pileGroupInfo.pile_space.image6Path];
+    NSString *chargingUrlStr = [NSString stringWithFormat:UPLOAD_IMAGE,@"pile_space_charging"];
+    [self.requestUtil uploadImageWithUrl:chargingUrlStr andParameters:nil andData:chargingImageData andTimeoutInterval:20];
+    
     [self.navigationController popViewControllerAnimated:YES];
 
 }
@@ -371,10 +400,48 @@
     }];
 }
 
+#pragma mark - 返回数据
+- (void)response:(NSURLResponse *)response andError:(NSError *)error andData:(NSData *)data andStatusCode:(NSInteger)statusCode andURLString:(NSString *)urlString{
+    
+    if (statusCode == 200 && !error) {
+        
+        if ([urlString isEqualToString:[NSString stringWithFormat:UPLOAD_IMAGE,@"pile_space_site"]]) {
+            NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+            self.pileGroupInfo.pile_space.imageUrl3 = dic[@"url"];
+        }
+        
+        if ([urlString isEqualToString:[NSString stringWithFormat:UPLOAD_IMAGE,@"pile_space_piles"]]) {
+            NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+            self.pileGroupInfo.pile_space.imageUrl4 = dic[@"url"];
+        }
+        
+        if ([urlString isEqualToString:[NSString stringWithFormat:UPLOAD_IMAGE,@"pile_space_empty"]]) {
+            NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+            self.pileGroupInfo.pile_space.imageUrl5 = dic[@"url"];
+        }
+        
+        if ([urlString isEqualToString:[NSString stringWithFormat:UPLOAD_IMAGE,@"pile_space_charging"]]) {
+            NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+            self.pileGroupInfo.pile_space.imageUrl6 = dic[@"url"];
+        }
+        
+    }else{
+        NSLog(@"%@",error);
+    }
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     [self.tableView reloadData];
+}
+
+- (RequestUtil *)requestUtil{
+    if(_requestUtil == nil){
+        _requestUtil = [[RequestUtil alloc]init];
+        _requestUtil.delegate = self;
+    }
+    return _requestUtil;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -382,14 +449,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

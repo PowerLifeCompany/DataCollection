@@ -213,10 +213,11 @@
 		FA808DA11CD34D9C00FD9A74 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = FA808D8E1CD34D9C00FD9A74 /* UIProgressView+AFNetworking.m */; };
 		FA808DA21CD34D9C00FD9A74 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = FA808D901CD34D9C00FD9A74 /* UIRefreshControl+AFNetworking.m */; };
 		FA808DA31CD34D9C00FD9A74 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = FA808D921CD34D9C00FD9A74 /* UIWebView+AFNetworking.m */; };
-		FA808DA71CD34DA800FD9A74 /* RequestUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FA808DA61CD34DA800FD9A74 /* RequestUtil.m */; };
 		FA808DA91CD35E3300FD9A74 /* back2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA808DA81CD35E3300FD9A74 /* back2@2x.png */; };
 		FA808DAB1CD360C600FD9A74 /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = FA808DAA1CD360C600FD9A74 /* add.png */; };
 		FA808DAD1CD3641800FD9A74 /* push.png in Resources */ = {isa = PBXBuildFile; fileRef = FA808DAC1CD3641800FD9A74 /* push.png */; };
+		FA808DB01CD9C99E00FD9A74 /* RequestUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FA808DAF1CD9C99E00FD9A74 /* RequestUtil.m */; };
+		FA808DB41CD9D38900FD9A74 /* PPNetworkingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FA808DB31CD9D38900FD9A74 /* PPNetworkingHelper.m */; };
 		FAC65DED1CC5FEDA0042C5E3 /* PileInfoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC65DEC1CC5FEDA0042C5E3 /* PileInfoViewController.storyboard */; };
 		FAC65DF01CC6003C0042C5E3 /* PileInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC65DEF1CC6003C0042C5E3 /* PileInfoViewController.m */; };
 		FAC65DF31CC600A80042C5E3 /* PileInfoMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC65DF21CC600A80042C5E3 /* PileInfoMainView.m */; };
@@ -634,11 +635,14 @@
 		FA808D901CD34D9C00FD9A74 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		FA808D911CD34D9C00FD9A74 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		FA808D921CD34D9C00FD9A74 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
-		FA808DA51CD34DA800FD9A74 /* RequestUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestUtil.h; sourceTree = "<group>"; };
-		FA808DA61CD34DA800FD9A74 /* RequestUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestUtil.m; sourceTree = "<group>"; };
 		FA808DA81CD35E3300FD9A74 /* back2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back2@2x.png"; sourceTree = "<group>"; };
 		FA808DAA1CD360C600FD9A74 /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
 		FA808DAC1CD3641800FD9A74 /* push.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = push.png; sourceTree = "<group>"; };
+		FA808DAE1CD9C99700FD9A74 /* RequestUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestUtil.h; sourceTree = "<group>"; };
+		FA808DAF1CD9C99E00FD9A74 /* RequestUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestUtil.m; sourceTree = "<group>"; };
+		FA808DB21CD9D38400FD9A74 /* PPNetworkingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPNetworkingHelper.h; sourceTree = "<group>"; };
+		FA808DB31CD9D38900FD9A74 /* PPNetworkingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPNetworkingHelper.m; sourceTree = "<group>"; };
+		FA808DB51CD9D8BD00FD9A74 /* PPNewworkingUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPNewworkingUrl.h; sourceTree = "<group>"; };
 		FAC65DEC1CC5FEDA0042C5E3 /* PileInfoViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PileInfoViewController.storyboard; sourceTree = "<group>"; };
 		FAC65DEE1CC6003C0042C5E3 /* PileInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PileInfoViewController.h; sourceTree = "<group>"; };
 		FAC65DEF1CC6003C0042C5E3 /* PileInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PileInfoViewController.m; sourceTree = "<group>"; };
@@ -1019,6 +1023,7 @@
 		7726ED6C1CB6303100D433FB /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				FA808DB11CD9D34500FD9A74 /* PPNetworkingHelper */,
 				FA808D6D1CD34D9C00FD9A74 /* AFNetworking */,
 				77510D4F1CBB5AD00052080F /* ImagePickViewCon */,
 				7726ED811CB6303100D433FB /* FMDB */,
@@ -1644,10 +1649,20 @@
 		FA808DA41CD34DA800FD9A74 /* AFNetworking+Category */ = {
 			isa = PBXGroup;
 			children = (
-				FA808DA51CD34DA800FD9A74 /* RequestUtil.h */,
-				FA808DA61CD34DA800FD9A74 /* RequestUtil.m */,
+				FA808DAE1CD9C99700FD9A74 /* RequestUtil.h */,
+				FA808DAF1CD9C99E00FD9A74 /* RequestUtil.m */,
 			);
 			path = "AFNetworking+Category";
+			sourceTree = "<group>";
+		};
+		FA808DB11CD9D34500FD9A74 /* PPNetworkingHelper */ = {
+			isa = PBXGroup;
+			children = (
+				FA808DB21CD9D38400FD9A74 /* PPNetworkingHelper.h */,
+				FA808DB31CD9D38900FD9A74 /* PPNetworkingHelper.m */,
+				FA808DB51CD9D8BD00FD9A74 /* PPNewworkingUrl.h */,
+			);
+			name = PPNetworkingHelper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1951,6 +1966,7 @@
 				FA0E47E31CC4D7C900687952 /* PileDetailViewController.m in Sources */,
 				7726EEFF1CB6463C00D433FB /* Pile.m in Sources */,
 				7726EEC51CB6303100D433FB /* CustomAlertView.m in Sources */,
+				FA808DB01CD9C99E00FD9A74 /* RequestUtil.m in Sources */,
 				FA808D941CD34D9C00FD9A74 /* AFNetworkReachabilityManager.m in Sources */,
 				7726EE981CB6303100D433FB /* MJIvar.m in Sources */,
 				7726EEB31CB6303100D433FB /* MKAnnotationView+WebCache.m in Sources */,
@@ -1987,6 +2003,7 @@
 				7726EF171CB6581900D433FB /* PileVillageBasicInfo.m in Sources */,
 				7726EEC11CB6303100D433FB /* UIImageView+WebCache.m in Sources */,
 				77510D8F1CBB5AD00052080F /* GJCFAssetsView.m in Sources */,
+				FA808DB41CD9D38900FD9A74 /* PPNetworkingHelper.m in Sources */,
 				7706F9331CC06B5000EA1ED6 /* UnifiedTariffsChargeView.m in Sources */,
 				7726ECFB1CB62F8000D433FB /* main.m in Sources */,
 				7726EEBE1CB6303100D433FB /* UIImage+MultiFormat.m in Sources */,
@@ -2017,7 +2034,6 @@
 				7726EEBF1CB6303100D433FB /* UIImage+WebP.m in Sources */,
 				7726EE8F1CB6303100D433FB /* MASViewAttribute.m in Sources */,
 				FA2C8E0A1CCB5C3B006B3D48 /* AddPileViewController.m in Sources */,
-				FA808DA71CD34DA800FD9A74 /* RequestUtil.m in Sources */,
 				77510D941CBB5AD00052080F /* GJCFPhotosViewController.m in Sources */,
 				7726EEC61CB6303100D433FB /* CustomTabbar.m in Sources */,
 				7726EEA81CB6303100D433FB /* MJRefreshBackGifFooter.m in Sources */,

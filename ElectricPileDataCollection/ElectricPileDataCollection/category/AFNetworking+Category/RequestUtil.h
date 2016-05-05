@@ -21,6 +21,7 @@ typedef enum RequestMethod{
 @protocol RequestUtilDelegate <NSObject>
 
 @optional
+
 - (void)response:(NSURLResponse *)response andError:(NSError *)error andData:(NSData *)data andStatusCode:(NSInteger)statusCode andURLString:(NSString *)urlString;
 
 @end
@@ -49,17 +50,6 @@ typedef enum RequestMethod{
 - (void)asyncThirdLibWithUrl:(NSString *)urlString andParameters:(NSDictionary *)parameters andMethod:(RequestMethod)method andTimeoutInterval:(NSInteger)timeoutInterval;
 
 /**
- *  图片上传
- *
- *  @param urlString       地址
- *  @param parameters      参数
- *  @param imageName       服务器给定的名称
- *  @param data            图片资源
- *  @param timeoutInterval 超时时间
- */
-- (void)asyncThirdLibWithUrl:(NSString *)urlString andParameters:(NSDictionary *)parameters andImageName:(NSString *)imageName andData:(NSData *)data andTimeoutInterval:(NSInteger)timeoutInterval;
-
-/**
  *  新版图片上传
  *
  *  @param urlString       url地址
@@ -69,6 +59,8 @@ typedef enum RequestMethod{
  */
 - (void)uploadImageWithUrl:(NSString *)urlString andParameters:(NSDictionary *)parameters andData:(NSData *)data andTimeoutInterval:(NSInteger)timeoutInterval;
 
+
+- (void)uploadDataWithUrl:(NSString *)urlString andParameters:(NSDictionary *)parameters andTimeoutInterval:(NSInteger)timeoutInterval;
 
 /**
  *  第三方库融云

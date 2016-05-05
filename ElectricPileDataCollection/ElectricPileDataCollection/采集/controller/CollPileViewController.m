@@ -120,11 +120,9 @@
         self.info = [[PileVillageInfo alloc] init];
         [self.dataArray addObject:self.info];
     }
-    
     self.info.pile_village.villageName = self.tableView.tf.text;
     self.info.pile_village.comment1 = self.tableView.toGoCommentTextView.text;
     self.info.pile_village.comment2 = self.tableView.villageEntranceTextView.text;
-    
     if(self.isChooseToGoIV){
         NSData * data = UIImagePNGRepresentation(self.tableView.toGoImageView.image);
         NSString * imagePath = IMAGE_PATH_PILE_VILLAGE_ENTRY;
@@ -137,35 +135,26 @@
         [NSFileManager writeToFile:imagePath withData:data];
         self.info.pile_village.villageEntranceImagePath=imagePath;
     }
-    
     PileInfoViewController *pileInfoVC = [[PileInfoViewController alloc] init];
     pileInfoVC.pileGroupInfoArray = self.info.sites;
     pileInfoVC.pileChargeStandardArray = self.info.parkings;
     pileInfoVC.siteName = self.info.pile_village.villageName;
+    
+    /**
+     *  上传图片
+     */
+    NSDictionary * headerDict = @{@"__provinceid":@(0),@"__cityid":@(0),@"__districtid":@(0),@"__areaid":@(0),@"__villageid":@(0)};
+    self.requestUtil.headerDict = headerDict;
+    
+    NSData *villageEntryImageData = UIImageJPEGRepresentation(self.tableView.toGoImageView.image, 1);
+    NSString *villageEntryUrlStr = [NSString stringWithFormat:UPLOAD_IMAGE,@"pile_village_entry"];
+    [self.requestUtil uploadImageWithUrl:villageEntryUrlStr andParameters:nil andData:villageEntryImageData andTimeoutInterval:20];
+    
+    NSData *villageGateimageData = UIImageJPEGRepresentation(self.tableView.villageEntranceImageView.image, 1);
+    NSString *villageGateUrlStr = [NSString stringWithFormat:UPLOAD_IMAGE,@"pile_village_gate"];
+    [self.requestUtil uploadImageWithUrl:villageGateUrlStr andParameters:nil andData:villageGateimageData andTimeoutInterval:20];
+    
     [self.navigationController pushViewController:pileInfoVC animated:YES];
-
-    
-//    PileVillageInfo * info = self.info;
-//    info.pile_village.comment1 = self.tableView.toGoCommentTextView.text;
-//    info.pile_village.comment2 = self.tableView.villageEntranceTextView.text;
-//    
-//    if(self.isChooseToGoIV){
-//        NSData * data = UIImagePNGRepresentation(self.tableView.toGoImageView.image);
-//        NSString * imagePath = IMAGE_PATH_PILE_VILLAGE_ENTRY;
-//        [NSFileManager writeToFile:imagePath withData:data];
-//        info.pile_village.villagePathImagePath=imagePath;
-//    }
-//    if(self.isChooseEntranceIV){
-//        NSData * data = UIImagePNGRepresentation(self.tableView.villageEntranceImageView.image);
-//        NSString * imagePath = IMAGE_PATH_PILE_VILLAGE_GATE;
-//        [NSFileManager writeToFile:imagePath withData:data];
-//        info.pile_village.villageEntranceImagePath=imagePath;
-//    }
-//
-//    PileInfoViewController *pileInfoVC = [[PileInfoViewController alloc] init];
-//    pileInfoVC.pileVillageInfoArray = self.dataArray;
-//    [self.navigationController pushViewController:pileInfoVC animated:YES];
-    
 }
 
 #pragma mark - 自定义代理
@@ -238,7 +227,7 @@
 
 #pragma mark - 下载数据
 - (void)response:(NSURLResponse *)response andError:(NSError *)error andData:(NSData *)data andStatusCode:(NSInteger)statusCode andURLString:(NSString *)urlString{
-    if(statusCode==200 && !error){
+    if(statusCode == 200 && !error){
         if([urlString isEqualToString:ADD_VILLAGE_URL]){
             NSInteger villageId = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] integerValue];
             NSLog(@"小区ID：%ld",villageId);
@@ -249,12 +238,17 @@
             }
             return;
         }
-//        NSArray * tmpArray = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-//        NSMutableArray * dataArray =[[NSMutableArray alloc]init];
-//        for (NSDictionary * dict in tmpArray) {
-//            [dataArray addObject:[Area areaWithDict:dict]];
-//        }
-//        self.tableView.villageDataArray=dataArray;
+        
+        if ([urlString isEqualToString:[NSString stringWithFormat:UPLOAD_IMAGE,@"pile_village_entry"]] ) {
+            NSDictionary * dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+            self.info.pile_village.villagePathImageUrl = dict[@"url"];
+        }
+        
+        if ([urlString isEqualToString:[NSString stringWithFormat:UPLOAD_IMAGE,@"pile_village_gate"]]) {
+            NSDictionary * dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+            self.info.pile_village.villageEntranceImageUrl = dict[@"url"];
+        }
+        
     }else{
         NSLog(@"%@",error);
         [self.view addSubview:[CustomPopupView customPopupViewWithMsg:FINAL_DATA_REQUEST_FAIL]];

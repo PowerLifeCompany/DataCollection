@@ -41,11 +41,13 @@ typedef enum {
     
 }pileBrand;
 
-@interface AddPileViewController ()<AddPileMainViewDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate,CustomImagePickerDelegate, CLImageEditorDelegate>
+@interface AddPileViewController ()<AddPileMainViewDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate,CustomImagePickerDelegate, CLImageEditorDelegate, RequestUtilDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 
 @property (weak, nonatomic) AddPileMainView* tableView;
+
+@property(nonatomic,strong)RequestUtil * requestUtil;
 
 @property (assign, nonatomic) BOOL isChooseLogoDetailIV;
 
@@ -321,6 +323,18 @@ typedef enum {
     
     // 桩细节描述
     self.addPile.pile_pile.comment7 = self.tableView.logoDetailTextView.text;
+    
+    
+    /**
+     *  上传图片
+     */
+    NSDictionary * headerDict = @{@"__provinceid":@(0),@"__cityid":@(0),@"__districtid":@(0),@"__areaid":@(0),@"__villageid":@(0),@"__parkingid":@(0),@"__siteid":@(0)};
+    self.requestUtil.headerDict = headerDict;
+    
+    NSData *detailImageData = [NSData dataWithContentsOfFile:self.addPile.pile_pile.logoDetailImagePath];
+    NSString *detailUrlStr = [NSString stringWithFormat:UPLOAD_IMAGE,@"pile_detail"];
+    [self.requestUtil uploadImageWithUrl:detailUrlStr andParameters:nil andData:detailImageData andTimeoutInterval:20];
+    
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -399,7 +413,21 @@ typedef enum {
     [self.navigationController pushViewController:addInterfaceVC animated:YES];
 }
 
-#pragma mark --------------------------------------------------
+#pragma mark - 返回数据
+- (void)response:(NSURLResponse *)response andError:(NSError *)error andData:(NSData *)data andStatusCode:(NSInteger)statusCode andURLString:(NSString *)urlString{
+    
+    if (statusCode == 200 && !error) {
+        
+        if ([urlString isEqualToString:[NSString stringWithFormat:UPLOAD_IMAGE,@"pile_detail"]]) {
+            NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+            self.addPile.pile_pile.imageUrl7 = dic[@"url"];
+        }
+        
+    }else{
+        NSLog(@"%@",error);
+    }
+}
+
 //- (NSMutableArray *)dataArray{
 //    if(_dataArray == nil){
 //        NSMutableArray * array = [PileVillageInfo sharedPileVillageInfo].sites;
@@ -416,9 +444,7 @@ typedef enum {
 //    return _addPileArray;
 //}
 
-#pragma mark --------------------------------------------------
-
-
+#pragma mark - 懒加载
 - (NSMutableArray *)dataArray{
     if(_dataArray == nil){
         NSMutableArray *array = [PileGroupInfo sharedPileGroupInfo].piles;
@@ -433,6 +459,14 @@ typedef enum {
         _interfaceArray = array?:[[NSMutableArray alloc]init];
     }
     return _interfaceArray;
+}
+
+- (RequestUtil *)requestUtil{
+    if(_requestUtil == nil){
+        _requestUtil = [[RequestUtil alloc]init];
+        _requestUtil.delegate = self;
+    }
+    return _requestUtil;
 }
 
 @end

@@ -18,7 +18,7 @@
 #import "NSFileManager+FileCategory.h"
 #import "UIImageView+WebCache.h"
 
-@interface FeesDetailViewController ()<UINavigationControllerDelegate, UIImagePickerControllerDelegate,CustomImagePickerDelegate,FeesDetailMainViewDelegate,CLImageEditorDelegate>
+@interface FeesDetailViewController ()<UINavigationControllerDelegate, UIImagePickerControllerDelegate,CustomImagePickerDelegate,FeesDetailMainViewDelegate,CLImageEditorDelegate,RequestUtilDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 
@@ -27,6 +27,8 @@
 @property (weak, nonatomic) UIView * currentParkingChargeView;
 
 @property(nonatomic,assign)BOOL isChooseImage;
+
+@property(nonatomic,strong)RequestUtil * requestUtil;
 
 @end
 
@@ -106,6 +108,10 @@
 }
 
 - (void)saveBtnClick:(UIBarButtonItem *)bbi{
+    
+    /**
+     *  保存数据
+     */
     if(!self.pcs){
         self.pcs=[[ParkingChargeStandard alloc]init];
         [self.dataArray addObject:self.pcs];
@@ -139,6 +145,17 @@
     }
     //总体说明
     self.pcs.comment=self.tableView.feesDetailCommentTV.text;
+    
+    /**
+     *  上传图片
+     */
+    NSDictionary * headerDict = @{@"__provinceid":@(0),@"__cityid":@(0),@"__districtid":@(0),@"__areaid":@(0),@"__villageid":@(0),@"__parkingid":@(0)};
+    self.requestUtil.headerDict = headerDict;
+    
+    NSData *chargeStandardImageData = UIImageJPEGRepresentation(self.tableView.feesDetailImageView.image, 1);
+    NSString *chargeStandardUrlStr = [NSString stringWithFormat:UPLOAD_IMAGE,@"pile_parking_tariff"];
+    [self.requestUtil uploadImageWithUrl:chargeStandardUrlStr andParameters:nil andData:chargeStandardImageData andTimeoutInterval:20];
+    
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -254,6 +271,31 @@
     }
     self.tableView.parkingDescLabel.text=value;
     [self.currentParkingChargeView removeFromSuperview];
+}
+
+#pragma mark - 返回数据
+- (void)response:(NSURLResponse *)response andError:(NSError *)error andData:(NSData *)data andStatusCode:(NSInteger)statusCode andURLString:(NSString *)urlString{
+    
+    if (statusCode == 200 && !error) {
+    
+        if ([urlString isEqualToString:[NSString stringWithFormat:UPLOAD_IMAGE,@"pile_parking_tariff"]]) {
+            
+            NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+            self.pcs.imageUrl0 = dic[@"url"];
+        }
+        
+    }else{
+         NSLog(@"%@",error);
+    }
+}
+
+#pragma mark - 懒加载
+- (RequestUtil *)requestUtil{
+    if(_requestUtil == nil){
+        _requestUtil = [[RequestUtil alloc]init];
+        _requestUtil.delegate = self;
+    }
+    return _requestUtil;
 }
 
 @end

@@ -48,11 +48,13 @@ typedef enum {
 }payType;
 
 
-@interface AddInterfaceViewController ()<AddInterfaceMainViewDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate, CustomImagePickerDelegate, CLImageEditorDelegate>
+@interface AddInterfaceViewController ()<AddInterfaceMainViewDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate, CustomImagePickerDelegate, CLImageEditorDelegate, RequestUtilDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 
 @property (weak, nonatomic) AddInterfaceMainView *tableView;
+
+@property(nonatomic,strong)RequestUtil * requestUtil;
 
 @property (assign, nonatomic) BOOL isChooseInterfaceIV;
 
@@ -332,6 +334,23 @@ typedef enum {
      */
     [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadVC" object:nil];
     
+    
+    /**
+     *  上传图片
+     */
+    NSDictionary * headerDict = @{@"__provinceid":@(0),@"__cityid":@(0),@"__districtid":@(0),@"__areaid":@(0),@"__villageid":@(0),@"__parkingid":@(0),@"__siteid":@(0),@"__pileinterfaceid":@(0)};
+    self.requestUtil.headerDict = headerDict;
+    
+    // 正面照
+    NSData *frontImageData = [NSData dataWithContentsOfFile:self.interface.chargingMouthImagePath];
+    NSString *frontUrlStr = [NSString stringWithFormat:UPLOAD_IMAGE,@"pile_interface_front"];
+    [self.requestUtil uploadImageWithUrl:frontUrlStr andParameters:nil andData:frontImageData andTimeoutInterval:20];
+    
+    // 细节特写
+    NSData *detailImageData = [NSData dataWithContentsOfFile:self.interface.detailImagePath];
+    NSString *detailUrlStr = [NSString stringWithFormat:UPLOAD_IMAGE,@"pile_interface_handler"];
+    [self.requestUtil uploadImageWithUrl:detailUrlStr andParameters:nil andData:detailImageData andTimeoutInterval:20];
+    
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -460,6 +479,36 @@ typedef enum {
     [picker dismissViewControllerAnimated:YES completion:^{
         [self editorImageWithImage:image];
     }];
+}
+
+#pragma mark - 返回数据
+- (void)response:(NSURLResponse *)response andError:(NSError *)error andData:(NSData *)data andStatusCode:(NSInteger)statusCode andURLString:(NSString *)urlString{
+    
+    if (statusCode == 200 && !error) {
+        
+        if ([urlString isEqualToString:[NSString stringWithFormat:UPLOAD_IMAGE,@"pile_interface_front"]]) {
+            NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+            self.interface.imageUrl8 = dic[@"url"];
+            NSLog(@"123-%@",self.interface.imageUrl8);
+        }
+        
+        if ([urlString isEqualToString:[NSString stringWithFormat:UPLOAD_IMAGE,@"pile_interface_handler"]]) {
+            NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+            self.interface.imageUrl9 = dic[@"url"];
+            NSLog(@"456-%@",self.interface.imageUrl9);
+        }
+    }else{
+        NSLog(@"%@",error);
+    }
+}
+
+#pragma mark - 懒加载
+- (RequestUtil *)requestUtil{
+    if(_requestUtil == nil){
+        _requestUtil = [[RequestUtil alloc]init];
+        _requestUtil.delegate = self;
+    }
+    return _requestUtil;
 }
 
 //- (NSMutableArray *)dataArray{
