@@ -280,7 +280,6 @@
     [self.requestUtil uploadImageWithUrl:chargingUrlStr andParameters:nil andData:chargingImageData andTimeoutInterval:20];
     
     [self.navigationController popViewControllerAnimated:YES];
-
 }
 
 - (void)cancelClick:(UIButton *)sender
@@ -360,22 +359,6 @@
     [self.navigationController pushViewController:pileDetailVC animated:YES];
 }
 
-//- (NSMutableArray *)dataArray{
-//    if(_dataArray == nil){
-//        NSMutableArray * array = [PileVillageInfo sharedPileVillageInfo].sites;
-//        _dataArray = array?:[[NSMutableArray alloc]init];
-//    }
-//    return _dataArray;
-//}
-
-- (NSMutableArray *)addPileArray{
-    if(_addPileArray == nil){
-        NSMutableArray *array = self.pileGroupInfo.piles;
-        _addPileArray = array ?:[[NSMutableArray alloc] init];
-    }
-    return _addPileArray;
-}
-
 #pragma mark - UIImagePickViewController
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary<NSString *,id> *)editingInfo{
     
@@ -425,6 +408,7 @@
             self.pileGroupInfo.pile_space.imageUrl6 = dic[@"url"];
         }
         
+        
     }else{
         NSLog(@"%@",error);
     }
@@ -434,6 +418,14 @@
 {
     [super viewWillAppear:animated];
     [self.tableView reloadData];
+}
+
+- (NSMutableArray *)addPileArray{
+    if(_addPileArray == nil){
+        NSMutableArray *array = self.pileGroupInfo.piles;
+        _addPileArray = array ?:[[NSMutableArray alloc] init];
+    }
+    return _addPileArray;
 }
 
 - (RequestUtil *)requestUtil{
@@ -449,5 +441,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+//- (NSMutableArray *)dataArray{
+//    if(_dataArray == nil){
+//        NSMutableArray * array = [PileVillageInfo sharedPileVillageInfo].sites;
+//        _dataArray = array?:[[NSMutableArray alloc]init];
+//    }
+//    return _dataArray;
+//}
 
 @end

@@ -489,13 +489,11 @@ typedef enum {
         if ([urlString isEqualToString:[NSString stringWithFormat:UPLOAD_IMAGE,@"pile_interface_front"]]) {
             NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
             self.interface.imageUrl8 = dic[@"url"];
-            NSLog(@"123-%@",self.interface.imageUrl8);
         }
         
         if ([urlString isEqualToString:[NSString stringWithFormat:UPLOAD_IMAGE,@"pile_interface_handler"]]) {
             NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
             self.interface.imageUrl9 = dic[@"url"];
-            NSLog(@"456-%@",self.interface.imageUrl9);
         }
     }else{
         NSLog(@"%@",error);

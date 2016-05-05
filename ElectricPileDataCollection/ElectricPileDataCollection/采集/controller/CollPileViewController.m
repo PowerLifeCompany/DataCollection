@@ -241,12 +241,12 @@
         
         if ([urlString isEqualToString:[NSString stringWithFormat:UPLOAD_IMAGE,@"pile_village_entry"]] ) {
             NSDictionary * dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-            self.info.pile_village.villagePathImageUrl = dict[@"url"];
+            self.info.pile_village.imageUrl1 = dict[@"url"];
         }
         
         if ([urlString isEqualToString:[NSString stringWithFormat:UPLOAD_IMAGE,@"pile_village_gate"]]) {
             NSDictionary * dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-            self.info.pile_village.villageEntranceImageUrl = dict[@"url"];
+            self.info.pile_village.imageUrl2 = dict[@"url"];
         }
         
     }else{

@@ -37,7 +37,7 @@
 /**
  *  小区路口怎么走图片url
  */
-@property (nonatomic, copy) NSString *villagePathImageUrl;
+@property (nonatomic, copy) NSString *imageUrl1;
 
 /**
  *  路口如何走，标明来处，面描述
@@ -52,7 +52,7 @@
 /**
  *  小区入口本地图片url
  */
-@property (nonatomic, copy) NSString *villageEntranceImageUrl;
+@property (nonatomic, copy) NSString *imageUrl2;
 
 /**
  *  小区入口（左转右转描述）

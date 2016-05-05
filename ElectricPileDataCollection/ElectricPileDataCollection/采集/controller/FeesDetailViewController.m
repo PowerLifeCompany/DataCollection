@@ -260,7 +260,7 @@
         }
     }else if ([self.currentParkingChargeView isKindOfClass:[TimeSharingChargeView class]]){
         TimeSharingChargeView * chargeView= (TimeSharingChargeView *)self.currentParkingChargeView;
-        NSMutableString * value1 =[ NSMutableString string];
+        NSMutableString * value1 =[NSMutableString string];
         for (NSString * content in chargeView.dataArray) {
             [value1 appendFormat:@"%@ ",content];
         }
