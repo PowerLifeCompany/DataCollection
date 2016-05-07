@@ -351,7 +351,16 @@ typedef enum {
     NSString *detailUrlStr = [NSString stringWithFormat:UPLOAD_IMAGE,@"pile_interface_handler"];
     [self.requestUtil uploadImageWithUrl:detailUrlStr andParameters:nil andData:detailImageData andTimeoutInterval:20];
     
-    [self.navigationController popViewControllerAnimated:YES];
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"保存数据?" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
+    
+    [alertVC addAction:cancelAction];
+    [alertVC addAction:confirmAction];
+    
+    [self presentViewController:alertVC animated:YES completion:nil];
 }
 
 - (void)cancelClick:(UIButton *)sender

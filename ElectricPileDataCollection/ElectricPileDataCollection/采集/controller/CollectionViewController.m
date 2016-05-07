@@ -32,15 +32,24 @@
 @property (nonatomic,strong) NSArray * pileBrandArray;
 
 /**
- *  数据总字典
+ *  上传数据汇总字典
  */
-@property (strong, nonatomic) NSMutableDictionary *dataDic;
+@property (nonatomic, strong) NSMutableDictionary *collectionDictionary;
 
-@property (copy, nonatomic) NSString *json1;
+/**
+ *  用户省市区片小区数据汇总字典
+ */
+@property (nonatomic, strong) NSMutableDictionary *villageDictionary;
 
-@property (copy, nonatomic) NSString *json2;
+/**
+ *  位置数据汇总数组
+ */
+@property (nonatomic, strong) NSMutableArray *sitesArray;
 
-@property (copy, nonatomic) NSString *json3;
+/**
+ *  收费标准数据汇总数组
+ */
+@property (nonatomic, strong) NSMutableArray *parkingsArray;
 
 @end
 
@@ -88,63 +97,68 @@
 
 - (void)upLoadWithMainView:(CollectionMainView *)mainView andButtonNumber:(NSInteger)num{
     
-    [self dealUpLoadData:num];
-    [PPNetworkingHelper uploadDataWithInfo:_dataDic andFinishBlock:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
-        if (!error) {
-            NSLog(@"tmd = %@",responseObject);
-        }else{
+    [self getData:num];
+    
+    NSMutableDictionary *upLoadDataDictionary = self.collectionDictionary;
+    
+//    self.requestUtil.headerDict=self.collectionDictionary;
+//    [self.requestUtil uploadDataWithUrl:UPLOAD_PILE_DATA andParameters:upLoadDataDictionary andTimeoutInterval:20];
+    //[self.requestUtil asyncThirdLibWithUrl:UPLOAD_PILE_DATA andParameters:upLoadDataDictionary andMethod:RequestMethodPost andTimeoutInterval:20];
+    
+    
+    [PPNetworkingHelper uploadDataWithInfo:upLoadDataDictionary andFinishBlock:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+        if (error) {
             NSLog(@"123 = %@",error);
+        }else{
+            NSLog(@"345 = %@",responseObject);
         }
     }];
 }
 
-#pragma mark - 整理上传数据
-- (void)dealUpLoadData:(NSInteger)num{
+#pragma mark - 整理数据
+- (void)getData:(NSInteger)num{
     
-    /**
-     *  整理数据
-     */
     if (self.dataArray.count) {
         
         PileVillageInfo *pileInfo = self.dataArray[num];
-        self.dataDic = [NSMutableDictionary dictionary];
         
-        // 小区数据
-        NSMutableDictionary *villageDic = [NSMutableDictionary dictionary];
-        _dataDic[@"pile_village"] = villageDic;
-        PileVillageBasicInfo *pile_village = pileInfo.pile_village;
-        villageDic[@"id"] = [NSString stringWithFormat:@"%ld", pile_village.Id];
-        villageDic[@"villageId"] = [NSString stringWithFormat:@"%ld", pile_village.villageId];
-        villageDic[@"imageUrl1"] = pile_village.imageUrl1;
-        villageDic[@"imageUrl2"] = pile_village.imageUrl2;
-        villageDic[@"comment1"] = pile_village.comment2;
-        
-        // 电桩数据
-        NSMutableArray *siteArr = pileInfo.sites;
-        _dataDic[@"sites"] = siteArr;
-        for (int i = 0; i < siteArr.count; i++) {
-            PileGroupInfo *pileGroupInfo = siteArr[i];
+        // 添加用户省市区片ID
+        self.collectionDictionary[@"userId"] = @"1";
+        self.collectionDictionary[@"provinceid"] = @"1";
+        self.collectionDictionary[@"cityid"] = @"1";
+        self.collectionDictionary[@"districtid"] = @"1";
+        self.collectionDictionary[@"areaid"] = @"1";
+
+        // 添加小区数据
+        self.collectionDictionary[@"pile_village"] = self.villageDictionary;
+        self.villageDictionary[@"id"] = @"0";
+        self.villageDictionary[@"villageId"] = @"0";
+        self.villageDictionary[@"imageUrl1"] = pileInfo.pile_village.imageUrl1;
+        self.villageDictionary[@"imageUrl2"] = pileInfo.pile_village.imageUrl2;
+        self.villageDictionary[@"comment1"] = [pileInfo.pile_village.comment1 stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        self.villageDictionary[@"comment2"] = [pileInfo.pile_village.comment2 stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+
+        // 添加位置
+        self.collectionDictionary[@"sites"] = self.sitesArray;
+        for (int i = 0; i < pileInfo.sites.count; i++) {
             NSMutableDictionary *sitesDic = [NSMutableDictionary dictionary];
-            [siteArr addObject:sitesDic];
+            [self.sitesArray addObject:sitesDic];
+            PileGroupInfo *pileGroupInfo = pileInfo.sites[i];
             
             // 电桩位置
             NSMutableDictionary *pileSiteDic = [NSMutableDictionary dictionary];
             sitesDic[@"pile_site"] = pileSiteDic;
-            pileSiteDic[@"id"] = [NSString stringWithFormat:@"%ld", pileGroupInfo.pile_site.Id];
-            pileSiteDic[@"villageId"] = [NSString stringWithFormat:@"%ld", pile_village.villageId];
-            pileSiteDic[@"siteName"] = pile_village.villageName;
+            pileSiteDic[@"id"] = @"0";
+            pileSiteDic[@"villageId"] = @"0";
+            pileSiteDic[@"siteName"] = [pileInfo.pile_village.villageName stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
             pileSiteDic[@"x"] = pileGroupInfo.pile_site.x;
             pileSiteDic[@"y"] = pileGroupInfo.pile_site.y;
-        
+
             // 电桩车位
             NSMutableDictionary *pileSpaceDic = [NSMutableDictionary dictionary];
             sitesDic[@"pile_space"] = pileSpaceDic;
-            pileSpaceDic[@"id"] = [NSString stringWithFormat:@"%ld", pileGroupInfo.pile_space.Id];
-            pileSpaceDic[@"pileSiteId"] = [NSString stringWithFormat:@"%ld", pileGroupInfo.pile_space.pileSiteId];
-            pileSpaceDic[@"comment3"] = pileGroupInfo.pile_space.comment3;
-            pileSpaceDic[@"comment4"] = pileGroupInfo.pile_space.comment4;
-            pileSpaceDic[@"comment5"] = pileGroupInfo.pile_space.comment5;
-            pileSpaceDic[@"comment6"] = pileGroupInfo.pile_space.comment6;
+            pileSpaceDic[@"id"] = @"0";
+            pileSpaceDic[@"pileSiteId"] = @"0";
             pileSpaceDic[@"imageUrl3"] = pileGroupInfo.pile_space.imageUrl3;
             pileSpaceDic[@"imageUrl4"] = pileGroupInfo.pile_space.imageUrl4;
             pileSpaceDic[@"imageUrl5"] = pileGroupInfo.pile_space.imageUrl5;
@@ -153,87 +167,87 @@
             pileSpaceDic[@"snum"] = pileGroupInfo.pile_space.snum;
             pileSpaceDic[@"mnum"] = pileGroupInfo.pile_space.mnum;
             pileSpaceDic[@"tnum"] = pileGroupInfo.pile_space.tnum;
-            pileSpaceDic[@"comment"] = pileGroupInfo.pile_space.comment;
-            
-            
-            // 电桩新增电桩
-            NSMutableArray *pilesPilesArr = pileGroupInfo.piles;
-            [sitesDic setObject:pilesPilesArr forKey:@"piles"];
-            for (int i = 0; i < pilesPilesArr.count; i++) {
-                Pile *pile = pilesPilesArr[i];
+            pileSpaceDic[@"comment3"] = [pileGroupInfo.pile_space.comment3 stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];;
+            pileSpaceDic[@"comment4"] = [pileGroupInfo.pile_space.comment4 stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+            pileSpaceDic[@"comment5"] = [pileGroupInfo.pile_space.comment5 stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+            pileSpaceDic[@"comment6"] = [pileGroupInfo.pile_space.comment6 stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+            pileSpaceDic[@"comment"] = [pileGroupInfo.pile_space.comment stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+
+            // 新增电桩
+            NSMutableArray *pilesPilesArr = [NSMutableArray array];
+            sitesDic[@"piles"] = pilesPilesArr;
+            for (int i = 0; i < pileGroupInfo.piles.count; i++) {
                 NSMutableDictionary *pileDataDic = [NSMutableDictionary dictionary];
                 [pilesPilesArr addObject:pileDataDic];
-                
-                // 新增电桩
+                Pile *pile = pileGroupInfo.piles[i];
+
+                // 电桩基本信息
                 NSMutableDictionary *pilePileDic = [NSMutableDictionary dictionary];
-                [pilePileDic setObject:[NSString stringWithFormat:@"%ld", pile.pile_pile.Id] forKey:@"id"];
-                [pilePileDic setObject:[NSString stringWithFormat:@"%ld", pile.pile_pile.pileSiteId] forKey:@"pileSiteId"];
-                [pilePileDic setObject:[NSString stringWithFormat:@"%ld", pile.pile_pile.pileResourceBrandId] forKey:@"pileResourceBrandId"];
-                [pilePileDic setObject:[NSString stringWithFormat:@"%ld", pile.pile_pile.pileResourceOperatorId] forKey:@"pile.pile_pile.pileResourceOperatorId"];
-                [pilePileDic setObject:pile.pile_pile.imageUrl7 forKey:@"imageUrl7"];
-                [pilePileDic setObject:pile.pile_pile.comment7 forKey:@"comment7"];
-                [pileDataDic setObject:pilePileDic forKey:@"pile_pile"];
-                
-                NSMutableArray *interfaceDataArr = pile.interfaces;
-                [pileDataDic setObject:interfaceDataArr forKey:@"interfaces"];
-                for (int i = 0; i < interfaceDataArr.count; i++) {
-                    PileInterface *interface = interfaceDataArr[i];
+                pileDataDic[@"pile_pile"] = pilePileDic;
+                pilePileDic[@"id"] = @"0";
+                pilePileDic[@"pileSiteId"] = @"0";
+                pilePileDic[@"pileResourceBrandId"] = @"0";
+                pilePileDic[@"pile.pile_pile.pileResourceOperatorId"] = @"0";
+                pilePileDic[@"imageUrl7"] = pile.pile_pile.imageUrl7;
+                pilePileDic[@"comment7"] = pile.pile_pile.comment7;
+
+                NSMutableArray *interfaceDataArr = [NSMutableArray array];
+                pileDataDic[@"interfaces"] = interfaceDataArr;
+                for (int i = 0; i < pile.interfaces.count; i++) {
                     NSMutableDictionary *interfaceDataDic = [NSMutableDictionary dictionary];
                     [interfaceDataArr addObject:interfaceDataDic];
-                    
+                    PileInterface *interface = pile.interfaces[i];
+
                     // 新增接口
-                    [interfaceDataDic setObject:[NSString stringWithFormat:@"%ld", interface.Id] forKey:@"id"];
-                    [interfaceDataDic setObject:[NSString stringWithFormat:@"%ld", interface.pileId] forKey:@"pileId"];
-                    [interfaceDataDic setObject:[NSString stringWithFormat:@"%ld", interface.pileResourceInterfaceId] forKey:@"pileResourceInterfaceId"];
-                    [interfaceDataDic setObject:interface.tariffService forKey:@"tariffService"];
-                    [interfaceDataDic setObject:interface.num forKey:@"num"];
-                    [interfaceDataDic setObject:interface.weight forKey:@"weight"];
-                    [interfaceDataDic setObject:[NSString stringWithFormat:@"%ld", interface.hasChargeCable] forKey:@"hasChargeCable"];
-                    [interfaceDataDic setObject:interface.voltage forKey:@"voltage"];
-                    [interfaceDataDic setObject:interface.current forKey:@"current"];
-                    [interfaceDataDic setObject:interface.tariffChargeBusy forKey:@"tariffChargeBusy"];
-                    [interfaceDataDic setObject:interface.tariffChargeBusyInterval forKey:@"tariffChargeBusyInterval"];
-                    [interfaceDataDic setObject:interface.tariffChargeIdle forKey:@"tariffChargeIdle"];
-                    [interfaceDataDic setObject:interface.tariffChargeIdleInterval forKey:@"tariffChargeIdleInterval"];
-                    [interfaceDataDic setObject:interface.paymentType forKey:@"paymentType"];
-                    [interfaceDataDic setObject:interface.imageUrl8 forKey:@"imageUrl8"];
-                    [interfaceDataDic setObject:interface.comment8 forKey:@"comment8"];
-                    [interfaceDataDic setObject:interface.imageUrl9 forKey:@"imageUrl9"];
-                    [interfaceDataDic setObject:interface.comment9 forKey:@"comment9"];
-                    [interfaceDataDic setObject:interface.comment forKey:@"comment"];
+                    interfaceDataDic[@"id"] = @"0";
+                    interfaceDataDic[@"pileId"] = @"0";
+                    interfaceDataDic[@"pileResourceInterfaceId"] = @"0";
+                    interfaceDataDic[@"num"] = interface.num;
+                    interfaceDataDic[@"weight"] = interface.weight;
+                    interfaceDataDic[@"hasChargeCable"] = [NSString stringWithFormat:@"%ld", interface.hasChargeCable];
+                    interfaceDataDic[@"voltage"] = interface.voltage;
+                    interfaceDataDic[@"current"] = interface.current;
+                    interfaceDataDic[@"tariffChargeBusy"] = interface.tariffChargeBusy;
+                    interfaceDataDic[@"tariffChargeBusyInterval"] = interface.tariffChargeBusyInterval;
+                    interfaceDataDic[@"tariffChargeIdle"] = interface.tariffChargeIdle;
+                    interfaceDataDic[@"tariffChargeIdleInterval"] = interface.tariffChargeIdleInterval;
+                    interfaceDataDic[@"paymentType"] = interface.paymentType;
+                    interfaceDataDic[@"imageUrl8"] = interface.imageUrl8;
+                    interfaceDataDic[@"imageUrl9"] = interface.imageUrl9;
+                    interfaceDataDic[@"comment8"] = [interface.comment8 stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+                    interfaceDataDic[@"comment9"] = [interface.comment9 stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+                    interfaceDataDic[@"comment"] = [interface.comment stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+                    
                 }
             }
-        
         }
         
-        /**
-         *  收费标准数据存储
-         */
-        NSMutableArray *parkingsDataArr = pileInfo.parkings;
-        [_dataDic setObject:parkingsDataArr forKey:@"parkings"];
-        for (int i = 0; i <parkingsDataArr.count; i++) {
-            ParkingChargeStandard *parkingChargeStandard = parkingsDataArr[i];
+        // 添加收费标准
+        self.collectionDictionary[@"parkings"] = self.parkingsArray;
+        NSMutableArray *parkingsDataArr = [NSMutableArray array];
+        for (int i = 0; i < pileInfo.parkings.count; i++) {
+            ParkingChargeStandard *parkingChargeStandard = pileInfo.parkings[i];
             NSMutableDictionary *parkingsDic = [NSMutableDictionary dictionary];
-            [parkingsDic setObject:[NSString stringWithFormat:@"%ld", parkingChargeStandard.Id] forKey:@"id"];
-            [parkingsDic setObject:parkingChargeStandard.parkingName forKey:@"parkingName"];
-            [parkingsDic setObject:[NSString stringWithFormat:@"%ld", parkingChargeStandard.villageId] forKey:@"villageId"];
-            [parkingsDic setObject:parkingChargeStandard.openIntervalWork forKey:@"openIntervalWork"];
-            [parkingsDic setObject:parkingChargeStandard.openIntervalNowork forKey:@"openIntervalNowork"];
-            [parkingsDic setObject:parkingChargeStandard.openComment forKey:@"openComment"];
-            [parkingsDic setObject:parkingChargeStandard.tariffType forKey:@"tariffType"];
-            [parkingsDic setObject:parkingChargeStandard.tariffTypeUnify forKey:@"tariffTypeUnify"];
-            [parkingsDic setObject:parkingChargeStandard.tariffTypeSplit forKey:@"tariffTypeSplit"];
-            [parkingsDic setObject:parkingChargeStandard.tariffTypeLadder forKey:@"tariffTypeLadder"];
-            [parkingsDic setObject:parkingChargeStandard.comment forKey:@"comment"];
-            [parkingsDic setObject:parkingChargeStandard.comment10 forKey:@"comment10"];
-            [parkingsDic setObject:parkingChargeStandard.imageUrl0 forKey:@"imageUrl0"];
             [parkingsDataArr addObject:parkingsDic];
+            
+            parkingsDic[@"id"] = @"0";
+            parkingsDic[@"villageId"] = @"0";
+            parkingsDic[@"parkingName"] = [parkingChargeStandard.parkingName stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+            parkingsDic[@"openIntervalWork"] = parkingChargeStandard.openIntervalWork;
+            parkingsDic[@"openIntervalNowork"] = parkingChargeStandard.openIntervalNowork;
+            parkingsDic[@"openComment"] = [parkingChargeStandard.openComment stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+            parkingsDic[@"tariffType"] = parkingChargeStandard.tariffType;
+            parkingsDic[@"tariffTypeUnify"] = parkingChargeStandard.tariffTypeUnify;
+            parkingsDic[@"tariffTypeSplit"] = parkingChargeStandard.tariffTypeSplit;
+            parkingsDic[@"tariffTypeLadder"] = parkingChargeStandard.tariffTypeLadder;
+            parkingsDic[@"comment"] = [parkingChargeStandard.comment stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+            parkingsDic[@"comment10"] = [parkingChargeStandard.comment stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+            parkingsDic[@"imageUrl0"] = parkingChargeStandard.imageUrl0;
         }
-
-    }
+   }
 }
 
-#pragma mark - 数据上传
+#pragma mark - 上传数据
 + (void)uploadDataWithInfo:(NSDictionary *)dict andFinishBlock:(nullable void (^)(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error))finishBlock {
 
     // 1.格式转换
@@ -251,12 +265,10 @@
         }
     }
     
-    NSLog(@"-------------%@", formData);
-    
     // 2.创建请求
-    NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] multipartFormRequestWithMethod:@"POST" URLString:UPLOAD_PILE_DATA parameters:formData constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+    NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] multipartFormRequestWithMethod:@"GET" URLString:UPLOAD_PILE_DATA parameters:formData constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
     } error:nil];
-    [request setHTTPMethod:@"POST"];
+    [request setHTTPMethod:@"GET"];
     
     // 3.创建数据数据上传任务
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
@@ -267,15 +279,6 @@
     [uploadTask resume];
 }
 
-//- (void)upLoadData{
-//
-//    //NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:@"0",@"userId",@"0",@"provinceid",@"0", @"cityid",@"0",@"districtid",@"0",@"areaid", self.json1, @"pile_village",self.json2,@"sites",self.json3,@"parkings",nil];
-////    NSDictionary * headerDict = @{@"__provinceid":@(0),@"__cityid":@(0),@"__districtid":@(0),@"__areaid":@(0),@"__villageid":@(0)};
-////    self.requestUtil.headerDict = headerDict;
-//
-//    [self.requestUtil uploadDataWithUrl:UPLOAD_PILE_DATA andParameters:dic andTimeoutInterval:20];
-//
-//}
 
 #pragma mark - custom方法
 - (void)showBrandPickView{
@@ -333,6 +336,34 @@
     return _dataArray;
 }
 
+- (NSMutableDictionary *)collectionDictionary {
+    if (_collectionDictionary == nil) {
+        _collectionDictionary = [NSMutableDictionary dictionary];
+    }
+    return _collectionDictionary;
+}
+
+- (NSMutableDictionary *)villageDictionary {
+    if (_villageDictionary == nil) {
+        _villageDictionary= [NSMutableDictionary dictionary];
+    }
+    return _villageDictionary;
+}
+
+- (NSMutableArray *)sitesArray {
+    if (_sitesArray == nil) {
+        _sitesArray = [NSMutableArray array];
+    }
+    return _sitesArray;
+}
+
+- (NSMutableArray *)parkingsArray {
+    if (_parkingsArray == nil) {
+        _parkingsArray = [NSMutableArray array];
+    }
+    return _parkingsArray;
+}
+
 - (CustomChooseCityView *)chooseCityView{
     if(_chooseCityView == nil){
         CustomChooseCityView *chooseCityView = [[CustomChooseCityView alloc]initWithFrame:CGRectMake(0, HEIGHT-300, WIDTH, 300)];
@@ -370,136 +401,5 @@
     [self.mainView reloadData];
     [AppDelegate customTabbar].hidden=NO;
 }
-
-- (void)nslog{
-    
-    //NSLog(@"Id = %ld, villageId = %ld, comment1 = %@, comment2 = %@, imageUrl1 = %@, imageUrl2 = %@,",pile_village.Id,pile_village.villageId,pile_village.comment1,pile_village.comment2,pile_village.imageUrl1, pile_village.imageUrl2);
-    
-    
-    // 存储数据的大字典
-    //self.dataDic = [NSMutableDictionary dictionary];
-    //[_dataDic setObject:villageDic forKey:@"pile_village"];
-    
-    
-    //NSData *villageData = [NSJSONSerialization dataWithJSONObject:villageDic options:NSJSONWritingPrettyPrinted error:nil];
-    //self.json1 = [[NSString alloc] initWithData:villageData encoding:NSUTF8StringEncoding];
-    
-    
-    //        NSData *siteData = [NSJSONSerialization dataWithJSONObject:siteDataArr options:NSJSONWritingPrettyPrinted error:nil];
-    //        self.json2 = [[NSString alloc] initWithData:siteData encoding:NSUTF8StringEncoding];
-    
-    
-    //        /**
-    //         *  收费标准数据存储
-    //         */
-    //        NSMutableArray<ParkingChargeStandard *> *parkings = pileInfo.parkings;
-    //        NSMutableArray *parkingsDataArr = [NSMutableArray array];
-    //        //[_dataDic setObject:parkingsDataArr forKey:@"parkings"];
-    //        for (int i = 0; i < parkings.count; i++) {
-    //            ParkingChargeStandard *parkingChargeStandard = parkings[i];
-    //            NSMutableDictionary *parkingsDic = [NSMutableDictionary dictionary];
-    //            [parkingsDic setObject:[NSString stringWithFormat:@"%ld", parkingChargeStandard.Id] forKey:@"id"];
-    //            [parkingsDic setObject:parkingChargeStandard.parkingName forKey:@"parkingName"];
-    //            [parkingsDic setObject:[NSString stringWithFormat:@"%ld", parkingChargeStandard.villageId] forKey:@"villageId"];
-    //            [parkingsDic setObject:parkingChargeStandard.openIntervalWork forKey:@"openIntervalWork"];
-    //            [parkingsDic setObject:parkingChargeStandard.openIntervalNowork forKey:@"openIntervalNowork"];
-    //            [parkingsDic setObject:parkingChargeStandard.openComment forKey:@"openComment"];
-    //            [parkingsDic setObject:parkingChargeStandard.tariffType forKey:@"tariffType"];
-    //            [parkingsDic setObject:parkingChargeStandard.tariffTypeUnify forKey:@"tariffTypeUnify"];
-    //            [parkingsDic setObject:parkingChargeStandard.tariffTypeSplit forKey:@"tariffTypeSplit"];
-    //            [parkingsDic setObject:parkingChargeStandard.tariffTypeLadder forKey:@"tariffTypeLadder"];
-    //            [parkingsDic setObject:parkingChargeStandard.comment forKey:@"comment"];
-    //            [parkingsDic setObject:parkingChargeStandard.comment10 forKey:@"comment10"];
-    //            [parkingsDic setObject:parkingChargeStandard.imageUrl0 forKey:@"imageUrl0"];
-    //            [parkingsDataArr addObject:parkingsDic];
-    //        }
-    //        NSData *parkingsData = [NSJSONSerialization dataWithJSONObject:parkingsDataArr options:NSJSONWritingPrettyPrinted error:nil];
-    //        self.json3 = [[NSString alloc] initWithData:parkingsData encoding:NSUTF8StringEncoding];
-    
-    //[_dataDic setObject:siteDataArr forKey:@"sites"];
-    
-    //            NSMutableArray<Pile *> *piles = pileGroupInfo.piles;
-    //            NSMutableArray *pilesDataArr = [NSMutableArray array];
-    //            //[sitesDataDic setObject:pilesDataArr forKey:@"piles"];
-    //            for (int i = 0; i < piles.count; i++) {
-    //                Pile *pile = piles[i];
-    //                NSMutableDictionary *pileDataDic = [NSMutableDictionary dictionary];
-    //                [pilesDataArr addObject:pileDataDic];
-    //
-    //                // 新增电桩
-    //                NSMutableDictionary *pilePileDic = [NSMutableDictionary dictionary];
-    //                [pilePileDic setObject:[NSString stringWithFormat:@"%ld", pile.pile_pile.Id] forKey:@"id"];
-    //                [pilePileDic setObject:[NSString stringWithFormat:@"%ld", pile.pile_pile.pileSiteId] forKey:@"pileSiteId"];
-    //                [pilePileDic setObject:[NSString stringWithFormat:@"%ld", pile.pile_pile.pileResourceBrandId] forKey:@"pileResourceBrandId"];
-    //                [pilePileDic setObject:[NSString stringWithFormat:@"%ld", pile.pile_pile.pileResourceOperatorId] forKey:@"pile.pile_pile.pileResourceOperatorId"];
-    //                [pilePileDic setObject:pile.pile_pile.imageUrl7 forKey:@"imageUrl7"];
-    //                [pilePileDic setObject:pile.pile_pile.comment7 forKey:@"comment7"];
-    //                [pileDataDic setObject:pilePileDic forKey:@"pile_pile"];
-    //
-    //                NSMutableArray<PileInterface *> *interfaces = pile.interfaces;
-    //                NSMutableArray *interfaceDataArr = [NSMutableArray array];
-    //                [pileDataDic setObject:interfaceDataArr forKey:@"interfaces"];
-    //                for (int i = 0; i < interfaces.count; i++) {
-    //                    PileInterface *interface = interfaces[i];
-    //                    NSMutableDictionary *interfaceDataDic = [NSMutableDictionary dictionary];
-    //                    [interfaceDataArr addObject:interfaceDataDic];
-    //
-    //                    // 新增接口
-    //                    [interfaceDataDic setObject:[NSString stringWithFormat:@"%ld", interface.Id] forKey:@"id"];
-    //                    [interfaceDataDic setObject:[NSString stringWithFormat:@"%ld", interface.pileId] forKey:@"pileId"];
-    //                    [interfaceDataDic setObject:[NSString stringWithFormat:@"%ld", interface.pileResourceInterfaceId] forKey:@"pileResourceInterfaceId"];
-    //                    [interfaceDataDic setObject:interface.tariffService forKey:@"tariffService"];
-    //                    [interfaceDataDic setObject:interface.num forKey:@"num"];
-    //                    [interfaceDataDic setObject:interface.weight forKey:@"weight"];
-    //                    [interfaceDataDic setObject:[NSString stringWithFormat:@"%ld", interface.hasChargeCable] forKey:@"hasChargeCable"];
-    //                    [interfaceDataDic setObject:interface.voltage forKey:@"voltage"];
-    //                    [interfaceDataDic setObject:interface.current forKey:@"current"];
-    //                    [interfaceDataDic setObject:interface.tariffChargeBusy forKey:@"tariffChargeBusy"];
-    //                    [interfaceDataDic setObject:interface.tariffChargeBusyInterval forKey:@"tariffChargeBusyInterval"];
-    //                    [interfaceDataDic setObject:interface.tariffChargeIdle forKey:@"tariffChargeIdle"];
-    //                    [interfaceDataDic setObject:interface.tariffChargeIdleInterval forKey:@"tariffChargeIdleInterval"];
-    //                    [interfaceDataDic setObject:interface.paymentType forKey:@"paymentType"];
-    //                    [interfaceDataDic setObject:interface.imageUrl8 forKey:@"imageUrl8"];
-    //                    [interfaceDataDic setObject:interface.comment8 forKey:@"comment8"];
-    //                    [interfaceDataDic setObject:interface.imageUrl9 forKey:@"imageUrl9"];
-    //                    [interfaceDataDic setObject:interface.comment9 forKey:@"comment9"];
-    //                    [interfaceDataDic setObject:interface.comment forKey:@"comment"];
-    //                }
-    //            }
-    
-    
-    //    // 电桩车位
-    //    NSMutableDictionary *pileSpaceDic = [NSMutableDictionary dictionary];
-    //    [pileSpaceDic setObject:[NSString stringWithFormat:@"%ld", pileGroupInfo.pile_space.Id] forKey:@"id"];
-    //    [pileSpaceDic setObject:[NSString stringWithFormat:@"%ld", pileGroupInfo.pile_space.pileSiteId] forKey:@"pileSiteId"];
-    //    [pileSpaceDic setObject:pileGroupInfo.pile_space.comment3 forKey:@"comment3"];
-    //    [pileSpaceDic setObject:pileGroupInfo.pile_space.imageUrl3 forKey:@"imageUrl3"];
-    //    [pileSpaceDic setObject:pileGroupInfo.pile_space.comment4 forKey:@"comment4"];
-    //    [pileSpaceDic setObject:pileGroupInfo.pile_space.imageUrl4 forKey:@"imageUrl4"];
-    //    [pileSpaceDic setObject:pileGroupInfo.pile_space.comment5 forKey:@"comment5"];
-    //    [pileSpaceDic setObject:pileGroupInfo.pile_space.imageUrl5 forKey:@"imageUrl5"];
-    //    [pileSpaceDic setObject:pileGroupInfo.pile_space.comment6 forKey:@"comment6"];
-    //    [pileSpaceDic setObject:pileGroupInfo.pile_space.imageUrl6 forKey:@"imageUrl6"];
-    //    [pileSpaceDic setObject:pileGroupInfo.pile_space.comment forKey:@"comment"];
-    //    [pileSpaceDic setObject:pileGroupInfo.pile_space.bnum forKey:@"bnum"];
-    //    [pileSpaceDic setObject:pileGroupInfo.pile_space.snum forKey:@"snum"];
-    //    [pileSpaceDic setObject:pileGroupInfo.pile_space.mnum forKey:@"mnum"];
-    //    [pileSpaceDic setObject:pileGroupInfo.pile_space.tnum forKey:@"tnum"];
-    //    [sitesDic setObject:pileSpaceDic forKey:@"pile_space"];
-    
-    
-    //NSLog(@"id = %ld,villageId = %ld,siteName = %@,x = %@,y = %@",pileGroupInfo.pile_site.Id,pile_village.villageId,pile_village.villageName,pileGroupInfo.pile_site.x,pileGroupInfo.pile_site.y);
-    
-    //            NSLog(@"id=%ld,pileSiteId=%ld,comment3=%@,comment4=%@,comment5=%@,comment6=%@,imageUrl3=%@,imageUrl4=%@,imageUrl5=%@,imageUrl6=%@,bnum=%@,snum=%@,mnum=%@,tnum=%@,comment=%@",pileGroupInfo.pile_space.Id,pileGroupInfo.pile_space.pileSiteId,pileGroupInfo.pile_space.comment3,pileGroupInfo.pile_space.comment4,pileGroupInfo.pile_space.comment5,pileGroupInfo.pile_space.comment6,pileGroupInfo.pile_space.imageUrl3,pileGroupInfo.pile_space.imageUrl4,pileGroupInfo.pile_space.imageUrl5,pileGroupInfo.pile_space.imageUrl6,pileGroupInfo.pile_space.bnum,pileGroupInfo.pile_space.snum,pileGroupInfo.pile_space.mnum,pileGroupInfo.pile_space.tnum,pileGroupInfo.pile_space.comment);
-    
-    //[villageDic setObject:[NSString stringWithFormat:@"%ld", pile_village.Id] forKey:@"id"];
-    //[villageDic setObject:[NSString stringWithFormat:@"%ld", pile_village.villageId] forKey:@"villageId"];
-    //[villageDic setObject:pile_village.imageUrl1 forKey:@"imageUrl1"];
-    //[villageDic setObject:pile_village.imageUrl2 forKey:@"imageUrl2"];
-    //[villageDic setObject:pile_village.comment1 forKey:@"comment1"];
-    //[villageDic setObject:pile_village.comment2 forKey:@"comment2"];
-    
-}
-
 
 @end

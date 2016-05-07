@@ -38,11 +38,10 @@
 #define ADD_VILLAGE_URL (SERVER_URL@"/region/village/add")
 
 //上传桩数据
-#define UPLOAD_PILE_DATA (SERVER_URL@"/pile/village/upload")
+//#define UPLOAD_PILE_DATA (SERVER_URL@"/pile/village/upload")
+#define UPLOAD_PILE_DATA @"http://prodtest.powerlife.com.cn/pile-service/pilemix/village/upload"
 
 //上传图片
-//#define UPLOAD_IMAGE @"http://192.168.1.38/image-service/upload?location=%@"
-// http://192.168.1.38/image-service
 #define UPLOAD_IMAGE (IMAGE_URL@"/upload?location=%@")
 
 //SQL语句

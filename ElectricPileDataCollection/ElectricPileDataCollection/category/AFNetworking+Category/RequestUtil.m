@@ -136,11 +136,9 @@
 - (void)uploadDataWithUrl:(NSString *)urlString andParameters:(NSDictionary *)parameters andTimeoutInterval:(NSInteger)timeoutInterval{
     AFHTTPSessionManager * manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-//    manager.requestSerializer.timeoutInterval=timeoutInterval?:10;
-//    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    manager.requestSerializer.timeoutInterval=timeoutInterval?:10;
     
     NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] multipartFormRequestWithMethod:@"POST" URLString:urlString parameters:parameters constructingBodyWithBlock:nil error:nil];
-    request.timeoutInterval=timeoutInterval?:10;
     
     for (NSString * key in [self.headerDict allKeys]) {
         [request setValue:[NSString stringWithFormat:@"%@",self.headerDict[key]] forHTTPHeaderField:key];

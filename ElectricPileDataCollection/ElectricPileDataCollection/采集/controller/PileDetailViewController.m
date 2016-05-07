@@ -256,8 +256,9 @@
     /**
      *  上传图片
      */
-    NSDictionary * headerDict = @{@"__provinceid":@(0),@"__cityid":@(0),@"__districtid":@(0),@"__areaid":@(0),@"__villageid":@(0),@"__parkingid":@(0),@"__siteid":@(0)};
+    NSDictionary *headerDict = @{@"__provinceid":@(0),@"__cityid":@(0),@"__districtid":@(0),@"__areaid":@(0),@"__villageid":@(0),@"__parkingid":@(0),@"__siteid":@(0)};
     self.requestUtil.headerDict = headerDict;
+    
     
     // 停车位
     NSData *parkingImageData = [NSData dataWithContentsOfFile:self.pileGroupInfo.pile_space.image3Path];
@@ -268,7 +269,7 @@
     NSData *pileAllImageData = [NSData dataWithContentsOfFile:self.pileGroupInfo.pile_space.image4Path];
     NSString *pileAllUrlStr = [NSString stringWithFormat:UPLOAD_IMAGE,@"pile_space_piles"];
     [self.requestUtil uploadImageWithUrl:pileAllUrlStr andParameters:nil andData:pileAllImageData andTimeoutInterval:20];
-    
+
     // 空车位
     NSData *emptyImageData = [NSData dataWithContentsOfFile:self.pileGroupInfo.pile_space.image5Path];
     NSString *emptyUrlStr = [NSString stringWithFormat:UPLOAD_IMAGE,@"pile_space_empty"];
@@ -279,7 +280,17 @@
     NSString *chargingUrlStr = [NSString stringWithFormat:UPLOAD_IMAGE,@"pile_space_charging"];
     [self.requestUtil uploadImageWithUrl:chargingUrlStr andParameters:nil andData:chargingImageData andTimeoutInterval:20];
     
-    [self.navigationController popViewControllerAnimated:YES];
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"保存数据?" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
+    
+    [alertVC addAction:cancelAction];
+    [alertVC addAction:confirmAction];
+    
+    [self presentViewController:alertVC animated:YES completion:nil];
+    
 }
 
 - (void)cancelClick:(UIButton *)sender
@@ -397,7 +408,7 @@
             NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
             self.pileGroupInfo.pile_space.imageUrl4 = dic[@"url"];
         }
-        
+
         if ([urlString isEqualToString:[NSString stringWithFormat:UPLOAD_IMAGE,@"pile_space_empty"]]) {
             NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
             self.pileGroupInfo.pile_space.imageUrl5 = dic[@"url"];
@@ -407,6 +418,8 @@
             NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
             self.pileGroupInfo.pile_space.imageUrl6 = dic[@"url"];
         }
+        
+        NSLog(@"imageUrl3=%@,imageUrl4=%@,imageUrl5=%@,imageUrl6=%@",self.pileGroupInfo.pile_space.imageUrl3,self.pileGroupInfo.pile_space.imageUrl4,self.pileGroupInfo.pile_space.imageUrl5,self.pileGroupInfo.pile_space.imageUrl6);
         
         
     }else{
