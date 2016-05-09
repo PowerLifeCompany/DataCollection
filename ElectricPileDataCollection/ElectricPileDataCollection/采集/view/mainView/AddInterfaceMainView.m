@@ -17,10 +17,6 @@
 
 @property (weak, nonatomic) CustomPickView * interfaceTypePickView;
 
-//@property(nonatomic,assign)NSInteger currentPickViewIndex;
-
-//@property (weak, nonatomic) UILabel * currentLabel;
-
 @end
 
 @implementation AddInterfaceMainView

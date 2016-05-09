@@ -125,8 +125,7 @@
     [btn setImage:[[UIImage imageNamed:@"select_no.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
     [btn setImage:[[UIImage imageNamed:@"select_yes.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateSelected];
     [btn setImage:[[UIImage imageNamed:@"select_yes.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateHighlighted];
-    
-    [btn setTintColor:[UIColor blackColor]];
+    [btn setTintColor:TAB_COLOR];
     [btn setTitleEdgeInsets:UIEdgeInsetsMake(0, 30, 0, 30)];
 }
 

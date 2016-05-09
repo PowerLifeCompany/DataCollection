@@ -10,4 +10,11 @@
 
 @implementation PileInterface
 
+- (NSMutableArray *)paymentTypeArray{
+    if(_paymentTypeArray == nil){
+        _paymentTypeArray = [[NSMutableArray alloc]init];
+    }
+    return _paymentTypeArray;
+}
+
 @end

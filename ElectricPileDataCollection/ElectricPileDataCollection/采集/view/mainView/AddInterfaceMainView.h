@@ -100,14 +100,6 @@
  */
 @property (copy, nonatomic) NSString* payType;
 
-@property (assign, nonatomic) BOOL isChoosepayOpetator;
-
-@property (assign, nonatomic) BOOL isChoosepayWechat;
-
-@property (assign, nonatomic) BOOL isChoosepayAli;
-
-@property (assign, nonatomic) BOOL isChoosepayCreditCard;
-
 @property (weak, nonatomic) IBOutlet UIImageView *payOpetator;
 
 @property (weak, nonatomic) IBOutlet UIImageView *payWechat;

@@ -30,7 +30,7 @@ typedef enum {
  */
 typedef enum {
     
-    takeChargingLineYes = 0, // 带充电线
+    takeChargingLineYes = 1, // 带充电线
     takeChargingLineNo      // 不带充电线
     
 }isTakeChargingLine;
@@ -72,7 +72,9 @@ typedef enum {
 
 @property (assign, nonatomic) BOOL isChooseCreditCardPayIV;
 
-@property (strong, nonatomic) NSMutableArray *payArray;
+@property (strong, nonatomic) NSMutableArray *payStyleArray;
+
+@property (assign, nonatomic) BOOL isSucceed;
 
 @end
 
@@ -98,9 +100,7 @@ typedef enum {
         self.tableView = self.containerView.subviews[0];
         self.tableView.mainViewDelegate = self;
     }
-    
-    self.payArray = [NSMutableArray array];
-    
+
     /**
      *  数据回显
      */
@@ -126,20 +126,23 @@ typedef enum {
         self.tableView.serviceFeeTextField.text = self.interface.tariffService;
         
         // 电桩是否自带充电线
-        switch (self.interface.hasChargeCable) {
-            case takeChargingLineYes:{
-                self.tableView.takeCharingTypeYesImageView.image = [UIImage imageNamed:@"select_yes"];
-                self.tableView.takeCharingTypeNoImageView.image = [UIImage imageNamed:@"select_no"];
+        if (self.interface.hasChargeCable) {
+            switch (self.interface.hasChargeCable) {
+                case takeChargingLineYes:{
+                    self.tableView.takeCharingTypeYesImageView.image = [UIImage imageNamed:@"select_yes"];
+                    self.tableView.takeCharingTypeNoImageView.image = [UIImage imageNamed:@"select_no"];
+                }
+                    break;
+                case takeChargingLineNo:{
+                    self.tableView.takeCharingTypeYesImageView.image = [UIImage imageNamed:@"select_no"];
+                    self.tableView.takeCharingTypeNoImageView.image = [UIImage imageNamed:@"select_yes"];
+                }
+                    break;
+                default:
+                    break;
             }
-            break;
-            case takeChargingLineNo:{
-                self.tableView.takeCharingTypeYesImageView.image = [UIImage imageNamed:@"select_no"];
-                self.tableView.takeCharingTypeNoImageView.image = [UIImage imageNamed:@"select_yes"];
-            }
-            break;
-            default:
-                break;
         }
+        
         // 接口个数
         self.tableView.interfaceNumTextField.text = self.interface.num;
         // 重量
@@ -165,37 +168,39 @@ typedef enum {
         // 充电单价-闲时-价格
         self.tableView.idlePriceTextField.text = self.interface.tariffChargeIdle;
         
-        NSArray *payTypeArray = [self.interface.paymentType componentsSeparatedByString:@","];        
         /**
          *  支付方式
          */
-        // 运营商专用卡
-        if ([payTypeArray containsObject:OPERATOR]) {
+        
+        NSArray *arr = [self.interface.paymentType componentsSeparatedByString:@","];
+        
+        if ([arr containsObject:OPERATOR]) {
             self.tableView.payOpetator.image = [UIImage imageNamed:@"checkBox_yes"];
         }else{
-             self.tableView.payOpetator.image = [UIImage imageNamed:@"checkBox_no"];
+            self.tableView.payOpetator.image = [UIImage imageNamed:@"checkBox_no"];
         }
         
         // 微信
-        if ([payTypeArray containsObject:WECHAT]) {
+        if ([arr containsObject:WECHAT]) {
             self.tableView.payWechat.image = [UIImage imageNamed:@"checkBox_yes"];
         }else{
             self.tableView.payWechat.image = [UIImage imageNamed:@"checkBox_no"];
         }
         
         // 支付宝
-        if ([payTypeArray containsObject:ALI]) {
+        if ([arr containsObject:ALI]) {
             self.tableView.payAli.image = [UIImage imageNamed:@"checkBox_yes"];
         }else{
             self.tableView.payAli.image = [UIImage imageNamed:@"checkBox_no"];
         }
         
         // 信用卡
-        if ([payTypeArray containsObject:CREDITCARD]) {
+        if ([arr containsObject:CREDITCARD]) {
             self.tableView.payCreditCard.image = [UIImage imageNamed:@"checkBox_yes"];
         }else{
             self.tableView.payCreditCard.image = [UIImage imageNamed:@"checkBox_no"];
         }
+
         
         // 充电口-正片照-图片
         if (self.interface.chargingMouthImagePath) {
@@ -242,18 +247,11 @@ typedef enum {
 - (void)saveClick:(UIButton *)sender
 {
     
-    if(!self.interface){
-        self.interface = [[PileInterface alloc]init];
-        [self.dataArray addObject:self.interface];
-    }
-    
-    if (!self.payArray) {
-        self.payArray = [NSMutableArray array];
-    }
-    
     /**
      *  保存数据到模型
      */
+    [self.dataArray addObject:self.interface];
+    
     // 接口类型
     if ([self.tableView.currentLabel.text isEqualToString:FAST_INTERNATION]) {
         self.interface.pileResourceInterfaceId = 1;
@@ -270,11 +268,11 @@ typedef enum {
     
     // 是否自带充电线
     if (self.isTakeCharingTypeYesIV == YES) {
-        self.interface.hasChargeCable = 0;
+        self.interface.hasChargeCable = 1; // 带
     }
     
     if (self.isTakeCharingTypeNoIV == YES) {
-        self.interface.hasChargeCable = 1;
+        self.interface.hasChargeCable = 2; //不带
     }
     
     // 接口个数
@@ -302,7 +300,7 @@ typedef enum {
     self.interface.tariffChargeIdle = self.tableView.idlePriceTextField.text;
     
     // 支付方式
-    self.interface.paymentType = [self.payArray componentsJoinedByString:@","];
+    self.interface.paymentType = [self.interface.paymentTypeArray componentsJoinedByString:@","];
     
     // 充电口 正面照
     if(self.isChooseInterfaceIV){
@@ -432,43 +430,53 @@ typedef enum {
 #pragma mark - 多选
 - (void)choosePayType:(AddInterfaceMainView *)mainView payTypeTap:(UITapGestureRecognizer *)tap
 {
+    if(!self.interface){
+        self.interface = [[PileInterface alloc]init];
+    }
+    
     if ([tap view].tag == 8000) {
-        if (mainView.isChoosepayOpetator == NO) {
+        // 运营商专用卡
+        if (self.interface.isChoosepayOpetator == NO) {
             mainView.payOpetator.image = [UIImage imageNamed:@"checkBox_yes"];
-            [self.payArray addObject:OPERATOR];
+            [self.interface.paymentTypeArray addObject:OPERATOR];
         }else{
             mainView.payOpetator.image = [UIImage imageNamed:@"checkBox_no"];
-            [self.payArray removeObject:OPERATOR];
+            [self.interface.paymentTypeArray removeObject:OPERATOR];
         }
-        mainView.isChoosepayOpetator = !mainView.isChoosepayOpetator;
+        self.interface.isChoosepayOpetator = !self.interface.isChoosepayOpetator;
         
     }else if ([tap view].tag == 8001){
-        if (mainView.isChoosepayWechat == NO) {
+        // 微信
+        if (self.interface.isChoosepayWechat == NO) {
             mainView.payWechat.image = [UIImage imageNamed:@"checkBox_yes"];
-            [self.payArray addObject:WECHAT];
+            [self.interface.paymentTypeArray addObject:WECHAT];
         }else{
             mainView.payWechat.image = [UIImage imageNamed:@"checkBox_no"];
-            [self.payArray removeObject:WECHAT];
+            [self.interface.paymentTypeArray removeObject:WECHAT];
         }
-        mainView.isChoosepayWechat = !mainView.isChoosepayWechat;
+        self.interface.isChoosepayWechat = !self.interface.isChoosepayWechat;
+        
     }else if ([tap view].tag == 8002){
-        if (mainView.isChoosepayAli == NO) {
+        // 支付宝
+        if (self.interface.isChoosepayAli == NO) {
             mainView.payAli.image = [UIImage imageNamed:@"checkBox_yes"];
-            [self.payArray addObject:ALI];
+            [self.interface.paymentTypeArray addObject:ALI];
         }else{
             mainView.payAli.image = [UIImage imageNamed:@"checkBox_no"];
-            [self.payArray removeObject:ALI];
+            [self.interface.paymentTypeArray removeObject:ALI];
         }
-        mainView.isChoosepayAli = !mainView.isChoosepayAli;
+        self.interface.isChoosepayAli = !self.interface.isChoosepayAli;
+        
     }else{
-        if (mainView.isChoosepayCreditCard == NO) {
+        // 信用卡
+        if (self.interface.isChoosepayCreditCard == NO) {
             mainView.payCreditCard.image = [UIImage imageNamed:@"checkBox_yes"];
-            [self.payArray addObject:CREDITCARD];
+            [self.interface.paymentTypeArray addObject:CREDITCARD];
         }else{
             mainView.payCreditCard.image = [UIImage imageNamed:@"checkBox_no"];
-            [self.payArray removeObject:CREDITCARD];
+            [self.interface.paymentTypeArray removeObject:CREDITCARD];
         }
-        mainView.isChoosepayCreditCard = !mainView.isChoosepayCreditCard;
+        self.interface.isChoosepayCreditCard = !self.interface.isChoosepayCreditCard;
     }
 }
 
@@ -517,6 +525,15 @@ typedef enum {
     }
     return _requestUtil;
 }
+
+//- (NSMutableArray *)payStyleArray{
+//    if (_payStyleArray == nil) {
+//        _payStyleArray = [[NSMutableArray alloc] init];
+//    }
+//    return _payStyleArray;
+//}
+
+
 
 //- (NSMutableArray *)dataArray{
 //    if(_dataArray == nil){

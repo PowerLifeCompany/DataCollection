@@ -16,7 +16,6 @@
 
 #import "CustomCellTwo.h"
 
-
 /**
  接口类型
  */
@@ -68,6 +67,7 @@ typedef enum {
     [self loadNavigationBar];
     [self addNotification];
 }
+
 #pragma mark - 初始化组件
 - (void)loadMainView{
     self.tableView = self.containerView.subviews[0];
@@ -83,17 +83,12 @@ typedef enum {
         dispatch_async(dispatch_get_main_queue(), ^{
             [self assignment];
         });
-       
     }
-        
 }
 
 - (void)assignment
 {
-    
-    //self.tableView.addPile = _addPile;
-    //return;
-    
+        
     // 电桩品牌
     switch (self.addPile.pile_pile.pileResourceBrandId) {
         case gd:
@@ -216,7 +211,6 @@ typedef enum {
     
 }
 
-
 - (void)loadNavigationBar{
     self.navigationItem.title = @"新增电桩";
     
@@ -225,7 +219,6 @@ typedef enum {
     
     UIBarButtonItem *saveBtnItem = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStyleDone target:self action:@selector(saveClick:)];
     self.navigationItem.rightBarButtonItem = saveBtnItem;
-
 }
 
 - (void)cancelClick:(UIButton *)sender
@@ -476,6 +469,17 @@ typedef enum {
         _requestUtil.delegate = self;
     }
     return _requestUtil;
+}
+
+-  (void)viewWillAppear:(BOOL)animated{
+    
+    [super viewWillAppear:animated];
+    if (self.addPile) {
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self assignment];
+        });
+    }
 }
 
 @end
