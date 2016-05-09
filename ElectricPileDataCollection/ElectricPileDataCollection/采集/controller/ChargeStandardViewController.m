@@ -47,7 +47,7 @@
     */
     
     UIButton * saveExitBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    saveExitBtn.frame = CGRectMake(70, HEIGHT-110, WIDTH-140, 40);
+    saveExitBtn.frame = CGRectMake(70, HEIGHT-60, WIDTH-140, 40);
     [self.view addSubview:saveExitBtn];
     [saveExitBtn addTarget:self action:@selector(saveExitBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     saveExitBtn.backgroundColor = [UIColor colorWithRed:0.02f green:0.48f blue:1.00f alpha:1.00f];;

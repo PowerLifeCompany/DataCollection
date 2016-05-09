@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -25,7 +25,7 @@
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIX-eC-8w6">
-                                <rect key="frame" x="70" y="557" width="235" height="40"/>
+                                <rect key="frame" x="70" y="607" width="235" height="40"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="FWk-Rl-nSg"/>
@@ -47,7 +47,7 @@
                             <constraint firstItem="tjg-xn-8St" firstAttribute="leading" secondItem="ps7-Bf-fBf" secondAttribute="leading" id="LI7-EJ-gLo"/>
                             <constraint firstItem="bIX-eC-8w6" firstAttribute="centerX" secondItem="ps7-Bf-fBf" secondAttribute="centerX" id="OD6-Jl-hQm"/>
                             <constraint firstItem="bIX-eC-8w6" firstAttribute="leading" secondItem="ps7-Bf-fBf" secondAttribute="leading" constant="70" id="QzA-md-Gf8"/>
-                            <constraint firstItem="rGR-Ro-Fdu" firstAttribute="top" secondItem="bIX-eC-8w6" secondAttribute="bottom" constant="70" id="aKH-qD-oFk"/>
+                            <constraint firstItem="rGR-Ro-Fdu" firstAttribute="top" secondItem="bIX-eC-8w6" secondAttribute="bottom" constant="20" id="aKH-qD-oFk"/>
                             <constraint firstItem="rGR-Ro-Fdu" firstAttribute="top" secondItem="tjg-xn-8St" secondAttribute="bottom" id="kQy-u8-hTy"/>
                         </constraints>
                     </view>
