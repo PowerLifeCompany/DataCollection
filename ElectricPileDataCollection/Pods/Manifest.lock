@@ -3,16 +3,19 @@ PODS:
     - CLImageEditor/Core (= 0.1.3)
   - CLImageEditor/Core (0.1.3)
   - RKDropdownAlert (0.3.0)
+  - SVProgressHUD (2.0.3)
   - UzysAssetsPickerController (0.9.9)
 
 DEPENDENCIES:
   - CLImageEditor (= 0.1.3)
   - RKDropdownAlert
+  - SVProgressHUD (~> 2.0.3)
   - UzysAssetsPickerController
 
 SPEC CHECKSUMS:
   CLImageEditor: c54336f80300d47694f7e5e95f6c0a1632ad503d
   RKDropdownAlert: f4b3364c251829ad439dc666836a1f2dad26f4c7
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
   UzysAssetsPickerController: 47c27bd96955467925f3d4d80b1e2e8aaeff766d
 
 COCOAPODS: 0.39.0

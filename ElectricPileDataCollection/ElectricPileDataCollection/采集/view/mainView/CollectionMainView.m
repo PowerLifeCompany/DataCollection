@@ -89,7 +89,16 @@
 
 - (void)upLoad:(UIButton *)sender
 {
+    UIButton *upLoadBtn = [self viewWithTag:sender.tag];
+    
+    // 隐藏按钮
+    upLoadBtn.hidden = YES;
+    
+    // 关闭交互
+    upLoadBtn.userInteractionEnabled = NO;
+    
     NSInteger num = sender.tag - 1000;
+    
     [self.mainViewDelegate upLoadWithMainView:self andButtonNumber:num];
 }
 

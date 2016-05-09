@@ -16,6 +16,7 @@
 #import "CollPileViewController.h"
 #import "PPNetworkingHelper.h"
 #import "AFNetworking.h"
+#import <SVProgressHUD.h>
 
 @interface CollectionViewController ()<RequestUtilDelegate,CollectionMainViewDelegate,CustomChooseCityViewDelegate,CustomPickViewDelegate>
 
@@ -95,23 +96,28 @@
     [mainView.mj_header endRefreshing];
 }
 
+
 - (void)upLoadWithMainView:(CollectionMainView *)mainView andButtonNumber:(NSInteger)num{
     
     [self getData:num];
     
     NSMutableDictionary *upLoadDataDictionary = self.collectionDictionary;
     
-//    self.requestUtil.headerDict=self.collectionDictionary;
-//    [self.requestUtil uploadDataWithUrl:UPLOAD_PILE_DATA andParameters:upLoadDataDictionary andTimeoutInterval:20];
-    //[self.requestUtil asyncThirdLibWithUrl:UPLOAD_PILE_DATA andParameters:upLoadDataDictionary andMethod:RequestMethodPost andTimeoutInterval:20];
+    // 提示框样式
+    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
     
+    // 上传
+    [SVProgressHUD showWithStatus:@"正在上传..."];
     
     [PPNetworkingHelper uploadDataWithInfo:upLoadDataDictionary andFinishBlock:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         if (error) {
-            NSLog(@"123 = %@",error);
+            [SVProgressHUD showErrorWithStatus:@"上传失败"];
         }else{
-            NSLog(@"345 = %@",responseObject);
+            [SVProgressHUD showSuccessWithStatus:@"上传成功"];
+            
         }
+        // 消失
+        [SVProgressHUD dismissWithDelay:1.0];
     }];
 }
 
@@ -250,7 +256,7 @@
 #pragma mark - 上传数据
 + (void)uploadDataWithInfo:(NSDictionary *)dict andFinishBlock:(nullable void (^)(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error))finishBlock {
 
-    // 1.格式转换
+    // 格式转换
     NSMutableDictionary *formData = [[NSMutableDictionary alloc]init];
     NSArray *keyList = [dict allKeys];
     for (NSString *key in keyList) {
@@ -265,20 +271,19 @@
         }
     }
     
-    // 2.创建请求
-    NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] multipartFormRequestWithMethod:@"GET" URLString:UPLOAD_PILE_DATA parameters:formData constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+    // 创建请求
+    NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] multipartFormRequestWithMethod:@"POST" URLString:UPLOAD_PILE_DATA parameters:formData constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
     } error:nil];
-    [request setHTTPMethod:@"GET"];
+    [request setHTTPMethod:@"POST"];
     
-    // 3.创建数据数据上传任务
+    // 创建数据数据上传任务
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     
     NSURLSessionUploadTask *uploadTask = [manager uploadTaskWithStreamedRequest:request progress:nil completionHandler:finishBlock];
     
-    // 4.开始上传数据
+    // 开始上传数据
     [uploadTask resume];
 }
-
 
 #pragma mark - custom方法
 - (void)showBrandPickView{
@@ -305,19 +310,6 @@
 
 - (void)customPickViewCancleTouch:(CustomPickView *)customPickView{
     [self hideBrandPickView];
-}
-
-#pragma mark - 返回数据
-- (void)response:(NSURLResponse *)response andError:(NSError *)error andData:(NSData *)data andStatusCode:(NSInteger)statusCode andURLString:(NSString *)urlString{
-    if(statusCode==200 && !error){
-        NSDictionary * dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-        NSLog(@"%@",dict);
-    }else{
-        NSLog(@"%@",error);
-        [self.view addSubview:[CustomPopupView customPopupViewWithMsg:FINAL_DATA_REQUEST_FAIL]];
-        [self.mainView.mj_header endRefreshing];
-        [self.mainView.mj_footer endRefreshing];
-    }
 }
 
 #pragma mark - 懒加载
@@ -400,6 +392,25 @@
     [super viewWillAppear:animated];
     [self.mainView reloadData];
     [AppDelegate customTabbar].hidden=NO;
+}
+
+- (void)nslog{
+    //    self.requestUtil.headerDict=self.collectionDictionary;
+    //    [self.requestUtil uploadDataWithUrl:UPLOAD_PILE_DATA andParameters:upLoadDataDictionary andTimeoutInterval:20];
+    //[self.requestUtil asyncThirdLibWithUrl:UPLOAD_PILE_DATA andParameters:upLoadDataDictionary andMethod:RequestMethodPost andTimeoutInterval:20];
+    
+    //#pragma mark - 返回数据
+    //- (void)response:(NSURLResponse *)response andError:(NSError *)error andData:(NSData *)data andStatusCode:(NSInteger)statusCode andURLString:(NSString *)urlString{
+    //    if(statusCode==200 && !error){
+    //        NSDictionary * dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+    //        NSLog(@"%@",dict);
+    //    }else{
+    //        NSLog(@"%@",error);
+    //        [self.view addSubview:[CustomPopupView customPopupViewWithMsg:FINAL_DATA_REQUEST_FAIL]];
+    //        [self.mainView.mj_header endRefreshing];
+    //        [self.mainView.mj_footer endRefreshing];
+    //    }
+    //}
 }
 
 @end

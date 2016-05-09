@@ -64,8 +64,6 @@
         }
     }
     
-    NSLog(@"----------------%@", formData);
-    
     // 2.创建请求
     NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] multipartFormRequestWithMethod:@"POST" URLString:UPLOAD_PILE_DATA parameters:formData constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
     } error:nil];

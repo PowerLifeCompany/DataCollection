@@ -10,48 +10,47 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
-		<key>0036019766ECF4E50B35D1097926B969</key>
+		<key>0158BF798AE00EA7DA8863DE24954CE9</key>
 		<dict>
-			<key>buildConfigurationList</key>
-			<string>BB878CA116310FD63246FD6654771393</string>
-			<key>buildPhases</key>
-			<array>
-				<string>337EB76BAF2ABAE4E1741319241F6435</string>
-				<string>4A65EC1D8D3C83820695378C1D8BF053</string>
-				<string>A74B73F3336F26F48DA2E077AA3083BB</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXNativeTarget</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>UzysAssetsPickerController</string>
-			<key>productName</key>
-			<string>UzysAssetsPickerController</string>
-			<key>productReference</key>
-			<string>0B774C7D9F91357DB177DBBC35467A16</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
+			<string>CLImageToolInfo+Private.h</string>
+			<key>path</key>
+			<string>CLImageEditor/ImageTools/ToolSettings/CLImageToolInfo+Private.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
-		<key>01421B244F34DF2A307FF6652695B608</key>
+		<key>01D91961919B8434002B5B951D1CB309</key>
 		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>426EEFA37EADB1E453F084D61C2D3E5A</string>
-			</array>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>CLDrawTool.m</string>
+			<key>path</key>
+			<string>CLImageEditor/ImageTools/CLDrawTool/CLDrawTool.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0245810AD66CF75833017C3FBB40AC00</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0E1C813E2595D0FD4DD5819D3E73D072</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>02D6267D41126EB8A38194021A7CB30F</key>
 		<dict>
 			<key>fileRef</key>
-			<string>DD3A54015EFB5C582745705272D84B3B</string>
+			<string>C6465CB168E287E25403ED22F7D31852</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -59,6 +58,19 @@
 				<key>COMPILER_FLAGS</key>
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
+		</dict>
+		<key>0342851C3FDAF108BC12D377E25A5420</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>1335C686253E618EF7AE29050CE14DF6</string>
+			<key>remoteInfo</key>
+			<string>RKDropdownAlert</string>
 		</dict>
 		<key>037C0CA694176A3C0915F62C9D20B3E6</key>
 		<dict>
@@ -73,10 +85,32 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>03C6BF3F27CE8CEE631A4F048F016B53</key>
+		<dict>
+			<key>fileRef</key>
+			<string>93C4186607FE33EC9D4A1DBDA65D3A6C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0454942075414AE2A0C4314E32FDFF59</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>CLHueEffect.h</string>
+			<key>path</key>
+			<string>CLImageEditor/ImageTools/CLEffectTool/CLEffect/CLHueEffect.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>059A4A90DFA030C1F109911DA3D21E29</key>
 		<dict>
 			<key>fileRef</key>
-			<string>67BD3C0C906F03F4CB2ED050FC73078A</string>
+			<string>B599B0AF4213041D13F9F76E21A4A4C2</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -85,76 +119,106 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
-		<key>05CA32E93A334458C7C222DED8C151A2</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C0B8A5D58BCCBEFD991BCBD136383DC4</string>
-				<string>65D071F94DF589289AD735DE1484B774</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Resources</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>08474AFE7A4E89AAB4CCDCCD43423BF7</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>libPods.a</string>
-			<key>path</key>
-			<string>libPods.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>098F3CE614DAFE0E298816442AA63D14</key>
+		<key>064FE153C1BBB9D9E27255E46CA39E59</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>RKDropdownAlert.h</string>
 			<key>path</key>
-			<string>RKDropdownAlert.xcconfig</string>
+			<string>SlingshotDropdownAlert/RKDropdownAlert.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>0B774C7D9F91357DB177DBBC35467A16</key>
+		<key>0666C0C6C16B00212A7C286DCF4E3070</key>
 		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>8BE604EF46BD1367B6F63BD9DE55A8CD</string>
+				<string>59D487EF6EB04B19406E36AFEC09E527</string>
+				<string>AA942A88B7161EA03E9B0F0511E9648F</string>
+				<string>03C6BF3F27CE8CEE631A4F048F016B53</string>
+				<string>21476FC8B14B08605319090B04217C27</string>
+				<string>F545690FCC8493DEF4531B3DE186FE2B</string>
+			</array>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>libUzysAssetsPickerController.a</string>
-			<key>path</key>
-			<string>libUzysAssetsPickerController.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
-		<key>0D70A4672E02FC2CA876E51E61B107AA</key>
+		<key>067EDFD2372E6A8AC3B3E11AB39C5681</key>
 		<dict>
 			<key>fileRef</key>
-			<string>288D5DCD171F89A946DD3C8500287DFF</string>
+			<string>93C4186607FE33EC9D4A1DBDA65D3A6C</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
+		</dict>
+		<key>078C710C7D9CF70F1C5C5AC333E49646</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>UzysWrapperPickerController.h</string>
+			<key>path</key>
+			<string>UzysAssetsPickerController/Library/UzysWrapperPickerController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>081BB7B5119955F5FE5F4E5020B68364</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>name</key>
+			<string>UzysAssetsPickerController.xib</string>
+			<key>path</key>
+			<string>UzysAssetsPickerController/Library/UzysAssetsPickerController.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0976E2632B616A430754DD48C728368C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9077F7C0C7CD82AC8C821A87ED726B48</string>
+				<string>F130D871B1804CDEDD69CD300E129333</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>CLImageEditor</string>
+			<key>path</key>
+			<string>CLImageEditor</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0B90EBDB9017ED490B0A47764A50EFEC</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>CLEffectBase.h</string>
+			<key>path</key>
+			<string>CLImageEditor/ImageTools/CLEffectTool/CLEffectBase.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>0E1C813E2595D0FD4DD5819D3E73D072</key>
 		<dict>
@@ -169,18 +233,33 @@
 			<key>sourceTree</key>
 			<string>DEVELOPER_DIR</string>
 		</dict>
-		<key>1062E6F742DA7ABB85A8F220D814A237</key>
+		<key>0EB626FC9C2390FC8EE966497A7F725A</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>UIDevice+SystemVersion.h</string>
+			<string>CLGloomEffect.m</string>
 			<key>path</key>
-			<string>CLImageEditor/Utils/UIDevice+SystemVersion.h</string>
+			<string>CLImageEditor/ImageTools/CLEffectTool/CLEffect/CLGloomEffect.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0F9FED1CEBB2A961B92C0830BFB08B54</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>UIImage+UzysExtension.m</string>
+			<key>path</key>
+			<string>UzysAssetsPickerController/Library/UIImage+UzysExtension.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -197,10 +276,25 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>11971DF1A4CDD70865FD7E43ECA9EA06</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libPods.a</string>
+			<key>path</key>
+			<string>libPods.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
 		<key>12D58E02B1C9C2E167E49B76B63633F9</key>
 		<dict>
 			<key>fileRef</key>
-			<string>A1003004FC58B9F33825230727A6B91D</string>
+			<string>85CC666B72DA24ECE6DD0F339E064572</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -208,6 +302,31 @@
 				<key>COMPILER_FLAGS</key>
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
+		</dict>
+		<key>1335C686253E618EF7AE29050CE14DF6</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>9788422BEBEE84BB298A1ABB79943CFB</string>
+			<key>buildPhases</key>
+			<array>
+				<string>7B2447DD68B18A60E164209C3AB549E1</string>
+				<string>BE34C24417EB16D71501D7F529EA7DF2</string>
+				<string>CE6ECA912B5AFCA577287FEAB7F34E6D</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>RKDropdownAlert</string>
+			<key>productName</key>
+			<string>RKDropdownAlert</string>
+			<key>productReference</key>
+			<string>DC2E742B638A506133482796C4CACD6C</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
 		</dict>
 		<key>1372C85D91603A710E5024822804545E</key>
 		<dict>
@@ -223,80 +342,24 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
-		<key>13DDFA726E59574FD8B0329F1EBF6171</key>
+		<key>14DBD15C2426A1E4795DC0107CF2F63C</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>buildConfigurations</key>
+			<array>
+				<string>5B5A27E163ACCE4C3D981CE4F2E7186A</string>
+				<string>9E388AFD999397497B494C103E0D42F2</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>RKDropdownAlert-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>XCConfigurationList</string>
 		</dict>
-		<key>154F209A7DB422509251480F1FD25267</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>CLEffectBase.h</string>
-			<key>path</key>
-			<string>CLImageEditor/ImageTools/CLEffectTool/CLEffectBase.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>16C9341EF6CB0B19D65B77DA4A9F20CA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>UzysAssetsPickerController.h</string>
-			<key>path</key>
-			<string>UzysAssetsPickerController/Library/UzysAssetsPickerController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>16E9781963CDA827E5458DA071DBE210</key>
-		<dict>
-			<key>fileRef</key>
-			<string>45DD3C984ACDBA33D0D0D09A8E6C98DA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>18AFEE966F125CD044C33ABFAEE3E702</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>UzysGroupViewCell.h</string>
-			<key>path</key>
-			<string>UzysAssetsPickerController/Library/UzysGroupViewCell.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1C983B8411478C3B0925E2A80C4D4C2F</key>
+		<key>1570F2759F2D6833186DBBD5A4953EFF</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>4E762F23EC34ED4A6FF3312D84E33A40</string>
+			<string>98C98CDFB3F20F2925F6CD1F141BB14F</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
@@ -306,7 +369,7 @@
 				<key>MACH_O_TYPE</key>
 				<string>staticlib</string>
 				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
+				<string>NO</string>
 				<key>OTHER_LDFLAGS</key>
 				<string></string>
 				<key>OTHER_LIBTOOLFLAGS</key>
@@ -323,26 +386,12 @@
 			<key>isa</key>
 			<string>XCBuildConfiguration</string>
 			<key>name</key>
-			<string>Debug</string>
+			<string>Release</string>
 		</dict>
-		<key>1D0228B3F3535BCEFFAA9A0A69372E92</key>
+		<key>16E9781963CDA827E5458DA071DBE210</key>
 		<dict>
 			<key>fileRef</key>
-			<string>3C6B0674D700D5EED54058F136AA0D95</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1D0863B4BEB418FDA423616E8F5A4CBE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3E529F54CDD699A947E5218485310282</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1DC5D7ADDFC624EAE63D0A90BDA8F584</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5F73AFB7A9BDB5390ED53BBB49482E81</string>
+			<string>EE856B405AD6FE0DAA6810D7E7F6B1AA</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -351,97 +400,7 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
-		<key>1E9583AE09E1556D7C466AD50585C85E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>CLHighlightShadowEffect.m</string>
-			<key>path</key>
-			<string>CLImageEditor/ImageTools/CLEffectTool/CLEffect/CLHighlightShadowEffect.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1F8804DB4A09CF73EEA65980B92EE476</key>
-		<dict>
-			<key>fileRef</key>
-			<string>272643F56613CA0D336AE3DBF19DC404</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1FF6F9BC7A32DAE7B7CD3A0C018CBAA1</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>UzysAssetsViewCell.h</string>
-			<key>path</key>
-			<string>UzysAssetsPickerController/Library/UzysAssetsViewCell.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>227843564C19409462E9B8CA43320C4A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>_CLImageEditorViewController.m</string>
-			<key>path</key>
-			<string>CLImageEditor/ViewController/_CLImageEditorViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2623033934FD241B41CB52FC7FA6C2B6</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>UzysAssetsPickerController</string>
-			<key>target</key>
-			<string>0036019766ECF4E50B35D1097926B969</string>
-			<key>targetProxy</key>
-			<string>4616FC740EEA1777D1AF63551054BF79</string>
-		</dict>
-		<key>2715B4C41EFCF5E4B7E63EC5715C7F00</key>
-		<dict>
-			<key>fileRef</key>
-			<string>18AFEE966F125CD044C33ABFAEE3E702</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>272643F56613CA0D336AE3DBF19DC404</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>288D5DCD171F89A946DD3C8500287DFF</key>
+		<key>1A03C62DD7435FE5DC4E772D08138C5B</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -456,10 +415,216 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>1B02B64CE5FA5FC9010054E7AC5EAF38</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>064FE153C1BBB9D9E27255E46CA39E59</string>
+				<string>68F2AB7F7223328904FC11D34C656E3E</string>
+				<string>84277E223A7E639D09256D54D17CE4D1</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>RKDropdownAlert</string>
+			<key>path</key>
+			<string>RKDropdownAlert</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1D6348C8E62EB9CBB0A60B18002DD0EB</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>EF2F07A60ED12F64A1EF1954DEEAAB70</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/UzysAssetsPickerController/UzysAssetsPickerController-prefix.pch</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>1DB1DFD38C67BB089D12447D5BEA1E30</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>CLImageEditorTheme.h</string>
+			<key>path</key>
+			<string>CLImageEditor/CLImageEditorTheme.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1DC5D7ADDFC624EAE63D0A90BDA8F584</key>
+		<dict>
+			<key>fileRef</key>
+			<string>FDB72255889455A33BA9A1F107242C88</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>1E773955C1EE28F436C20365A0B99B40</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>CLClippingTool.h</string>
+			<key>path</key>
+			<string>CLImageEditor/ImageTools/CLClippingTool/CLClippingTool.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>206DEDC6A13F2AEFB48CA2E2711310F6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>CLEffectBase.m</string>
+			<key>path</key>
+			<string>CLImageEditor/ImageTools/CLEffectTool/CLEffectBase.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>21476FC8B14B08605319090B04217C27</key>
+		<dict>
+			<key>fileRef</key>
+			<string>88F0DEFAD90333B5FD85165BF1250DE8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>22845784BE1FC332818E392FA1703E47</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>EF2F07A60ED12F64A1EF1954DEEAAB70</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/UzysAssetsPickerController/UzysAssetsPickerController-prefix.pch</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>22BBBC1CAAB0109B791982EE6A902853</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8FD7D3A5CBD28EAEA616D93E045B8C5E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>23B6A52AB1517781546A9F62326AFD8C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4D196C957144B5F6CE13338C2E598F62</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>23D5E9A4E6442B2E5C6B913D3E785D17</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>SVIndefiniteAnimatedView.h</string>
+			<key>path</key>
+			<string>SVProgressHUD/SVIndefiniteAnimatedView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>272643F56613CA0D336AE3DBF19DC404</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>28914B1506ED03C12A531B04DFCE48B6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>CLRotateTool.h</string>
+			<key>path</key>
+			<string>CLImageEditor/ImageTools/CLRotateTool/CLRotateTool.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>28B8E0FB4AC0A5BB76AEEDA1AB75328D</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>D6777C9B9A4F2F236AFAB7262B45C8C2</string>
+			<string>40F720E838361C1D85F0D6898777ED35</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
@@ -490,10 +655,25 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
+		<key>28E789427212862C4225F49C9361D14E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>CLFilterBase.h</string>
+			<key>path</key>
+			<string>CLImageEditor/ImageTools/CLFilterTool/CLFilterBase.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>290D771A8FEB0255B8D529E2B3E2F678</key>
 		<dict>
 			<key>fileRef</key>
-			<string>BA1B5A3E47EC31E157D532E5981ECF86</string>
+			<string>D8DE0070661E179E3332543BAE0774D0</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -504,10 +684,17 @@
 				</array>
 			</dict>
 		</dict>
+		<key>2921EAFF51FAD7B819A43AE7970E4473</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2E2B65237DD5325065279E282F3F8492</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>2942B4F00EFE28F80F14C5C48D991C52</key>
 		<dict>
 			<key>fileRef</key>
-			<string>8395A4449977B95389106CEC023F0926</string>
+			<string>E3C73D11D7FA1243FD0CFA91868AAAA3</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -516,25 +703,10 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
-		<key>2A9A6271F3075B2016BC3C530895FF49</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>_CLImageEditorViewController.h</string>
-			<key>path</key>
-			<string>CLImageEditor/ViewController/_CLImageEditorViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>2AEEEC4BAC718BA1E66DB3E804A73155</key>
 		<dict>
 			<key>fileRef</key>
-			<string>9C2105DC0F19A5C31F32A69393CFD4FE</string>
+			<string>A1DE631CFB982A02BAF743EBF560CD22</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -548,7 +720,7 @@
 		<key>2B1A0FC287864BBA61BA050FE9BB6096</key>
 		<dict>
 			<key>fileRef</key>
-			<string>7E28B3E5565919600E32B82D76837C6A</string>
+			<string>7BF808258933BC6C153B0305D1BC4A85</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -557,34 +729,33 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
-		<key>2B755F9B8B6181E71A5C1E93B5EDEB5A</key>
+		<key>2D5A4EE70CB23DCBD3927D501BACB505</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>CLRotateTool.m</string>
+			<string>CLBlurTool.h</string>
 			<key>path</key>
-			<string>CLImageEditor/ImageTools/CLRotateTool/CLRotateTool.m</string>
+			<string>CLImageEditor/ImageTools/CLBlurTool/CLBlurTool.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>2BF28A5EEE7F04871300DFA7E0A57354</key>
+		<key>2D76116191B2A14DBA2A211A965949D5</key>
 		<dict>
-			<key>fileRef</key>
-			<string>AB24AC976D93101BDC0209FF7D82D072</string>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>UzysAssetsPickerController-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>2D8E8EC45A3A1A1D94AE762CB5028504</key>
 		<dict>
@@ -600,25 +771,25 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
-		<key>2E2BB7E4C765971FE00FE308302175E9</key>
+		<key>2E2B65237DD5325065279E282F3F8492</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>CLImageToolInfo+Private.h</string>
+			<string>SVProgressHUD.m</string>
 			<key>path</key>
-			<string>CLImageEditor/ImageTools/ToolSettings/CLImageToolInfo+Private.h</string>
+			<string>SVProgressHUD/SVProgressHUD.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>2EA85852C3629FF96881C59648CC1AD4</key>
 		<dict>
 			<key>fileRef</key>
-			<string>CAE619B9C06498C8B3EF93C09B3373E6</string>
+			<string>206DEDC6A13F2AEFB48CA2E2711310F6</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -627,7 +798,109 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
-		<key>2F28DCE6C28577A009D07392470706F4</key>
+		<key>305B56A526F39859DB73ABB3ED72CC95</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>CLImageEditor-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>315E7C18608C3A75F5E5845070CC8EFA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>93C4186607FE33EC9D4A1DBDA65D3A6C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3236578CF1377578995B787D88F65A06</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>FEDD8534C4DFC13AECDAB7588713DE2F</string>
+				<string>0245810AD66CF75833017C3FBB40AC00</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>3278AA3E74D16EE4C5265E8A29C16523</key>
+		<dict>
+			<key>fileRef</key>
+			<string>39C404180080628FC46839D26F49FB8D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Project</string>
+				</array>
+			</dict>
+		</dict>
+		<key>328DFB7651D3A9364EFC9E209CEF1A7D</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>FDF1170AD4EC3D79CECEC903C221802F</string>
+				<string>1570F2759F2D6833186DBBD5A4953EFF</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>32B89B9D67A70704CDAB880D321BD183</key>
+		<dict>
+			<key>fileRef</key>
+			<string>68D886F92A033881344795BB97C962DE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>340476359EFC75B36E93448AF01AB80A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>CLImageToolInfo.h</string>
+			<key>path</key>
+			<string>CLImageEditor/CLImageToolInfo.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3422C7D290F0EEC4177D7CDE54194CA7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>RKDropdownAlert-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>347888ABD7FD1A289641D4320B5AA737</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -642,86 +915,32 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>3076AFE0EF667DEB09C00799129CA1E7</key>
+		<key>34B3DDA59C133A593A2D8FF73C85590D</key>
 		<dict>
-			<key>children</key>
-			<array>
-				<string>51E6EF6F941A665F198A6401E3340E2C</string>
-				<string>4E80F155F362A86CE72DB67F5BC66D14</string>
-			</array>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXGroup</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>CLImageEditor</string>
+			<string>CLFilterTool.h</string>
 			<key>path</key>
-			<string>CLImageEditor</string>
+			<string>CLImageEditor/ImageTools/CLFilterTool/CLFilterTool.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>3278AA3E74D16EE4C5265E8A29C16523</key>
+		<key>3510E34CFFD6BC7BA0D7B4382FE985AD</key>
 		<dict>
 			<key>fileRef</key>
-			<string>2A9A6271F3075B2016BC3C530895FF49</string>
+			<string>5B1D80CDE6742E198B3CF8EF608CB39A</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Project</string>
-				</array>
-			</dict>
-		</dict>
-		<key>32B89B9D67A70704CDAB880D321BD183</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7B64112CAF35E4C9BDD31FB85F39E831</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>335F451479C70F6F102C063F9E46548D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1FF6F9BC7A32DAE7B7CD3A0C018CBAA1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>337EB76BAF2ABAE4E1741319241F6435</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>6929BAF9E8CFC9FED7274F2A88A024DF</string>
-				<string>B9A61126BAC5898C78C03C0F904524D3</string>
-				<string>6C50AB5924B7C3D7B647587145D1A475</string>
-				<string>A81900FDE771A59FE6E9B66CA173240F</string>
-				<string>BE63B9E7286889F54B446B5B1C5772F7</string>
-				<string>D3CE7FC05B939014A4D97CCBF36DC93D</string>
-				<string>563FC9D1972E60D3DB1E3C214B45FC35</string>
-				<string>1D0863B4BEB418FDA423616E8F5A4CBE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
 		</dict>
 		<key>355C679E490596648CDE4BDDF1D7E04F</key>
 		<dict>
 			<key>fileRef</key>
-			<string>2B755F9B8B6181E71A5C1E93B5EDEB5A</string>
+			<string>89DEE8E6774DA43E94A9D4462D295644</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -743,20 +962,16 @@
 			<key>sourceTree</key>
 			<string>DEVELOPER_DIR</string>
 		</dict>
-		<key>36EBC86735F587A4111709A12F5AECC3</key>
+		<key>374783419079BCCDDD99670D43B1E18D</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>PBXTargetDependency</string>
 			<key>name</key>
-			<string>CLRotateTool.h</string>
-			<key>path</key>
-			<string>CLImageEditor/ImageTools/CLRotateTool/CLRotateTool.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>SVProgressHUD</string>
+			<key>target</key>
+			<string>382485F1C35F20FA5A231870882B4DC9</string>
+			<key>targetProxy</key>
+			<string>DE28B9145AAEA1912E0988DB7DB64E2D</string>
 		</dict>
 		<key>37DB56D75062CC75FCB0966E1C6E8A8E</key>
 		<dict>
@@ -771,25 +986,35 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>38FD7C25E662080E83010082DD4360C5</key>
+		<key>382485F1C35F20FA5A231870882B4DC9</key>
 		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
+			<key>buildConfigurationList</key>
+			<string>14DBD15C2426A1E4795DC0107CF2F63C</string>
+			<key>buildPhases</key>
+			<array>
+				<string>4777DCDFA0CEEB964CD547AB51C64640</string>
+				<string>3236578CF1377578995B787D88F65A06</string>
+				<string>60B8CC3FC84DB3B1E627A812F5944C18</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
 			<key>isa</key>
-			<string>PBXFileReference</string>
+			<string>PBXNativeTarget</string>
 			<key>name</key>
-			<string>libRKDropdownAlert.a</string>
-			<key>path</key>
-			<string>libRKDropdownAlert.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
+			<string>SVProgressHUD</string>
+			<key>productName</key>
+			<string>SVProgressHUD</string>
+			<key>productReference</key>
+			<string>7D87B7F27ED722529961B00129F21BE5</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
 		</dict>
 		<key>394D17200BC994028DD0B4211213D808</key>
 		<dict>
 			<key>fileRef</key>
-			<string>888D5A7A11B3E74804C4EE935698C193</string>
+			<string>78495AFB78FAEAB86439D312F1D00C3B</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -800,7 +1025,36 @@
 				</array>
 			</dict>
 		</dict>
-		<key>3A9B40FE486E1F455432DE50EE675A6A</key>
+		<key>394DD81A8B4DB7B7809D48C877493F47</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>328DFB7651D3A9364EFC9E209CEF1A7D</string>
+			<key>buildPhases</key>
+			<array>
+				<string>E3C37BD74F445E1029C31AAB15F9DA1B</string>
+				<string>4994D5BCDA35CDCD32E5AE994F583DC0</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>4B8AA500495376B7455DFBF6ECC72A87</string>
+				<string>90E55E1A83BDD97F7470F7A0195FD933</string>
+				<string>374783419079BCCDDD99670D43B1E18D</string>
+				<string>D5191B3933AB3AF0FB4027EC0EE8A16B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>productName</key>
+			<string>Pods</string>
+			<key>productReference</key>
+			<string>11971DF1A4CDD70865FD7E43ECA9EA06</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>39C404180080628FC46839D26F49FB8D</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -809,16 +1063,47 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>UzysAssetsPickerController_Configuration.h</string>
+			<string>_CLImageEditorViewController.h</string>
 			<key>path</key>
-			<string>UzysAssetsPickerController/Library/UzysAssetsPickerController_Configuration.h</string>
+			<string>CLImageEditor/ViewController/_CLImageEditorViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3A88D5A187C7B54C2E3E15B537372AD4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>UIView+CLImageToolInfo.m</string>
+			<key>path</key>
+			<string>CLImageEditor/ImageTools/ToolSettings/UIView+CLImageToolInfo.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3A9B4AC516043CFBB01B50E11976E5ED</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0976E2632B616A430754DD48C728368C</string>
+				<string>1B02B64CE5FA5FC9010054E7AC5EAF38</string>
+				<string>BD963FDBDF9890C2F97C8FACCEAF2885</string>
+				<string>B8E7DF0A41C4B6B1F1E29F47D0DE3A6C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>3B35B6CA8B1E8DDB4DF18F534146EC95</key>
 		<dict>
 			<key>fileRef</key>
-			<string>958736BD11F20A130C10D97F2B27C581</string>
+			<string>56C5376B1806F5CC0F2F8010A32FAD02</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -826,6 +1111,23 @@
 				<key>COMPILER_FLAGS</key>
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
+		</dict>
+		<key>3BD5DCE3D786609CB63124A34FC64BA0</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B292A8DC5019823CC1C145D9E5A27BAB</string>
+				<string>EC4C6CA8E71C5E58233ED1A4C7024CD2</string>
+				<string>6BE42546B9194624AC06E20BEE2F2ECA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/SVProgressHUD</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>3C6B0674D700D5EED54058F136AA0D95</key>
 		<dict>
@@ -843,7 +1145,7 @@
 		<key>3C8C244FF71EE6328025B51FF8B1536E</key>
 		<dict>
 			<key>fileRef</key>
-			<string>65BC7E487F2CDFBAAB9955D56CD348AB</string>
+			<string>8DB28DA1645E44EB53F14D855FEDD39D</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -854,40 +1156,31 @@
 				</array>
 			</dict>
 		</dict>
-		<key>3C9FEF3D23C307F13222A8B86947FD22</key>
+		<key>3CBD4F7C4B87CF78BEAE4BDDCF2B0E5D</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>23D5E9A4E6442B2E5C6B913D3E785D17</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>CLToneCurveTool.m</string>
-			<key>path</key>
-			<string>CLImageEditor/ImageTools/CLToneCurveTool/CLToneCurveTool.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
-		<key>3E529F54CDD699A947E5218485310282</key>
+		<key>3E28ED44FCC3CD3480173BB005EEBDAC</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>9F842A87BA69C905BE1530EBB0D38D98</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>UzysWrapperPickerController.m</string>
-			<key>path</key>
-			<string>UzysAssetsPickerController/Library/UzysWrapperPickerController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>3F72A311E313F4D6B8A97670F485875C</key>
 		<dict>
 			<key>fileRef</key>
-			<string>687F00265CF08BEC760E361C751A76A4</string>
+			<string>5BC7176797ADD1BDF08818CB5DD64601</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -899,7 +1192,7 @@
 		<key>3F8B75545DB32B08F15B774FBB4B8A44</key>
 		<dict>
 			<key>fileRef</key>
-			<string>B4B587071128B77CFC36DF71CAA1CEE0</string>
+			<string>8CC7EEBBD2152AF14D99CA6F4059F9B4</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -908,7 +1201,20 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
-		<key>3F9FAB514661F7CA855DE4EC42A2CCA8</key>
+		<key>40F720E838361C1D85F0D6898777ED35</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>CLImageEditor.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>42619A21E70902F36426A21177DE1A4E</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -917,51 +1223,56 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>CLToolbarMenuItem.h</string>
+			<string>CLSpotEffect.h</string>
 			<key>path</key>
-			<string>CLImageEditor/ImageTools/ToolSettings/CLToolbarMenuItem.h</string>
+			<string>CLImageEditor/ImageTools/CLEffectTool/CLEffect/CLSpotEffect.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>426EEFA37EADB1E453F084D61C2D3E5A</key>
+		<key>42F444C0A5EBB92A2D23C94FBF5BF1F7</key>
 		<dict>
-			<key>fileRef</key>
-			<string>93C4186607FE33EC9D4A1DBDA65D3A6C</string>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>CLImageEditor.m</string>
+			<key>path</key>
+			<string>CLImageEditor/CLImageEditor.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
-		<key>4392AE91F7AA916B8189EF40824B734B</key>
+		<key>43DA1266AF3DF1D844877966024AA926</key>
 		<dict>
 			<key>buildConfigurationList</key>
-			<string>CCF053D69130E3CC9079859B43067835</string>
+			<string>528A233D4AFFA387C62BC4B972CD877B</string>
 			<key>buildPhases</key>
 			<array>
-				<string>486177970900FAEE477984D5CCACE7AD</string>
-				<string>01421B244F34DF2A307FF6652695B608</string>
+				<string>5B25EB05CFE8DE97B79050BF1F108D05</string>
+				<string>0666C0C6C16B00212A7C286DCF4E3070</string>
+				<string>5AF1B81CC4AA05339BEE8B06EBF1D762</string>
 			</array>
 			<key>buildRules</key>
 			<array/>
 			<key>dependencies</key>
-			<array>
-				<string>E70BAD8FBBB40228143F70AC623AA501</string>
-				<string>A3523A4B942B6262C8E8572E47F0935D</string>
-				<string>2623033934FD241B41CB52FC7FA6C2B6</string>
-			</array>
+			<array/>
 			<key>isa</key>
 			<string>PBXNativeTarget</string>
 			<key>name</key>
-			<string>Pods</string>
+			<string>UzysAssetsPickerController</string>
 			<key>productName</key>
-			<string>Pods</string>
+			<string>UzysAssetsPickerController</string>
 			<key>productReference</key>
-			<string>08474AFE7A4E89AAB4CCDCCD43423BF7</string>
+			<string>A988676F68060CF1E9F20B51099B5F5C</string>
 			<key>productType</key>
 			<string>com.apple.product-type.library.static</string>
 		</dict>
-		<key>4401BB96924866C3E39974A86586C271</key>
+		<key>44E43768C7C76B3E1A57CF7848598BC1</key>
 		<dict>
 			<key>fileRef</key>
-			<string>93C4186607FE33EC9D4A1DBDA65D3A6C</string>
+			<string>272643F56613CA0D336AE3DBF19DC404</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -1014,7 +1325,7 @@
 		<key>4587AAB15BCCB9A247F1D54C2C2C8042</key>
 		<dict>
 			<key>fileRef</key>
-			<string>88CC89196C23DA4F35597E9DA694B271</string>
+			<string>63EEA16B6E4737F7022645555F10076E</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1023,7 +1334,7 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
-		<key>45DD3C984ACDBA33D0D0D09A8E6C98DA</key>
+		<key>460809270240CE0BA3AA869754A40946</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1031,56 +1342,39 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>CLImageToolBase.m</string>
 			<key>path</key>
-			<string>CLImageEditor/ImageTools/CLImageToolBase.m</string>
+			<string>CLImageEditor-dummy.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>4616FC740EEA1777D1AF63551054BF79</key>
+		<key>467AB3B84513CE511E4ED35831AB14D0</key>
 		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>fileRef</key>
+			<string>CFBE32B947516EFCFADEEA9174F3CD98</string>
 			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>0036019766ECF4E50B35D1097926B969</string>
-			<key>remoteInfo</key>
-			<string>UzysAssetsPickerController</string>
+			<string>PBXBuildFile</string>
 		</dict>
-		<key>486177970900FAEE477984D5CCACE7AD</key>
+		<key>4777DCDFA0CEEB964CD547AB51C64640</key>
 		<dict>
 			<key>buildActionMask</key>
 			<string>2147483647</string>
 			<key>files</key>
 			<array>
-				<string>1F8804DB4A09CF73EEA65980B92EE476</string>
+				<string>7AB30151BE6FD24A14A7298EDEBE29A0</string>
+				<string>23B6A52AB1517781546A9F62326AFD8C</string>
+				<string>709ECDF3B779E1E7A4951FAE1F3F48C2</string>
+				<string>2921EAFF51FAD7B819A43AE7970E4473</string>
+				<string>58CF0D51CC5533460BEE6FCC28BA0821</string>
 			</array>
 			<key>isa</key>
 			<string>PBXSourcesBuildPhase</string>
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>48CB26C571B28CF9869639595DFACD59</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>6E71355582DC6FB5F5C1B89EC915BEE0</string>
-			<key>remoteInfo</key>
-			<string>RKDropdownAlert</string>
-		</dict>
 		<key>4953160AB7382B9BB8E90B1C27D73BE0</key>
 		<dict>
 			<key>fileRef</key>
-			<string>E1685F5FD13D331D75A296FD428BB448</string>
+			<string>3A88D5A187C7B54C2E3E15B537372AD4</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1089,31 +1383,13 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
-		<key>49891AA63EB696F494C9A23EA1523B4A</key>
+		<key>4994D5BCDA35CDCD32E5AE994F583DC0</key>
 		<dict>
 			<key>buildActionMask</key>
 			<string>2147483647</string>
 			<key>files</key>
 			<array>
-				<string>D9D1536DB3CE39B59B8B3DC530C210B1</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>4A65EC1D8D3C83820695378C1D8BF053</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>84DC7A5347FBD913B4CB093E2C618D31</string>
-				<string>1D0228B3F3535BCEFFAA9A0A69372E92</string>
-				<string>9CCF28DE620F822A9F4EEC1C072F0AA5</string>
-				<string>8C3E10C419FB128E90CCF2F40D96DB20</string>
-				<string>73D7BEF585E9F8AF0EB9F6654D2CD3D9</string>
-				<string>5357CE30530B6BEF55CCA8E223BCAFBE</string>
+				<string>315E7C18608C3A75F5E5845070CC8EFA</string>
 			</array>
 			<key>isa</key>
 			<string>PBXFrameworksBuildPhase</string>
@@ -1123,7 +1399,7 @@
 		<key>4B179C4C1159313A4BEF7F0F08BF9EFB</key>
 		<dict>
 			<key>fileRef</key>
-			<string>7068301A3E4711617ACD2C6E2DB2EE4E</string>
+			<string>BC96E3E9159F49EECBD2F0D30B844F95</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1134,25 +1410,70 @@
 				</array>
 			</dict>
 		</dict>
+		<key>4B8AA500495376B7455DFBF6ECC72A87</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>CLImageEditor</string>
+			<key>target</key>
+			<string>7D0CC9C201F6C266651FF6CA7268352C</string>
+			<key>targetProxy</key>
+			<string>5D68C7AC8F7CD18C18C2FA5DD0387D87</string>
+		</dict>
 		<key>4C1CB2B0F83D3AD35713484C85853F8F</key>
 		<dict>
 			<key>fileRef</key>
-			<string>F1D05751BE53D94E45233A4DEA703CAB</string>
+			<string>460809270240CE0BA3AA869754A40946</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>4E354EE149A18B67750C9948D6A5F7F9</key>
+		<key>4CE7C33716FBF1D73D1AE067A560B017</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>66343838323A4465799738510FAEF5E2</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/RKDropdownAlert/RKDropdownAlert-prefix.pch</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>4D196C957144B5F6CE13338C2E598F62</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>UIView+CLImageToolInfo.h</string>
+			<string>SVProgressAnimatedView.m</string>
 			<key>path</key>
-			<string>CLImageEditor/ImageTools/ToolSettings/UIView+CLImageToolInfo.h</string>
+			<string>SVProgressHUD/SVProgressAnimatedView.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1169,24 +1490,70 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>4E80F155F362A86CE72DB67F5BC66D14</key>
+		<key>4EDF67A7B96E1DD410A9BF81AE35AC80</key>
 		<dict>
-			<key>children</key>
-			<array>
-				<string>D6777C9B9A4F2F236AFAB7262B45C8C2</string>
-				<string>F1D05751BE53D94E45233A4DEA703CAB</string>
-				<string>563257B9BB0EC14CCD8CAB9517EAC43C</string>
-			</array>
+			<key>fileRef</key>
+			<string>0F9FED1CEBB2A961B92C0830BFB08B54</string>
 			<key>isa</key>
-			<string>PBXGroup</string>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5082D25EA59D12288631D5191E981F95</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>Support Files</string>
+			<string>_CLImageEditorViewController.m</string>
 			<key>path</key>
-			<string>../Target Support Files/CLImageEditor</string>
+			<string>CLImageEditor/ViewController/_CLImageEditorViewController.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>4EEE77E9C786B60D396E04153E345337</key>
+		<key>50850C9D045DC1E89517981D017FC17D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>347888ABD7FD1A289641D4320B5AA737</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>511728ADEFA3211567C1AE2DDF23D779</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>CLSplineInterpolator.h</string>
+			<key>path</key>
+			<string>CLImageEditor/Utils/CLSplineInterpolator.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>528A233D4AFFA387C62BC4B972CD877B</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>1D6348C8E62EB9CBB0A60B18002DD0EB</string>
+				<string>22845784BE1FC332818E392FA1703E47</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>54EEC46136BCDDACA19F43022F5BE31D</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1201,164 +1568,18 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>4F3DDD47CF3CD1DDFB8DCCA36403B237</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>AB24AC976D93101BDC0209FF7D82D072</string>
-				<string>74248ABB218EECC3D8CCACB39F564E37</string>
-				<string>C6C3ABB13BE08B3657EACDB325B532E8</string>
-				<string>E4AAA98934565BFFC7C276C99AF1F5C2</string>
-				<string>16C9341EF6CB0B19D65B77DA4A9F20CA</string>
-				<string>FE974A6F9C40F66D7AD8D5A3F9F00102</string>
-				<string>3A9B40FE486E1F455432DE50EE675A6A</string>
-				<string>1FF6F9BC7A32DAE7B7CD3A0C018CBAA1</string>
-				<string>86150107E2EF336E69CFA1F2FC9D91F5</string>
-				<string>288D5DCD171F89A946DD3C8500287DFF</string>
-				<string>594E5D143EBB739936D68D6B6417BA43</string>
-				<string>18AFEE966F125CD044C33ABFAEE3E702</string>
-				<string>C9F4D27D48A8F017A867586CCBDE8EDA</string>
-				<string>5C2DCF9E9E893A19A907CDBC5BB5A68C</string>
-				<string>3E529F54CDD699A947E5218485310282</string>
-				<string>05CA32E93A334458C7C222DED8C151A2</string>
-				<string>97C0424AFD38B0471650E69EB88C3E53</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>UzysAssetsPickerController</string>
-			<key>path</key>
-			<string>UzysAssetsPickerController</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>50850C9D045DC1E89517981D017FC17D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2F28DCE6C28577A009D07392470706F4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>51E6EF6F941A665F198A6401E3340E2C</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>2A9A6271F3075B2016BC3C530895FF49</string>
-				<string>227843564C19409462E9B8CA43320C4A</string>
-				<string>A9FA18E42F3445F0D6D94F9DCEC89B49</string>
-				<string>5B22DD4B8B26A277516CF13C414B3BAE</string>
-				<string>EF7DC528B64A1FDFA1784B21CA25A0A7</string>
-				<string>CCA036DF49C355C72CCDE9DA5D78DC0B</string>
-				<string>960973A1B90C58116D89035ED105BA4C</string>
-				<string>8395A4449977B95389106CEC023F0926</string>
-				<string>E781B1DC5CE45B0ED37634D2D93A1088</string>
-				<string>2F28DCE6C28577A009D07392470706F4</string>
-				<string>FBE92AE73FD1D472D3F7CEB60E155026</string>
-				<string>9554D540E84BCDD37AAAA3C776E75AFB</string>
-				<string>F17FA9CFB9F797E65BC2C5D6B29549BF</string>
-				<string>7E28B3E5565919600E32B82D76837C6A</string>
-				<string>4EEE77E9C786B60D396E04153E345337</string>
-				<string>B4B587071128B77CFC36DF71CAA1CEE0</string>
-				<string>888D5A7A11B3E74804C4EE935698C193</string>
-				<string>C3477A1755B67375041107FCC3E854F0</string>
-				<string>154F209A7DB422509251480F1FD25267</string>
-				<string>CAE619B9C06498C8B3EF93C09B3373E6</string>
-				<string>D0F179C8667B4B89419B80A86A8C73F8</string>
-				<string>7B99CBA75F4060787DC3C0A30FAA5663</string>
-				<string>AAC63248245840AFE550837DD2B54116</string>
-				<string>88CC89196C23DA4F35597E9DA694B271</string>
-				<string>E3C2BEFE467CE88F9F9AB26D61B27F45</string>
-				<string>5F73AFB7A9BDB5390ED53BBB49482E81</string>
-				<string>C3660625D8306AD0DBFF6884C178EA6C</string>
-				<string>A5ED88B08834C2AD9C7F934CCE2075E1</string>
-				<string>905CDA6E1603246852ABE21419A9E14F</string>
-				<string>1E9583AE09E1556D7C466AD50585C85E</string>
-				<string>743B6AF2EB9A29A36051E076A521EC7D</string>
-				<string>877E8C321DC7D0FAB4E0B1C45D00FFFD</string>
-				<string>E15E539A7B7578035426594571D60D83</string>
-				<string>B208C27235EFDC163A098BEDBC2A7909</string>
-				<string>537026B0026B0B17C90718641B52E6B7</string>
-				<string>67BD3C0C906F03F4CB2ED050FC73078A</string>
-				<string>803761E92884A729B4514037ED768A73</string>
-				<string>B49E3F65F2F1C166A231F9E8918BF7EF</string>
-				<string>65BC7E487F2CDFBAAB9955D56CD348AB</string>
-				<string>45DD3C984ACDBA33D0D0D09A8E6C98DA</string>
-				<string>899AA413B3E1BD7DD1CED92E2460E4F3</string>
-				<string>FC521C7F64C1C1271A608B12615C847B</string>
-				<string>2E2BB7E4C765971FE00FE308302175E9</string>
-				<string>687F00265CF08BEC760E361C751A76A4</string>
-				<string>8D5A79915719C048F3EF8A9281E33675</string>
-				<string>E835F3F19B21324E69AAB459DCB0280C</string>
-				<string>7068301A3E4711617ACD2C6E2DB2EE4E</string>
-				<string>919A43D310A146D75E6E3353DB82B6E0</string>
-				<string>CFD451B6F1A5E6770AB5150ECD2BF08B</string>
-				<string>C0BDF0C52FB1B4EF73953D897B0D37BD</string>
-				<string>36EBC86735F587A4111709A12F5AECC3</string>
-				<string>2B755F9B8B6181E71A5C1E93B5EDEB5A</string>
-				<string>CDF68869213E58557CFA1C14816F6C97</string>
-				<string>958736BD11F20A130C10D97F2B27C581</string>
-				<string>7E0A52BC4678F149406B54E4307D5F83</string>
-				<string>7B64112CAF35E4C9BDD31FB85F39E831</string>
-				<string>9C2105DC0F19A5C31F32A69393CFD4FE</string>
-				<string>3C9FEF3D23C307F13222A8B86947FD22</string>
-				<string>3F9FAB514661F7CA855DE4EC42A2CCA8</string>
-				<string>A1003004FC58B9F33825230727A6B91D</string>
-				<string>1062E6F742DA7ABB85A8F220D814A237</string>
-				<string>57AB3FD256B1F8C385D06BB0E62DA846</string>
-				<string>BA1B5A3E47EC31E157D532E5981ECF86</string>
-				<string>DD3A54015EFB5C582745705272D84B3B</string>
-				<string>4E354EE149A18B67750C9948D6A5F7F9</string>
-				<string>E1685F5FD13D331D75A296FD428BB448</string>
-				<string>E7C5A5E0FC9FDA7635EE887FC35C34A5</string>
-				<string>75A382C9E99F2469C9D094A97AE2624E</string>
-				<string>B087D208B2687822A8AF8BFF7D40C71F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Core</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5357CE30530B6BEF55CCA8E223BCAFBE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0E1C813E2595D0FD4DD5819D3E73D072</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>537026B0026B0B17C90718641B52E6B7</key>
+		<key>54EF67F66B2DC1D9D98057FFED35A711</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>CLImageEditorTheme.h</string>
+			<string>UzysWrapperPickerController.m</string>
 			<key>path</key>
-			<string>CLImageEditor/CLImageEditorTheme.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>537A6AC7C401A272FA1BA597E1EE85DF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>RKDropdownAlert.h</string>
-			<key>path</key>
-			<string>SlingshotDropdownAlert/RKDropdownAlert.h</string>
+			<string>UzysAssetsPickerController/Library/UzysWrapperPickerController.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1382,27 +1603,7 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>563257B9BB0EC14CCD8CAB9517EAC43C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>CLImageEditor-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>563FC9D1972E60D3DB1E3C214B45FC35</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C9F4D27D48A8F017A867586CCBDE8EDA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>57AB3FD256B1F8C385D06BB0E62DA846</key>
+		<key>56C5376B1806F5CC0F2F8010A32FAD02</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1411,43 +1612,13 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>UIDevice+SystemVersion.m</string>
+			<string>CLSplineInterpolator.m</string>
 			<key>path</key>
-			<string>CLImageEditor/Utils/UIDevice+SystemVersion.m</string>
+			<string>CLImageEditor/Utils/CLSplineInterpolator.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>594E5D143EBB739936D68D6B6417BA43</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>UzysGroupPickerView.m</string>
-			<key>path</key>
-			<string>UzysAssetsPickerController/Library/UzysGroupPickerView.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5B22DD4B8B26A277516CF13C414B3BAE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>CLAdjustmentTool.m</string>
-			<key>path</key>
-			<string>CLImageEditor/ImageTools/CLAdjustmentTool/CLAdjustmentTool.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C2DCF9E9E893A19A907CDBC5BB5A68C</key>
+		<key>56FE6D671652999D76632616F3199468</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1456,76 +1627,16 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>UzysWrapperPickerController.h</string>
+			<string>CLImageToolProtocol.h</string>
 			<key>path</key>
-			<string>UzysAssetsPickerController/Library/UzysWrapperPickerController.h</string>
+			<string>CLImageEditor/ImageTools/ToolSettings/CLImageToolProtocol.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>5F73AFB7A9BDB5390ED53BBB49482E81</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>CLFilterTool.m</string>
-			<key>path</key>
-			<string>CLImageEditor/ImageTools/CLFilterTool/CLFilterTool.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>603D9E3739AE3548437583B6619834FC</key>
+		<key>570D18AAF89D7D0C6D5A028A13403491</key>
 		<dict>
 			<key>fileRef</key>
-			<string>7E0A52BC4678F149406B54E4307D5F83</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Project</string>
-				</array>
-			</dict>
-		</dict>
-		<key>60F145F2D0B8C961057ECE6156BF2B54</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4EEE77E9C786B60D396E04153E345337</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Project</string>
-				</array>
-			</dict>
-		</dict>
-		<key>6488FFEA7CC3EA62BDDC338705B0CAC1</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>537A6AC7C401A272FA1BA597E1EE85DF</string>
-				<string>7DE1F41EF43E989E7DE6C2BDCE74FC17</string>
-				<string>C0D40A357C37EB997B3549EA5E1EA2E9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>RKDropdownAlert</string>
-			<key>path</key>
-			<string>RKDropdownAlert</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6514807B4C75603F910304324037EA7F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3A9B40FE486E1F455432DE50EE675A6A</string>
+			<string>C9F1722015EE85A31E6C3935EF44D9D2</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1536,37 +1647,68 @@
 				</array>
 			</dict>
 		</dict>
-		<key>65BC7E487F2CDFBAAB9955D56CD348AB</key>
+		<key>5772DC8BBBBC31A32FD214DA6EFD281D</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>CLImageToolBase.h</string>
-			<key>path</key>
-			<string>CLImageEditor/ImageTools/CLImageToolBase.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>43DA1266AF3DF1D844877966024AA926</string>
+			<key>remoteInfo</key>
+			<string>UzysAssetsPickerController</string>
 		</dict>
-		<key>65D071F94DF589289AD735DE1484B774</key>
+		<key>58CF0D51CC5533460BEE6FCC28BA0821</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>FBE2C759D2C800CFF78CBD4DAD87020F</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.xib</string>
-			<key>name</key>
-			<string>UzysAssetsPickerController.xib</string>
-			<key>path</key>
-			<string>UzysAssetsPickerController/Library/UzysAssetsPickerController.xib</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXBuildFile</string>
 		</dict>
-		<key>67BD3C0C906F03F4CB2ED050FC73078A</key>
+		<key>59D487EF6EB04B19406E36AFEC09E527</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3C6B0674D700D5EED54058F136AA0D95</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5A1C26BDAB3BA58632E6563D6BC1761C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>078C710C7D9CF70F1C5C5AC333E49646</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>5AF1B81CC4AA05339BEE8B06EBF1D762</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>A2E4C6DCC39AFE9746C3972D5316DD58</string>
+				<string>570D18AAF89D7D0C6D5A028A13403491</string>
+				<string>C904B8059927711ED9B19C4D180A517C</string>
+				<string>C064C01320182C673922DB3861A638C8</string>
+				<string>8048E9DF0B73B8D09B98C2CC0F2A9BB7</string>
+				<string>8DEF1947F2FB1BA5CAB0C466C3175749</string>
+				<string>731610284A80C70A7844684A2796969F</string>
+				<string>5A1C26BDAB3BA58632E6563D6BC1761C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>5B1D80CDE6742E198B3CF8EF608CB39A</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1575,26 +1717,67 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>CLImageEditorTheme.m</string>
+			<string>UzysAssetsViewCell.m</string>
 			<key>path</key>
-			<string>CLImageEditor/CLImageEditorTheme.m</string>
+			<string>UzysAssetsPickerController/Library/UzysAssetsViewCell.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>67EA50D606C57DF9CEECBF0AC61B8E0A</key>
+		<key>5B25EB05CFE8DE97B79050BF1F108D05</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>4EDF67A7B96E1DD410A9BF81AE35AC80</string>
+				<string>3E28ED44FCC3CD3480173BB005EEBDAC</string>
+				<string>467AB3B84513CE511E4ED35831AB14D0</string>
+				<string>B211132ACF09119554BF7AEAE9F8B407</string>
+				<string>3510E34CFFD6BC7BA0D7B4382FE985AD</string>
+				<string>C3383F52EE344E4B44C6D37A92AFF320</string>
+				<string>22BBBC1CAAB0109B791982EE6A902853</string>
+				<string>CDAE00D6F411482EF179D9990BB72AA7</string>
+			</array>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>UzysAssetsPickerController-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
-		<key>687F00265CF08BEC760E361C751A76A4</key>
+		<key>5B5A27E163ACCE4C3D981CE4F2E7186A</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>B292A8DC5019823CC1C145D9E5A27BAB</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/SVProgressHUD/SVProgressHUD-prefix.pch</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>5BC7176797ADD1BDF08818CB5DD64601</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1606,6 +1789,226 @@
 			<string>CLImageToolInfo+Private.m</string>
 			<key>path</key>
 			<string>CLImageEditor/ImageTools/ToolSettings/CLImageToolInfo+Private.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5D2A8387F771AD861CA119A1A61B10EB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.plug-in</string>
+			<key>name</key>
+			<string>CLImageEditor.bundle</string>
+			<key>path</key>
+			<string>CLImageEditor/CLImageEditor.bundle</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5D68C7AC8F7CD18C18C2FA5DD0387D87</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>7D0CC9C201F6C266651FF6CA7268352C</string>
+			<key>remoteInfo</key>
+			<string>CLImageEditor</string>
+		</dict>
+		<key>603D9E3739AE3548437583B6619834FC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>42619A21E70902F36426A21177DE1A4E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Project</string>
+				</array>
+			</dict>
+		</dict>
+		<key>60B8CC3FC84DB3B1E627A812F5944C18</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>3CBD4F7C4B87CF78BEAE4BDDCF2B0E5D</string>
+				<string>7EFFCDA39D83E558C32A6F615668C54A</string>
+				<string>835D21356E98CED7C6FE5FF586B4C0CC</string>
+				<string>86C47A7DCA4298804BFE92A8E392F16F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>60F145F2D0B8C961057ECE6156BF2B54</key>
+		<dict>
+			<key>fileRef</key>
+			<string>54EEC46136BCDDACA19F43022F5BE31D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Project</string>
+				</array>
+			</dict>
+		</dict>
+		<key>612E04DD91CFB6BACF25C975CB457F02</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>CLClassList.m</string>
+			<key>path</key>
+			<string>CLImageEditor/Utils/CLClassList.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>618FDDFA5BD88B41DCA4D1035A5AD2F8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>CLGloomEffect.h</string>
+			<key>path</key>
+			<string>CLImageEditor/ImageTools/CLEffectTool/CLEffect/CLGloomEffect.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6225A94D76B7256A1CC6CCE27DF875B8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>SVProgressAnimatedView.h</string>
+			<key>path</key>
+			<string>SVProgressHUD/SVProgressAnimatedView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>63EEA16B6E4737F7022645555F10076E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>CLFilterBase.m</string>
+			<key>path</key>
+			<string>CLImageEditor/ImageTools/CLFilterTool/CLFilterBase.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>641E69DB018FB7D22CADF3E9A07D2EA8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.plug-in</string>
+			<key>name</key>
+			<string>UzysAssetPickerController.bundle</string>
+			<key>path</key>
+			<string>UzysAssetsPickerController/Library/UzysAssetPickerController.bundle</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>65CF65848516180E0983BDA91F6C73D9</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>CLToneCurveTool.m</string>
+			<key>path</key>
+			<string>CLImageEditor/ImageTools/CLToneCurveTool/CLToneCurveTool.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>66343838323A4465799738510FAEF5E2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>RKDropdownAlert.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>67F2E57B3F574D4CF6AFFCED14F7FF20</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>UzysAssetsPickerController.m</string>
+			<key>path</key>
+			<string>UzysAssetsPickerController/Library/UzysAssetsPickerController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>68D886F92A033881344795BB97C962DE</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>CLSpotEffect.m</string>
+			<key>path</key>
+			<string>CLImageEditor/ImageTools/CLEffectTool/CLEffect/CLSpotEffect.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>68F2AB7F7223328904FC11D34C656E3E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>RKDropdownAlert.m</string>
+			<key>path</key>
+			<string>SlingshotDropdownAlert/RKDropdownAlert.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1622,17 +2025,25 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>6929BAF9E8CFC9FED7274F2A88A024DF</key>
+		<key>69C4D0AA6DD188162C8A6675EDE36483</key>
 		<dict>
-			<key>fileRef</key>
-			<string>74248ABB218EECC3D8CCACB39F564E37</string>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>SVRadialGradientLayer.h</string>
+			<key>path</key>
+			<string>SVProgressHUD/SVRadialGradientLayer.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>6A4978ACD13FADBC94356EB26FD56333</key>
 		<dict>
 			<key>fileRef</key>
-			<string>4E354EE149A18B67750C9948D6A5F7F9</string>
+			<string>7F197A4E712790A3479B2A8769142DC5</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1642,6 +2053,19 @@
 					<string>Project</string>
 				</array>
 			</dict>
+		</dict>
+		<key>6A75862B19A3C2C75E5C346E03267493</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>EB26430EA753D79EDEF0DC344B17229C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Resources</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>6B5B447915EC2F32CF32F7E50EA4EE46</key>
 		<dict>
@@ -1690,12 +2114,33 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>6C50AB5924B7C3D7B647587145D1A475</key>
+		<key>6BE42546B9194624AC06E20BEE2F2ECA</key>
 		<dict>
-			<key>fileRef</key>
-			<string>67EA50D606C57DF9CEECBF0AC61B8E0A</string>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SVProgressHUD-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6BEBD13021A357E878053251F030144D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>CLCircleView.h</string>
+			<key>path</key>
+			<string>CLImageEditor/ImageTools/ToolSettings/CLCircleView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>6C633939CB8C487B004A9636B9A13C4B</key>
 		<dict>
@@ -1704,10 +2149,25 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>6D3B8034017EC2085816D46B352DB50C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>CLImageToolInfo.m</string>
+			<key>path</key>
+			<string>CLImageEditor/CLImageToolInfo.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>6D969CCEB67994E631F22FEEE7E805CE</key>
 		<dict>
 			<key>fileRef</key>
-			<string>2E2BB7E4C765971FE00FE308302175E9</string>
+			<string>0158BF798AE00EA7DA8863DE24954CE9</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1721,7 +2181,7 @@
 		<key>6E4E893DD1D3B1BA988227914975F664</key>
 		<dict>
 			<key>fileRef</key>
-			<string>1E9583AE09E1556D7C466AD50585C85E</string>
+			<string>E86E72CCBAC7D84D63E4DFE497477863</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1730,35 +2190,10 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
-		<key>6E71355582DC6FB5F5C1B89EC915BEE0</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>84ADF38D8F2A6D0464EBAD6E00D5FF6B</string>
-			<key>buildPhases</key>
-			<array>
-				<string>9D871EA23F84FFE594DE1910259845F4</string>
-				<string>B9A277663831DF749A35264C550641D0</string>
-				<string>49891AA63EB696F494C9A23EA1523B4A</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>RKDropdownAlert</string>
-			<key>productName</key>
-			<string>RKDropdownAlert</string>
-			<key>productReference</key>
-			<string>38FD7C25E662080E83010082DD4360C5</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
 		<key>6FAF8880543B3734D3CF619EC402E7DD</key>
 		<dict>
 			<key>fileRef</key>
-			<string>36EBC86735F587A4111709A12F5AECC3</string>
+			<string>28914B1506ED03C12A531B04DFCE48B6</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1769,7 +2204,28 @@
 				</array>
 			</dict>
 		</dict>
-		<key>7068301A3E4711617ACD2C6E2DB2EE4E</key>
+		<key>709ECDF3B779E1E7A4951FAE1F3F48C2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EC4C6CA8E71C5E58233ED1A4C7024CD2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7152E238EC47E1515C534DB00ED98002</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B878DDFCD2014F81299AF2F8343513BD</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Project</string>
+				</array>
+			</dict>
+		</dict>
+		<key>72BCDDA2D4F2E0EF74409E6A1B41FF88</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1778,34 +2234,27 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>CLPixellateEffect.h</string>
+			<string>UzysAssetsPickerController.h</string>
 			<key>path</key>
-			<string>CLImageEditor/ImageTools/CLEffectTool/CLEffect/CLPixellateEffect.h</string>
+			<string>UzysAssetsPickerController/Library/UzysAssetsPickerController.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>7152E238EC47E1515C534DB00ED98002</key>
+		<key>731610284A80C70A7844684A2796969F</key>
 		<dict>
 			<key>fileRef</key>
-			<string>E7C5A5E0FC9FDA7635EE887FC35C34A5</string>
+			<string>BA60B652104B424E0D22028B58EB74BC</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
 			<dict>
 				<key>ATTRIBUTES</key>
 				<array>
-					<string>Project</string>
+					<string>Public</string>
 				</array>
 			</dict>
 		</dict>
-		<key>73D7BEF585E9F8AF0EB9F6654D2CD3D9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>88F0DEFAD90333B5FD85165BF1250DE8</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>74248ABB218EECC3D8CCACB39F564E37</key>
+		<key>73B4FD810EC9E60A7A2D4A2DA4D4F5BB</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1814,31 +2263,16 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>UIImage+UzysExtension.m</string>
+			<string>CLHueEffect.m</string>
 			<key>path</key>
-			<string>UzysAssetsPickerController/Library/UIImage+UzysExtension.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>743B6AF2EB9A29A36051E076A521EC7D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>CLHueEffect.h</string>
-			<key>path</key>
-			<string>CLImageEditor/ImageTools/CLEffectTool/CLEffect/CLHueEffect.h</string>
+			<string>CLImageEditor/ImageTools/CLEffectTool/CLEffect/CLHueEffect.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>757CCBA8A55F31F03FCAECB2434BBD24</key>
 		<dict>
 			<key>fileRef</key>
-			<string>AAC63248245840AFE550837DD2B54116</string>
+			<string>28E789427212862C4225F49C9361D14E</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1849,7 +2283,24 @@
 				</array>
 			</dict>
 		</dict>
-		<key>75A382C9E99F2469C9D094A97AE2624E</key>
+		<key>774C97E4A9E15F761FB48A9F71EFC87C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>EF2F07A60ED12F64A1EF1954DEEAAB70</string>
+				<string>CFBE32B947516EFCFADEEA9174F3CD98</string>
+				<string>2D76116191B2A14DBA2A211A965949D5</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/UzysAssetsPickerController</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>78345C3B1FDD7E60B44EB60C98F0B60B</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1861,6 +2312,21 @@
 			<string>UIView+Frame.m</string>
 			<key>path</key>
 			<string>CLImageEditor/Utils/UIView+Frame.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>78495AFB78FAEAB86439D312F1D00C3B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>CLDrawTool.h</string>
+			<key>path</key>
+			<string>CLImageEditor/ImageTools/CLDrawTool/CLDrawTool.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1877,14 +2343,7 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>79FFE9AD1E99B42DAFEECF19FE2EDFC5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>13DDFA726E59574FD8B0329F1EBF6171</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7B64112CAF35E4C9BDD31FB85F39E831</key>
+		<key>7A37604E5AB6F628DEC80DC32B8F8B2C</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1893,13 +2352,33 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>CLSpotEffect.m</string>
+			<string>CLImageEditorTheme+Private.m</string>
 			<key>path</key>
-			<string>CLImageEditor/ImageTools/CLEffectTool/CLEffect/CLSpotEffect.m</string>
+			<string>CLImageEditor/ImageTools/ToolSettings/CLImageEditorTheme+Private.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>7B99CBA75F4060787DC3C0A30FAA5663</key>
+		<key>7AB30151BE6FD24A14A7298EDEBE29A0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>99F5534411B3B12C4A3CBFD1B873058A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7B032DC7CE31545D6194B1392D2D5F92</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>RKDropdownAlert-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7B134A8D361A665C476423FC6FB2BD78</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1908,9 +2387,38 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>CLEffectTool.m</string>
+			<string>CLBloomEffect.m</string>
 			<key>path</key>
-			<string>CLImageEditor/ImageTools/CLEffectTool/CLEffectTool.m</string>
+			<string>CLImageEditor/ImageTools/CLEffectTool/CLEffect/CLBloomEffect.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7B2447DD68B18A60E164209C3AB549E1</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>C9EA8B8E3BE7CE12B71F75DDA7E93BC0</string>
+				<string>ABE3ACD8D7FE6448160CB87F0579A04B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>7BF808258933BC6C153B0305D1BC4A85</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>CLClippingTool.m</string>
+			<key>path</key>
+			<string>CLImageEditor/ImageTools/CLClippingTool/CLClippingTool.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1935,7 +2443,7 @@
 			<key>productName</key>
 			<string>CLImageEditor</string>
 			<key>productReference</key>
-			<string>FA8EC5403E8B5220750A7D30116045D5</string>
+			<string>8536DE20D1181A18F499F444A27AC292</string>
 			<key>productType</key>
 			<string>com.apple.product-type.library.static</string>
 		</dict>
@@ -1955,10 +2463,40 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>7D8F23FBBE1D57F260632817727831D6</key>
+		<key>7D87B7F27ED722529961B00129F21BE5</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libSVProgressHUD.a</string>
+			<key>path</key>
+			<string>libSVProgressHUD.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>7DB346D0F39D3F0E887471402A8071AB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>BA6428E9F66FD5A23C0A2E06ED26CD2F</string>
+				<string>785553737B06AFC3DA711DDEB7D56194</string>
+				<string>3A9B4AC516043CFBB01B50E11976E5ED</string>
+				<string>917D7F554193A8705A2613A2D922B3DB</string>
+				<string>037C0CA694176A3C0915F62C9D20B3E6</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7EFFCDA39D83E558C32A6F615668C54A</key>
 		<dict>
 			<key>fileRef</key>
-			<string>16C9341EF6CB0B19D65B77DA4A9F20CA</string>
+			<string>6225A94D76B7256A1CC6CCE27DF875B8</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1969,37 +2507,7 @@
 				</array>
 			</dict>
 		</dict>
-		<key>7DB346D0F39D3F0E887471402A8071AB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BA6428E9F66FD5A23C0A2E06ED26CD2F</string>
-				<string>785553737B06AFC3DA711DDEB7D56194</string>
-				<string>8645AA5DE4FFCE7F49A076D824CE4E5B</string>
-				<string>859B99A09CAB9563AD3CA118C15857C9</string>
-				<string>037C0CA694176A3C0915F62C9D20B3E6</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7DE1F41EF43E989E7DE6C2BDCE74FC17</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>RKDropdownAlert.m</string>
-			<key>path</key>
-			<string>SlingshotDropdownAlert/RKDropdownAlert.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E0A52BC4678F149406B54E4307D5F83</key>
+		<key>7F197A4E712790A3479B2A8769142DC5</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2008,61 +2516,44 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>CLSpotEffect.h</string>
+			<string>UIView+CLImageToolInfo.h</string>
 			<key>path</key>
-			<string>CLImageEditor/ImageTools/CLEffectTool/CLEffect/CLSpotEffect.h</string>
+			<string>CLImageEditor/ImageTools/ToolSettings/UIView+CLImageToolInfo.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>7E28B3E5565919600E32B82D76837C6A</key>
+		<key>8048E9DF0B73B8D09B98C2CC0F2A9BB7</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>ACD2133C75C4759B6818217BC67956BD</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>CLClippingTool.m</string>
-			<key>path</key>
-			<string>CLImageEditor/ImageTools/CLClippingTool/CLClippingTool.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
-		<key>803761E92884A729B4514037ED768A73</key>
+		<key>835D21356E98CED7C6FE5FF586B4C0CC</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>89BE98A76E86B71ADF36BDDD5BB2AEA7</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>CLImageEditorTheme+Private.h</string>
-			<key>path</key>
-			<string>CLImageEditor/ImageTools/ToolSettings/CLImageEditorTheme+Private.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8395A4449977B95389106CEC023F0926</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>CLBlurTool.m</string>
-			<key>path</key>
-			<string>CLImageEditor/ImageTools/CLBlurTool/CLBlurTool.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
 		<key>83B8E623C5F65CEF6FB8017029FD6C8E</key>
 		<dict>
 			<key>fileRef</key>
-			<string>803761E92884A729B4514037ED768A73</string>
+			<string>F71FE554C8D6A5D9BC2609CECC987623</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2073,117 +2564,66 @@
 				</array>
 			</dict>
 		</dict>
-		<key>84ADF38D8F2A6D0464EBAD6E00D5FF6B</key>
+		<key>84277E223A7E639D09256D54D17CE4D1</key>
 		<dict>
-			<key>buildConfigurations</key>
+			<key>children</key>
 			<array>
-				<string>9DF58269DD2A364724B307CB469B8059</string>
-				<string>C8AA61D3AA46096FFC6E73B3EE7B1D37</string>
+				<string>66343838323A4465799738510FAEF5E2</string>
+				<string>7B032DC7CE31545D6194B1392D2D5F92</string>
+				<string>3422C7D290F0EEC4177D7CDE54194CA7</string>
 			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
 			<key>isa</key>
-			<string>XCConfigurationList</string>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/RKDropdownAlert</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
-		<key>84DC7A5347FBD913B4CB093E2C618D31</key>
+		<key>8536DE20D1181A18F499F444A27AC292</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libCLImageEditor.a</string>
+			<key>path</key>
+			<string>libCLImageEditor.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>85CC666B72DA24ECE6DD0F339E064572</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>CLToolbarMenuItem.m</string>
+			<key>path</key>
+			<string>CLImageEditor/ImageTools/ToolSettings/CLToolbarMenuItem.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>86C47A7DCA4298804BFE92A8E392F16F</key>
 		<dict>
 			<key>fileRef</key>
-			<string>A9E8A7000401057D5B54B07DE6F31E36</string>
+			<string>69C4D0AA6DD188162C8A6675EDE36483</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-		</dict>
-		<key>859B99A09CAB9563AD3CA118C15857C9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>FA8EC5403E8B5220750A7D30116045D5</string>
-				<string>08474AFE7A4E89AAB4CCDCCD43423BF7</string>
-				<string>38FD7C25E662080E83010082DD4360C5</string>
-				<string>0B774C7D9F91357DB177DBBC35467A16</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>86150107E2EF336E69CFA1F2FC9D91F5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>UzysAssetsViewCell.m</string>
-			<key>path</key>
-			<string>UzysAssetsPickerController/Library/UzysAssetsViewCell.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8645AA5DE4FFCE7F49A076D824CE4E5B</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3076AFE0EF667DEB09C00799129CA1E7</string>
-				<string>6488FFEA7CC3EA62BDDC338705B0CAC1</string>
-				<string>4F3DDD47CF3CD1DDFB8DCCA36403B237</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>877E8C321DC7D0FAB4E0B1C45D00FFFD</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>CLHueEffect.m</string>
-			<key>path</key>
-			<string>CLImageEditor/ImageTools/CLEffectTool/CLEffect/CLHueEffect.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>888D5A7A11B3E74804C4EE935698C193</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>CLDrawTool.h</string>
-			<key>path</key>
-			<string>CLImageEditor/ImageTools/CLDrawTool/CLDrawTool.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>88CC89196C23DA4F35597E9DA694B271</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>CLFilterBase.m</string>
-			<key>path</key>
-			<string>CLImageEditor/ImageTools/CLFilterTool/CLFilterBase.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
 		<key>88F0DEFAD90333B5FD85165BF1250DE8</key>
 		<dict>
@@ -2211,7 +2651,7 @@
 			<key>sourceTree</key>
 			<string>DEVELOPER_DIR</string>
 		</dict>
-		<key>899AA413B3E1BD7DD1CED92E2460E4F3</key>
+		<key>89BE98A76E86B71ADF36BDDD5BB2AEA7</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2220,16 +2660,31 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>CLImageToolInfo.h</string>
+			<string>SVProgressHUD.h</string>
 			<key>path</key>
-			<string>CLImageEditor/CLImageToolInfo.h</string>
+			<string>SVProgressHUD/SVProgressHUD.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>89DEE8E6774DA43E94A9D4462D295644</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>CLRotateTool.m</string>
+			<key>path</key>
+			<string>CLImageEditor/ImageTools/CLRotateTool/CLRotateTool.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>8B3C4EA5D40B454A88669516A59C48A2</key>
 		<dict>
 			<key>fileRef</key>
-			<string>FC521C7F64C1C1271A608B12615C847B</string>
+			<string>6D3B8034017EC2085816D46B352DB50C</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2241,7 +2696,7 @@
 		<key>8BA05F032D310AA51CDEC68B5BC2B291</key>
 		<dict>
 			<key>fileRef</key>
-			<string>E15E539A7B7578035426594571D60D83</string>
+			<string>B89AD3B6ECF6E050111ECD79F03BFC96</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2252,17 +2707,17 @@
 				</array>
 			</dict>
 		</dict>
-		<key>8C3E10C419FB128E90CCF2F40D96DB20</key>
+		<key>8BE604EF46BD1367B6F63BD9DE55A8CD</key>
 		<dict>
 			<key>fileRef</key>
-			<string>93C4186607FE33EC9D4A1DBDA65D3A6C</string>
+			<string>A9E8A7000401057D5B54B07DE6F31E36</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
 		<key>8C99EBFC39E6789A2EAEA633DB20C83F</key>
 		<dict>
 			<key>fileRef</key>
-			<string>E781B1DC5CE45B0ED37634D2D93A1088</string>
+			<string>6BEBD13021A357E878053251F030144D</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2273,18 +2728,18 @@
 				</array>
 			</dict>
 		</dict>
-		<key>8D5A79915719C048F3EF8A9281E33675</key>
+		<key>8CC7EEBBD2152AF14D99CA6F4059F9B4</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>CLImageToolProtocol.h</string>
+			<string>CLColorPickerView.m</string>
 			<key>path</key>
-			<string>CLImageEditor/ImageTools/ToolSettings/CLImageToolProtocol.h</string>
+			<string>CLImageEditor/ImageTools/ToolSettings/CLColorPickerView.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -2295,10 +2750,25 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>8DB28DA1645E44EB53F14D855FEDD39D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>CLImageToolBase.h</string>
+			<key>path</key>
+			<string>CLImageEditor/ImageTools/CLImageToolBase.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>8DD052A952B7781197D8F2FD2792662C</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>D6777C9B9A4F2F236AFAB7262B45C8C2</string>
+			<string>40F720E838361C1D85F0D6898777ED35</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
@@ -2329,34 +2799,21 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>905CDA6E1603246852ABE21419A9E14F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>CLHighlightShadowEffect.h</string>
-			<key>path</key>
-			<string>CLImageEditor/ImageTools/CLEffectTool/CLEffect/CLHighlightShadowEffect.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>919808A4F4CB9180753FFA66D81405ED</key>
+		<key>8DEF1947F2FB1BA5CAB0C466C3175749</key>
 		<dict>
 			<key>fileRef</key>
-			<string>B49E3F65F2F1C166A231F9E8918BF7EF</string>
+			<string>1A03C62DD7435FE5DC4E772D08138C5B</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
 			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
 			</dict>
 		</dict>
-		<key>919A43D310A146D75E6E3353DB82B6E0</key>
+		<key>8FD7D3A5CBD28EAEA616D93E045B8C5E</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2365,16 +2822,171 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>CLPixellateEffect.m</string>
+			<string>UzysGroupViewCell.m</string>
 			<key>path</key>
-			<string>CLImageEditor/ImageTools/CLEffectTool/CLEffect/CLPixellateEffect.m</string>
+			<string>UzysAssetsPickerController/Library/UzysGroupViewCell.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9077F7C0C7CD82AC8C821A87ED726B48</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>39C404180080628FC46839D26F49FB8D</string>
+				<string>5082D25EA59D12288631D5191E981F95</string>
+				<string>E76BB4125508E6668909F7059B7ED5C7</string>
+				<string>B31DCCFC057D6D425F137FE0EA59AFD4</string>
+				<string>DAE5BCE26216AA4CA4E062DE17C08522</string>
+				<string>7B134A8D361A665C476423FC6FB2BD78</string>
+				<string>2D5A4EE70CB23DCBD3927D501BACB505</string>
+				<string>E3C73D11D7FA1243FD0CFA91868AAAA3</string>
+				<string>6BEBD13021A357E878053251F030144D</string>
+				<string>347888ABD7FD1A289641D4320B5AA737</string>
+				<string>D5CD2D8AD604D258F879B2D50A9EC3BF</string>
+				<string>612E04DD91CFB6BACF25C975CB457F02</string>
+				<string>1E773955C1EE28F436C20365A0B99B40</string>
+				<string>7BF808258933BC6C153B0305D1BC4A85</string>
+				<string>54EEC46136BCDDACA19F43022F5BE31D</string>
+				<string>8CC7EEBBD2152AF14D99CA6F4059F9B4</string>
+				<string>78495AFB78FAEAB86439D312F1D00C3B</string>
+				<string>01D91961919B8434002B5B951D1CB309</string>
+				<string>0B90EBDB9017ED490B0A47764A50EFEC</string>
+				<string>206DEDC6A13F2AEFB48CA2E2711310F6</string>
+				<string>E80C3A305A44EA0168EAC00B279716BB</string>
+				<string>E0B13D166CCB7A3EED8283F79882587A</string>
+				<string>28E789427212862C4225F49C9361D14E</string>
+				<string>63EEA16B6E4737F7022645555F10076E</string>
+				<string>34B3DDA59C133A593A2D8FF73C85590D</string>
+				<string>FDB72255889455A33BA9A1F107242C88</string>
+				<string>618FDDFA5BD88B41DCA4D1035A5AD2F8</string>
+				<string>0EB626FC9C2390FC8EE966497A7F725A</string>
+				<string>B206FB46B783BD4138599447E46D0ED9</string>
+				<string>E86E72CCBAC7D84D63E4DFE497477863</string>
+				<string>0454942075414AE2A0C4314E32FDFF59</string>
+				<string>73B4FD810EC9E60A7A2D4A2DA4D4F5BB</string>
+				<string>B89AD3B6ECF6E050111ECD79F03BFC96</string>
+				<string>42F444C0A5EBB92A2D23C94FBF5BF1F7</string>
+				<string>1DB1DFD38C67BB089D12447D5BEA1E30</string>
+				<string>B599B0AF4213041D13F9F76E21A4A4C2</string>
+				<string>F71FE554C8D6A5D9BC2609CECC987623</string>
+				<string>7A37604E5AB6F628DEC80DC32B8F8B2C</string>
+				<string>8DB28DA1645E44EB53F14D855FEDD39D</string>
+				<string>EE856B405AD6FE0DAA6810D7E7F6B1AA</string>
+				<string>340476359EFC75B36E93448AF01AB80A</string>
+				<string>6D3B8034017EC2085816D46B352DB50C</string>
+				<string>0158BF798AE00EA7DA8863DE24954CE9</string>
+				<string>5BC7176797ADD1BDF08818CB5DD64601</string>
+				<string>56FE6D671652999D76632616F3199468</string>
+				<string>B10DAFF87133BD233116F7D2E8E9228E</string>
+				<string>BC96E3E9159F49EECBD2F0D30B844F95</string>
+				<string>D9ED56373ACA08EEC9A37564D9D92A55</string>
+				<string>CB521EEE2B0F7422E19D23DD3695DB59</string>
+				<string>E62B0DED6A2CEA68387421DAFEB3442C</string>
+				<string>28914B1506ED03C12A531B04DFCE48B6</string>
+				<string>89DEE8E6774DA43E94A9D4462D295644</string>
+				<string>511728ADEFA3211567C1AE2DDF23D779</string>
+				<string>56C5376B1806F5CC0F2F8010A32FAD02</string>
+				<string>42619A21E70902F36426A21177DE1A4E</string>
+				<string>68D886F92A033881344795BB97C962DE</string>
+				<string>A1DE631CFB982A02BAF743EBF560CD22</string>
+				<string>65CF65848516180E0983BDA91F6C73D9</string>
+				<string>E40749428C05CCC0AA0086DD5B443CC7</string>
+				<string>85CC666B72DA24ECE6DD0F339E064572</string>
+				<string>B84748FE6D94340206C6FCC5300C8F65</string>
+				<string>AC1A7CEB3294882281E3FF6FAD083429</string>
+				<string>D8DE0070661E179E3332543BAE0774D0</string>
+				<string>C6465CB168E287E25403ED22F7D31852</string>
+				<string>7F197A4E712790A3479B2A8769142DC5</string>
+				<string>3A88D5A187C7B54C2E3E15B537372AD4</string>
+				<string>B878DDFCD2014F81299AF2F8343513BD</string>
+				<string>78345C3B1FDD7E60B44EB60C98F0B60B</string>
+				<string>EDDF1B4487D81FECA7A5866B2A05127B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Core</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>908482DC5ED81DE895EBDCB3E0EE8AF1</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>66343838323A4465799738510FAEF5E2</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/RKDropdownAlert/RKDropdownAlert-prefix.pch</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>90E55E1A83BDD97F7470F7A0195FD933</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>RKDropdownAlert</string>
+			<key>target</key>
+			<string>1335C686253E618EF7AE29050CE14DF6</string>
+			<key>targetProxy</key>
+			<string>0342851C3FDAF108BC12D377E25A5420</string>
+		</dict>
+		<key>917D7F554193A8705A2613A2D922B3DB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>8536DE20D1181A18F499F444A27AC292</string>
+				<string>11971DF1A4CDD70865FD7E43ECA9EA06</string>
+				<string>DC2E742B638A506133482796C4CACD6C</string>
+				<string>7D87B7F27ED722529961B00129F21BE5</string>
+				<string>A988676F68060CF1E9F20B51099B5F5C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>919808A4F4CB9180753FFA66D81405ED</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7A37604E5AB6F628DEC80DC32B8F8B2C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
 		</dict>
 		<key>91BE4A5447FC2E901EA83CB6FC4381E2</key>
 		<dict>
 			<key>fileRef</key>
-			<string>F17FA9CFB9F797E65BC2C5D6B29549BF</string>
+			<string>1E773955C1EE28F436C20365A0B99B40</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2388,7 +3000,7 @@
 		<key>92656CDE49E88BF912D1C5E740D77CB5</key>
 		<dict>
 			<key>fileRef</key>
-			<string>905CDA6E1603246852ABE21419A9E14F</string>
+			<string>B206FB46B783BD4138599447E46D0ED9</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2415,7 +3027,7 @@
 		<key>94398E73420F236E66841D7EC33E8281</key>
 		<dict>
 			<key>fileRef</key>
-			<string>9554D540E84BCDD37AAAA3C776E75AFB</string>
+			<string>612E04DD91CFB6BACF25C975CB457F02</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2423,90 +3035,11 @@
 				<key>COMPILER_FLAGS</key>
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
-		</dict>
-		<key>9554D540E84BCDD37AAAA3C776E75AFB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>CLClassList.m</string>
-			<key>path</key>
-			<string>CLImageEditor/Utils/CLClassList.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>958736BD11F20A130C10D97F2B27C581</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>CLSplineInterpolator.m</string>
-			<key>path</key>
-			<string>CLImageEditor/Utils/CLSplineInterpolator.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>960973A1B90C58116D89035ED105BA4C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>CLBlurTool.h</string>
-			<key>path</key>
-			<string>CLImageEditor/ImageTools/CLBlurTool/CLBlurTool.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9628107FAC667BBC885B5C08B4BA0E9B</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>F603DFC077443206C3922BAD5305507B</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/UzysAssetsPickerController/UzysAssetsPickerController-prefix.pch</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string></string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
 		</dict>
 		<key>977641F888F4634A9FDEB686C31513F4</key>
 		<dict>
 			<key>fileRef</key>
-			<string>C3477A1755B67375041107FCC3E854F0</string>
+			<string>01D91961919B8434002B5B951D1CB309</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2515,22 +3048,19 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
-		<key>97C0424AFD38B0471650E69EB88C3E53</key>
+		<key>9788422BEBEE84BB298A1ABB79943CFB</key>
 		<dict>
-			<key>children</key>
+			<key>buildConfigurations</key>
 			<array>
-				<string>F603DFC077443206C3922BAD5305507B</string>
-				<string>67EA50D606C57DF9CEECBF0AC61B8E0A</string>
-				<string>A9964FF928AF7561175A2F53F1456715</string>
+				<string>4CE7C33716FBF1D73D1AE067A560B017</string>
+				<string>908482DC5ED81DE895EBDCB3E0EE8AF1</string>
 			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
 			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/UzysAssetsPickerController</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>XCConfigurationList</string>
 		</dict>
 		<key>98C98CDFB3F20F2925F6CD1F141BB14F</key>
 		<dict>
@@ -2561,7 +3091,7 @@
 		<key>99F077879410A0A3FF0C348C099FA5CE</key>
 		<dict>
 			<key>fileRef</key>
-			<string>CFD451B6F1A5E6770AB5150ECD2BF08B</string>
+			<string>CB521EEE2B0F7422E19D23DD3695DB59</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2572,6 +3102,21 @@
 				</array>
 			</dict>
 		</dict>
+		<key>99F5534411B3B12C4A3CBFD1B873058A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>SVIndefiniteAnimatedView.m</string>
+			<key>path</key>
+			<string>SVProgressHUD/SVIndefiniteAnimatedView.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>9B1608FFCD0A03597181CFE16791E01B</key>
 		<dict>
 			<key>fileRef</key>
@@ -2579,56 +3124,20 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>9C2105DC0F19A5C31F32A69393CFD4FE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>CLToneCurveTool.h</string>
-			<key>path</key>
-			<string>CLImageEditor/ImageTools/CLToneCurveTool/CLToneCurveTool.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9CCF28DE620F822A9F4EEC1C072F0AA5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>99D5F1EBCD2AD527A8AD1C94F531A04C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>9D871EA23F84FFE594DE1910259845F4</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>79FFE9AD1E99B42DAFEECF19FE2EDFC5</string>
-				<string>BF9FA8EB8DA20BE8FA3A4A9D68410EBB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>9DF58269DD2A364724B307CB469B8059</key>
+		<key>9E388AFD999397497B494C103E0D42F2</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>098F3CE614DAFE0E298816442AA63D14</string>
+			<string>B292A8DC5019823CC1C145D9E5A27BAB</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
 				<string>YES</string>
 				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/RKDropdownAlert/RKDropdownAlert-prefix.pch</string>
+				<string>Target Support Files/SVProgressHUD/SVProgressHUD-prefix.pch</string>
 				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
 				<string>8.0</string>
 				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
+				<string>NO</string>
 				<key>OTHER_LDFLAGS</key>
 				<string></string>
 				<key>OTHER_LIBTOOLFLAGS</key>
@@ -2647,22 +3156,9 @@
 			<key>isa</key>
 			<string>XCBuildConfiguration</string>
 			<key>name</key>
-			<string>Debug</string>
+			<string>Release</string>
 		</dict>
-		<key>9E6BECA6A5EE07896B4F1174EF06CF90</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>RKDropdownAlert-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A1003004FC58B9F33825230727A6B91D</key>
+		<key>9F842A87BA69C905BE1530EBB0D38D98</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2671,16 +3167,16 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>CLToolbarMenuItem.m</string>
+			<string>UzysAppearanceConfig.m</string>
 			<key>path</key>
-			<string>CLImageEditor/ImageTools/ToolSettings/CLToolbarMenuItem.m</string>
+			<string>UzysAssetsPickerController/Library/UzysAppearanceConfig.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>A126E125728F454351923D0305778CC7</key>
 		<dict>
 			<key>fileRef</key>
-			<string>75A382C9E99F2469C9D094A97AE2624E</string>
+			<string>78345C3B1FDD7E60B44EB60C98F0B60B</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2702,29 +3198,46 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>A3523A4B942B6262C8E8572E47F0935D</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>RKDropdownAlert</string>
-			<key>target</key>
-			<string>6E71355582DC6FB5F5C1B89EC915BEE0</string>
-			<key>targetProxy</key>
-			<string>48CB26C571B28CF9869639595DFACD59</string>
-		</dict>
-		<key>A5ED88B08834C2AD9C7F934CCE2075E1</key>
+		<key>A1DE631CFB982A02BAF743EBF560CD22</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>CLGloomEffect.m</string>
+			<string>CLToneCurveTool.h</string>
 			<key>path</key>
-			<string>CLImageEditor/ImageTools/CLEffectTool/CLEffect/CLGloomEffect.m</string>
+			<string>CLImageEditor/ImageTools/CLToneCurveTool/CLToneCurveTool.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A2E4C6DCC39AFE9746C3972D5316DD58</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C769A73396A32A081AC5B24E567E0980</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>A69A555C6BF53C964A05B06D2D20DC4D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>641E69DB018FB7D22CADF3E9A07D2EA8</string>
+				<string>081BB7B5119955F5FE5F4E5020B68364</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Resources</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -2801,30 +3314,10 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>A74B73F3336F26F48DA2E077AA3083BB</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>2BF28A5EEE7F04871300DFA7E0A57354</string>
-				<string>D5FFEA5C527571C852F992F1D72D6DBF</string>
-				<string>7D8F23FBBE1D57F260632817727831D6</string>
-				<string>6514807B4C75603F910304324037EA7F</string>
-				<string>335F451479C70F6F102C063F9E46548D</string>
-				<string>0D70A4672E02FC2CA876E51E61B107AA</string>
-				<string>2715B4C41EFCF5E4B7E63EC5715C7F00</string>
-				<string>D244387D27E48BC8BD3BAA46A9601B2F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
 		<key>A7FD47AC7119CE22F4DC28FF034E00C8</key>
 		<dict>
 			<key>fileRef</key>
-			<string>877E8C321DC7D0FAB4E0B1C45D00FFFD</string>
+			<string>73B4FD810EC9E60A7A2D4A2DA4D4F5BB</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2833,25 +3326,20 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
-		<key>A81900FDE771A59FE6E9B66CA173240F</key>
+		<key>A988676F68060CF1E9F20B51099B5F5C</key>
 		<dict>
-			<key>fileRef</key>
-			<string>FE974A6F9C40F66D7AD8D5A3F9F00102</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A9964FF928AF7561175A2F53F1456715</key>
-		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
 			<key>includeInIndex</key>
-			<string>1</string>
+			<string>0</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>libUzysAssetsPickerController.a</string>
 			<key>path</key>
-			<string>UzysAssetsPickerController-prefix.pch</string>
+			<string>libUzysAssetsPickerController.a</string>
 			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
 		<key>A9E8A7000401057D5B54B07DE6F31E36</key>
 		<dict>
@@ -2866,68 +3354,17 @@
 			<key>sourceTree</key>
 			<string>DEVELOPER_DIR</string>
 		</dict>
-		<key>A9FA18E42F3445F0D6D94F9DCEC89B49</key>
+		<key>AA942A88B7161EA03E9B0F0511E9648F</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>99D5F1EBCD2AD527A8AD1C94F531A04C</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>CLAdjustmentTool.h</string>
-			<key>path</key>
-			<string>CLImageEditor/ImageTools/CLAdjustmentTool/CLAdjustmentTool.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AAC63248245840AFE550837DD2B54116</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>CLFilterBase.h</string>
-			<key>path</key>
-			<string>CLImageEditor/ImageTools/CLFilterTool/CLFilterBase.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AB24AC976D93101BDC0209FF7D82D072</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>UIImage+UzysExtension.h</string>
-			<key>path</key>
-			<string>UzysAssetsPickerController/Library/UIImage+UzysExtension.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AB95418A1B20908D49C0A7073A28395B</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>7D0CC9C201F6C266651FF6CA7268352C</string>
-			<key>remoteInfo</key>
-			<string>CLImageEditor</string>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>ABB61ACEE3149A01E37684863E23584A</key>
 		<dict>
 			<key>fileRef</key>
-			<string>A5ED88B08834C2AD9C7F934CCE2075E1</string>
+			<string>0EB626FC9C2390FC8EE966497A7F725A</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2936,10 +3373,17 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
+		<key>ABE3ACD8D7FE6448160CB87F0579A04B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>68F2AB7F7223328904FC11D34C656E3E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>ABF85184B1B84686ECB055AAEF6FC4DD</key>
 		<dict>
 			<key>fileRef</key>
-			<string>D0F179C8667B4B89419B80A86A8C73F8</string>
+			<string>E80C3A305A44EA0168EAC00B279716BB</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2950,23 +3394,40 @@
 				</array>
 			</dict>
 		</dict>
-		<key>B087D208B2687822A8AF8BFF7D40C71F</key>
+		<key>AC1A7CEB3294882281E3FF6FAD083429</key>
 		<dict>
-			<key>children</key>
-			<array>
-				<string>BFB0D4E8A981978AFE921D579916A584</string>
-			</array>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXGroup</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>Resources</string>
+			<string>UIDevice+SystemVersion.m</string>
+			<key>path</key>
+			<string>CLImageEditor/Utils/UIDevice+SystemVersion.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>ACD2133C75C4759B6818217BC67956BD</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>UzysAssetsViewCell.h</string>
+			<key>path</key>
+			<string>UzysAssetsPickerController/Library/UzysAssetsViewCell.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>B0AAEABCFBDE29497F0B729286DE262B</key>
 		<dict>
 			<key>fileRef</key>
-			<string>CDF68869213E58557CFA1C14816F6C97</string>
+			<string>511728ADEFA3211567C1AE2DDF23D779</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2980,7 +3441,7 @@
 		<key>B0B050DFA0ECC13E38A158114296C64D</key>
 		<dict>
 			<key>fileRef</key>
-			<string>EF7DC528B64A1FDFA1784B21CA25A0A7</string>
+			<string>DAE5BCE26216AA4CA4E062DE17C08522</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2991,44 +3452,25 @@
 				</array>
 			</dict>
 		</dict>
-		<key>B109D29656F9A567D6B573D62EC298C2</key>
+		<key>B10DAFF87133BD233116F7D2E8E9228E</key>
 		<dict>
-			<key>baseConfigurationReference</key>
-			<string>F603DFC077443206C3922BAD5305507B</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/UzysAssetsPickerController/UzysAssetsPickerController-prefix.pch</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string></string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>XCBuildConfiguration</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>Debug</string>
+			<string>CLImageToolSettings.h</string>
+			<key>path</key>
+			<string>CLImageEditor/ImageTools/ToolSettings/CLImageToolSettings.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>B15EA62ADA674232E807215B27A022C8</key>
 		<dict>
 			<key>fileRef</key>
-			<string>919A43D310A146D75E6E3353DB82B6E0</string>
+			<string>D9ED56373ACA08EEC9A37564D9D92A55</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -3040,7 +3482,7 @@
 		<key>B1F1A942382DA5A05385CA6BB4F08804</key>
 		<dict>
 			<key>fileRef</key>
-			<string>FBE92AE73FD1D472D3F7CEB60E155026</string>
+			<string>D5CD2D8AD604D258F879B2D50A9EC3BF</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -3051,7 +3493,42 @@
 				</array>
 			</dict>
 		</dict>
-		<key>B208C27235EFDC163A098BEDBC2A7909</key>
+		<key>B206FB46B783BD4138599447E46D0ED9</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>CLHighlightShadowEffect.h</string>
+			<key>path</key>
+			<string>CLImageEditor/ImageTools/CLEffectTool/CLEffect/CLHighlightShadowEffect.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B211132ACF09119554BF7AEAE9F8B407</key>
+		<dict>
+			<key>fileRef</key>
+			<string>67F2E57B3F574D4CF6AFFCED14F7FF20</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B292A8DC5019823CC1C145D9E5A27BAB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>SVProgressHUD.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B31DCCFC057D6D425F137FE0EA59AFD4</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -3060,16 +3537,16 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>CLImageEditor.m</string>
+			<string>CLAdjustmentTool.m</string>
 			<key>path</key>
-			<string>CLImageEditor/CLImageEditor.m</string>
+			<string>CLImageEditor/ImageTools/CLAdjustmentTool/CLAdjustmentTool.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>B34E1220B16F9918DA2E18E2AE4F925C</key>
 		<dict>
 			<key>fileRef</key>
-			<string>1062E6F742DA7ABB85A8F220D814A237</string>
+			<string>B84748FE6D94340206C6FCC5300C8F65</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -3101,7 +3578,7 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>B49E3F65F2F1C166A231F9E8918BF7EF</key>
+		<key>B599B0AF4213041D13F9F76E21A4A4C2</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -3110,60 +3587,13 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>CLImageEditorTheme+Private.m</string>
+			<string>CLImageEditorTheme.m</string>
 			<key>path</key>
-			<string>CLImageEditor/ImageTools/ToolSettings/CLImageEditorTheme+Private.m</string>
+			<string>CLImageEditor/CLImageEditorTheme.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>B4B587071128B77CFC36DF71CAA1CEE0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>CLColorPickerView.m</string>
-			<key>path</key>
-			<string>CLImageEditor/ImageTools/ToolSettings/CLColorPickerView.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B89820C82A57719F3BD89711F2439866</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B208C27235EFDC163A098BEDBC2A7909</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>B9A277663831DF749A35264C550641D0</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>4401BB96924866C3E39974A86586C271</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B9A61126BAC5898C78C03C0F904524D3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E4AAA98934565BFFC7C276C99AF1F5C2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>BA1B5A3E47EC31E157D532E5981ECF86</key>
+		<key>B84748FE6D94340206C6FCC5300C8F65</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -3172,9 +3602,97 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>UIImage+Utility.h</string>
+			<string>UIDevice+SystemVersion.h</string>
 			<key>path</key>
-			<string>CLImageEditor/Utils/UIImage+Utility.h</string>
+			<string>CLImageEditor/Utils/UIDevice+SystemVersion.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B878DDFCD2014F81299AF2F8343513BD</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>UIView+Frame.h</string>
+			<key>path</key>
+			<string>CLImageEditor/Utils/UIView+Frame.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B89820C82A57719F3BD89711F2439866</key>
+		<dict>
+			<key>fileRef</key>
+			<string>42F444C0A5EBB92A2D23C94FBF5BF1F7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>B89AD3B6ECF6E050111ECD79F03BFC96</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>CLImageEditor.h</string>
+			<key>path</key>
+			<string>CLImageEditor/CLImageEditor.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B8E7DF0A41C4B6B1F1E29F47D0DE3A6C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C769A73396A32A081AC5B24E567E0980</string>
+				<string>0F9FED1CEBB2A961B92C0830BFB08B54</string>
+				<string>C9F1722015EE85A31E6C3935EF44D9D2</string>
+				<string>9F842A87BA69C905BE1530EBB0D38D98</string>
+				<string>72BCDDA2D4F2E0EF74409E6A1B41FF88</string>
+				<string>67F2E57B3F574D4CF6AFFCED14F7FF20</string>
+				<string>E3CCAAA56D45F221DF076B7DB0EED681</string>
+				<string>ACD2133C75C4759B6818217BC67956BD</string>
+				<string>5B1D80CDE6742E198B3CF8EF608CB39A</string>
+				<string>1A03C62DD7435FE5DC4E772D08138C5B</string>
+				<string>C04C4319B889B5AA2C02B7C630F02AE3</string>
+				<string>BA60B652104B424E0D22028B58EB74BC</string>
+				<string>8FD7D3A5CBD28EAEA616D93E045B8C5E</string>
+				<string>078C710C7D9CF70F1C5C5AC333E49646</string>
+				<string>54EF67F66B2DC1D9D98057FFED35A711</string>
+				<string>A69A555C6BF53C964A05B06D2D20DC4D</string>
+				<string>774C97E4A9E15F761FB48A9F71EFC87C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>UzysAssetsPickerController</string>
+			<key>path</key>
+			<string>UzysAssetsPickerController</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BA60B652104B424E0D22028B58EB74BC</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>UzysGroupViewCell.h</string>
+			<key>path</key>
+			<string>UzysAssetsPickerController/Library/UzysGroupViewCell.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -3195,31 +3713,76 @@
 			<key>xcLanguageSpecificationIdentifier</key>
 			<string>xcode.lang.ruby</string>
 		</dict>
-		<key>BB878CA116310FD63246FD6654771393</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>B109D29656F9A567D6B573D62EC298C2</string>
-				<string>9628107FAC667BBC885B5C08B4BA0E9B</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>BE63B9E7286889F54B446B5B1C5772F7</key>
+		<key>BB705BD7EF98D4EAD6E45215EEAA9A4A</key>
 		<dict>
 			<key>fileRef</key>
-			<string>86150107E2EF336E69CFA1F2FC9D91F5</string>
+			<string>064FE153C1BBB9D9E27255E46CA39E59</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>BC96E3E9159F49EECBD2F0D30B844F95</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>CLPixellateEffect.h</string>
+			<key>path</key>
+			<string>CLImageEditor/ImageTools/CLEffectTool/CLEffect/CLPixellateEffect.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BD963FDBDF9890C2F97C8FACCEAF2885</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>23D5E9A4E6442B2E5C6B913D3E785D17</string>
+				<string>99F5534411B3B12C4A3CBFD1B873058A</string>
+				<string>6225A94D76B7256A1CC6CCE27DF875B8</string>
+				<string>4D196C957144B5F6CE13338C2E598F62</string>
+				<string>89BE98A76E86B71ADF36BDDD5BB2AEA7</string>
+				<string>2E2B65237DD5325065279E282F3F8492</string>
+				<string>69C4D0AA6DD188162C8A6675EDE36483</string>
+				<string>FBE2C759D2C800CFF78CBD4DAD87020F</string>
+				<string>6A75862B19A3C2C75E5C346E03267493</string>
+				<string>3BD5DCE3D786609CB63124A34FC64BA0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>SVProgressHUD</string>
+			<key>path</key>
+			<string>SVProgressHUD</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE34C24417EB16D71501D7F529EA7DF2</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>067EDFD2372E6A8AC3B3E11AB39C5681</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
 		<key>BE6EAC06A03A46C57D07D4FC9D3565D1</key>
 		<dict>
 			<key>fileRef</key>
-			<string>743B6AF2EB9A29A36051E076A521EC7D</string>
+			<string>0454942075414AE2A0C4314E32FDFF59</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -3230,32 +3793,10 @@
 				</array>
 			</dict>
 		</dict>
-		<key>BF9FA8EB8DA20BE8FA3A4A9D68410EBB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7DE1F41EF43E989E7DE6C2BDCE74FC17</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>BFB0D4E8A981978AFE921D579916A584</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.plug-in</string>
-			<key>name</key>
-			<string>CLImageEditor.bundle</string>
-			<key>path</key>
-			<string>CLImageEditor/CLImageEditor.bundle</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>C00677F9055371FE8EC469D6741FFB29</key>
 		<dict>
 			<key>fileRef</key>
-			<string>C0BDF0C52FB1B4EF73953D897B0D37BD</string>
+			<string>E62B0DED6A2CEA68387421DAFEB3442C</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -3264,22 +3805,7 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
-		<key>C0B8A5D58BCCBEFD991BCBD136383DC4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.plug-in</string>
-			<key>name</key>
-			<string>UzysAssetPickerController.bundle</string>
-			<key>path</key>
-			<string>UzysAssetsPickerController/Library/UzysAssetPickerController.bundle</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C0BDF0C52FB1B4EF73953D897B0D37BD</key>
+		<key>C04C4319B889B5AA2C02B7C630F02AE3</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -3288,33 +3814,30 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>CLPosterizeEffect.m</string>
+			<string>UzysGroupPickerView.m</string>
 			<key>path</key>
-			<string>CLImageEditor/ImageTools/CLEffectTool/CLEffect/CLPosterizeEffect.m</string>
+			<string>UzysAssetsPickerController/Library/UzysGroupPickerView.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>C0D40A357C37EB997B3549EA5E1EA2E9</key>
+		<key>C064C01320182C673922DB3861A638C8</key>
 		<dict>
-			<key>children</key>
-			<array>
-				<string>098F3CE614DAFE0E298816442AA63D14</string>
-				<string>13DDFA726E59574FD8B0329F1EBF6171</string>
-				<string>9E6BECA6A5EE07896B4F1174EF06CF90</string>
-			</array>
+			<key>fileRef</key>
+			<string>E3CCAAA56D45F221DF076B7DB0EED681</string>
 			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/RKDropdownAlert</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
 		<key>C17577C5CF8E1A6D211EE725FAA82389</key>
 		<dict>
 			<key>fileRef</key>
-			<string>8D5A79915719C048F3EF8A9281E33675</string>
+			<string>56FE6D671652999D76632616F3199468</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -3328,7 +3851,7 @@
 		<key>C1B0B392CD1CC79AFEC8B480C6233BC4</key>
 		<dict>
 			<key>fileRef</key>
-			<string>3C9FEF3D23C307F13222A8B86947FD22</string>
+			<string>65CF65848516180E0983BDA91F6C73D9</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -3337,7 +3860,26 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
-		<key>C3477A1755B67375041107FCC3E854F0</key>
+		<key>C3383F52EE344E4B44C6D37A92AFF320</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C04C4319B889B5AA2C02B7C630F02AE3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C347D1029C184A02EA569F839BE8880C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AC1A7CEB3294882281E3FF6FAD083429</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>C6465CB168E287E25403ED22F7D31852</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -3346,25 +3888,13 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>CLDrawTool.m</string>
+			<string>UIImage+Utility.m</string>
 			<key>path</key>
-			<string>CLImageEditor/ImageTools/CLDrawTool/CLDrawTool.m</string>
+			<string>CLImageEditor/Utils/UIImage+Utility.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>C347D1029C184A02EA569F839BE8880C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>57AB3FD256B1F8C385D06BB0E62DA846</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>C3660625D8306AD0DBFF6884C178EA6C</key>
+		<key>C769A73396A32A081AC5B24E567E0980</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -3373,13 +3903,48 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>CLGloomEffect.h</string>
+			<string>UIImage+UzysExtension.h</string>
 			<key>path</key>
-			<string>CLImageEditor/ImageTools/CLEffectTool/CLEffect/CLGloomEffect.h</string>
+			<string>UzysAssetsPickerController/Library/UIImage+UzysExtension.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>C6C3ABB13BE08B3657EACDB325B532E8</key>
+		<key>C8416C04DB95B3E85D273DB29F6C4006</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E40749428C05CCC0AA0086DD5B443CC7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Project</string>
+				</array>
+			</dict>
+		</dict>
+		<key>C904B8059927711ED9B19C4D180A517C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>72BCDDA2D4F2E0EF74409E6A1B41FF88</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>C9EA8B8E3BE7CE12B71F75DDA7E93BC0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7B032DC7CE31545D6194B1392D2D5F92</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C9F1722015EE85A31E6C3935EF44D9D2</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -3394,88 +3959,10 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>C8416C04DB95B3E85D273DB29F6C4006</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3F9FAB514661F7CA855DE4EC42A2CCA8</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Project</string>
-				</array>
-			</dict>
-		</dict>
-		<key>C8AA61D3AA46096FFC6E73B3EE7B1D37</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>098F3CE614DAFE0E298816442AA63D14</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/RKDropdownAlert/RKDropdownAlert-prefix.pch</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string></string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>C9F4D27D48A8F017A867586CCBDE8EDA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>UzysGroupViewCell.m</string>
-			<key>path</key>
-			<string>UzysAssetsPickerController/Library/UzysGroupViewCell.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAE619B9C06498C8B3EF93C09B3373E6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>CLEffectBase.m</string>
-			<key>path</key>
-			<string>CLImageEditor/ImageTools/CLEffectTool/CLEffectBase.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>CB3BF33149A5317CC2787930BEE9861E</key>
 		<dict>
 			<key>fileRef</key>
-			<string>C3660625D8306AD0DBFF6884C178EA6C</string>
+			<string>618FDDFA5BD88B41DCA4D1035A5AD2F8</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -3486,51 +3973,7 @@
 				</array>
 			</dict>
 		</dict>
-		<key>CCA036DF49C355C72CCDE9DA5D78DC0B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>CLBloomEffect.m</string>
-			<key>path</key>
-			<string>CLImageEditor/ImageTools/CLEffectTool/CLEffect/CLBloomEffect.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CCF053D69130E3CC9079859B43067835</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>1C983B8411478C3B0925E2A80C4D4C2F</string>
-				<string>F5A1590981A823F155A4CA5A1FA34C2F</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>CDF68869213E58557CFA1C14816F6C97</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>CLSplineInterpolator.h</string>
-			<key>path</key>
-			<string>CLImageEditor/Utils/CLSplineInterpolator.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CFD451B6F1A5E6770AB5150ECD2BF08B</key>
+		<key>CB521EEE2B0F7422E19D23DD3695DB59</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -3545,41 +3988,38 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>D0F179C8667B4B89419B80A86A8C73F8</key>
+		<key>CDAE00D6F411482EF179D9990BB72AA7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>54EF67F66B2DC1D9D98057FFED35A711</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CE6ECA912B5AFCA577287FEAB7F34E6D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>BB705BD7EF98D4EAD6E45215EEAA9A4A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>CFBE32B947516EFCFADEEA9174F3CD98</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>CLEffectTool.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>path</key>
-			<string>CLImageEditor/ImageTools/CLEffectTool/CLEffectTool.h</string>
+			<string>UzysAssetsPickerController-dummy.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D244387D27E48BC8BD3BAA46A9601B2F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5C2DCF9E9E893A19A907CDBC5BB5A68C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>D3CE7FC05B939014A4D97CCBF36DC93D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>594E5D143EBB739936D68D6B6417BA43</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
 		</dict>
 		<key>D41D8CD98F00B204E9800998ECF8427E</key>
 		<dict>
@@ -3607,7 +4047,7 @@
 			<key>mainGroup</key>
 			<string>7DB346D0F39D3F0E887471402A8071AB</string>
 			<key>productRefGroup</key>
-			<string>859B99A09CAB9563AD3CA118C15857C9</string>
+			<string>917D7F554193A8705A2613A2D922B3DB</string>
 			<key>projectDirPath</key>
 			<string></string>
 			<key>projectReferences</key>
@@ -3617,42 +4057,42 @@
 			<key>targets</key>
 			<array>
 				<string>7D0CC9C201F6C266651FF6CA7268352C</string>
-				<string>4392AE91F7AA916B8189EF40824B734B</string>
-				<string>6E71355582DC6FB5F5C1B89EC915BEE0</string>
-				<string>0036019766ECF4E50B35D1097926B969</string>
+				<string>394DD81A8B4DB7B7809D48C877493F47</string>
+				<string>1335C686253E618EF7AE29050CE14DF6</string>
+				<string>382485F1C35F20FA5A231870882B4DC9</string>
+				<string>43DA1266AF3DF1D844877966024AA926</string>
 			</array>
 		</dict>
-		<key>D5FFEA5C527571C852F992F1D72D6DBF</key>
+		<key>D5191B3933AB3AF0FB4027EC0EE8A16B</key>
 		<dict>
-			<key>fileRef</key>
-			<string>C6C3ABB13BE08B3657EACDB325B532E8</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>UzysAssetsPickerController</string>
+			<key>target</key>
+			<string>43DA1266AF3DF1D844877966024AA926</string>
+			<key>targetProxy</key>
+			<string>5772DC8BBBBC31A32FD214DA6EFD281D</string>
 		</dict>
-		<key>D6777C9B9A4F2F236AFAB7262B45C8C2</key>
+		<key>D5CD2D8AD604D258F879B2D50A9EC3BF</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>CLClassList.h</string>
 			<key>path</key>
-			<string>CLImageEditor.xcconfig</string>
+			<string>CLImageEditor/Utils/CLClassList.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>D6E87FB4C5687092C9DFEE56CE4615A7</key>
 		<dict>
 			<key>fileRef</key>
-			<string>154F209A7DB422509251480F1FD25267</string>
+			<string>0B90EBDB9017ED490B0A47764A50EFEC</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -3666,7 +4106,7 @@
 		<key>D7A40FCFA75BF64DDEEBB806ACD72B9C</key>
 		<dict>
 			<key>fileRef</key>
-			<string>5B22DD4B8B26A277516CF13C414B3BAE</string>
+			<string>B31DCCFC057D6D425F137FE0EA59AFD4</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -3675,19 +4115,35 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
-		<key>D9D1536DB3CE39B59B8B3DC530C210B1</key>
+		<key>D8DE0070661E179E3332543BAE0774D0</key>
 		<dict>
-			<key>fileRef</key>
-			<string>537A6AC7C401A272FA1BA597E1EE85DF</string>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>UIImage+Utility.h</string>
+			<key>path</key>
+			<string>CLImageEditor/Utils/UIImage+Utility.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D9ED56373ACA08EEC9A37564D9D92A55</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>CLPixellateEffect.m</string>
+			<key>path</key>
+			<string>CLImageEditor/ImageTools/CLEffectTool/CLEffect/CLPixellateEffect.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>DABA4B3ACA1D5B95BB5A69446909D611</key>
 		<dict>
@@ -3696,192 +4152,7 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>DD3A54015EFB5C582745705272D84B3B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>UIImage+Utility.m</string>
-			<key>path</key>
-			<string>CLImageEditor/Utils/UIImage+Utility.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DF268068D26C3B8FF96AA9729F1DF67F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>227843564C19409462E9B8CA43320C4A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>E120CE911C8850506D34ECC22BD6BD0F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>899AA413B3E1BD7DD1CED92E2460E4F3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>E15E539A7B7578035426594571D60D83</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>CLImageEditor.h</string>
-			<key>path</key>
-			<string>CLImageEditor/CLImageEditor.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E1685F5FD13D331D75A296FD428BB448</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>UIView+CLImageToolInfo.m</string>
-			<key>path</key>
-			<string>CLImageEditor/ImageTools/ToolSettings/UIView+CLImageToolInfo.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E3C2BEFE467CE88F9F9AB26D61B27F45</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>CLFilterTool.h</string>
-			<key>path</key>
-			<string>CLImageEditor/ImageTools/CLFilterTool/CLFilterTool.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E4AAA98934565BFFC7C276C99AF1F5C2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>UzysAppearanceConfig.m</string>
-			<key>path</key>
-			<string>UzysAssetsPickerController/Library/UzysAppearanceConfig.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E70BAD8FBBB40228143F70AC623AA501</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>CLImageEditor</string>
-			<key>target</key>
-			<string>7D0CC9C201F6C266651FF6CA7268352C</string>
-			<key>targetProxy</key>
-			<string>AB95418A1B20908D49C0A7073A28395B</string>
-		</dict>
-		<key>E781B1DC5CE45B0ED37634D2D93A1088</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>CLCircleView.h</string>
-			<key>path</key>
-			<string>CLImageEditor/ImageTools/ToolSettings/CLCircleView.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E7C5A5E0FC9FDA7635EE887FC35C34A5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>UIView+Frame.h</string>
-			<key>path</key>
-			<string>CLImageEditor/Utils/UIView+Frame.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E835F3F19B21324E69AAB459DCB0280C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>CLImageToolSettings.h</string>
-			<key>path</key>
-			<string>CLImageEditor/ImageTools/ToolSettings/CLImageToolSettings.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA78DB2B86A94DCD0BF02AB20312A5E9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E3C2BEFE467CE88F9F9AB26D61B27F45</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Project</string>
-				</array>
-			</dict>
-		</dict>
-		<key>ECF31704E5E1BF5F31BA5032E95B2B4F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>537026B0026B0B17C90718641B52E6B7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>EF7DC528B64A1FDFA1784B21CA25A0A7</key>
+		<key>DAE5BCE26216AA4CA4E062DE17C08522</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -3896,52 +4167,38 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>F0E7EF21B151D20C4D86D071784AF4DF</key>
+		<key>DC2E742B638A506133482796C4CACD6C</key>
 		<dict>
-			<key>fileRef</key>
-			<string>A9FA18E42F3445F0D6D94F9DCEC89B49</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Project</string>
-				</array>
-			</dict>
-		</dict>
-		<key>F17FA9CFB9F797E65BC2C5D6B29549BF</key>
-		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
 			<key>includeInIndex</key>
-			<string>1</string>
+			<string>0</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>CLClippingTool.h</string>
+			<string>libRKDropdownAlert.a</string>
 			<key>path</key>
-			<string>CLImageEditor/ImageTools/CLClippingTool/CLClippingTool.h</string>
+			<string>libRKDropdownAlert.a</string>
 			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
-		<key>F1D05751BE53D94E45233A4DEA703CAB</key>
+		<key>DE28B9145AAEA1912E0988DB7DB64E2D</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>CLImageEditor-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>382485F1C35F20FA5A231870882B4DC9</string>
+			<key>remoteInfo</key>
+			<string>SVProgressHUD</string>
 		</dict>
-		<key>F222850AE91FCD9C5BA4838041002FD1</key>
+		<key>DF268068D26C3B8FF96AA9729F1DF67F</key>
 		<dict>
 			<key>fileRef</key>
-			<string>7B99CBA75F4060787DC3C0A30FAA5663</string>
+			<string>5082D25EA59D12288631D5191E981F95</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -3950,10 +4207,157 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
-		<key>F50A90FEF6352F621B71BDDB47CCDED3</key>
+		<key>E0B13D166CCB7A3EED8283F79882587A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>CLEffectTool.m</string>
+			<key>path</key>
+			<string>CLImageEditor/ImageTools/CLEffectTool/CLEffectTool.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E120CE911C8850506D34ECC22BD6BD0F</key>
 		<dict>
 			<key>fileRef</key>
-			<string>960973A1B90C58116D89035ED105BA4C</string>
+			<string>340476359EFC75B36E93448AF01AB80A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>E3C37BD74F445E1029C31AAB15F9DA1B</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>44E43768C7C76B3E1A57CF7848598BC1</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>E3C73D11D7FA1243FD0CFA91868AAAA3</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>CLBlurTool.m</string>
+			<key>path</key>
+			<string>CLImageEditor/ImageTools/CLBlurTool/CLBlurTool.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E3CCAAA56D45F221DF076B7DB0EED681</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>UzysAssetsPickerController_Configuration.h</string>
+			<key>path</key>
+			<string>UzysAssetsPickerController/Library/UzysAssetsPickerController_Configuration.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E40749428C05CCC0AA0086DD5B443CC7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>CLToolbarMenuItem.h</string>
+			<key>path</key>
+			<string>CLImageEditor/ImageTools/ToolSettings/CLToolbarMenuItem.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E62B0DED6A2CEA68387421DAFEB3442C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>CLPosterizeEffect.m</string>
+			<key>path</key>
+			<string>CLImageEditor/ImageTools/CLEffectTool/CLEffect/CLPosterizeEffect.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E76BB4125508E6668909F7059B7ED5C7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>CLAdjustmentTool.h</string>
+			<key>path</key>
+			<string>CLImageEditor/ImageTools/CLAdjustmentTool/CLAdjustmentTool.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E80C3A305A44EA0168EAC00B279716BB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>CLEffectTool.h</string>
+			<key>path</key>
+			<string>CLImageEditor/ImageTools/CLEffectTool/CLEffectTool.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E86E72CCBAC7D84D63E4DFE497477863</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>CLHighlightShadowEffect.m</string>
+			<key>path</key>
+			<string>CLImageEditor/ImageTools/CLEffectTool/CLEffect/CLHighlightShadowEffect.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EA78DB2B86A94DCD0BF02AB20312A5E9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>34B3DDA59C133A593A2D8FF73C85590D</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -3964,39 +4368,77 @@
 				</array>
 			</dict>
 		</dict>
-		<key>F5A1590981A823F155A4CA5A1FA34C2F</key>
+		<key>EB26430EA753D79EDEF0DC344B17229C</key>
 		<dict>
-			<key>baseConfigurationReference</key>
-			<string>98C98CDFB3F20F2925F6CD1F141BB14F</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>XCBuildConfiguration</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.plug-in</string>
 			<key>name</key>
-			<string>Release</string>
+			<string>SVProgressHUD.bundle</string>
+			<key>path</key>
+			<string>SVProgressHUD/SVProgressHUD.bundle</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
-		<key>F603DFC077443206C3922BAD5305507B</key>
+		<key>EC4C6CA8E71C5E58233ED1A4C7024CD2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SVProgressHUD-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>ECF31704E5E1BF5F31BA5032E95B2B4F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1DB1DFD38C67BB089D12447D5BEA1E30</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>EDDF1B4487D81FECA7A5866B2A05127B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>5D2A8387F771AD861CA119A1A61B10EB</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Resources</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EE856B405AD6FE0DAA6810D7E7F6B1AA</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>CLImageToolBase.m</string>
+			<key>path</key>
+			<string>CLImageEditor/ImageTools/CLImageToolBase.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EF2F07A60ED12F64A1EF1954DEEAAB70</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -4009,10 +4451,10 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>F8B0D2555D79533C4958D8FC9BF7657C</key>
+		<key>F0E7EF21B151D20C4D86D071784AF4DF</key>
 		<dict>
 			<key>fileRef</key>
-			<string>E835F3F19B21324E69AAB459DCB0280C</string>
+			<string>E76BB4125508E6668909F7059B7ED5C7</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -4023,25 +4465,89 @@
 				</array>
 			</dict>
 		</dict>
-		<key>FA8EC5403E8B5220750A7D30116045D5</key>
+		<key>F130D871B1804CDEDD69CD300E129333</key>
 		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
+			<key>children</key>
+			<array>
+				<string>40F720E838361C1D85F0D6898777ED35</string>
+				<string>460809270240CE0BA3AA869754A40946</string>
+				<string>305B56A526F39859DB73ABB3ED72CC95</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/CLImageEditor</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F222850AE91FCD9C5BA4838041002FD1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E0B13D166CCB7A3EED8283F79882587A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>F50A90FEF6352F621B71BDDB47CCDED3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2D5A4EE70CB23DCBD3927D501BACB505</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Project</string>
+				</array>
+			</dict>
+		</dict>
+		<key>F545690FCC8493DEF4531B3DE186FE2B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0E1C813E2595D0FD4DD5819D3E73D072</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F71FE554C8D6A5D9BC2609CECC987623</key>
+		<dict>
 			<key>includeInIndex</key>
-			<string>0</string>
+			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>libCLImageEditor.a</string>
+			<string>CLImageEditorTheme+Private.h</string>
 			<key>path</key>
-			<string>libCLImageEditor.a</string>
+			<string>CLImageEditor/ImageTools/ToolSettings/CLImageEditorTheme+Private.h</string>
 			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F8B0D2555D79533C4958D8FC9BF7657C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B10DAFF87133BD233116F7D2E8E9228E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Project</string>
+				</array>
+			</dict>
 		</dict>
 		<key>FB077A0580AFAC48AA48A76D31266076</key>
 		<dict>
 			<key>fileRef</key>
-			<string>CCA036DF49C355C72CCDE9DA5D78DC0B</string>
+			<string>7B134A8D361A665C476423FC6FB2BD78</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -4118,22 +4624,7 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>FBE92AE73FD1D472D3F7CEB60E155026</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>CLClassList.h</string>
-			<key>path</key>
-			<string>CLImageEditor/Utils/CLClassList.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FC521C7F64C1C1271A608B12615C847B</key>
+		<key>FBE2C759D2C800CFF78CBD4DAD87020F</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -4142,13 +4633,13 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>CLImageToolInfo.m</string>
+			<string>SVRadialGradientLayer.m</string>
 			<key>path</key>
-			<string>CLImageEditor/CLImageToolInfo.m</string>
+			<string>SVProgressHUD/SVRadialGradientLayer.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>FE974A6F9C40F66D7AD8D5A3F9F00102</key>
+		<key>FDB72255889455A33BA9A1F107242C88</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -4157,11 +4648,50 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>UzysAssetsPickerController.m</string>
+			<string>CLFilterTool.m</string>
 			<key>path</key>
-			<string>UzysAssetsPickerController/Library/UzysAssetsPickerController.m</string>
+			<string>CLImageEditor/ImageTools/CLFilterTool/CLFilterTool.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FDF1170AD4EC3D79CECEC903C221802F</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>4E762F23EC34ED4A6FF3312D84E33A40</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>FEDD8534C4DFC13AECDAB7588713DE2F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>93C4186607FE33EC9D4A1DBDA65D3A6C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 	</dict>
 	<key>rootObject</key>
